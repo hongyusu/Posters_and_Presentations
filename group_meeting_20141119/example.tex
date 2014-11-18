@@ -136,34 +136,134 @@ Aalto University
 
 
 %
-\begin{frame}{Model}
+\begin{frame}[allowframebreaks]{Model}
 	\begin{itemize}
 		\item The training examples are given in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}$.
-		\item Each example is mapped to a joint feature space $\phi(\vx_i,\vy_i)$.
+		\item A complete graph $G=(E,V)$ as the output graph.
+		\item $\Gamma_G(\vy_i)$ is the output feature map on a complete graph $G$.
+		\item Each example is mapped to a joint feature space by an joint feature map
+		\begin{align*}
+			\phi_G(\vx_i,\vy_i) = \varphi(\vx_i)\otimes\Gamma_G(\vy_i).
+		\end{align*}
 		\item A compatibility score is defined as
 		\begin{align*}
-			F(\vx_i,\vy_i;\vw) = \ip{\vw}{\phi(\vx_i,\vy_i)}
+			F(\vx_i,\vy_i;\vw) = \ip{\vw}{\phi_G(\vx_i,\vy_i)}=\sum_{e\in E}\ip{\vw_e}{\phi_G(\vx_i,\vy_{i,e})}
 		\end{align*} 
-		\item $\vw$ ensure an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
+		\item $\vw$ ensures an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
 		\item The predicted output $\vy_{\vw}(\vx)$ for a given input is computed by
 		\begin{align*}
 			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw),
 		\end{align*}
-		also called \textit{inference problem}.
-		\item The inference problem is \nphard\ for most output feature map.
+		which is call \textit{inference problem}.
+		\item The {inference problem} is \nphard\ for most joint feature map on the complete graph.
 	\end{itemize}
 \end{frame}
 
 
 
 %
-\begin{frame}{Max-Margin Optimization}
-	\begin{align*}
-		
-	\end{align*}
+\begin{frame}{Learning with A Complete Graph}
+	\begin{itemize}
+		\item The \textit{margin} of an example $\vx_i$ is
+		\begin{align*}
+			\gamma_G(\vx_i;\vw) = \underset{\vy\in\vYcal}{\minimize}[F(\vx_i,\vy_i;\vw)-F(\vx_i,\vy;\vw)].
+		\end{align*}
+		\item $\vw$ is solved by \textit{maximum-margin principle} which aims to maximize $\gamma(\vx_i;\vw)$ for all examples.
+		\item It is difficult to solve as the inference is \nphard\ on a complete graph.
+		\item We aim to use a joint feature that allow solving the inference problem in polynomial time.
+	\end{itemize}
 \end{frame}
 
 
+
+%
+\begin{frame}{Random Spanning Tree Approximation}
+	\begin{itemize}
+		\item We proved if a large margin structured output predictor exists, then combining a small sample of random trees will, with high probability, generate a predictor with good generalization.
+		\item $\Tcal$ is a random sample of spanning trees from $G$, $|\Tcal| = n$.
+		\item The compatibility score can be defined on $\Tcal$ as
+		\begin{align*}
+			F(\vx_i,\vy_i;\vw) = \sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}
+		\end{align*}
+		\item The inference problem of predicting the output $\vy_{\vw}(\vx)$ for a given input is 
+		\begin{align*}
+			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)},
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+
+%
+\begin{frame}{Optimization Problem}
+	\begin{itemize}
+		\item The margin of the example $\vx_i$ achieved by $\Tcal$ is
+		\begin{align*}
+		\gamma_{\Tcal}(\vx_i;\vw) = \underset{\vy\in\vYcal}{\minimize}[\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}-\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy)}].
+	\end{align*}
+		\item To learn $\vw_{T_t},\forall T_t\in\Tcal$ we solve the optimization problem
+		\begin{align*}
+			\underset{\vw_{T_t},\xi_i}{\minimize} & \quad \frac{1}{2}\sum_{t=1}^{n}\norm{\vw_{T_t}}^2 + C\sum_{i=1}^{m}\xi_i\\
+			\st & \quad \sum_{t=1}^{n}{ \langle \vw_{T_t}, \phib_{T_t}(\vx_i,\vy_i) \rangle} - \underset{\vy \neq \vy_i}{\maximize\ } \sum_{t=1}^{n}{\langle \vw_{T_t}, \phib_{T_t}(\vx_i,\vy) \rangle } \geq 1 -  \xi_i, \\
+			& \quad \xi_i\ge0\, , \forall\ i \in \set{1,\dots,m},
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{Inference Problem}
+	\begin{itemize}
+		\item The inference problem is
+		\begin{align*}
+			\vy_{G}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)},
+		\end{align*}
+		\item It is easy to do inference on an individual spanning tree
+		\begin{align*}
+			\vy_{T_t}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)},
+		\end{align*}
+		\item There is no guarantee $\vy_{G}=\vy_{T_t},\forall T_t\in\Tcal$
+	\end{itemize}
+\end{frame}
+
+
+
+
+%
+\begin{frame}{$K$-Best Inference Algorithm}
+	\begin{itemize}
+		\item Instead of compute the best multilabel $\vy_{T_t}$ from each individual spanning tree $T_t\in\Tcal$, we consider the $K$-best multilabel 
+		\begin{align*}
+			\Ycal_{T_t,K} = \{\vy_{T_t,1},\cdots,\vy_{T_t,K}\}.
+		\end{align*}
+		\item This gives a candidate list $\Ycal_{\Tcal,K}=\Ycal_{T_1,K}\cup\cdots\Ycal_{T_n,K}$ of $nK$ multilabels.
+		\item We proved that with a high probability $\vy_G$ will appear in $\Ycal_{\Tcal,K}$.
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{Performance of the Inference Algorithm}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[width=11cm]{./result_plot.pdf}
+			\caption{Percentage of examples with provably optimal $\vy$ being in the $K$-best lists plotted as a function of K, scaled with respect to the number of microlabels in the dataset.}
+		\end{center}
+	\end{figure}
+\end{frame}
+
+
+
+%
+\begin{frame}{Prediction Performance}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[width=11cm]{./result_table.pdf}
+			\caption{Prediction performance of each algorithm in terms of microlabel loss and 0/1 loss. The best performing algorithm is highlighted with boldface, the second best is in italic}
+		\end{center}
+	\end{figure}
+\end{frame}
 
 
 \iffalse

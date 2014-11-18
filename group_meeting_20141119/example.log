@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  18 NOV 2014 17:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  18 NOV 2014 23:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1237,11 +1237,106 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 154.
+ne 160.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [7
 
 ]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 160.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [8
+
+
+]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 175.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [9
+
+]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 193.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [10
+
+]
+Overfull \hbox (0.73566pt too wide) in paragraph at lines 210--210
+[]  
+ []
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 210.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [11
+
+]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 227.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [12
+
+]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 242.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [13
+
+]
+<./result_plot.pdf, id=102, 403.5624pt x 132.60962pt>
+File: ./result_plot.pdf Graphic file (type pdf)
+ <use ./result_plot.pdf>
+Package pdftex.def Info: ./result_plot.pdf used on input line 254.
+(pdftex.def)             Requested size: 312.9803pt x 102.8503pt.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 254--254
+ [] 
+ []
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 254.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [14
+
+ <./result_plot.pdf>]
+<./result_table.pdf, id=175, 395.0487pt x 145.38817pt>
+File: ./result_table.pdf Graphic file (type pdf)
+
+<use ./result_table.pdf>
+Package pdftex.def Info: ./result_table.pdf used on input line 266.
+(pdftex.def)             Requested size: 312.9803pt x 115.18814pt.
+
+Overfull \hbox (5.69043pt too wide) in paragraph at lines 266--266
+ [] 
+ []
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 266.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [15
+
+ <./result_table.pdf>]
 \tf@nav=\write6
 \openout6 = `example.nav'.
 
@@ -1254,11 +1349,11 @@ ne 154.
 
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
 (./example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1266,32 +1361,54 @@ Package rerunfilecheck Info: File `example.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
  ) 
 Here is how much of TeX's memory you used:
- 16396 strings out of 493315
- 299856 string characters out of 6137904
- 378691 words of memory out of 5000000
- 19409 multiletter control sequences out of 15000+600000
- 17810 words of font info for 67 fonts, out of 8000000 for 9000
+ 16490 strings out of 493315
+ 301562 string characters out of 6137904
+ 381695 words of memory out of 5000000
+ 19483 multiletter control sequences out of 15000+600000
+ 19620 words of font info for 74 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,15n,55p,397b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
-b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></us
-r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></us
-r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on example.pdf (7 pages, 135305 bytes).
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
+cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2013
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2013/texmf-d
+ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/
+times/utmri8a.pfb>
+Output written on example.pdf (15 pages, 887204 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 348 PDF objects out of 1000 (max. 8388607)
+ 269 compressed objects within 3 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
