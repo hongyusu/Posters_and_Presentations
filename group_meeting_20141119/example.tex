@@ -62,41 +62,10 @@ Aalto University
 			\item Each input variable $\vx\in\vXcal$ is simultaneously associated with multiple output variables $\vy\in\vYcal,\vYcal=\Ycal_1\times\cdots\times\Ycal_k$.
 			\item The goal is to find a mapping function that predicts the best values of an output given an input $f\in\Hcal:\vXcal\rightarrow\vYcal$.
 		\end{itemize}
-	\item The central problems of multilabel classification:
-	\begin{itemize}
-		\item The exponential sized output space $\vYcal$ in the number of microlabels.
-		\item The dependency of microlabels to be exploited to improve the prediction performance.
-	\end{itemize}
-	\end{itemize}
-\end{frame}
-
-
-
-%
-\begin{frame}{Category of Algorithms}
-	\begin{itemize}
-		\item Flat multilabel classification:
+		\item The central problems of multilabel classification:
 		\begin{itemize}
-			\item Multiple output variables are treated as a ``flat'' vector.
-			\item For example, \mlknn, \adaboostmh, ...
-		\end{itemize}
-		\item Structured output prediction:
-		\begin{itemize}
-			\item There is an \textit{output graph} connecting multiple labels.
-			\begin{itemize}
-				\item A set of nodes corresponds to the multiple labels.
-				\item A set of edges represents the correlation between labels.
-			\end{itemize}
-			\item Hierarchical classification:
-			\begin{itemize}
-				\item The output graph is a rooted tree or a graph with parent-child relationships defining the different levels of granularities.
-				\item For example, \svmstruct, ...
-			\end{itemize}
-			\item Graph labeling:
-			\begin{itemize}
-				\item The output graph often takes a general form (e.g., a tree, a chain).
-				\item For example, \mmmn, \crf, \mmcrf, ...
-			\end{itemize}
+			\item The size of the output space $\vYcal$ is exponential in the number of microlabels.
+			\item The dependency of microlabels needs to be exploited to improve the prediction performance.
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -104,7 +73,84 @@ Aalto University
 
 
 %
-\begin{frame}{}
+\begin{frame}{Flat Multilabel Classification}
+	\begin{itemize}
+		\item Multiple output variables are treated as a ``flat'' vector.
+		\item It is difficult to take into consideration the correlation of labels.
+		\item For example, \mlknn, \adaboostmh, \mtl, ...
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Structured Output Learning}
+	\begin{itemize}
+		\item There is an \textit{output graph} connecting multiple labels.
+		\begin{itemize}
+			\item A set of nodes corresponds to the multiple labels.
+			\item A set of edges represents the correlation between labels.
+		\end{itemize}
+		\item Hierarchical classification:
+		\begin{itemize}
+			\item The output graph is a rooted tree or a directed graph defining the different levels of granularities.
+			\item For example, \svmstruct, ...
+		\end{itemize}
+		\item Graph labeling:
+		\begin{itemize}
+			\item The output graph often takes a general form (e.g., a tree, a chain).
+			\item For example, \mmmn, \crf, \mmcrf, ...
+		\end{itemize}
+		\item The output graph is assumed to be known \textit{apriori}.
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{The Research Question}
+	\begin{itemize}
+		\item The output graph is hidden in many applications.
+		\begin{itemize}
+			\item For example, a surveillance photo can be tagged with ``building'', ``road'', ``pedestrian'', and ``vehicle''.
+		\end{itemize}
+		\item We focus on the problem in structured output learning when the output graph is not observed.
+		\item Our approach:
+		\begin{itemize}
+			\item Assume the dependency can be modeled by a complete set of pairwise correlations.
+			\item Build a structured output learning model with a complete graph as the output graph.
+			\item Solve the optimization problem.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{Contributions}
+	\begin{itemize}
+		\item A structured output learning model which performs max-margin learning on a random sample of spanning tree.
+		\item The model is not constrained to the availability of the output graph.
+		\item The \nphard\ inference problem can be solved by a polynomial time algorithm with a condition guaranteeing the exact solution.
+		\item The theoretical analysis and the empirical results verify the performance of the model.
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{Model}
+	\begin{itemize}
+		\item The training examples are given in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}$.
+		\item Each example is mapped to a joint feature space $\phi(\vx_i,\vy_i)$.
+		\item A compatibility score is defined as
+		\begin{align*}
+			F(\vx_i,\vy_i;\vw) = \ip{\vw}{\phi(\vx_i,\vy_i)}
+		\end{align*} 
+		\item $\vw$ ensure an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
+		\item The predicted output $\vy_{\vw}(\vx)$ for a given input is computed by
+		\begin{align*}
+			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw),
+		\end{align*}
+		also called \textit{inference problem}.
+	\end{itemize}
 \end{frame}
 
 
