@@ -1,0 +1,120 @@
+
+
+
+
+\documentclass[first=dgreen,second=purple,logo=yellowexc]{aaltoslides}
+%\documentclass{aaltoslides} % DEFAULT
+%\documentclass[first=purple,second=lgreen,logo=redque,normaltitle,nofoot]{aaltoslides} % SOME OPTION EXAMPLES
+
+
+
+\input{slide_macro_su.tex}
+
+
+
+
+\title{Structured Output Learning with A Random Sample of Spanning Trees}
+\author{Hongyu Su}
+
+
+
+\institute[ICS]{
+Helsinki Institute for Information Technilogy HIIT\\
+Department of Information and Computer Science\\
+Aalto University
+}
+
+\aaltofootertext{Random Spanning Tree Approximation}{\today}{\arabic{page}/\pageref{LastPage}\ }
+
+
+\date{ \today} %\date{Version 1.0, \today}
+
+\iffalse
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,subsection]
+  \end{frame}
+}
+\fi
+
+
+
+
+%--------------------------------
+%
+% document
+%
+%--------------------------------
+
+\begin{document}
+
+\aaltotitleframe
+
+
+
+%
+\begin{frame}{Multilabel Classification}
+	\begin{itemize}
+		\item Multilabel classification is an important research field in machine learning.
+		\begin{itemize}
+			\item For example, a document can be classified as ``science'', ``genomics'', and ``drug discovery''.
+			\item Each input variable $\vx\in\vXcal$ is simultaneously associated with multiple output variables $\vy\in\vYcal,\vYcal=\Ycal_1\times\cdots\times\Ycal_k$.
+			\item The goal is to find a mapping function that predicts the best values of an output given an input $f\in\Hcal:\vXcal\rightarrow\vYcal$.
+		\end{itemize}
+	\item The central problems of multilabel classification:
+	\begin{itemize}
+		\item The exponential sized output space $\vYcal$ in the number of microlabels.
+		\item The dependency of microlabels to be exploited to improve the prediction performance.
+	\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{Category of Algorithms}
+	\begin{itemize}
+		\item Flat multilabel classification:
+		\begin{itemize}
+			\item Multiple output variables are treated as a ``flat'' vector.
+			\item For example, \mlknn, \adaboostmh, ...
+		\end{itemize}
+		\item Structured output prediction:
+		\begin{itemize}
+			\item There is an \textit{output graph} connecting multiple labels.
+			\begin{itemize}
+				\item A set of nodes corresponds to the multiple labels.
+				\item A set of edges represents the correlation between labels.
+			\end{itemize}
+			\item Hierarchical classification:
+			\begin{itemize}
+				\item The output graph is a rooted tree or a graph with parent-child relationships defining the different levels of granularities.
+				\item For example, \svmstruct, ...
+			\end{itemize}
+			\item Graph labeling:
+			\begin{itemize}
+				\item The output graph often takes a general form (e.g., a tree, a chain).
+				\item For example, \mmmn, \crf, \mmcrf, ...
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{}
+\end{frame}
+
+
+\iffalse
+\begin{frame}[allowframebreaks]{Bibliography}
+	%\bibliographystyle{plain}
+	\bibliographystyle{apalike}
+	\bibliography{example}
+\end{frame}
+\fi
+
+
+\end{document}
