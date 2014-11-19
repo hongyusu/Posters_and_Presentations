@@ -127,7 +127,7 @@ Aalto University
 \begin{frame}{Contributions}
 	\begin{itemize}
 		\item A structured output learning model which performs max-margin learning on a random sample of spanning tree.
-		\item The model is not constrained to the availability of the output graph.
+		\item The model is not constrained by the availability of the output graph.
 		\item The \nphard\ inference problem can be solved by a polynomial time algorithm with a condition guaranteeing the exact solution.
 		\item The theoretical analysis and the empirical results verify the performance of the proposed model.
 	\end{itemize}
@@ -138,21 +138,21 @@ Aalto University
 %
 \begin{frame}[allowframebreaks]{Model}
 	\begin{itemize}
-		\item Training examples comes in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}$.
+		\item Training examples comes in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}\in\vXcal\times\vYcal$.
 		\item A complete graph $G=(E,V)$ is used as the output graph.
-		\item $\Gamma_G(\vy_i)$ is the output feature map on a complete graph $G$.
+		\item $\Gamma_G(\vy_i)$ is the output feature map of the multilabel $\vy_i$ on a complete graph $G$.
 		\item Each example is mapped to a joint feature space by a joint feature map
 		\begin{align*}
 			\phi_G(\vx_i,\vy_i) = \varphi(\vx_i)\otimes\Gamma_G(\vy_i).
 		\end{align*}
 		\item A compatibility score is defined as
 		\begin{align*}
-			F(\vx,\vy;\vw) = \ip{\vw}{\phi_G(\vx,\vy)}=\sum_{e\in E}\ip{\vw_e}{\phi_G(\vx,\vy_{e})}
+			F(\vx,\vy;\vw_G) = \ip{\vw_G}{\phi_G(\vx,\vy)}=\sum_{e\in E}\ip{\vw_{G,e}}{\phi_G(\vx,\vy_{e})}
 		\end{align*} 
 		\item $\vw$ ensures an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
 		\item The predicted output $\vy(\vx)$ for a given input $\vx$ is computed by
 		\begin{align*}
-			\vy(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw}{\phi_G(\vx,\vy)},
+			\vy(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw_G) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_G}{\phi_G(\vx,\vy)},
 		\end{align*}
 		which is called \textit{inference problem}.
 		\item The {inference problem} is \nphard\ for most joint feature maps on the complete graph.
@@ -162,14 +162,14 @@ Aalto University
 
 
 %
-\begin{frame}{Learning with A Complete Graph}
+\begin{frame}{To Learn $\vw$ on A Complete Graph}
 	\begin{itemize}
 		\item The \textit{margin} of an example $\vx_i$ is
 		\begin{align*}
-			\gamma_G(\vx_i;\vw) = \underset{\vy\in\vYcal}{\minimize}\,[F(\vx_i,\vy_i;\vw)-F(\vx_i,\vy;\vw)].
+			\gamma_G(\vx_i;\vw_G) = \underset{\vy\in\vYcal/\vy_i}{\minimize}\,[F(\vx_i,\vy_i;\vw_G)-F(\vx_i,\vy;\vw_G)].
 		\end{align*}
-		\item $\vw$ is solved by \textit{maximum-margin principle} which aims to maximize $\gamma(\vx_i;\vw)$ over all training example.
-		\item The problem includes:
+		\item $\vw$ is solved by \textit{maximum-margin principle} which aims to maximize $\gamma(\vx_i;\vw_G)$ over all training example.
+		\item The problems are:
 		\begin{itemize}
 			\item The \nphardness\ of the inference problem on a complete graph.
 			\item A large parameter space: $\Theta(k^2)$
@@ -187,9 +187,9 @@ Aalto University
 		\item $\Tcal=\{T_1,\cdots,T_n\}$ is a set of spanning trees randomly sampled from the complete graph $G$.
 		\item The compatibility score can be re-defined based on $\Tcal$ as
 		\begin{align*}
-			F_{\Tcal}(\vx_i,\vy_i;\vw_{T_t}) = \sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}.
+			F_{\Tcal}(\vx_i,\vy_i;\vw_{\Tcal}) = \sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}.
 		\end{align*}
-		\item The inference problem of predicting the output $\vy_{\Tcal}(\vx)$ for a given input $\vw$ is 
+		\item The inference problem of predicting the output $\vy_{\Tcal}(\vx)$ for a given input $\vx$ is 
 		\begin{align*}
 			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F_{\Tcal}(\vx,\vy;\vw_{\Tcal})=\underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
 		\end{align*}
@@ -202,9 +202,9 @@ Aalto University
 	\begin{itemize}
 		\item The margin of an example $\vx_i$ achieved by $\Tcal$ is
 		\begin{align*}
-		\gamma_{\Tcal}(\vx_i;\vw_{\Tcal}) = \underset{\vy\in\vYcal}{\minimize}\,[\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}-\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy)}].
+		\gamma_{\Tcal}(\vx_i;\vw_{\Tcal}) = \underset{\vy\in\vYcal/\vy_i}{\minimize}\,[\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}-\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy)}].
 	\end{align*}
-		\item To learn $\vw_{T_t},\forall T_t\in\Tcal$ we solve the optimization problem
+		\item To learn $\{\vw_{T_t}\}_{T_t\in\Tcal}$ we solve the optimization problem
 		\begin{align*}
 			\underset{\vw_{T_t},\xi_i}{\minimize} & \quad \frac{1}{2}\sum_{t=1}^{n}\norm{\vw_{T_t}}^2 + C\sum_{i=1}^{m}\xi_i\\
 			\st & \quad \sum_{t=1}^{n}{ \langle \vw_{T_t}, \phib_{T_t}(\vx_i,\vy_i) \rangle} - \underset{\vy \neq \vy_i}{\maximize\ } \sum_{t=1}^{n}{\langle \vw_{T_t}, \phib_{T_t}(\vx_i,\vy) \rangle } \geq 1 -  \xi_i, \\
@@ -226,7 +226,7 @@ Aalto University
 		\begin{align*}
 			\vy_{T_t}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltored}F_{T_t}(\vx,\vy;\vw_{T_t})}= \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
 		\end{align*}
-		\item There is no guarantee that there exists a tree $T_t\in\Tcal$ for which the maximizer of ${\color{aaltored}F_{T_t}}$ is the maximizer of ${\color{aaltoblue}F_{\Tcal}}$.
+		\item There is no guarantee that there exists a tree $T_t\in\Tcal$ in which the maximizer of ${\color{aaltored}F_{T_t}}$ is the maximizer of ${\color{aaltoblue}F_{\Tcal}}$.
 	\end{itemize}
 \end{frame}
 
