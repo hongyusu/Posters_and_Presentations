@@ -59,7 +59,7 @@ Aalto University
 		\item Multilabel classification is an important research field in machine learning.
 		\begin{itemize}
 			\item For example, a document can be classified as ``science'', ``genomics'', and ``drug discovery''.
-			\item Each input variable $\vx\in\vXcal$ is simultaneously associated with multiple output variables $\vy\in\vYcal,\vYcal=\Ycal_1\times\cdots\times\Ycal_k$.
+			\item Each input variable $\vx\in\vXcal$ is simultaneously associated with multiple output variables $\vy\in\vYcal,\vYcal=\Ycal_1\times\cdots\times\Ycal_l$.
 			\item The goal is to find a mapping function that predicts the best values of an output given an input $f\in\Hcal:\vXcal\rightarrow\vYcal$.
 		\end{itemize}
 		\item The central problems of multilabel classification:
@@ -76,8 +76,8 @@ Aalto University
 \begin{frame}{Flat Multilabel Classification}
 	\begin{itemize}
 		\item Multiple output variables are treated as a ``flat'' vector.
-		\item It is difficult to take into consideration the correlation of labels.
 		\item For example, \mlknn, \adaboostmh, \mtl, ...
+		\item It is difficult to take into consideration the correlation of labels.
 	\end{itemize}
 \end{frame}
 
@@ -218,15 +218,15 @@ Aalto University
 %
 \begin{frame}{Inference Problem}
 	\begin{itemize}
-		\item The inference problem is
+		\item The inference problem of \rta\ is defined as finding the multilabel $\vy_{\Tcal}(\vx)$ that maximizes the sum of scores over a collection of trees
 		\begin{align*}
-			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)},
+			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltoblue}F_{\Tcal}(\vx_i,\vy_i;\vw_{\Tcal})} = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)},
 		\end{align*}
-		\item The inference problem on an individual spanning tree can be solve efficiently by \textit{dynamic programming}
+		\item The inference problem on each individual spanning tree can be solve efficiently in $\Theta(l)$ by \textit{dynamic programming}
 		\begin{align*}
-			\vy_{T_t}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}.
+			\vy_{T_t}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltored}F_{T_t}(\vx_i,\vy_i;\vw_{T_t})}= \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}.
 		\end{align*}
-		\item There is no guarantee $\vy_{\Tcal}=\vy_{T_t},\forall T_t\in\Tcal$
+		\item There is no guarantee that there exists a tree $T_t\in\Tcal$ for which the maximizer of ${\color{aaltored}F_{T_t}}$ is the maximizer of ${\color{aaltoblue}F_{\Tcal}}$.
 	\end{itemize}
 \end{frame}
 
@@ -234,7 +234,7 @@ Aalto University
 
 
 %
-\begin{frame}{$K$-Best Inference Algorithm}
+\begin{frame}{Fast Inference Over a Collection of Trees}
 	\begin{itemize}
 		\item Instead of compute the best multilabel $\vy_{T_t}$ from each individual spanning tree $T_t\in\Tcal$, we consider the $K$-best multilabel 
 		\begin{align*}
