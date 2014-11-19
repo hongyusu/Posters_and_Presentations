@@ -105,7 +105,7 @@ Aalto University
 
 
 %
-\begin{frame}{The Research Question}
+\begin{frame}{Research Question}
 	\begin{itemize}
 		\item The output graph is hidden in many applications.
 		\begin{itemize}
@@ -202,7 +202,7 @@ Aalto University
 	\begin{itemize}
 		\item The margin of an example $\vx_i$ achieved by $\Tcal$ is
 		\begin{align*}
-		\gamma_{\Tcal}(\vx_i;\vw) = \underset{\vy\in\vYcal}{\minimize}[\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}-\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy)}].
+		\gamma_{\Tcal}(\vx_i;\vw) = \underset{\vy\in\vYcal}{\minimize}\,[\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}-\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy)}].
 	\end{align*}
 		\item To learn $\vw_{T_t},\forall T_t\in\Tcal$ we solve the optimization problem
 		\begin{align*}
@@ -234,16 +234,41 @@ Aalto University
 
 
 %
-\begin{frame}{Fast Inference Over a Collection of Trees}
+\begin{frame}[allowframebreaks]{Fast Inference Over a Collection of Trees}
 	\begin{itemize}
-		\item $K$-best inference algorithm:
-		\begin{itemize}
-			\item Instead of computing the best multilabel $\vy_{T_t}$ from each individual spanning tree $T_t\in\Tcal$, we consider the $K$-best multilabel 
-			\begin{align*}
-				\Ycal_{T_t,K} = \{\vy_{T_t,1},\cdots,\vy_{T_t,K}\}.
-			\end{align*}
-			\item This gives a candidate list $\Ycal_{\Tcal,K}=\Ycal_{T_1,K}\cup\cdots\Ycal_{T_n,K}$ of $n\times K$ multilabels.
-		\end{itemize}
+		\item For each tree $T_t$, instead of computing the best multilabel $\vy_{T_t}$, we compute $K$-best multilabels in $\Theta(Kl)$ time
+		\begin{align*}
+			\Ycal_{T_t,K} = \{\vy_{T_t,1},\cdots,\vy_{T_t,K}\}.
+		\end{align*}
+		\item Performing the same computation on all trees gives a candidate list of $n\times K$ multilabels in $\Theta(nKl)$ time
+		\begin{align*}
+			\Ycal_{\Tcal,K}=\Ycal_{T_1,K}\cup\cdots\Ycal_{T_n,K}.
+		\end{align*}
+		\item For now, we assume the best scoring multilabel of a collection of trees exists in the list $\Ycal_{\Tcal,K}$. 
+		\item Assume 
+		\begin{align*}
+		\vy_K^*=\underset{\vy\in\Ycal_{\Tcal,K}}{\argmax}\,F_{\Tcal}(\vx,\vy;\vw_{\Tcal}).
+		\end{align*} 
+		If
+		\begin{align*}
+			F_{\Tcal}(\vx,\vy_K^*;\vw_{\Tcal})\ge\frac{1}{n}\sum_{t=1}^{n}F_{T_t}(\vx,\vy_{T_t,K},\vw_{T_t})=\theta_{\vx}(K),
+		\end{align*}
+		then 
+		\begin{align*}
+			F_{\Tcal}(\vx,\vy_K^*;\vw_{\Tcal}) = \underset{\vy\in\vYcal}{\maximize}\,F_{\Tcal}(\vx,\vy;\vw_{\Tcal}).
+		\end{align*}
+		\framebreak
+		\item For example, $\Tcal=\{T_1,T_2\},\vYcal=\Ycal_1\times\Ycal_2,\Ycal_i=\{+,-\}$
+		\begin{table}
+			\begin{tabular}{|c|cc|cc|c|} \hline
+				\multirow{2}{*}{} & \multicolumn{2}{c|}{$T_1$} & \multicolumn{2}{c|}{$T_2$} & $\theta_{\vx}(K)$\\ \cline{2-5}
+				& $\vy_{T_1,K}$ & $F_{T_1}(\vx,\vy_{T_1,K})$ & $\vy_{T_1,K}$ & $F_{T_1}(\vx,\vy_{T_1,K})$ & \\ \hline
+				$K=1$ & $+-$ & $5$ & $--$ & $4$ & $9$\\ \hline
+				$K=2$ & $++$ & $4$ & $-+$ & $3$ & $7$\\ \hline
+				$K=3$ & $-+$ & $3$ & $++$ & $3$ & $6$\\ \hline
+				$K=4$ & $--$ & $3$ & $+-$ & $2$ & $5$\\ \hline
+			\end{tabular}
+		\end{table}
 		\item We proved that with a high probability $\vy_{\Tcal}$ will appear in $\Ycal_{\Tcal,K}$.
 	\end{itemize}
 \end{frame}
@@ -252,10 +277,16 @@ Aalto University
 
 %
 \begin{frame}{Performance of the Inference Algorithm}
+	\begin{itemize}
+		\item $10$ datasets, $|\Tcal| = \{5,10,40\}, K=\{2,4,8,16,32,40,60\}$
+		\item X-axis is the percentage of examples with exact inference.
+		\item Y-axis is the value of $K$ as the percentage of the number of microlabels.
+		\item $K=100\%|Y|$ corresponds to a complexity of $\Theta(nl^2)$.
+	\end{itemize}
 	\begin{figure}
 		\begin{center}
 			\includegraphics[width=11cm]{./result_plot.pdf}
-			\caption{Percentage of examples with provably optimal $\vy$ being in the $K$-best lists plotted as a function of K, scaled with respect to the number of microlabels in the dataset.}
+			%\caption{Percentage of examples with provably optimal $\vy$ being in the $K$-best lists plotted as a function of K, scaled with respect to the number of microlabels in the dataset.}
 		\end{center}
 	\end{figure}
 \end{frame}
@@ -277,7 +308,9 @@ Aalto University
 %
 \begin{frame}{Conclusions}
 	\begin{itemize}
-		\item 
+		\item Theoretical study shows if a large margin structured output learner exist,  then the combination of a random sample of spanning trees will achieve a similar margin with a high probability.
+		\item The $K$-best inference algorithm is tractable which is proved theoretically and empirically.
+		\item \rta\ is not constrained by the availability of the output graph, it can therefore be applied to a wider range of multilabel classification problem where the output graph is believed to play an important role during learning.
 	\end{itemize}
 \end{frame}
 
