@@ -220,7 +220,7 @@ Aalto University
 	\begin{itemize}
 		\item The inference problem of \rta\ is defined as finding the multilabel $\vy_{\Tcal}(\vx)$ that maximizes the sum of scores over a collection of trees
 		\begin{align*}
-			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltoblue}F_{\Tcal}(\vx_i,\vy_i;\vw_{\Tcal})} = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)},
+			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltoblue}F_{\Tcal}(\vx_i,\vy_i;\vw_{\Tcal})} = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}.
 		\end{align*}
 		\item The inference problem on each individual spanning tree can be solve efficiently in $\Theta(l)$ by \textit{dynamic programming}
 		\begin{align*}
@@ -236,11 +236,14 @@ Aalto University
 %
 \begin{frame}{Fast Inference Over a Collection of Trees}
 	\begin{itemize}
-		\item Instead of compute the best multilabel $\vy_{T_t}$ from each individual spanning tree $T_t\in\Tcal$, we consider the $K$-best multilabel 
-		\begin{align*}
-			\Ycal_{T_t,K} = \{\vy_{T_t,1},\cdots,\vy_{T_t,K}\}.
-		\end{align*}
-		\item This gives a candidate list $\Ycal_{\Tcal,K}=\Ycal_{T_1,K}\cup\cdots\Ycal_{T_n,K}$ of $n\times K$ multilabels.
+		\item $K$-best inference algorithm:
+		\begin{itemize}
+			\item Instead of computing the best multilabel $\vy_{T_t}$ from each individual spanning tree $T_t\in\Tcal$, we consider the $K$-best multilabel 
+			\begin{align*}
+				\Ycal_{T_t,K} = \{\vy_{T_t,1},\cdots,\vy_{T_t,K}\}.
+			\end{align*}
+			\item This gives a candidate list $\Ycal_{\Tcal,K}=\Ycal_{T_1,K}\cup\cdots\Ycal_{T_n,K}$ of $n\times K$ multilabels.
+		\end{itemize}
 		\item We proved that with a high probability $\vy_{\Tcal}$ will appear in $\Ycal_{\Tcal,K}$.
 	\end{itemize}
 \end{frame}
