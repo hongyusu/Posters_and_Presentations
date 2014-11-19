@@ -19,7 +19,7 @@
 
 
 \institute[ICS]{
-Helsinki Institute for Information Technilogy HIIT\\
+Helsinki Institute for Information Technology HIIT\\
 Department of Information and Computer Science\\
 Aalto University
 }
@@ -116,7 +116,7 @@ Aalto University
 		\begin{itemize}
 			\item Assume the dependency can be modeled by a complete set of pairwise correlations.
 			\item Build a structured output learning model with a complete graph as the output graph.
-			\item Solve the optimization problem.
+			\item Solve the optimization problem and the inference problem.
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -152,7 +152,7 @@ Aalto University
 		\item $\vw$ ensures an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
 		\item The predicted output $\vy(\vx)$ for a given input $\vx$ is computed by
 		\begin{align*}
-			\vy(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw),
+			\vy(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw}{\phi_G(\vx,\vy)},
 		\end{align*}
 		which is called \textit{inference problem}.
 		\item The {inference problem} is \nphard\ for most joint feature maps on the complete graph.
@@ -169,9 +169,9 @@ Aalto University
 			\gamma_G(\vx_i;\vw) = \underset{\vy\in\vYcal}{\minimize}\,[F(\vx_i,\vy_i;\vw)-F(\vx_i,\vy;\vw)].
 		\end{align*}
 		\item $\vw$ is solved by \textit{maximum-margin principle} which aims to maximize $\gamma(\vx_i;\vw)$ over all training example.
-		\item The problems:
+		\item The problem includes:
 		\begin{itemize}
-			\item \nphardness of the inference problem on a complete graph.
+			\item The \nphardness\ of the inference problem on a complete graph.
 			\item A large parameter space: $\Theta(k^2)$
 		\end{itemize}
 		\item We aim to use a joint feature map that allows the inference problem be solved in polynomial time.
@@ -187,11 +187,11 @@ Aalto University
 		\item $\Tcal=\{T_1,\cdots,T_n\}$ is a set of spanning trees randomly sampled from the complete graph $G$.
 		\item The compatibility score can be re-defined based on $\Tcal$ as
 		\begin{align*}
-			F(\vx_i,\vy_i;\vw) = \sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}
+			F_{\Tcal}(\vx_i,\vy_i;\vw_{T_t}) = \sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}.
 		\end{align*}
-		\item The inference problem of predicting the output $\vy_{\Tcal}(\vx)$ for a given input is 
+		\item The inference problem of predicting the output $\vy_{\Tcal}(\vx)$ for a given input $\vw$ is 
 		\begin{align*}
-			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)},
+			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F_{\Tcal}(\vx,\vy;\vw_{\Tcal})=\underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
 		\end{align*}
 	\end{itemize}
 \end{frame}
@@ -202,7 +202,7 @@ Aalto University
 	\begin{itemize}
 		\item The margin of an example $\vx_i$ achieved by $\Tcal$ is
 		\begin{align*}
-		\gamma_{\Tcal}(\vx_i;\vw) = \underset{\vy\in\vYcal}{\minimize}\,[\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}-\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy)}].
+		\gamma_{\Tcal}(\vx_i;\vw_{\Tcal}) = \underset{\vy\in\vYcal}{\minimize}\,[\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}-\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy)}].
 	\end{align*}
 		\item To learn $\vw_{T_t},\forall T_t\in\Tcal$ we solve the optimization problem
 		\begin{align*}
@@ -220,11 +220,11 @@ Aalto University
 	\begin{itemize}
 		\item The inference problem of \rta\ is defined as finding the multilabel $\vy_{\Tcal}(\vx)$ that maximizes the sum of scores over a collection of trees
 		\begin{align*}
-			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltoblue}F_{\Tcal}(\vx_i,\vy_i;\vw_{\Tcal})} = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}.
+			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltoblue}F_{\Tcal}(\vx,\vy;\vw_{\Tcal})} = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
 		\end{align*}
 		\item The inference problem on each individual spanning tree can be solve efficiently in $\Theta(l)$ by \textit{dynamic programming}
 		\begin{align*}
-			\vy_{T_t}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltored}F_{T_t}(\vx_i,\vy_i;\vw_{T_t})}= \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}.
+			\vy_{T_t}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltored}F_{T_t}(\vx,\vy;\vw_{T_t})}= \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
 		\end{align*}
 		\item There is no guarantee that there exists a tree $T_t\in\Tcal$ for which the maximizer of ${\color{aaltored}F_{T_t}}$ is the maximizer of ${\color{aaltoblue}F_{\Tcal}}$.
 	\end{itemize}
@@ -308,7 +308,7 @@ Aalto University
 %
 \begin{frame}{Conclusions}
 	\begin{itemize}
-		\item Theoretical study shows if a large margin structured output learner exist,  then the combination of a random sample of spanning trees will achieve a similar margin with a high probability.
+		\item Theoretical study shows if a large margin structured output learner exists,  then the combination of a random sample of spanning trees will achieve a similar margin with a high probability.
 		\item The $K$-best inference algorithm is tractable which is proved theoretically and empirically.
 		\item \rta\ is not constrained by the availability of the output graph, it can therefore be applied to a wider range of multilabel classification problem where the output graph is believed to play an important role during learning.
 	\end{itemize}
