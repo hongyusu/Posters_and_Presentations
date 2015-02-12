@@ -190,7 +190,7 @@ Aalto University
 			F(\vx,\vy,\vw_G) &= \sum_{e\in G}\ip{\vw_{G,e}}{\phi_{G,e}(\vx,\vy_e)} \\
 			& = \frac{1}{\ell^{\ell-2}}\sum_{T\in S(G)}\sqrt{\frac{\ell}{2}}\ip{\vw_{T}}{\phi_{T}(\vx,\vy_e)}\\
 			& = \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
-			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \quad 	\frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1, \quad n=\ell^{\ell-2}.
+			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, n=\ell^{\ell-2}.
 		\end{align*}
 	\end{itemize}
 \end{frame}
@@ -203,7 +203,7 @@ Aalto University
 		\item Recall
 		\begin{align*}
 			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
-			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \quad 	\frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1, \xcancel{\quad n=\ell^{\ell-2}}.
+			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, \xcancel{n=\ell^{\ell-2}}.
 		\end{align*}
 	\end{itemize}
 \end{frame}
@@ -215,10 +215,13 @@ Aalto University
 		\item A sample $\Tcal$ of $n$ spanning trees drawn from $G$.
 		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
 		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
-		\item Conical combination
+		\item Conical combination of spanning trees
 		\begin{align*}
 			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy)}\\
-			\sum_{i=1}^{n}q_i^2 &= 1,\, \sum_{i=1}^{n}q_i \ge 1.
+			\sum_{i=1}^{n}q_i^2 &= 1,\, q_i \ge 0.
+		\end{align*}
+		\item Optimization problem
+		\begin{align*}
 		\end{align*}
 	\end{itemize}
 \end{frame}
