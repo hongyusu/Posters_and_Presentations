@@ -160,11 +160,11 @@ Aalto University
 
 
 %
-\begin{frame}{How to learn $\vw$ on a complete graph}
+\begin{frame}{How to learn $\vw$ on a complete graph?}
 	\begin{itemize}
 		\item The \textit{margin} of an example $\vx_i$ is
 		\begin{align*}
-			\gamma_G(\vx_i;\vw_G) = \underset{\vy\in\vYcal/\vy_i}{\minimize}\,[F(\vx_i,\vy_i;\vw_G)-F(\vx_i,\vy;\vw_G)].
+			\gamma_G(\vx_i;\vw_G) = F(\vx_i,\vy_i;\vw_G) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\,F(\vx_i,\vy;\vw_G).
 		\end{align*}
 		\item $\vw$ is solved by \textit{maximum-margin principle} which aims to maximize $\gamma(\vx_i;\vw_G)$ over all training example.
 		\item The problems are:
