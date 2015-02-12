@@ -136,31 +136,23 @@ Aalto University
 		\item Training examples comes in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}\in\vXcal\times\vYcal$.
 		\item A complete graph $G=(E,V)$ is used as the output graph.
 		\item $\Gamma_G(\vy_i)$ is the output feature map of $\vy_i$ on $G$
-		{\footnotesize
 		\begin{align*}
 			\Gamma_G(\vy_i) &= \{\Gamma_e(\vy_{i,e})\}_{e\in G},\\
 			 \Gamma_e(\vy_{i,e}) &= [\vone_{\vy_{i,e}==00},\vone_{\vy_{i,e}==01},\vone_{\vy_{i,e}==10},\vone_{\vy_{i,e}==11}]
 		\end{align*}
-		}
 		\item A joint feature map of $(\vx_i,\vy_i)$
-		{\footnotesize
 		\begin{align*}
 			\phi_G(\vx_i,\vy_i) = \varphi(\vx_i)\otimes\Gamma_G(\vy_i) = \{\phi_e(x_i,\vy_{i,e})\}_{e\in G}.
 		\end{align*}
-		}
 		\item A compatibility score is defined as
-		{\footnotesize
 		\begin{align*}
 			F(\vx,\vy;\vw_G) = \ip{\vw_G}{\phi_G(\vx,\vy)}=\sum_{e\in G}\ip{\vw_{G,e}}{\phi_e(\vx,\vy_{e})}
-		\end{align*} 
-		}
+		\end{align*}
 		\item $\vw$ ensures an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
 		\item The predicted output $\vy(\vx)$ for a given input $\vx$ is computed by
-		{\footnotesize
 		\begin{align*}
 			\vy(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw_G) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_G}{\phi_G(\vx,\vy)},
 		\end{align*}
-		}
 		which is called \textit{inference problem}.
 		\item The {inference problem} is \nphard\ for most joint feature maps on the complete graph.
 	\end{itemize}
@@ -172,11 +164,9 @@ Aalto University
 \begin{frame}{How to learn $\vw$ on a complete graph?}
 	\begin{itemize}
 		\item The \textit{margin} of an example $\vx_i$ is
-		{\footnotesize
 		\begin{align*}
 			\gamma_G(\vx_i;\vw_G) = F(\vx_i,\vy_i;\vw_G) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\,F(\vx_i,\vy;\vw_G).
 		\end{align*}
-		}
 		\item $\vw$ is solved by \textit{maximum-margin principle} which aims to maximize $\gamma(\vx_i;\vw_G)$ over all training example.
 		\item The problems are:
 		\begin{itemize}
@@ -196,14 +186,12 @@ Aalto University
 		\item $\vw_{T}=\{\vw_{G,e}\}_{e\in T}$ is the projection of $\vw_G$ on $T$.
 		\item $\phi_T(\vx,\vy)=\{\phi_e(\vx,\vy)\}_{e\in T}$ is the projection of $\phi_G(\vx,\vy)$ on $T$.
 		\item Rewrite
-		{\footnotesize
 		\begin{align*}
 			F(\vx,\vy,\vw_G) &= \sum_{e\in G}\ip{\vw_{G,e}}{\phi_{G,e}(\vx,\vy_e)} \\
 			& = \frac{1}{\ell^{\ell-2}}\sum_{T\in S(G)}\sqrt{\frac{\ell}{2}}\ip{\vw_{T}}{\phi_{T}(\vx,\vy_e)}\\
 			& = \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
 			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, n=\ell^{\ell-2}.
 		\end{align*}
-		}
 	\end{itemize}
 \end{frame}
 
@@ -213,12 +201,10 @@ Aalto University
 	\begin{itemize}
 		\item If there is a predictor $\vw_G$ on complete graph achieves a margin on some training data, with high probability we need $n$ spanning tree predictors $\{\vw_{T_i}\}_{i=1}^n$ to achieve a close margin. $n$ is quadratic in terms of $\ell$.
 		\item Recall
-		{\footnotesize
 		\begin{align*}
 			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
 			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, \xcancel{n=\ell^{\ell-2}}.
 		\end{align*}
-		}
 	\end{itemize}
 \end{frame}
 
@@ -230,28 +216,22 @@ Aalto University
 		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
 		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
 		\item Conical combination of spanning trees
-		{\footnotesize
 		\begin{align*}
 			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy)}\\
 			\sum_{i=1}^{n}q_i^2 &= 1,\, q_i \ge 0,\, \forall i\in\{1,\cdots,n\}.
 		\end{align*}
-		}
-		\item Optimization problem
-		{\footnotesize
+		\item To solve $\{\vw_{T_i}\}_{T_i\in\Tcal}$, we need to work on the optimization problem
 		\begin{align*}
 			\underset{\vxi,\gamma,\vq,\Wcal}{\minimize} \quad& \frac{1}{2\gamma^2} + \frac{C}{\gamma}\sum_{k=1}^m\xi_k\\
 			\st \quad& \frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy_k)} -\underset{\vy\in\vYcal}{\maximize}\frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy)}\\
 			&\ge \gamma-\xi_k, \xi_k\ge 0,\forall k\in\{1,\cdots,m\},\sum_{i=1}^nq_i^2=1,q_i\ge0,\forall i\in\{1,\cdots,n\}.
 		\end{align*}
-		}
 		\item This is equivalent to
-		{\footnotesize
 		\begin{align*}
 			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\sum_{i=1}^{n}\norm{\vw_{T_i}}^2 + C\sum_{k=1}^{m}\xi_k\\
 			\st & \quad \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
 			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
 		\end{align*}
-		}
 	\end{itemize}
 \end{frame}
 
@@ -263,156 +243,30 @@ Aalto University
 		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
 		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
 		\item Conical combination of spanning trees
-		{\footnotesize
 		\begin{align*}
 			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy)}\\
 			\sum_{i=1}^{n}q_i &= 1,\, q_i \ge 0,\, \forall i\in\{1,\cdots,n\}.
 		\end{align*}
-		}
-		\item Optimization problem
-		{\footnotesize
+		\item To solve $\{\vw_{T_i}\}_{T_i\in\Tcal}$, we need to work on the optimization problem
 		\begin{align*}
 			\underset{\vxi,\gamma,\vq,\Wcal}{\minimize} \quad& \frac{1}{2\gamma^2} + \frac{C}{\gamma}\sum_{k=1}^m\xi_k\\
 			\st \quad& \frac{1}{{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy_k)} -\underset{\vy\in\vYcal}{\maximize}\frac{1}{{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy)}\\
 			&\ge \gamma-\xi_k, \xi_k\ge 0,\forall k\in\{1,\cdots,m\},\sum_{i=1}^nq_i=1,q_i\ge0,\forall i\in\{1,\cdots,n\}.
 		\end{align*}
-		}
 		\item This is equivalent to
-		{\footnotesize
 		\begin{align*}
 			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\left(\sum_{i=1}^{n}\norm{\vw_{T_i}}\right)^2 + C\sum_{k=1}^{m}\xi_k\\
 			\st & \quad \frac{1}{{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
-			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
+			& \quad \xi_k\ge0,\, \forall k \in \set{1,\dots,m}.
 		\end{align*}
-		}
-	\end{itemize}
-\end{frame}
-
-
-
-%
-\begin{frame}{Random Spanning Tree Approximation}
-	\begin{itemize}
-		\item We proved if a large margin structured output predictor exists, then combining a small sample of random trees will, with a high probability, generate a predictor with good generalization.
-		\item $\Tcal=\{T_1,\cdots,T_n\}$ is a set of spanning trees randomly sampled from the complete graph $G$.
-		\item The compatibility score can be re-defined based on $\Tcal$ as
+		\item This can be expressed equivalently as
 		\begin{align*}
-			F_{\Tcal}(\vx_i,\vy_i;\vw_{\Tcal}) = \sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}.
-		\end{align*}
-		\item The inference problem of predicting the output $\vy_{\Tcal}(\vx)$ for a given input $\vx$ is 
-		\begin{align*}
-			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F_{\Tcal}(\vx,\vy;\vw_{\Tcal})=\underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
+			\underset{\vw_{T_i},\xi_i,\lambda_i}{\minimize} & \quad \frac{1}{2}\sum_{i=1}^{n}\frac{1}{\lambda_{i}}\norm{\vw_{T_i}}^2 + C\sum_{k=1}^{m}\xi_k\\
+			\st & \quad \frac{1}{{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
+			& \quad \xi_k\ge0,\, \forall k \in \set{1,\dots,m},\, \sum_{i=1}^{n}\lambda_i=1,\,\lambda_i\ge0,\,\forall i\in\{1,\cdots,n\}.
 		\end{align*}
 	\end{itemize}
 \end{frame}
-
-
-%
-\begin{frame}{Optimization Problem}
-	\begin{itemize}
-		\item The margin of an example $\vx_i$ achieved by $\Tcal$ is
-		\begin{align*}
-		\gamma_{\Tcal}(\vx_i;\vw_{\Tcal}) = \underset{\vy\in\vYcal/\vy_i}{\minimize}\,[\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy_i)}-\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx_i,\vy)}].
-	\end{align*}
-		\item To learn $\{\vw_{T_t}\}_{T_t\in\Tcal}$ we solve the optimization problem
-		\begin{align*}
-			\underset{\vw_{T_t},\xi_i}{\minimize} & \quad \frac{1}{2}\sum_{t=1}^{n}\norm{\vw_{T_t}}^2 + C\sum_{i=1}^{m}\xi_i\\
-			\st & \quad \sum_{t=1}^{n}{ \langle \vw_{T_t}, \phib_{T_t}(\vx_i,\vy_i) \rangle} - \underset{\vy \neq \vy_i}{\maximize\ } \sum_{t=1}^{n}{\langle \vw_{T_t}, \phib_{T_t}(\vx_i,\vy) \rangle } \geq 1 -  \xi_i, \\
-			& \quad \xi_i\ge0\, , \forall\ i \in \set{1,\dots,m},
-		\end{align*}
-	\end{itemize}
-\end{frame}
-
-
-
-%
-\begin{frame}{Inference Problem}
-	\begin{itemize}
-		\item The inference problem of \rta\ is defined as finding the multilabel $\vy_{\Tcal}(\vx)$ that maximizes the sum of scores over a collection of trees
-		\begin{align*}
-			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltoblue}F_{\Tcal}(\vx,\vy;\vw_{\Tcal})} = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
-		\end{align*}
-		\item The inference problem on each individual spanning tree can be solve efficiently in $\Theta(l)$ by \textit{dynamic programming}
-		\begin{align*}
-			\vy_{T_t}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltored}F_{T_t}(\vx,\vy;\vw_{T_t})}= \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
-		\end{align*}
-		\item There is no guarantee that there exists a tree $T_t\in\Tcal$ in which the maximizer of ${\color{aaltored}F_{T_t}}$ is the maximizer of ${\color{aaltoblue}F_{\Tcal}}$.
-	\end{itemize}
-\end{frame}
-
-
-
-
-%
-\begin{frame}[allowframebreaks]{Fast Inference Over a Collection of Trees}
-	\begin{itemize}
-		\item For each tree $T_t$, instead of computing the best multilabel $\vy_{T_t}$, we compute $K$-best multilabels in $\Theta(Kl)$ time
-		\begin{align*}
-			\Ycal_{T_t,K} = \{\vy_{T_t,1},\cdots,\vy_{T_t,K}\}.
-		\end{align*}
-		\item Performing the same computation on all trees gives a candidate list of $n\times K$ multilabels in $\Theta(nKl)$ time
-		\begin{align*}
-			\Ycal_{\Tcal,K}=\Ycal_{T_1,K}\cup\cdots\Ycal_{T_n,K}.
-		\end{align*}
-		\item For now, we assume the best scoring multilabel of a collection of trees exists in the list $\Ycal_{\Tcal,K}$. 
-		\item Assume 
-		\begin{align*}
-		\vy_K^*=\underset{\vy\in\Ycal_{\Tcal,K}}{\argmax}\,F_{\Tcal}(\vx,\vy;\vw_{\Tcal}).
-		\end{align*} 
-		If
-		\begin{align*}
-			F_{\Tcal}(\vx,\vy_K^*;\vw_{\Tcal})\ge\frac{1}{n}\sum_{t=1}^{n}F_{T_t}(\vx,\vy_{T_t,K},\vw_{T_t})=\theta_{\vx}(K),
-		\end{align*}
-		then 
-		\begin{align*}
-			F_{\Tcal}(\vx,\vy_K^*;\vw_{\Tcal}) = \underset{\vy\in\vYcal}{\maximize}\,F_{\Tcal}(\vx,\vy;\vw_{\Tcal}).
-		\end{align*}
-		\framebreak
-		\item For example, $\Tcal=\{T_1,T_2\},\vYcal=\Ycal_1\times\Ycal_2,\Ycal_i=\{+,-\}$
-		\begin{table}
-			\begin{tabular}{|c|cc|cc|c|} \hline
-				\multirow{2}{*}{} & \multicolumn{2}{c|}{$T_1$} & \multicolumn{2}{c|}{$T_2$} & $\theta_{\vx}(K)$\\ \cline{2-5}
-				& $\vy_{T_1,K}$ & $F_{T_1}(\vx,\vy_{T_1,K})$ & $\vy_{T_1,K}$ & $F_{T_1}(\vx,\vy_{T_1,K})$ & \\ \hline
-				$K=1$ & $+-$ & $5$ & $--$ & $4$ & $9$\\ \hline
-				$K=2$ & $++$ & $4$ & $-+$ & $3$ & $7$\\ \hline
-				$K=3$ & $-+$ & $3$ & $++$ & $3$ & $6$\\ \hline
-				$K=4$ & $--$ & $3$ & $+-$ & $2$ & $5$\\ \hline
-			\end{tabular}
-		\end{table}
-		\item We proved that with a high probability $\vy_{\Tcal}$ will appear in $\Ycal_{\Tcal,K}$.
-	\end{itemize}
-\end{frame}
-
-
-
-%
-\begin{frame}{Performance of the Inference Algorithm}
-	\begin{itemize}
-		\item $10$ datasets, $|\Tcal| = \{5,10,40\}, K=\{2,4,8,16,32,40,60\}$
-		\item X-axis is the percentage of examples with exact inference.
-		\item Y-axis is the value of $K$ as the percentage of the number of microlabels.
-		\item $K=100\%|Y|$ corresponds to a complexity of $\Theta(nl^2)$.
-	\end{itemize}
-	\begin{figure}
-		\begin{center}
-			\includegraphics[width=11cm]{./result_plot.pdf}
-			%\caption{Percentage of examples with provably optimal $\vy$ being in the $K$-best lists plotted as a function of K, scaled with respect to the number of microlabels in the dataset.}
-		\end{center}
-	\end{figure}
-\end{frame}
-
-
-
-%
-\begin{frame}{Prediction Performance}
-	\begin{figure}
-		\begin{center}
-			\includegraphics[width=11cm]{./result_table.pdf}
-			\caption{Prediction performance of each algorithm in terms of microlabel loss and 0/1 loss. The best performing algorithm is highlighted with boldface, the second best is in italic}
-		\end{center}
-	\end{figure}
-\end{frame}
-
 
 
 %
