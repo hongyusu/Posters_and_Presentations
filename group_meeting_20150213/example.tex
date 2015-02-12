@@ -73,7 +73,7 @@ Aalto University
 
 
 %
-\begin{frame}{Structured Output Learning}
+\begin{frame}{Structured output learning}
 	\begin{itemize}
 		\item There is an \textit{output graph} connecting multiple labels.
 		\begin{itemize}
@@ -82,7 +82,7 @@ Aalto University
 		\end{itemize}
 		\item Hierarchical classification:
 		\begin{itemize}
-			\item The output graph is a rooted tree or a directed graph defining the different levels of granularities.
+			\item The output graph is a rooted tree or a directed graph defining different levels of granularities.
 			\item For example, \svmstruct, ...
 		\end{itemize}
 		\item Graph labeling:
@@ -97,18 +97,18 @@ Aalto University
 
 
 %
-\begin{frame}{Research Question}
+\begin{frame}{Research question}
 	\begin{itemize}
 		\item The output graph is hidden in many applications.
 		\begin{itemize}
 			\item For example, a surveillance photo can be tagged with ``building'', ``road'', ``pedestrian'', and ``vehicle''.
 		\end{itemize}
-		\item We focus on the problem in structured output learning when the output graph is not observed.
-		\item Our approach:
+		\item We study the problem in structured output learning when the output graph is not observed.
+		\item In particular:
 		\begin{itemize}
-			\item Assume the dependency can be modeled by a complete set of pairwise correlations.
+			\item Assume the dependency can be expressed by a complete set of pairwise correlations.
 			\item Build a structured output learning model with a complete graph as the output graph.
-			\item Solve the optimization problem and the inference problem.
+			\item Solve the optimization problem and the inference problem (\nphard).
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -116,12 +116,15 @@ Aalto University
 
 
 %
-\begin{frame}{Contributions}
+\begin{frame}{In this presentation}
 	\begin{itemize}
-		\item A structured output learning model which performs max-margin learning on a random sample of spanning tree.
-		\item The model is not constrained by the availability of the output graph.
-		\item The \nphard\ inference problem can be solved by a polynomial time algorithm with a condition guaranteeing the exact solution.
-		\item The theoretical analysis and the empirical results verify the performance of the proposed model.
+		\item A structured prediction model which performs max-margin learning on a random sample of spanning tree.
+		\item Two ways to combine the set of random spanning trees.
+		\begin{itemize}
+			\item conical combination
+			\item convex combination
+		\end{itemize}
+		\item The corresponding optimization problem.
 	\end{itemize}
 \end{frame}
 
@@ -132,14 +135,17 @@ Aalto University
 	\begin{itemize}
 		\item Training examples comes in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}\in\vXcal\times\vYcal$.
 		\item A complete graph $G=(E,V)$ is used as the output graph.
-		\item $\Gamma_G(\vy_i)$ is the output feature map of the multilabel $\vy_i$ on a complete graph $G$.
-		\item Each example is mapped to a joint feature space by a joint feature map
+		\item $\Gamma_G(\vy_i)$ is the output feature map of $\vy_i$ on $G$
 		\begin{align*}
-			\phi_G(\vx_i,\vy_i) = \varphi(\vx_i)\otimes\Gamma_G(\vy_i).
+			\Gamma_G(\vy_i) = \{\Gamma_e(\vy_{i,e})\}_{e\in G}.
+		\end{align*}
+		\item A joint feature map of $(\vx_i,\vy_i)$
+		\begin{align*}
+			\phi_G(\vx_i,\vy_i) = \varphi(\vx_i)\otimes\Gamma_G(\vy_i) = \{\phi_e(x_i,\vy_{i,e})\}_{e\in G}.
 		\end{align*}
 		\item A compatibility score is defined as
 		\begin{align*}
-			F(\vx,\vy;\vw_G) = \ip{\vw_G}{\phi_G(\vx,\vy)}=\sum_{e\in E}\ip{\vw_{G,e}}{\phi_G(\vx,\vy_{e})}
+			F(\vx,\vy;\vw_G) = \ip{\vw_G}{\phi_G(\vx,\vy)}=\sum_{e\in G}\ip{\vw_{G,e}}{\phi_e(\vx,\vy_{e})}
 		\end{align*} 
 		\item $\vw$ ensures an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
 		\item The predicted output $\vy(\vx)$ for a given input $\vx$ is computed by
@@ -154,7 +160,7 @@ Aalto University
 
 
 %
-\begin{frame}{To Learn $\vw$ on A Complete Graph}
+\begin{frame}{How to learn $\vw$ on a complete graph}
 	\begin{itemize}
 		\item The \textit{margin} of an example $\vx_i$ is
 		\begin{align*}
