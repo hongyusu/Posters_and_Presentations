@@ -13,14 +13,14 @@
 
 
 
-\title{Structured Output Learning with A Random Sample of Spanning Trees}
+\title{Max-Margin Learning with A Random Sample of Spanning Trees}
 \author{Hongyu Su}
 
 
 
 \institute[ICS]{
 Helsinki Institute for Information Technology HIIT\\
-Department of Information and Computer Science\\
+Department of Computer Science\\
 Aalto University
 }
 
@@ -59,7 +59,7 @@ Aalto University
 		\item Multilabel classification is an important research field in machine learning.
 		\begin{itemize}
 			\item For example, a document can be classified as ``science'', ``genomics'', and ``drug discovery''.
-			\item Each input variable $\vx\in\vXcal$ is simultaneously associated with multiple output variables $\vy\in\vYcal,\vYcal=\Ycal_1\times\cdots\times\Ycal_l$.
+			\item Each input variable $\vx\in\vXcal$ is associated with multiple output variables $\vy\in\vYcal,\vYcal=\Ycal_1\times\cdots\times\Ycal_l,\Ycal_i=\{+1,-1\}$.
 			\item The goal is to find a mapping function that predicts the best values of an output given an input $f\in\Hcal:\vXcal\rightarrow\vYcal$.
 		\end{itemize}
 		\item The central problems of multilabel classification:
@@ -73,19 +73,11 @@ Aalto University
 
 
 %
-\begin{frame}{Flat Multilabel Classification}
-	\begin{itemize}
-		\item Multiple output variables are treated as a ``flat'' vector.
-		\item For example, \mlknn, \adaboostmh, \mtl, ...
-		\item It is difficult to take into consideration the correlation of labels.
-	\end{itemize}
-\end{frame}
-
 \begin{frame}{Structured Output Learning}
 	\begin{itemize}
 		\item There is an \textit{output graph} connecting multiple labels.
 		\begin{itemize}
-			\item A set of nodes corresponds to the multiple labels.
+			\item A set of nodes represents multiple labels.
 			\item A set of edges represents the correlation between labels.
 		\end{itemize}
 		\item Hierarchical classification:
