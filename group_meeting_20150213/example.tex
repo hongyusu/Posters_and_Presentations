@@ -50,7 +50,7 @@ Aalto University
 \begin{document}
 
 \aaltotitleframe
-
+\footnotesize
 
 
 %
@@ -136,23 +136,31 @@ Aalto University
 		\item Training examples comes in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}\in\vXcal\times\vYcal$.
 		\item A complete graph $G=(E,V)$ is used as the output graph.
 		\item $\Gamma_G(\vy_i)$ is the output feature map of $\vy_i$ on $G$
+		{\footnotesize
 		\begin{align*}
 			\Gamma_G(\vy_i) &= \{\Gamma_e(\vy_{i,e})\}_{e\in G},\\
 			 \Gamma_e(\vy_{i,e}) &= [\vone_{\vy_{i,e}==00},\vone_{\vy_{i,e}==01},\vone_{\vy_{i,e}==10},\vone_{\vy_{i,e}==11}]
 		\end{align*}
+		}
 		\item A joint feature map of $(\vx_i,\vy_i)$
+		{\footnotesize
 		\begin{align*}
 			\phi_G(\vx_i,\vy_i) = \varphi(\vx_i)\otimes\Gamma_G(\vy_i) = \{\phi_e(x_i,\vy_{i,e})\}_{e\in G}.
 		\end{align*}
+		}
 		\item A compatibility score is defined as
+		{\footnotesize
 		\begin{align*}
 			F(\vx,\vy;\vw_G) = \ip{\vw_G}{\phi_G(\vx,\vy)}=\sum_{e\in G}\ip{\vw_{G,e}}{\phi_e(\vx,\vy_{e})}
 		\end{align*} 
+		}
 		\item $\vw$ ensures an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
 		\item The predicted output $\vy(\vx)$ for a given input $\vx$ is computed by
+		{\footnotesize
 		\begin{align*}
 			\vy(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw_G) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_G}{\phi_G(\vx,\vy)},
 		\end{align*}
+		}
 		which is called \textit{inference problem}.
 		\item The {inference problem} is \nphard\ for most joint feature maps on the complete graph.
 	\end{itemize}
@@ -164,9 +172,11 @@ Aalto University
 \begin{frame}{How to learn $\vw$ on a complete graph?}
 	\begin{itemize}
 		\item The \textit{margin} of an example $\vx_i$ is
+		{\footnotesize
 		\begin{align*}
 			\gamma_G(\vx_i;\vw_G) = F(\vx_i,\vy_i;\vw_G) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\,F(\vx_i,\vy;\vw_G).
 		\end{align*}
+		}
 		\item $\vw$ is solved by \textit{maximum-margin principle} which aims to maximize $\gamma(\vx_i;\vw_G)$ over all training example.
 		\item The problems are:
 		\begin{itemize}
@@ -186,12 +196,14 @@ Aalto University
 		\item $\vw_{T}=\{\vw_{G,e}\}_{e\in T}$ is the projection of $\vw_G$ on $T$.
 		\item $\phi_T(\vx,\vy)=\{\phi_e(\vx,\vy)\}_{e\in T}$ is the projection of $\phi_G(\vx,\vy)$ on $T$.
 		\item Rewrite
+		{\footnotesize
 		\begin{align*}
 			F(\vx,\vy,\vw_G) &= \sum_{e\in G}\ip{\vw_{G,e}}{\phi_{G,e}(\vx,\vy_e)} \\
 			& = \frac{1}{\ell^{\ell-2}}\sum_{T\in S(G)}\sqrt{\frac{\ell}{2}}\ip{\vw_{T}}{\phi_{T}(\vx,\vy_e)}\\
 			& = \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
 			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, n=\ell^{\ell-2}.
 		\end{align*}
+		}
 	\end{itemize}
 \end{frame}
 
@@ -201,35 +213,82 @@ Aalto University
 	\begin{itemize}
 		\item If there is a predictor $\vw_G$ on complete graph achieves a margin on some training data, with high probability we need $n$ spanning tree predictors $\{\vw_{T_i}\}_{i=1}^n$ to achieve a close margin. $n$ is quadratic in terms of $\ell$.
 		\item Recall
+		{\footnotesize
 		\begin{align*}
 			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
 			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, \xcancel{n=\ell^{\ell-2}}.
 		\end{align*}
+		}
 	\end{itemize}
 \end{frame}
 
 
 %
-\begin{frame}{Conical combination}
+\begin{frame}[allowframebreaks]{Conical combination}
 	\begin{itemize}
 		\item A sample $\Tcal$ of $n$ spanning trees drawn from $G$.
 		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
 		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
 		\item Conical combination of spanning trees
+		{\footnotesize
 		\begin{align*}
 			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy)}\\
-			\sum_{i=1}^{n}q_i^2 &= 1,\, q_i \ge 0.
+			\sum_{i=1}^{n}q_i^2 &= 1,\, q_i \ge 0,\, \forall i\in\{1,\cdots,n\}.
 		\end{align*}
+		}
 		\item Optimization problem
+		{\footnotesize
 		\begin{align*}
+			\underset{\vxi,\gamma,\vq,\Wcal}{\minimize} \quad& \frac{1}{2\gamma^2} + \frac{C}{\gamma}\sum_{k=1}^m\xi_k\\
+			\st \quad& \frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy_k)} -\underset{\vy\in\vYcal}{\maximize}\frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy)}\\
+			&\ge \gamma-\xi_k, \xi_k\ge 0,\forall k\in\{1,\cdots,m\},\sum_{i=1}^nq_i^2=1,q_i\ge0,\forall i\in\{1,\cdots,n\}.
 		\end{align*}
+		}
+		\item This is equivalent to
+		{\footnotesize
+		\begin{align*}
+			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\sum_{i=1}^{n}\norm{\vw_{T_i}}^2 + C\sum_{k=1}^{m}\xi_k\\
+			\st & \quad \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
+			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
+		\end{align*}
+		}
 	\end{itemize}
 \end{frame}
 
 
 %
-\begin{frame}{Convex combination}
+\begin{frame}[allowframebreaks]{Convex combination}
+	\begin{itemize}
+		\item A sample $\Tcal$ of $n$ spanning trees drawn from $G$.
+		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
+		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
+		\item Conical combination of spanning trees
+		{\footnotesize
+		\begin{align*}
+			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy)}\\
+			\sum_{i=1}^{n}q_i &= 1,\, q_i \ge 0,\, \forall i\in\{1,\cdots,n\}.
+		\end{align*}
+		}
+		\item Optimization problem
+		{\footnotesize
+		\begin{align*}
+			\underset{\vxi,\gamma,\vq,\Wcal}{\minimize} \quad& \frac{1}{2\gamma^2} + \frac{C}{\gamma}\sum_{k=1}^m\xi_k\\
+			\st \quad& \frac{1}{{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy_k)} -\underset{\vy\in\vYcal}{\maximize}\frac{1}{{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy)}\\
+			&\ge \gamma-\xi_k, \xi_k\ge 0,\forall k\in\{1,\cdots,m\},\sum_{i=1}^nq_i=1,q_i\ge0,\forall i\in\{1,\cdots,n\}.
+		\end{align*}
+		}
+		\item This is equivalent to
+		{\footnotesize
+		\begin{align*}
+			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\left(\sum_{i=1}^{n}\norm{\vw_{T_i}}\right)^2 + C\sum_{k=1}^{m}\xi_k\\
+			\st & \quad \frac{1}{{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
+			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
+		\end{align*}
+		}
+	\end{itemize}
 \end{frame}
+
+
 
 %
 \begin{frame}{Random Spanning Tree Approximation}
