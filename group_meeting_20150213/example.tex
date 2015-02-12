@@ -182,18 +182,32 @@ Aalto University
 %
 \begin{frame}{Superposition of random trees}
 	\begin{itemize}
-		\item $U(G)$ is a complete set of spanning tree generate from $G$.
+		\item $S(G)$ is a complete set of spanning tree generate from $G$.
 		\item $\vw_{T}=\{\vw_{G,e}\}_{e\in T}$ is the projection of $\vw_G$ on $T$.
 		\item $\phi_T(\vx,\vy)=\{\phi_e(\vx,\vy)\}_{e\in T}$ is the projection of $\phi_G(\vx,\vy)$ on $T$.
 		\item Rewrite
 		\begin{align*}
 			F(\vx,\vy,\vw_G) &= \sum_{e\in G}\ip{\vw_{G,e}}{\phi_{G,e}(\vx,\vy_e)} \\
-			& = \frac{1}{\ell^{\ell-2}}\sum_{T\in U(G)}\sqrt{\frac{\ell}{2}}\ip{\vw_{T}}{\phi_{T}(\vx,\vy_e)}\\
-			& = \esp{T\in U(G)}a_{T}\ip{\hat{\vw}_{T}}{\hat{\phi}_{T}(\vx,\vy_e)},\\
-			&\esp{T\in U(G)} a_T^2=1, \quad 	\esp{T\in U(G)} a_T\le1.
+			& = \frac{1}{\ell^{\ell-2}}\sum_{T\in S(G)}\sqrt{\frac{\ell}{2}}\ip{\vw_{T}}{\phi_{T}(\vx,\vy_e)}\\
+			& = \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
+			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \quad 	\frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1, \quad n=\ell^{\ell-2}.
 		\end{align*}
 	\end{itemize}
 \end{frame}
+
+
+%
+\begin{frame}{How many trees?}
+	\begin{itemize}
+		\item If there is a predictor $\vw_G$ on complete graph achieves a margin on some training data, with high probability we need $n$ spanning tree predictors $\{\vw_{T_i}\}_{i=1}^n$ to achieve a close margin. $n$ is quadratic in terms of $\ell$.
+		\item Recall
+		\begin{align*}
+			F(\vx,\vy,\vw_G) &= \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
+			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \quad 	\frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1, \xcancel{\quad n=\ell^{\ell-2}}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
 
 %
 \begin{frame}{Random Spanning Tree Approximation}
