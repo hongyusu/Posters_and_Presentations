@@ -124,7 +124,7 @@ Aalto University
 			\item conical combination in NIPS paper.
 			\item convex combination as future work.
 		\end{itemize}
-		\item The corresponding optimization problem.
+		\item Derivations and the corresponding optimization problems.
 	\end{itemize}
 \end{frame}
 
@@ -135,10 +135,11 @@ Aalto University
 	\begin{itemize}\footnotesize
 		\item Training examples comes in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}\in\vXcal\times\vYcal$.
 		\item A complete graph $G=(E,V)$ is used as the output graph.
-		\item $\Gamma_G(\vy_i)$ is the output feature map of $\vy_i$ on $G$
+		\item $\varphi(\vx)$ is the input feature map, e.g., a feature vector of $d$ dimension.
+		\item $\Gamma_G(\vy)$ is the output feature map of $\vy$ on $G$ of $4\times |E|$ dimension
 		\begin{align*}
-			\Gamma_G(\vy_i) &= \{\Gamma_e(\vy_{i,e})\}_{e\in G},\\
-			 \Gamma_e(\vy_{i,e}) &= [\vone_{\vy_{i,e}==00},\vone_{\vy_{i,e}==01},\vone_{\vy_{i,e}==10},\vone_{\vy_{i,e}==11}]
+			\Gamma_G(\vy) &= \{\Gamma_e(\vy_{e})\}_{e\in G},\\
+			 \Gamma_e(\vy_{e}) &= [\vone_{\vy_{e}==00},\vone_{\vy_{e}==01},\vone_{\vy_{e}==10},\vone_{\vy_{e}==11}]
 		\end{align*}
 		\item A joint feature map of $(\vx_i,\vy_i)$
 		\begin{align*}
@@ -151,7 +152,7 @@ Aalto University
 		\item $\vw$ ensures an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
 		\item The predicted output $\vy(\vx)$ for a given input $\vx$ is computed by
 		\begin{align*}
-			\vy(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw_G) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_G}{\phi_G(\vx,\vy)},
+			\vy(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw_G) = \underset{\vy\in\vYcal}{\argmax}\,\sum_{e\in G}\ip{\vw_{G,e}}{\phi_{G,e}(\vx,\vy_e)},
 		\end{align*}
 		which is called \textit{inference problem}.
 		\item The {inference problem} is \nphard\ for most joint feature maps on the complete graph.
@@ -165,14 +166,11 @@ Aalto University
 	\begin{itemize}\footnotesize
 		\item The \textit{margin} of an example $\vx_i$ is
 		\begin{align*}
-			\gamma_G(\vx_i;\vw_G) = F(\vx_i,\vy_i;\vw_G) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\,F(\vx_i,\vy;\vw_G).
+			\gamma_G(\vx_i;\vw_G) = F(\vx_i,{\color{aaltored} \vy_i};\vw_G) - \underset{{\color{aaltoblue}\vy\in\vYcal/\vy_i}}{\maximize}\,F(\vx_i,{\color{aaltoblue}\vy};\vw_G).
 		\end{align*}
-		\item $\vw$ is solved by \textit{maximum-margin principle} which aims to maximize $\gamma(\vx_i;\vw_G)$ over all training example.
-		\item The problems are:
-		\begin{itemize}\footnotesize
-			\item The \nphardness\ of the inference problem on a complete graph.
-			\item A large parameter space: $\Theta(k^2)$
-		\end{itemize}
+		\item $\vw$ is solved by \textit{max-margin principle} which aims to maximize $\gamma(\vx_i;\vw_G)$ over all training example $\vx_i,i\in\{1,\cdots,m\}$.
+		\item The inference problem on a complete graph is \nphardness.
+		\item The parameter space is quadratic in the number of microlabels $k$.
 		\item We aim to use a joint feature map that allows the inference problem be solved in polynomial time.
 	\end{itemize}
 \end{frame}
