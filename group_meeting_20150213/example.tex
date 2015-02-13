@@ -181,14 +181,15 @@ Aalto University
 \begin{frame}{Superposition of random trees}
 	\begin{itemize}\footnotesize
 		\item $S(G)$ is a complete set of spanning tree generate from $G$, $|S(G)| = \ell^{\ell-2}$.
-		\item $\vw_{T}=\{\vw_{G,e}\}_{e\in T}$ is the projection of $\vw_G$ on $T\in S(G)$.
+		\item Recall $\phi_G(\vx,\vy) = \{\phi_{G,e}(\vx,\vy_e)\}_{e\in G},\vw_G = \{\vw_{G,e}\}_{e\in G},||\phi_G(\vx,\vy)||=||\vw_{G}||=1$.
 		\item $\phi_T(\vx,\vy)=\{\phi_e(\vx,\vy)\}_{e\in T}$ is the projection of $\phi_G(\vx,\vy)$ on $T\in S(G)$.
+		\item $\vw_{T}=\{\vw_{G,e}\}_{e\in T}$ is the projection of $\vw_G$ on $T\in S(G)$.
 		\item Rewrite
 		\begin{align*}
 			F(\vx,\vy,\vw_G) &= \sum_{e\in G}\ip{\vw_{G,e}}{\phi_{G,e}(\vx,\vy_e)} \\
 			& = \frac{1}{\ell^{\ell-2}}\sum_{T\in S(G)}\sqrt{\frac{\ell}{2}}\ip{\vw_{T}}{\phi_{T}(\vx,\vy_e)}\\
-			& = \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
-			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, n=\ell^{\ell-2}.
+			& {\color{aaltored} =} \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
+			||\hat{\phi}_T(\vx,\vy)||=||\hat{\vw}_{T}||=1,\, & \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, n=\ell^{\ell-2}.
 		\end{align*}
 	\end{itemize}
 \end{frame}
@@ -200,8 +201,8 @@ Aalto University
 		\item If there is a predictor $\vw_G$ on complete graph achieves a margin on some training data, with high probability we need $n$ spanning tree predictors $\{\vw_{T_i}\}_{i=1}^n$ to achieve a close margin. $n$ is quadratic in terms of $\ell$.
 		\item Recall
 		\begin{align*}
-			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
-			& \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, \xcancel{n=\ell^{\ell-2}}.
+			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\underbrace{\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)}}_{F(\vx,\vy,\vw_{T_i})},\\
+			||\hat{\phi}_T(\vx,\vy)||=||\hat{\vw}_{T}||=1,\, & \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, \xcancel{n=\ell^{\ell-2}}.
 		\end{align*}
 	\end{itemize}
 \end{frame}
@@ -210,12 +211,12 @@ Aalto University
 %
 \begin{frame}[allowframebreaks]{Conical combination}
 	\begin{itemize}\footnotesize
-		\item A sample $\Tcal$ of $n$ spanning trees drawn from $G$.
-		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
+		\item A sample $\Tcal=\{T_1,\cdots,T_n\}$ of $n$ spanning trees drawn from $G$.
 		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
+		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
 		\item Conical combination of spanning trees
 		\begin{align*}
-			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy)}\\
+			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\underbrace{\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy)}}_{F(\vx,\vy,\vw_{T_i})}\\
 			\sum_{i=1}^{n}q_i^2 &= 1,\, q_i \ge 0,\, \forall i\in\{1,\cdots,n\}.
 		\end{align*}
 		\item To solve $\{\vw_{T_i}\}_{T_i\in\Tcal}$, we need to work on the optimization problem
@@ -230,6 +231,41 @@ Aalto University
 			\st & \quad \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
 			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
 		\end{align*}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Inference Problem}
+	\begin{itemize}
+		\item The inference problem of \rta\ is defined as finding the multilabel $\vy_{\Tcal}(\vx)$ that maximizes the sum of scores over a collection of trees
+		\begin{align*}
+			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltoblue}F_{\Tcal}(\vx,\vy;\vw_{\Tcal})} = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
+		\end{align*}
+		\item The inference problem on each individual spanning tree can be solve efficiently in $\Theta(l)$ by \textit{dynamic programming}
+		\begin{align*}
+			\vy_{T_t}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltored}F_{T_t}(\vx,\vy;\vw_{T_t})}= \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
+		\end{align*}
+		\item There is no guarantee that there exists a tree $T_t\in\Tcal$ in which the maximizer of ${\color{aaltored}F_{T_t}}$ is the maximizer of ${\color{aaltoblue}F_{\Tcal}}$.
+	\end{itemize}
+\end{frame}
+
+
+
+
+%
+\begin{frame}[allowframebreaks]{Fast Inference Over a Collection of Trees}
+	\begin{itemize}
+		\item For each tree $T_t$, instead of computing the best multilabel $\vy_{T_t}$, we compute $K$-best multilabels in $\Theta(Kl)$ time
+		\begin{align*}
+			\Ycal_{T_t,K} = \{\vy_{T_t,1},\cdots,\vy_{T_t,K}\}.
+		\end{align*}
+		\item Performing the same computation on all trees gives a candidate list of $n\times K$ multilabels in $\Theta(nKl)$ time
+		\begin{align*}
+			\Ycal_{\Tcal,K}=\Ycal_{T_1,K}\cup\cdots\Ycal_{T_n,K}.
+		\end{align*}
+		\item For now, we assume the best scoring multilabel of a collection of trees exists in the list $\Ycal_{\Tcal,K}$. 
+		\item We proved that with a high probability $\vy_{\Tcal}$ will appear in $\Ycal_{\Tcal,K}$.
+		\item We can identify $\vy_{\Tcal}$ from $\Ycal_{\Tcal,K}$.
 	\end{itemize}
 \end{frame}
 
@@ -270,9 +306,8 @@ Aalto University
 %
 \begin{frame}{Conclusions}
 	\begin{itemize}\footnotesize
-		\item Theoretical study shows if a large margin structured output learner exists,  then the combination of a random sample of spanning trees will achieve a similar margin with a high probability.
-		\item The $K$-best inference algorithm is tractable which is proved theoretically and empirically.
-		\item \rta\ is not constrained by the availability of the output graph, it can therefore be applied to a wider range of multilabel classification problem where the output graph is believed to play an important role during learning.
+		\item We show that if there is a learner $\vw_G$ defined on a complete graph achieves a margin on some training data, then with a random collection of spanning tree learners $\{\vw_{T_i}\}_{i=1}^n$ we can achieve a similar margin with high probability. Besides, $n$ is polynomial in $k$.
+		\item We propose two methods to combine the random collection of trees, namely, convex combination and conical combination.
 	\end{itemize}
 \end{frame}
 
