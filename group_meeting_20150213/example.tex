@@ -55,15 +55,15 @@ Aalto University
 
 %
 \begin{frame}{Multilabel classification}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item Multilabel classification is an important research field in machine learning.
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item For example, a document can be classified as ``science'', ``genomics'', and ``drug discovery''.
 			\item Each input variable $\vx\in\vXcal$ is associated with multiple output variables $\vy\in\vYcal,\vYcal=\Ycal_1\times\cdots\times\Ycal_l,\Ycal_i=\{+1,-1\}$.
 			\item The goal is to find a mapping function that predicts the best values of an output given an input $f\in\Hcal:\vXcal\rightarrow\vYcal$.
 		\end{itemize}
 		\item The central problems of multilabel classification:
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item The size of the output space $\vYcal$ is exponential in the number of microlabels.
 			\item The dependency of microlabels needs to be exploited to improve the prediction performance.
 		\end{itemize}
@@ -74,19 +74,19 @@ Aalto University
 
 %
 \begin{frame}{Structured output learning}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item There is an \textit{output graph} connecting multiple labels.
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item A set of nodes represents multiple labels.
 			\item A set of edges represents the correlation between labels.
 		\end{itemize}
 		\item Hierarchical classification:
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item The output graph is a rooted tree or a directed graph defining different levels of granularities.
 			\item For example, \svmstruct, ...
 		\end{itemize}
 		\item Graph labeling:
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item The output graph often takes a general form (e.g., a tree, a chain).
 			\item For example, \mmmn, \crf, \mmcrf, ...
 		\end{itemize}
@@ -98,14 +98,14 @@ Aalto University
 
 %
 \begin{frame}{Research question}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item The output graph is hidden in many applications.
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item For example, a surveillance photo can be tagged with ``building'', ``road'', ``pedestrian'', and ``vehicle''.
 		\end{itemize}
 		\item We study the problem in structured output learning when the output graph is not observed.
 		\item In particular:
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item Assume the dependency can be expressed by a complete set of pairwise correlations.
 			\item Build a structured output learning model with a complete graph as the output graph.
 			\item Solve the optimization problem and the inference problem (\nphard).
@@ -117,10 +117,10 @@ Aalto University
 
 %
 \begin{frame}{In this presentation}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item A structured prediction model which performs max-margin learning on a random sample of spanning tree.
 		\item Two ways to combine the set of random spanning trees.
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item conical combination
 			\item convex combination
 		\end{itemize}
@@ -132,7 +132,7 @@ Aalto University
 
 %
 \begin{frame}[allowframebreaks]{Model}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item Training examples comes in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}\in\vXcal\times\vYcal$.
 		\item A complete graph $G=(E,V)$ is used as the output graph.
 		\item $\Gamma_G(\vy_i)$ is the output feature map of $\vy_i$ on $G$
@@ -162,14 +162,14 @@ Aalto University
 
 %
 \begin{frame}{How to learn $\vw$ on a complete graph?}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item The \textit{margin} of an example $\vx_i$ is
 		\begin{align*}
 			\gamma_G(\vx_i;\vw_G) = F(\vx_i,\vy_i;\vw_G) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\,F(\vx_i,\vy;\vw_G).
 		\end{align*}
 		\item $\vw$ is solved by \textit{maximum-margin principle} which aims to maximize $\gamma(\vx_i;\vw_G)$ over all training example.
 		\item The problems are:
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item The \nphardness\ of the inference problem on a complete graph.
 			\item A large parameter space: $\Theta(k^2)$
 		\end{itemize}
@@ -181,7 +181,7 @@ Aalto University
 
 %
 \begin{frame}{Superposition of random trees}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item $S(G)$ is a complete set of spanning tree generate from $G$.
 		\item $\vw_{T}=\{\vw_{G,e}\}_{e\in T}$ is the projection of $\vw_G$ on $T$.
 		\item $\phi_T(\vx,\vy)=\{\phi_e(\vx,\vy)\}_{e\in T}$ is the projection of $\phi_G(\vx,\vy)$ on $T$.
@@ -198,7 +198,7 @@ Aalto University
 
 %
 \begin{frame}{How many trees?}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item If there is a predictor $\vw_G$ on complete graph achieves a margin on some training data, with high probability we need $n$ spanning tree predictors $\{\vw_{T_i}\}_{i=1}^n$ to achieve a close margin. $n$ is quadratic in terms of $\ell$.
 		\item Recall
 		\begin{align*}
@@ -211,7 +211,7 @@ Aalto University
 
 %
 \begin{frame}[allowframebreaks]{Conical combination}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item A sample $\Tcal$ of $n$ spanning trees drawn from $G$.
 		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
 		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
@@ -238,7 +238,7 @@ Aalto University
 
 %
 \begin{frame}[allowframebreaks]{Convex combination}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item A sample $\Tcal$ of $n$ spanning trees drawn from $G$.
 		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
 		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
@@ -271,7 +271,7 @@ Aalto University
 
 %
 \begin{frame}{Conclusions}
-	\begin{itemize}
+	\begin{itemize}\footnotesize
 		\item Theoretical study shows if a large margin structured output learner exists,  then the combination of a random sample of spanning trees will achieve a similar margin with a high probability.
 		\item The $K$-best inference algorithm is tractable which is proved theoretically and empirically.
 		\item \rta\ is not constrained by the availability of the output graph, it can therefore be applied to a wider range of multilabel classification problem where the output graph is believed to play an important role during learning.
