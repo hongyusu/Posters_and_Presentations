@@ -1,0 +1,389 @@
+% simdoc.tex V3.0, 30 March 2010
+
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage{moreverb}
+\usepackage[dvips,colorlinks,bookmarksopen,bookmarksnumbered,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{multirow}
+%\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[all]{xy}
+\usepackage{comment}
+\usepackage{stmaryrd}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{booktabs}
+
+\urldef{\mailsa}\path|juho.rousu@cs.helsinki.fi|    
+%\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+%\noindent\keywordname\enspace\ignorespaces#1}
+
+%\newcommand{\mysmall}{\fontsize{7.5pt}{8pt}\selectfont}
+\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\dphi}{\Delta \negthinspace \varphi}
+\newcommand{\Dphi}{\Delta \negthinspace \Phi}
+\newcommand{\pex}{\!+\!1} % +1 label
+\newcommand{\nex}{\!-\!1} % -1 label\newcommand{\etal}{{\em et al.}}
+\newcommand{\sbf}[1]{\boldsymbol{#1}}
+\newcommand{\mbf}[1]{\mathbf{#1}} 
+\newcommand{\KK}{K}
+\newcommand{\ww}{w}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\Ecal}{\mathcal{E}}
+\newcommand{\Acal}{\mathcal{A}}
+\newcommand{\Fcal}{\mathcal{F}} %feature space
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\Hcal}{\mathcal{H}} %feature space / RKHS
+\newcommand{\Ncal}{\mathcal{N}} %covering numbers
+\newcommand{\Pcal}{\mathcal{P}} %Family Probability
+\newcommand{\Xcal}{\mathcal{X}} %set of possible inputs x
+\newcommand{\Ycal}{\mathcal{Y}} %set of possible outputs y
+\newcommand{\Zcal}{\mathcal{Z}}
+\newcommand{\Rcal}{\mathcal{R}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\Mcal}{\mathcal{M}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\argmax}{\textbf{argmax}}
+\newcommand{\argmin}{\textbf{argmin}}
+\newcommand{\ind}[1]{\llbracket #1 \rrbracket}
+\newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
+\newcommand{\xb}{{\bf x}}
+\newcommand{\yb}{{\bf y}}
+\newcommand{\zb}{{\bf z}}
+\newcommand{\gb}{{\bf g}}
+%\newcommand{\pb}{{\bf p}}
+\newcommand{\rb}{{\bf r}}
+\newcommand{\wb}{{\bf w}}
+\newcommand{\vb}{{\bf v}}
+\newcommand{\ab}{{\bf a}}
+%\newcommand{\vbb}{{\bf b}}
+\newcommand{\cb}{{\bf c}}
+\newcommand{\db}{{\bf d}}
+\newcommand{\eb}{{\bf e}}
+\newcommand{\ub}{{\bf u}}
+\newcommand{\ib}{{\bf i}}
+\newcommand{\jb}{{\bf j}}
+\newcommand{\kb}{{\bf k}}
+\newcommand{\tb}{{\bf t}}
+\newcommand{\fb}{{\bf f}}
+\newcommand{\mub}{\mathbf{\mu}}
+\newcommand{\vzero}{{\bf 0}}
+\newcommand{\vone}{{\bf 1}}
+\newcommand{\vDelta}{\mathbf{\Delta}}
+\newcommand{\vxi}{\mathbf{\xi}}
+\newcommand{\valpha}{\mathbf{\alpha}}
+\newcommand{\vphi}{\mathbf{\phi}}
+\newcommand{\vell}{\mathbf{\ell}}
+\newcommand{\zo}{0 \negthinspace / \negthinspace 1}
+\newcommand{\lz}{\ell_{\zo}}
+\newcommand{\lsym}{\ell_\Delta}
+\newcommand{\lnicolo}{\ell_{H}}
+\newcommand{\ledge}{\ell_{\tilde{H}}}
+\newcommand{\HMcubed}{HM$^3$}
+\def\volumeyear{2011}
+
+\urldef{\mailsa}\path|{hongyu.su,juho.rousu}@cs.helsinki.fi|    
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\mainmatter  
+
+\title{Multi-Task Drug Bioactivity Classification \\ with Graph Labeling Ensembles }
+\author{Hongyu Su \and Juho Rousu}
+\institute{Department of Computer Science\\
+PO Box 68, 00014 University of Helsinki, Finland\\
+\mailsa\\
+}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%
+% abstract
+%%%%%%%%%%%%%%
+\begin{abstract}
+	We present a new method for drug bioactivity classification based on learning an ensemble of multi-task classifiers. As the base classifiers of the ensemble 
+	we use Max-Margin Conditional Random Field (MMCRF) models, which have previously obtained the state-of-the-art accuracy in this problem.
+	MMCRF relies on a graph structure coupling the set of tasks together, and thus turns the multi-task learning problem into a graph labeling problem.
+	In our ensemble method the graphs of the base classifiers are random, constructed by random pairing or random spanning tree extraction over the set of tasks.
+	
+	We compare the ensemble approaches on datasets containing the cancer inhibition potential of drug-like molecules against $60$ cancer cell lines.
+	In our experiments we find that  ensembles based on random graphs surpass the accuracy of single SVM as well as a single MMCRF model relying on a graph
+	built from auxiliary data.
+	
+\end{abstract}
+
+\keywords{drug bioactivity prediction; multi-task learning; ensemble methods; kernel methods}
+
+
+%%%%%%%%%%%%%%
+% introduction
+%%%%%%%%%%%%%%
+\section{Introduction}
+
+Molecular classification, the task of predicting the presence or absence of the bioactivity of interest, has been benefited from variety of methods in statistics and machine learning \cite{olga10}. In particular, kernel methods \cite{ralaivola05,trotter01,ceroni07,olga10} have emerged as an effective way to handle the non-linear properties of chemicals. However, classification methods focusing on a single target variable are probably not optimally suited to drug screening applications where large number of target cell lines are to be handled.  
+
+In \cite{su2010}  a multi-task (or multilabel) learning approach was proposed to classify molecules according to their activity against a set of cancer cell lines.
+It was shown that the multilabel learning setup improves predictive performance over a set of support vector machine based single target classifiers. The multilabel classifier applied, Max-Margin Conditional Random Field (MMCRF)  \cite{rousu2007} relies on a graph structure coupling the outputs together. In \cite{su2010} the graph was extracted from auxiliary data, concerning sets of experiments conducted on the cancer cell lines, by simple techniques such as correlation thresholding and maximum weight spanning tree extraction. 
+
+In this paper, we develop ensemble learning methods for the multi-task learning setup. In our method, MMCRF models are used as the ensemble components. 
+Unlike other ensemble learners for multi-task setups, our method does not require bootstrapping of the training data or changing instance weights to induce diversity among the ensemble components. In our case, the diversity is provided by the randomization of the output graphs, which combined with discriminative training of the base MMCRF classifiers, realizes the benefits typically seen from ensemble approaches. The random graph approach is compared against single classifiers and ensembles  on graphs built from auxiliary data with different graph extraction methods, including inverse covariance learning \cite{Hastie08} that is theoretically superior to correlation thresholding for extracting statistical dependencies.
+
+Ensembles of multi-task or multilabel classifiers have been proposed in a few papers prior to ours, but with important differences both in the methods
+and the applications. In general, the previous approaches can be divided into two groups based on the source of diversity among the base classifiers of the ensemble.
+The first group of methods, boosting type, relies on changing the weights of the training instances so that difficult-to-classify instances gradually receive more and more weight.
+The Boostexter method \cite{SchSin00} by the inventors of boosting has a multilabel learning variant. Later, Esuli et al. \cite{Esu08} developed a hierarchical multilabel variant of
+AdaBoost. Neither method explicitly considers label dependencies but the multilabel is considered essentially a flat vector. The second group of methods, bagging, is based on bootstrap sampling the training set several times and building the base classifiers from the bootstrap samples. Averaging over the ensemble gives the final predictions. Schietgat et al \cite{Sch10} concentrate a bagging in multilabel gene function prediction. They build ensembles of predictive clustering trees (PCT) by bagging, that is, bootstrap sampling of the data several times to arrive at a set of different models. In their approach, there is also no structure defined for the tasks, but the multilabel is essentially treated as a flat vector. Finally, Yan et al. \cite{yan2007model} select different random subsets of input features and 
+examples to induce the base classifiers. 
+
+The remainder of the article is structured as follows. In section 2 we present the base classifier MMCRF and the multi-task ensemble learning approach. In section 3
+we validate the methods empirically, in particular we show that the ensemble approach exceeds the accuracy of MMCRF, which to our knowledge currently has the state-of-the-art predictive performance. In section 4 we aim to provide intuition of the hows and whys of the behaviour of the new method by relating the new ensemble approach to other multi-task and multilabel ensemble approaches. In section 5 finish with concluding remarks.
+
+
+%%%%%%%%%%%%%%
+% methods
+%%%%%%%%%%%%%%
+
+\section{Ensemble learning with Max-margin Conditional Random Field Models on random graphs}
+
+Ensemble learners \cite{dietterich2000ensemble,Opitz99}, such as boosting \cite{SchSin00} and bagging \cite{Breiman96} are based on the notion that a set of {\em weak leaners}, those that have accuracy higher than coin tossing, may produce a strong learner with high accuracy when appropriately combined. It has been found that the diversity among the base models is the key property. The diversity may arise from re-weighting of examples, bootstrap resampling of examples, from the different inductive biases of the base learners, or  in multiclass setup, or by generating a set of derived binary classification tasks (one-vs-the rest, one vs. one, and error-correcting output codes \cite{dietterich2000ensemble}).
+
+In this section we present our ensemble learning approach where the diversity among the base learners comes from a different source, namely randomized graph structures
+that are used to couple the tasks. We use a  majority voting approach over the predictions of the base classifiers, namely labelings of the randomized graphs. Two basic types of graphs are used, random spanning trees and random pairings of targets (Figure \ref{ensemble_methods}). As the base learner, we use the MMCRF algorithm  \cite{rousu2007}. 
+
+The method for generating the ensemble is depicted in  Algorithm \ref{alg_ens}. The algorithm receives a training sample of molecules $x_i$, computes the input kernel $K$ and embarks on the ensemble learning phase. For each base model, a random graph $G_t$ of the type specified by the user is drawn to couple the outputs $\yb_i$ which are the inhibition potentials of molecule $x_i$ against $60$ cancer cell lines.
+The input kernel, label data and the graph are given as input to the MMCRF (see Section \ref{sec_model}) that learns the graph labeling. After the ensemble has been generated, the ensemble prediction is extracted in post-processing:  we extract the majority vote over the graph labelings from the sign of the mean of the base classifier predictions. 
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.8\columnwidth]{ensemble_methods}
+\caption{Ensemble prediction from a set of random spanning trees (top) and a set of random pairings of tasks (bottom). The varying graph structures provide the
+  required diversity among the ensemble components. Majority vote decides the final predicted label for each task.}
+\label{ensemble_methods}
+\end{center}
+\end{figure}
+\begin{algorithm}
+\caption{Ensemble learning algorithm with random graph multi-task classifiers}
+\label{alg_ens}
+\begin{algorithmic}[1]
+\REQUIRE Training sample $S = \lbrace (x_i,\yb_i)\rbrace_{i=1}^m$, ensemble size $T$, type of the graph generated $graphType$, $n$ the number of nodes in the graph,
+type of input kernel applied $kernelType$
+\ENSURE Multi-task classification ensemble $\left(f^{(1)},\dots,f^{(T)}\right)$
+\STATE $K = buildKernel( \lbrace x_i \rbrace_{i=1}^m,kernelType)$
+\STATE $t = 0$
+\WHILE{$t < T$}
+\STATE $t = t+1$
+\STATE $G_t = randomGraph(n,graphType)$
+\STATE $f^{(t)} = learnMMCRF(K,\left(\yb_i\right)_{i=1}^m,G_t)$
+\ENDWHILE
+\RETURN $f = \left(f^{(1)},\dots,f^{(T)}\right)$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Learning graph labeling with MMCRF}
+\label{sec_model}
+
+The MMCRF method used as the base learner in the multi-task ensembles is an instantiation of the structured output prediction framework MMCRF \cite{rousu2007} for associative Markov networks and can also be seen as a sibling method to \HMcubed \cite{rousu2006kbl}, which is designed for hierarchies. We give a brief outline here, the interested reader may check the details from the above references.
+
+The MMCRF learning algorithm takes as input a matrix  $K = \left(k(x_i,x_j)\right)_{i,j=1}^m$ of kernel values $k(x_i,x_j) = \phi(x_i)^T\phi(x_j)$ between the training patterns, where $\phi(x)$ denotes
+a feature description of an input pattern (in our case a potential drug molecule), and a label 
+matrix $Y = \left(\yb_i\right)_{i=1}^m$ containing the multilabels $\yb_i = (y_1,\dots,y_k)$ of the training patterns. The components $y_j \in \set{-1,+1}$ of the multilabel are called microlabels, which in multi-task learning setup, correspond to labels of different tasks.  In addition, the algorithm assumes an associative network $G = (V,E)$ to be given, where node $j \in V$ corresponds to the $j$'th
+component of the multilabel and the edges $e = (j,j') \in E$ correspond to a microlabel dependency structure. 
+
+The model learned by MMCRF takes the form of a conditional random field with exponential edge-potentials,
+\begin{equation*}
+  P(\yb|x) \propto  \prod_{e \in E} \exp \left( \wb_{e}^T \varphi_{e}(x,\yb_e) \right) \\
+   = \exp\left(\wb^T \varphi(x,\yb)\right),
+\end{equation*}
+where $\yb_e = (y_j,y_{j'})$ denotes the pair of microlabels of the edge $e = (j,j')$. A joint feature map $\varphi(x,\yb) = \phi(x) \otimes \psi(\yb)$  is composed via tensor
+product of input $\phi(x)$ and output feature map $\psi(\yb)$, thus including all pairs of input and output features. The output feature map is composed of indicator functions $\psi_e^u(\yb) = \ind{\yb_e = u}$
+where $u$ ranges over the four possible labelings of an edge given binary node labels. The  corresponding weights are denoted by $\wb = \left(\wb_e \right)_e$. The benefit of the tensor product representation is that 
+context  (edge-labeling) sensitive weights can be  learned for input features and no prior alignment of input and output features needs to be assumed.
+
+The parameters are learned by maximizing the minimum loss-scaled margin 
+between the correct training examples $(x_i,\yb_i)$ and incorrect pseudo-examples $(x_i,\yb), \yb \neq \yb_i$, while controlling the norm of the weight vector.
+The dual  soft-margin optimization problem takes the form
+%\begin{align}
+%\underset{\wb,\xi \ge 0}{\text{ minimize } } & \frac{1}{2}||{\wb}||^2 + C \sum_{i=1}^m \xi_i
+%\label{soft_margin}\\
+%\text{ s.t. } & \wb^T \varphi(x_i,\yb_i) - \wb^T \varphi(x_i,\yb)  \ge \ell(\yb_i,\yb) - \xi_i, \nonumber \\ 
+%& \mbox{ for all } i \mbox{ and } \yb,\nonumber
+%\end{align}
+%where $\xi_i$ denote the slacks allotted to each example.
+%The effect of loss-scaling is to push high-loss pseudo-examples further away from the correct example than the low-loss pseudo-examples, which, intuitively,
+%decreases the risk of incurring high-loss.  
+%The  Lagrangian dual of \ref{soft_margin} is given by the quadratic programme 
+\begin{eqnarray}
+\underset{\alpha \geq 0}{\min} && \sum_{i,\yb} \alpha(i,\yb) \ell(\yb_i,\yb)
+- \frac{1}{2} \sum_{i,\yb}\sum_{j,\yb'}\alpha(i,y) \KK(x_i,\yb;x_j,\yb') \alpha(i,\yb') \nonumber \\
+  \text{s.t.} && \sum_{\yb} \alpha(i,\yb) \le C, \forall i \label{orig_dual},
+\end{eqnarray}
+where $\KK(x_i,\yb;x_j,\yb') = \Delta \varphi(i,\yb)^T \Delta \varphi(j,\yb') = K_X(x_i,x_j)\odot K_{\Delta Y}(\yb,\yb')$ is the joint kernel
+composed of the input $K_X(x_i,x_j)$ and output $K_{\Delta Y}(\yb_i,\yb')$ kernels. The underlying joint feature map is expressed by
+$$\Delta \varphi(i,\yb) = \left(\varphi(x_i,\yb_i)-\varphi(x,\yb)\right) = \phi(x_i)\otimes\left(\psi(\yb_i) - \psi(\yb)\right),$$ 
+that is, joint feature difference vectors between the true ($\yb_i$) and  a competing output ($\yb$).
+
+
+As the input kernel we use the hash fingerprint Tanimoto kernel \cite{ralaivola05} that was previously shown \cite{su2010} to be a well performing kernel in this task. Hash fingerprints enumerate all linear fragments of length $n$ in a molecule. A hash function assigns each fragment a hash value that determines its position in descriptor space. Given two  fingerprint vectors $x$ and $z$, Tanimoto kernel is the way to measure their similarity defined as
+\begin{align*}
+	K_X(x,z) = \frac{|I(x) \cap I(z)|}{|I(x)\cup I(z)|},
+\end{align*}
+where $I(x)$ denotes the set of indices of $1$-bits in $x$ .
+
+As the loss function we use {\em Hamming loss} 
+$$\ell_{\Delta}(\yb,\ub) = \sum_j \ind{y_j \neq u_j}$$
+that is gradually increasing in the number of incorrect microlabels  so that we can make a difference between 'nearly correct' 
+and 'clearly incorrect' multilabel predictions.
+
+\subsection{Graph generation for cancer cell lines}
+\label{sec_graph_generation}
+
+In the anti-cancer bioactivity prediction problem, a single task entails classification of drug molecules according to whether they are active or inactive against one of the 60 cancer cell lines. The nodes of the graph $G$ to be labeled thus correspond to cancer cell lines. The edges of the graph depict coupling of the tasks, denoting a potential statistical dependency that is to be utilized in predicting the graph labels (Figure \ref{fig:graph}).
+
+\begin{figure}
+\begin{center}
+{\includegraphics[height=2.5in,trim=0 1.5cm 0cm 1.2cm,clip]{net.pdf}}
+\caption{Example of a cell line graph.}
+\label{fig:graph}
+\end{center}
+\end{figure}
+
+
+To generate random graphs $G_t$ we use two approaches. 
+\begin{itemize}
+\item In the random spanning tree approach, we first generate a random correlation matrix and extract the spanning tree
+out of the matrix with the above described approach. 
+\item In the random pairing approach, one takes each vertex in turn, randomly draws another vertex and couples the two with an edge. 
+\end{itemize}
+We note that the random graph approach lets us build ensembles whose size is not limited in practice.
+
+We compare the random graphs against the approach used by \cite{su2010}, namely, graphs built from Radiation RNA Array data, available for the cancer cell lines from NCI database\footnote{\url{http://discover.nci.nih.gov/cellminer/home.do}}. To extract a graph out of the correlation matrix we use the graphical lasso \cite{Hastie08}  which estimates a sparse graph model by using {\em $L_1$} (lasso) regularization on inverse covariance matrix, and is theoretically a better method than the simple thresholding of the covariance matrix, applied in \cite{su2010}. Graphical lasso assumes multivariate Gaussian distribution over cell lines with mean $\mu$ and covariance matrix $\Sigma$. The inverse covariance matrix $\Sigma^{-1}$ is a good indicator for conditional independencies \cite{Meinshausen06}, where variable $i$ and $j$ are conditional independent given other variables if the $ij$the entry of $\Sigma^{-1}$ is zero. It imposes {\em $L_1$} penalty during the estimation of $\Sigma^{-1}$ to increase the sparsity of the resulted graph. The objective is to maximize the penalized log-likelihood
+\begin{align*}
+	\log \det \Sigma^{-1} - \text{tr}(S\Sigma^{-1}) - \rho||\Sigma^{-1}||_1,
+\end{align*}
+where $\text{tr}$ is the trace of the matrix, $S$ is empirical covariance matrix, and $||\Sigma^{-1}||_1$ is the $L_1$ norm of $\Sigma^{-1}$. Particularly in our application, we post processed the estimated sparse graph to be a tree-liked one.
+
+\section{Experiments}
+
+\subsection{Data and preprocessing}
+In this paper we use the NCI-Cancer dataset obtained through PubChem Bioassay\footnote{\url{http://pubchem.ncbi.nlm.nih.gov}} \cite{Bioassay} data repository. The dataset, initiated by National Cancer Institute and National Institutes of Health (NCI/NIH), contains bioactivity information of large number of molecules against several human cancer cell lines in nine different tissue types including leukemia, melanoma and cancers of the lung, colon, brain, ovary, breast, prostate, and kidney. For each molecule tested against a certain cell line, the dataset provide a bioactivity outcome that we use as the classes (active, inactive).
+
+Currently, there are $43197$ molecules in the PubChem Bioassay database together with their activities information in $73$ cancer cell lines. $60$ cell lines have screen experimental results for most molecules and $4547$ molecules have no missing data in these cell lines. Therefore these cell lines and molecules are selected and employed in our experiments. However, molecular activity data are highly biased over the $60$ cell lines: Around $60\%$ of molecules are inactive in all cell lines, while still a relatively large proportion of molecules are active against all cell lines. These molecules are less likely to be potential drug candidates than the ones in the middle part of the histogram. 
+
+To tackle the skewness  problem, Su et al. \cite{su2010} prepared three different versions of the datasets, which approach is also followed here:
+\begin{description}
+  \item[Full data.] This dataset contains all $4547$ molecules in the NCI-Cancer dataset that have their activity class (active vs. inactive) recorded against all $60$ cancer cell lines.
+  \item[No-Zero-Active.] From full data, we removed all molecules that are not active towards any of the cell lines. The remaining $2303$ molecules are all active against at least one cell line.
+  \item[Middle-Active.] Here, we followed the preprocessing suggested in \cite{shivakumar09}, and selected molecules that are active in more than \(10\) cell lines and inactive in more than \(10\) cell lines. As a result, \(545\) molecules remained and were employed in our experiments.
+\end{description}
+
+\subsection{Compared methods}
+
+Three kinds of multi-task classifier ensembles are compared: 
+\begin{itemize}
+  \item SVM: Support vector machines (SVM) are used as the single-task non-ensemble baseline classifier. 
+   \item MMCRF-Glasso: An MMCRF model where the underlying graph connecting the tasks is built by graphical lasso from auxiliary data.
+  \item MMCRF-EnsRT: An ensemble of 1-500 MMCRF models, where the graph connecting the tasks is built by a random spanning tree.
+  \item MMCRF-EnsRP: An ensemble  of 1-500 MMCRF models, where the graph connecting the tasks is built by random pairing of the tasks.
+\end{itemize} 
+
+In the tests by \cite{su2010}, a  relatively hard margin ($C = 100$) emerged as the most favorable for SVM, while MMCRF proved to 
+be quite insensitive as regarding margin softness. Here we used the same value for all compared  classifiers.
+
+\subsection{Experiment setup and performance measures}
+
+Because of the skewness of the multilabel distribution we used the following {\em stratified 5-fold cross-validation} scheme in all experiments reported such that we group the molecules in equivalence classes based on the number of cell lines they are active against. Then each group is randomly split among the five folds. The procedure ensures that also the smaller groups have representation in all folds. Besides overall classification accuracy, we also report microlabel $F_1$ score, the harmonic mean of precision and recall 
+\begin{align*}
+	F_1 &= 2 \times \frac{Precision \times Recall}{Precision + Recall}.
+\end{align*}
+In particular, we pool together individual microlabel predictions over all examples and all cell lines, and count accuracy and $F_1$ from the pool.
+
+We generated hash fragments features from OpenBabel\footnote{\url{http://openbabel.org}} which is a chemical toolbox available in public domain. We used default value for enumerating all linear structures up to length seven. Then Tanimoto kernel was built based on hash fingerprints features and normalized.
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=1\columnwidth,trim = 13 16 13 16]{ensemble.pdf}
+\caption{Accuracy against number of individual classifiers in ensemble methods from different version of datasets. The red line corresponds to random tree ensemble, and blue line is random pairing ensemble. The performance of single models (SVM and MMCRF-Glasso) are depicted by the horizontal lines.}
+\label{ensemble}
+\end{center}
+\end{figure}
+
+\subsection{Results}
+
+Figure~\ref{ensemble} illustrates the performance of the compared methods on the three versions of the datasets. All models based on MMCRF are clearly more accurate than SVM. Among single models and small ensembles, MMCRF-Glasso is the most competitive method, showing that the auxiliary data contains information that can be successfully used to improve predictive performance. 
+
+Both the random pairing and random tree based ensembles steadily improve accuracy and $F_1$ score as the number of base models increases. SVM falls behind the random graph ensembles even on small ensemble sizes ($T < 5$). With larger ensemble sizes, both types of  ensembles end up superior to MMCRF-Glasso in terms of classification accuracy. In terms of $F_1$ score, the best method depends on the dataset: on the Middle-Active dataset, the random tree ensemble outperform random pairing one, and MMCRF-Glasso is slightly behind. On No-zero-Active and Full data, random pairing ensemble ends up the best method. This result might reflect the sizes of the datasets: the Middle-Active dataset is significantly smaller than the other two, and perhaps the random pairing ensemble requires more data for best results.
+
+\begin{table}
+\scriptsize
+\centering
+\begin{tabular}{|c||c|c|c|c||c|c|c|c|}
+\toprule
+\multirow{2}{*}{\bf Dataset}
+& \multicolumn{4}{|c||}{\bf Accuracy} &  \multicolumn{4}{|c|}{\bf $\bf F_1$}\\ \cline{2-9}
+& {SVM} & {Glasso} & {EnsRP} & {EnsRT} & {SVM} & {Glasso} & {EnsRP} & {EnsRT}\\
+\midrule
+{\bf Middle-Active} & ${64.5\%}_{\text{\tiny $\dagger\dagger\dagger$}}$ & ${66.2\%^{\text{\tiny ***}}_{\text{\tiny $\dagger\dagger$}}}$& ${66.5\%^{\text{\tiny ***}}_{\text{\tiny $\dagger$}}}$ & ${\bf 66.6\%^{\text{\tiny ***}}}$
+& $63.4\%_{\text{\tiny $\dagger$}}$ & ${ 63.7\%^{\text{\tiny }}_{\text{\tiny }}}$ & ${ 63.9\%^{\text{\tiny *}}_{\text{\tiny }}}$ & ${\bf 63.9\%^{\text{\tiny *}}}$\\ \cline{1-9}
+
+{\bf No-Zero-Active} & $74.5\%_{\text{\tiny $\dagger\dagger\dagger$}}$ & ${ 75.4\%^{\text{\tiny ***}}_{\text{\tiny $\dagger\dagger\dagger$}}}$ &${75.4\%^{\text{\tiny ***}}_{\text{\tiny $\dagger\dagger\dagger$}}}$ & ${\bf 75.7\%^{\text{\tiny ***}}}$
+& $62.9\%_{\text{\tiny $\dagger\dagger\dagger$}}$ & ${64.6\%^{\text{\tiny ***}}_{\text{\tiny $$}}}$ & ${\bf 64.7\%^{\text{\tiny ***}}}$ & ${64.6\%^{\text{\tiny ***}}_{\text{\tiny $$}}}$\\ \cline{1-9}
+
+{\bf Full} & $86.1\%_{\text{\tiny $\dagger\dagger\dagger$}}$ & ${86.2\%^{\text{\tiny ***}}_{\text{\tiny $\dagger\dagger\dagger$}}}$ & ${86.3\%^{\text{\tiny ***}}_{\text{\tiny }}}$ & ${\bf 86.4\%^{\text{\tiny ***}}}$
+& $54.8\%_{\text{\tiny $\dagger\dagger\dagger$}}$ & ${ 59.0\%^{\text{\tiny ***}}_{\text{\tiny $$}}}$ & ${\bf 59.2\%^{\text{\tiny ***}}}$ & ${59.0\%^{\text{\tiny ***}}_{\text{\tiny $\dagger\dagger\dagger$}}}$\\ \cline{1-9}
+
+\bottomrule
+\end{tabular}
+\caption{Overall accuracy and microlabel $F_1$ scores. $P$-values for the differences over the worst classifier in each version of the dataset are marked with asterisks. $P$-values for the differences towards the best classifier are marked with crosses. Single, double and triple symbols correspond to $p$-value below $0.05$, $0.01$ and $0.001$.}
+\label{table_data_version}
+\end{table}
+
+
+Table~\ref{table_data_version} shows the prediction performance from SVM, Glasso, EnsRP and EnsRT from three versions of the dataset. We performed two-tailed sign test to identify whether the differences in accuracy and $F_1$ score in individual cell lines are statistically significant.
+$P$-values for the difference over the worst classifier and the ones towards the best classifier are shown as asterisks and crosses. The result shows that, in terms of accuracy and $F_1$ the multi-task methods outperform SVM in all versions of datasets in a statistically significant manner. EnsRT outperforms Glasso in terms of accuracy in statistically very significant manner.
+
+
+
+
+\section{Discussion}
+
+The results of this paper show that ensemble methods can be effectively combined with a graph-based multi-task learner such as MMCRF.
+From machine learning point of view, perhaps the most surprising result obtained here is that in an ensemble, the base graph labeling models can be successfully learnt  
+on random graphs, as opposed to using some auxiliary data or prior knowledge to extract graphs that aim to reflect statistical dependencies.
+
+The present ensemble method differs from previous approaches in that the diversity among the base classifiers arises from the different random output structures,
+ we do not reweight training examples as in boosting and we do not resample the data like in bagging methods. At the same time, each weak learner is trained to discriminate between different multilabels as well as possible.  
+ 
+Another way to understand the phenomenon is to see the edges of the task network as 'experts', and the collection of edges adjacent to a node as a 'expert committee' voting on the node label, each from a different context. The random pairing of tasks then induces a random set of experts. Random tree of tasks, in addition, makes the experts to negotiate on all node labels in order to keep the tree labeled consistently. Our experiments suggest that enforcing this consistency also may be beneficial.
+
+
+\section{Conclusions}
+
+We presented an ensemble approach for multi-task classification of drug bioactivity. The base classifiers of the ensemble, learned by Max-Margin Conditional Random Field algorithm (MMCRF),  predict a labeling of a graph coupling the tasks together. The predictive performance of two types of ensembles, one based on random pairing
+of tasks, another based on a random spanning tree of tasks, surpasses that of SVM as well as single MMCRF model where the underlying graph has been built from auxiliary data using graphical lasso.
+
+
+
+\section*{Acknowledgements} The work was financially supported by Helsinki Doctoral Programme in Computer Science (Hecse), Academy of Finland grant 118653 
+(ALGODAN), and in part by the IST Programme of the 
+European Community, under the PASCAL2 Network 
+of Excellence, ICT-2007-216886. This publication only reflects 
+the authors' views.
+
+\bibliographystyle{splncs03}
+\bibliography{suetalprib2011}
+
+\end{document}

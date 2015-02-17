@@ -1,0 +1,1783 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  17 FEB 2015 16:10
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**mlss_poster.tex
+(./mlss_poster.tex
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/05/16 v3.9f The Babel package
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/05/16 v3.9f Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(./aaltologo.sty
+Package: aaltologo 2011/02/19 v1.1.2 Package for drawing Aalto University logos
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks17
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box26
+(/usr/local/texlive/2013/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks18
+\pgfkeys@temptoks=\toks19
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks20
+))
+\pgf@x=\dimen106
+\pgf@y=\dimen107
+\pgf@xa=\dimen108
+\pgf@ya=\dimen109
+\pgf@xb=\dimen110
+\pgf@yb=\dimen111
+\pgf@xc=\dimen112
+\pgf@yc=\dimen113
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count89
+\c@pgf@countb=\count90
+\c@pgf@countc=\count91
+\c@pgf@countd=\count92
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count93
+\pgfsyssoftpath@bigbuffer@items=\count94
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen114
+\pgfmath@count=\count95
+\pgfmath@box=\box27
+\pgfmath@toks=\toks21
+\pgfmath@stack@operand=\toks22
+\pgfmath@stack@operation=\toks23
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count96
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen115
+\pgf@picmaxx=\dimen116
+\pgf@picminy=\dimen117
+\pgf@picmaxy=\dimen118
+\pgf@pathminx=\dimen119
+\pgf@pathmaxx=\dimen120
+\pgf@pathminy=\dimen121
+\pgf@pathmaxy=\dimen122
+\pgf@xx=\dimen123
+\pgf@xy=\dimen124
+\pgf@yx=\dimen125
+\pgf@yy=\dimen126
+\pgf@zx=\dimen127
+\pgf@zy=\dimen128
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen129
+\pgf@path@lasty=\dimen130
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen131
+\pgf@shorten@start@additional=\dimen132
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box28
+\pgf@hbox=\box29
+\pgf@layerbox@main=\box30
+\pgf@picture@serial@count=\count97
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen133
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen134
+\pgf@pt@y=\dimen135
+\pgf@pt@temp=\dimen136
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen137
+\pgf@sys@shading@range@num=\count98
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box31
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box32
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen138
+\pgf@nodesepend=\dimen139
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen140
+\pgffor@skip=\dimen141
+\pgffor@stack=\toks24
+\pgffor@toks=\toks25
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count99
+\pgfplotmarksize=\dimen142
+)
+\tikz@lastx=\dimen143
+\tikz@lasty=\dimen144
+\tikz@lastxsaved=\dimen145
+\tikz@lastysaved=\dimen146
+\tikzleveldistance=\dimen147
+\tikzsiblingdistance=\dimen148
+\tikz@figbox=\box33
+\tikz@tempbox=\box34
+\tikztreelevel=\count100
+\tikznumberofchildren=\count101
+\tikznumberofcurrentchild=\count102
+\tikz@fig@count=\count103
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count104
+\pgfmatrixcurrentcolumn=\count105
+\pgf@matrix@numberofcolumns=\count106
+)
+\tikz@expandcount=\count107
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/lcg/lcg.sty
+Package: lcg 2008/09/10 v1.2 generating random numbers
+\f@rst=\count108
+\l@st=\count109
+\cr@nd=\count110
+\c@rand=\count111
+
+Smallest possible random number: 1
+Largest possible random number: 2147483647
+The pseudo random numbers will be stored in the LaTeX counter `rand'
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/newcent.sty
+Package: newcent 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+Random number generator initialized to 0
+
+Package lcg Warning: Using an already existing counter rand on input line 493.
+
+Smallest possible random number: 1
+Largest possible random number: 3
+The pseudo random numbers will be stored in the LaTeX counter `rand'
+\c@aaltologo_color=\count112
+\c@aaltologo_mark=\count113
+\c@aaltologo_linecount=\count114
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box35
+\beforetitleunit=\skip43
+\aftertitleunit=\skip44
+\ttl@plus=\dimen149
+\ttl@minus=\dimen150
+\ttl@toksa=\toks26
+\titlewidth=\dimen151
+\titlewidthlast=\dimen152
+\titlewidthfirst=\dimen153
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks27
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/textpos/textpos.sty
+Package: textpos 2012/11/13 v1.7i
+
+Package: textpos 2012/11/13 1.7i, absolute positioning of text on the page
+\TP@textbox=\box36
+\TP@holdbox=\box37
+\TPHorizModule=\dimen154
+\TPVertModule=\dimen155
+\TP@margin=\dimen156
+\TP@absmargin=\dimen157
+Grid set 16 x 16 = 38.39343pt x 49.68562pt
+\TPboxrulesize=\dimen158
+\TP@ox=\dimen159
+\TP@oy=\dimen160
+\TP@tbargs=\toks28
+\TP@prevdepth=\dimen161
+TextBlockOrigin set to 0pt x 0pt
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks29
+\ex@=\dimen162
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen163
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count115
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count116
+\leftroot@=\count117
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count118
+\DOTSCASE@=\count119
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box38
+\strutbox@=\box39
+\big@size=\dimen164
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count120
+\c@MaxMatrixCols=\count121
+\dotsspace@=\muskip11
+\c@parentequation=\count122
+\dspbrk@lvl=\count123
+\tag@help=\toks30
+\row@=\count124
+\column@=\count125
+\maxfields@=\count126
+\andhelp@=\toks31
+\eqnshift@=\dimen165
+\alignsep@=\dimen166
+\tagshift@=\dimen167
+\tagwidth@=\dimen168
+\totwidth@=\dimen169
+\lineht@=\dimen170
+\@envbody=\toks32
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks34
+\thm@bodyfont=\toks35
+\thm@headfont=\toks36
+\thm@notefont=\toks37
+\thm@headpunct=\toks38
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
+\dth@everypar=\toks39
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count127
+\mult@box=\box40
+\multicol@leftmargin=\dimen171
+\c@unbalance=\count128
+\c@collectmore=\count129
+\doublecol@number=\count130
+\multicoltolerance=\count131
+\multicolpretolerance=\count132
+\full@width=\dimen172
+\page@free=\dimen173
+\premulticols=\dimen174
+\postmulticols=\dimen175
+\multicolsep=\skip51
+\multicolbaselineskip=\skip52
+\partial@page=\box41
+\last@line=\box42
+\mult@rightbox=\box43
+\mult@grightbox=\box44
+\mult@gfirstbox=\box45
+\mult@firstbox=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\c@columnbadness=\count133
+\c@finalcolumnbadness=\count134
+\last@try=\dimen176
+\multicolovershoot=\dimen177
+\multicolundershoot=\dimen178
+\mult@nat@firstbox=\box64
+\colbreak@box=\box65
+\multicol@sort@counter=\count135
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen179
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks40
+\verbatim@line=\toks41
+\verbatim@in@stream=\read2
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen180
+\lightrulewidth=\dimen181
+\cmidrulewidth=\dimen182
+\belowrulesep=\dimen183
+\belowbottomsep=\dimen184
+\aboverulesep=\dimen185
+\abovetopsep=\dimen186
+\cmidrulesep=\dimen187
+\cmidrulekern=\dimen188
+\defaultaddspace=\dimen189
+\@cmidla=\count136
+\@cmidlb=\count137
+\@aboverulesep=\dimen190
+\@belowrulesep=\dimen191
+\@thisruleclass=\count138
+\@lastruleclass=\count139
+\@thisrulewidth=\dimen192
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen193
+\enit@toks=\toks42
+\enit@inbox=\box66
+\enitdp@description=\count140
+)
+(./algorithm.sty
+Package: algorithm 
+
+Document Style `algorithm' - floating environment
+(/usr/local/texlive/2013/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count141
+\float@exts=\toks43
+\float@box=\box67
+\@float@everytoks=\toks44
+\@floatcapt=\box68
+)
+\@float@every@algorithm=\toks45
+\c@algorithm=\count142
+)
+(./algorithmic.sty
+Package: algorithmic 
+
+Document Style `algorithmic' - environment
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count143
+\calc@Bcount=\count144
+\calc@Adimen=\dimen194
+\calc@Bdimen=\dimen195
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count145
+\calc@Cskip=\skip56
+)
+\c@ALC@line=\count146
+\c@ALC@rem=\count147
+\ALC@tlm=\skip57
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup6
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+TextBlockOrigin set to 8mm x 45mm
+
+LaTeX Warning: Unused global option(s):
+    [a4poster].
+
+(./mlss_poster.aux
+
+LaTeX Warning: Label `ensemble_3' multiply defined.
+
+)
+\openout1 = `mlss_poster.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 131.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1ppl.fd
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count148
+\scratchdimen=\dimen196
+\scratchbox=\box69
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen197
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks47
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+ABD: EveryShipout initializing macros
+<./template_pics/hiit_logo.png, id=4, 301.125pt x 142.5325pt>
+File: ./template_pics/hiit_logo.png Graphic file (type png)
+
+<use ./template_pics/hiit_logo.png>
+Package pdftex.def Info: ./template_pics/hiit_logo.png used on input line 144.
+(pdftex.def)             Requested size: 129.48122pt x 61.28777pt.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 151.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 151.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 19.70294pt on input line 151.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 151.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 19.70294pt on input line 151.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 158.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 159.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 170.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 171.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 186.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 189.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 189
+.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 189
+.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 189
+.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 189.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 189.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 189.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 189.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 189.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 189.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 189
+.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+Overfull \hbox (2.41582pt too wide) in paragraph at lines 192--195
+\T1/phv/m/n/8 Denote the $\OML/zplm/m/it/8  []\OT1/zplm/m/n/8 (\OML/zplm/m/it/8
+ x\OT1/ppl/m/n/8 , \OT1/zplm/b/n/8 y\OT1/zplm/m/n/8 )$ \T1/phv/m/n/8 op-ti-mal 
+com-pat-i-bil-ity score. Re-
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 4.74998pt on input line 198.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 5.69998pt on input line 198.
+
+Overfull \hbox (3.8769pt too wide) in paragraph at lines 198--201
+\T1/phv/m/n/8 av-er-age re-con-struc-tion er-ror given by in-di-vid-ual base
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 203.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.59998pt on input line 203.
+
+Overfull \hbox (6.62056pt too wide) in paragraph at lines 225--229
+\T1/phv/m/n/8 thus cre-ated have favourable pre-dic-tive per-for-mances
+ []
+
+
+Overfull \hbox (3.08624pt too wide) in paragraph at lines 225--229
+\T1/phv/m/n/8 on a het-ero-ge-neous col-lec-tion of mul-ti-l-abel datasets.
+ []
+
+
+Overfull \hbox (0.48685pt too wide) in paragraph at lines 225--229
+\T1/phv/m/n/8 The the-o-ret-i-cal anal-y-sis of the MAM en-sem-ble high-
+ []
+
+<./ensemble_2.pdf, id=5, 215.80624pt x 179.67125pt>
+File: ./ensemble_2.pdf Graphic file (type pdf)
+ <use ./ensemble_2.pdf>
+Package pdftex.def Info: ./ensemble_2.pdf used on input line 267.
+(pdftex.def)             Requested size: 75.53331pt x 62.88586pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--270
+[]$\OMS/zplm/m/n/8 f\OML/zplm/m/it/8  []\OT1/zplm/m/n/8 (\OML/zplm/m/it/8 x\OT1
+/ppl/m/n/8 , \OT1/zplm/m/n/8 ++)\OT1/ppl/m/n/8 , \OML/zplm/m/it/8  []\OT1/zplm/
+m/n/8 (\OML/zplm/m/it/8 x\OT1/ppl/m/n/8 , \OT1/zplm/m/n/8 +\OMS/zplm/m/n/8 ^^@\
+OT1/zplm/m/n/8 )\OT1/ppl/m/n/8 , \OML/zplm/m/it/8  []\OT1/zplm/m/n/8 (\OML/zplm
+/m/it/8 x\OT1/ppl/m/n/8 , \OMS/zplm/m/n/8 ^^@\OT1/zplm/m/n/8 +)\OT1/ppl/m/n/8 ,
+ \OML/zplm/m/it/8  []\OT1/zplm/m/n/8 (\OML/zplm/m/it/8 x\OT1/ppl/m/n/8 , \OMS/z
+plm/m/n/8 ^^@^^@\OT1/zplm/m/n/8 )\OMS/zplm/m/n/8 g$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--286
+
+ []
+
+<./ensemble_2a.pdf, id=6, page=1, 727.71875pt x 243.91125pt>
+File: ./ensemble_2a.pdf Graphic file (type pdf)
+
+<use ./ensemble_2a.pdf, page 1>
+Package pdftex.def Info: ./ensemble_2a.pdf, page1 used on input line 289.
+(pdftex.def)             Requested size: 189.90034pt x 63.64989pt.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 295.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 7.59998pt on input line 295.
+
+<./ensemble_3.pdf, id=7, page=1, 727.71875pt x 401.5pt>
+File: ./ensemble_3.pdf Graphic file (type pdf)
+
+<use ./ensemble_3.pdf, page 1>
+Package pdftex.def Info: ./ensemble_3.pdf, page1 used on input line 318.
+(pdftex.def)             Requested size: 189.90034pt x 104.7735pt.
+
+<./ensemble_curve.pdf, id=8, page=1, 1156.32pt x 361.35pt>
+File: ./ensemble_curve.pdf Graphic file (type pdf)
+
+<use ./ensemble_curve.pdf, page 1>
+Package pdftex.def Info: ./ensemble_curve.pdf, page1 used on input line 348.
+(pdftex.def)             Requested size: 389.8007pt x 121.80975pt.
+LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <5> not available
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 365.
+
+Overfull \hbox (3.12067pt too wide) in paragraph at lines 365--366
+[][]| 
+ []
+
+
+Overfull \hbox (6.08076pt too wide) in paragraph at lines 367--367
+[]\T1/ppl/m/sc/5 Bagging| 
+ []
+
+
+Overfull \hbox (6.63202pt too wide) in paragraph at lines 367--367
+[]\T1/ppl/m/sc/5 AdaBoost| 
+ []
+
+
+Overfull \hbox (1.83574pt too wide) in paragraph at lines 367--367
+[]\T1/ppl/m/sc/5 Mmcrf| 
+ []
+
+
+Overfull \hbox (5.83557pt too wide) in paragraph at lines 368--368
+[]\T1/ppl/m/sc/5 Emotions| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 368--368
+[]\T1/ppl/m/sc/5 77.3$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.9| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 368--368
+[]\T1/ppl/m/sc/5 74.1$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.8| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 368--368
+[]\T1/ppl/m/sc/5 76.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.6| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 368--368
+[]\T1/ppl/m/it/5 79.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 1.8| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 368--368
+[]\T1/ppl/m/sc/5 79.2$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.9| 
+ []
+
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <5> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 368.
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 368--368
+[]\T1/ppl/b/n/5 80.5$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 1.4| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 369--369
+[]\T1/ppl/b/n/5 80.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.6| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 369--369
+[]\T1/ppl/m/sc/5 78.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.7| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 369--369
+[]\T1/ppl/m/sc/5 74.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.3| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 369--369
+[]\T1/ppl/m/sc/5 79.3$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.2| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 369--369
+[]\T1/ppl/m/sc/5 79.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.3| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 369--369
+[]\T1/ppl/m/it/5 79.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 0.4| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 370--370
+[]\T1/ppl/b/n/5 90.2$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.3| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 370--370
+[]\T1/ppl/m/sc/5 87.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.8| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 370--370
+[]\T1/ppl/m/sc/5 84.3$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.4| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 370--370
+[]\T1/ppl/m/it/5 88.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 0.6| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 370--370
+[]\T1/ppl/m/sc/5 83.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.2| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 370--370
+[]\T1/ppl/m/sc/5 83.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.2| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 371--371
+[]\T1/ppl/m/sc/5 93.6$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.2| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 371--371
+[]\T1/ppl/m/sc/5 93.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.1| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 371--371
+[]\T1/ppl/m/sc/5 86.2$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.2| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 371--371
+[]\T1/ppl/m/sc/5 93.5$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.1| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 371--371
+[]\T1/ppl/m/it/5 94.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 0.1| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 371--371
+[]\T1/ppl/b/n/5 95.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.2| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 372--372
+[]\T1/ppl/b/n/5 86.3$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.3| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 372--372
+[]\T1/ppl/m/sc/5 86.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.2| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 372--372
+[]\T1/ppl/m/sc/5 74.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.4| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 372--372
+[]\T1/ppl/m/sc/5 86.2$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.2| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 372--372
+[]\T1/ppl/b/n/5 86.3$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.2| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 372--372
+[]\T1/ppl/b/n/5 86.3$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.3| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 373--373
+[]\T1/ppl/b/n/5 89.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.2| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 373--373
+[]\T1/ppl/m/sc/5 85.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.7| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 373--373
+[]\T1/ppl/m/sc/5 84.1$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.5| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 373--373
+[]\T1/ppl/m/sc/5 82.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.3| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 373--373
+[]\T1/ppl/m/it/5 89.5$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 0.3| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 373--373
+[]\T1/ppl/m/it/5 89.5$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 0.8| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 374--374
+[]\T1/ppl/m/sc/5 84.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.7| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 374--374
+[]\T1/ppl/m/sc/5 79.5$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.8| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 374--374
+[]\T1/ppl/m/sc/5 79.3$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.0| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 374--374
+[]\T1/ppl/m/sc/5 84.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.1| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 374--374
+[]\T1/ppl/m/it/5 85.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 0.9| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 374--374
+[]\T1/ppl/b/n/5 85.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.7| 
+ []
+
+
+Overfull \hbox (3.25058pt too wide) in paragraph at lines 375--375
+[]\T1/ppl/m/sc/5 Medical| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 375--375
+[]\T1/ppl/m/sc/5 97.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.1| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 375--375
+[]\T1/ppl/m/sc/5 97.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.1| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 375--375
+[]\T1/ppl/m/sc/5 91.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.3| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 375--375
+[]\T1/ppl/m/sc/5 97.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.1| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 375--375
+[]\T1/ppl/b/n/5 97.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.1| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 375--375
+[]\T1/ppl/b/n/5 97.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.1| 
+ []
+
+
+Overfull \hbox (3.78062pt too wide) in paragraph at lines 376--376
+[]\T1/ppl/m/sc/5 Circle10| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 376--376
+[]\T1/ppl/m/sc/5 94.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.9| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 376--376
+[]\T1/ppl/m/sc/5 92.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.9| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 376--376
+[]\T1/ppl/m/sc/5 93.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.4| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 376--376
+[]\T1/ppl/m/sc/5 96.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.7| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 376--376
+[]\T1/ppl/m/it/5 97.5$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 0.3| 
+ []
+
+
+Overfull \hbox (3.78062pt too wide) in paragraph at lines 377--377
+[]\T1/ppl/m/sc/5 Circle50| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 377--377
+[]\T1/ppl/m/sc/5 94.1$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.3| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 377--377
+[]\T1/ppl/m/sc/5 91.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.3| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 377--377
+[]\T1/ppl/m/sc/5 93.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.7| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 377--377
+[]\T1/ppl/m/sc/5 96.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.1| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 377--377
+[]\T1/ppl/b/n/5 97.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.2| 
+ []
+
+
+Overfull \hbox (7.62625pt too wide) in paragraph at lines 364--382
+ [] 
+ []
+
+
+Overfull \hbox (3.12067pt too wide) in paragraph at lines 395--396
+[][]| 
+ []
+
+
+Overfull \hbox (6.08076pt too wide) in paragraph at lines 397--397
+[]\T1/ppl/m/sc/5 Bagging| 
+ []
+
+
+Overfull \hbox (6.63202pt too wide) in paragraph at lines 397--397
+[]\T1/ppl/m/sc/5 AdaBoost| 
+ []
+
+
+Overfull \hbox (1.83574pt too wide) in paragraph at lines 397--397
+[]\T1/ppl/m/sc/5 Mmcrf| 
+ []
+
+
+Overfull \hbox (5.83557pt too wide) in paragraph at lines 398--398
+[]\T1/ppl/m/sc/5 Emotions| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 398--398
+[]\T1/ppl/m/sc/5 21.2$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 3.4| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 398--398
+[]\T1/ppl/m/sc/5 20.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 2.6| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 398--398
+[]\T1/ppl/m/sc/5 23.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 2.3| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 398--398
+[]\T1/ppl/m/sc/5 25.5$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 3.5| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 398--398
+[]\T1/ppl/m/it/5 26.5$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 3.1| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 398--398
+[]\T1/ppl/b/n/5 30.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 4.2| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 399--399
+[]\T1/ppl/m/it/5 14.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 1.8| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 399--399
+[]\T1/ppl/m/sc/5 13.1$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.2| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 399--399
+[]\T1/ppl/m/sc/5 11.3$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 2.8| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 399--399
+[]\T1/ppl/m/sc/5 13.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.5| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 399--399
+[]\T1/ppl/b/n/5 14.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 0.6| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 400--400
+[]\T1/ppl/b/n/5 52.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 1.0| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 400--400
+[]\T1/ppl/m/it/5 46.5$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 2.5| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 400--400
+[]\T1/ppl/m/sc/5 34.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.8| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 400--400
+[]\T1/ppl/m/sc/5 44.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 3.0| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 400--400
+[]\T1/ppl/m/sc/5 12.6$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.7| 
+ []
+
+
+Overfull \hbox (3.3794pt too wide) in paragraph at lines 400--400
+[]\T1/ppl/m/sc/5 5.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.5| 
+ []
+
+
+Overfull \hbox (3.3794pt too wide) in paragraph at lines 401--401
+[]\T1/ppl/m/sc/5 0.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.1| 
+ []
+
+
+Overfull \hbox (2.52585pt too wide) in paragraph at lines 401--401
+[]\T1/ppl/m/sc/5 0.1$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.2| 
+ []
+
+
+Overfull \hbox (3.3794pt too wide) in paragraph at lines 401--401
+[]\T1/ppl/m/sc/5 0.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.3| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 401--401
+[]\T1/ppl/m/it/5 11.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 1.2| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 401--401
+[]\T1/ppl/b/n/5 12.1$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 1.0| 
+ []
+
+
+Overfull \hbox (3.3794pt too wide) in paragraph at lines 402--402
+[]\T1/ppl/m/sc/5 0.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.0| 
+ []
+
+
+Overfull \hbox (2.52585pt too wide) in paragraph at lines 402--402
+[]\T1/ppl/m/sc/5 0.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.0| 
+ []
+
+
+Overfull \hbox (3.3794pt too wide) in paragraph at lines 402--402
+[]\T1/ppl/m/sc/5 0.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.0| 
+ []
+
+
+Overfull \hbox (2.52585pt too wide) in paragraph at lines 402--402
+[]\T1/ppl/m/sc/5 0.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.0| 
+ []
+
+
+Overfull \hbox (3.3794pt too wide) in paragraph at lines 402--402
+[]\T1/ppl/m/sc/5 0.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.0| 
+ []
+
+
+Overfull \hbox (1.8794pt too wide) in paragraph at lines 403--403
+[]\T1/ppl/b/n/5 1.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 1.0| 
+ []
+
+
+Overfull \hbox (2.52585pt too wide) in paragraph at lines 403--403
+[]\T1/ppl/m/sc/5 0.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.0| 
+ []
+
+
+Overfull \hbox (3.3794pt too wide) in paragraph at lines 403--403
+[]\T1/ppl/m/sc/5 0.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.0| 
+ []
+
+
+Overfull \hbox (1.02585pt too wide) in paragraph at lines 403--403
+[]\T1/ppl/m/it/5 0.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 0.9| 
+ []
+
+
+Overfull \hbox (1.8794pt too wide) in paragraph at lines 403--403
+[]\T1/ppl/m/it/5 0.4$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 0.5| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 404--404
+[]\T1/ppl/m/it/5 43.1$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 1.3| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 404--404
+[]\T1/ppl/m/sc/5 21.1$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.3| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 404--404
+[]\T1/ppl/b/n/5 47.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 1.4| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 404--404
+[]\T1/ppl/m/sc/5 36.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 0.8| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 404--404
+[]\T1/ppl/m/sc/5 40.0$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.0| 
+ []
+
+
+Overfull \hbox (3.25058pt too wide) in paragraph at lines 405--405
+[]\T1/ppl/m/sc/5 Medical| 
+ []
+
+
+Overfull \hbox (3.3794pt too wide) in paragraph at lines 405--405
+[]\T1/ppl/m/sc/5 8.2$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 2.3| 
+ []
+
+
+Overfull \hbox (2.52585pt too wide) in paragraph at lines 405--405
+[]\T1/ppl/m/sc/5 8.2$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.6| 
+ []
+
+
+Overfull \hbox (3.3794pt too wide) in paragraph at lines 405--405
+[]\T1/ppl/m/sc/5 8.2$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 1.2| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 405--405
+[]\T1/ppl/m/it/5 35.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 2.1| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 405--405
+[]\T1/ppl/b/n/5 36.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 4.6| 
+ []
+
+
+Overfull \hbox (3.78062pt too wide) in paragraph at lines 406--406
+[]\T1/ppl/m/sc/5 Circle10| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 406--406
+[]\T1/ppl/m/sc/5 69.1$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 4.0| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 406--406
+[]\T1/ppl/m/sc/5 64.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 3.2| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 406--406
+[]\T1/ppl/m/sc/5 66.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 3.4| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 406--406
+[]\T1/ppl/m/sc/5 75.2$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 5.6| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 406--406
+[]\T1/ppl/m/it/5 82.3$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 2.2| 
+ []
+
+
+Overfull \hbox (3.78062pt too wide) in paragraph at lines 407--407
+[]\T1/ppl/m/sc/5 Circle50| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 407--407
+[]\T1/ppl/m/sc/5 29.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 2.5| 
+ []
+
+
+Overfull \hbox (5.27585pt too wide) in paragraph at lines 407--407
+[]\T1/ppl/m/sc/5 21.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 2.6| 
+ []
+
+
+Overfull \hbox (1.57729pt too wide) in paragraph at lines 407--407
+[]\T1/ppl/m/sc/5 28.9$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 3.6| 
+ []
+
+
+Overfull \hbox (6.1294pt too wide) in paragraph at lines 407--407
+[]\T1/ppl/m/sc/5 27.7$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/sc/5 3.4| 
+ []
+
+
+Overfull \hbox (3.52585pt too wide) in paragraph at lines 407--407
+[]\T1/ppl/m/it/5 30.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/m/it/5 1.9| 
+ []
+
+
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 407--407
+[]\T1/ppl/b/n/5 53.8$\OMS/zplm/m/n/5 ^^F$\T1/ppl/b/n/5 2.2| 
+ []
+
+
+Overfull \hbox (7.62625pt too wide) in paragraph at lines 394--412
+ [] 
+ []
+
+[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+ <./template_pics/hiit_logo.png> <./ensemble_2.pdf> <./ensemble_2a.pdf> <./ense
+mble_3.pdf> <./ensemble_curve.pdf>] (./mlss_poster.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 14019 strings out of 493315
+ 248607 string characters out of 6137904
+ 817235 words of memory out of 5000000
+ 17079 multiletter control sequences out of 15000+600000
+ 69787 words of font info for 113 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 63i,21n,57p,497b,632s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2013
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2013/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
+/palatino/uplb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/palati
+no/uplr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/palatino/uplr
+i8a.pfb>
+Output written on mlss_poster.pdf (1 page, 1916475 bytes).
+PDF statistics:
+ 8545 PDF objects out of 8907 (max. 8388607)
+ 4547 compressed objects within 46 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+
