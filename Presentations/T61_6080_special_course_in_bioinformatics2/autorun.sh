@@ -19,4 +19,3 @@ pdflatex example
 
 
 git commit -m'auto upload' .
-git push -u origin mater

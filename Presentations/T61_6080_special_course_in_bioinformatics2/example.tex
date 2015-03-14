@@ -494,14 +494,19 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{\mmcrf\ optimization problem}
+\begin{frame}{The optimization problem}
 	\begin{itemize}
-		\item The \mmcrf\ optimization problem
+		\item The optimization problem is defined as
 		\begin{align*}
 			\underset{\vw,\vxi}{\minimize} &\quad {\frac{1}{2}||\vw||^2} + {C\sum_{i=1}^m\xi_i}\\
 			\st &\quad f(\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}{\maximize}f(\vx_i,\vy) \ge \ell(\vy_i,\vy) - \xi_i,\\
 			&\quad \xi_i\ge0, \forall i\in\{1,\cdots,m\}.
 		\end{align*}
+		\item In order to solve \mmcrf\ we need to solve similar problems both in training and in prediction
+		\begin{align*}
+			\vy^*= \underset{\vy\in\vYcal}{\argmax} \, f(\vx,\vy) =  \underset{\vy\in\vYcal}{\argmax} \,\ip{\vw}{\phib(\vx,\vy)}.
+		\end{align*}
+		\item It is a instantiation of maximize a-posteriori (MAP) problem defined on the output graph $G$.
 	\end{itemize}
 \end{frame}
 
