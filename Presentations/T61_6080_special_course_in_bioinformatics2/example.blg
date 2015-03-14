@@ -3,10 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: example.aux
 The style file: apalike.bst
 Database file #1: dissertation.bib
+Warning--I didn't find a database entry for "su14b"
 Warning--empty institution in Evgeniou99a
 You've used 19 entries,
             1935 wiz_defined-function locations,
-            613 strings with 7357 characters,
+            614 strings with 7362 characters,
 and the built_in function-call counts, 7907 in all, are:
 = -- 795
 > -- 284
@@ -45,4 +46,4 @@ warning$ -- 1
 while$ -- 67
 width$ -- 0
 write$ -- 255
-(There was 1 warning)
+(There were 2 warnings)
