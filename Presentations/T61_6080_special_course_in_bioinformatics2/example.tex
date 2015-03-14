@@ -456,14 +456,15 @@
 		% \put(-40,75){\tiny $\psib(\vy)[j]$}
 		% \put(-60,30){\tiny $\phi(\vx,\vy)[i,j] = \varphi(\vx)[i]\psib(\vy)[j]$}
 		% \end{center}
-		\item Compatibility score will assign high value to $(\vx_i,\vy_i)$ compared to $(\vx_i,\vy),\vy\in\vYcal/\vy_i$
+		\item For now we assume we already have optimal $\vw$, compatibility score will assign high value to $(\vx_i,\vy_i)$ compared to $(\vx_i,\vy),\vy\in\vYcal/\vy_i$
 		\begin{align*}
 			F(\vx_i,\vy_i;\vw) = \ip{\vw}{\phib(\vx_i,\vy_i)}.
 		\end{align*}
-		\item Prediction is 
+		\item Prediction is computed by solving the $\argmax$ in exponential space $|\vYcal|=2^k$
 		\begin{align*}
-			\vy*= \underset{\vy\in\vYcal}{\argmax}\ip{\vw}{\phib(\vx_i,\vy_i)}.
+			\vy^*= \underset{\vy\in\vYcal}{\argmax} \, \ip{\vw}{\phib(\vx,\vy)}.
 		\end{align*}
+		\item 
 	\end{itemize}
 \end{frame}
 \begin{frame}[allowframebreaks]{Bibliography}
