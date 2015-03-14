@@ -478,13 +478,13 @@
 			\begin{align*}
 				f(\vx_i,\vy_i) - f(\vx_i,\vy) \ge 0, \forall \vy\in\vYcal/\vy_i, i\in\{1,\cdots,m\}.
 			\end{align*}
-			\item We only have to evaluate the score of best incorrect label 
+			\item We only need to evaluate the score of best incorrect label 
 			\begin{align*}
 				f(\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\,f(\vx_i,\vy) \ge 0, \forall i\in\{1,\cdots,m\}.
 			\end{align*}
 			\item Further push away ``bad'' multilabels 
 			\begin{align*}
-				f(\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\,f(\vx_i,\vy) - \ell(\vy_i,\vy) \ge 0, \forall i\in\{1,\cdots,m\}.
+				f(\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\,f(\vx_i,\vy) \ge \ell(\vy_i,\vy), \forall i\in\{1,\cdots,m\}.
 			\end{align*}
 		\end{itemize}
 		\item Regularization theory suggests we minimize
