@@ -1510,7 +1510,7 @@ File: ./figures/jointfeaturespace.pdf Graphic file (type pdf)
 <use ./figures/jointfeaturespace.pdf>
 Package pdftex.def Info: ./figures/jointfeaturespace.pdf used on input line 464
 .
-(pdftex.def)             Requested size: 77.0823pt x 78.04074pt.
+(pdftex.def)             Requested size: 67.44647pt x 68.2851pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
@@ -1604,7 +1604,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (28 pages, 769729 bytes).
+Output written on example.pdf (28 pages, 769731 bytes).
 PDF statistics:
  457 PDF objects out of 1000 (max. 8388607)
  349 compressed objects within 4 object streams
