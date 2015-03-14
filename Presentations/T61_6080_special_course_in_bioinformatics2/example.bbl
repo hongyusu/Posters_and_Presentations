@@ -71,11 +71,6 @@ Shawe-Taylor, J. and Cristianini, N. (2004).
 \newblock {\em {Kernel Methods for Pattern Analysis}}.
 \newblock Cambridge University Press.
 
-\bibitem[Su and Rousu, 2014]{su14b}
-Su, H. and Rousu, J. (2014).
-\newblock Multilabel classification through random graph ensembles.
-\newblock {\em Machine Learning}, 1(1).
-
 \bibitem[Tibshirani, 1994]{Tibshirani94regression}
 Tibshirani, R. (1994).
 \newblock Regression shrinkage and selection via the lasso.

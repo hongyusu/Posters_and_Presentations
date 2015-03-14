@@ -528,12 +528,12 @@
 		\begin{itemize}
 			\footnotesize
 			\item We can try to extract the correlation graph from some external data sources if available.
-			\item ``Ensemble'' methods in \citep{su14b}
+			\item ``Ensemble'' methods
 			\begin{itemize}
 				\footnotesize
 				\item Generate a set random output graphs $\{G_1,\cdots,G_n\}$
 				\item Build a collection of structured output learners $\{f_{G_1}(\vx,\vy;\vw_{G_1}),\cdots,f_{G_1}(\vx,\vy;\vw_{G_n})\}$
-				\item Combine the predictions
+				\item Combine the predictions.
 			\end{itemize}
 		\end{itemize}
 		\item Can we do better than these?
@@ -545,6 +545,18 @@
 		\includegraphics[scale=0.4]{./figures/cancernet.pdf}
 	\end{center}
 \end{frame}
+
+
+
+\begin{frame}{Random spanning tree approximation}
+	\begin{itemize}
+		\item We assume a complete set of pairwise correlations is sufficient to describe the dependencies between multiple labels.
+		\item We use a complete graph as the output graph.
+		
+	\end{itemize}
+\end{frame}
+
+
 
 \begin{frame}[allowframebreaks]{Bibliography}
 %\bibliographystyle{plain}
