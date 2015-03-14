@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 11:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 11:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1464,22 +1464,6 @@ Package pdftex.def Info: ./figures/mol1.png used on input line 419.
 Overfull \vbox (4.46278pt too high) detected at line 419
  []
 
-
-Overfull \hbox (1.65997pt too wide) in paragraph at lines 419--419
-[][]| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
-[]$\OT1/cmss/bx/n/8 y \OT1/cmss/m/n/8 =
- []
-
-
-Overfull \hbox (32.93703pt too wide) in paragraph at lines 419--419
-\OT1/cmss/m/n/8 (+1\OML/cmm/m/it/8 ; \OMS/cmsy/m/n/8 ^^@\OT1/cmss/m/n/8 1\OML/c
-mm/m/it/8 ; \OT1/cmss/m/n/8 +1\OML/cmm/m/it/8 ; \OT1/cmss/m/n/8 +1)$| 
- []
-
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
@@ -1581,7 +1565,7 @@ exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local
 /texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/lo
 cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (27 pages, 410869 bytes).
+Output written on example.pdf (27 pages, 410866 bytes).
 PDF statistics:
  274 PDF objects out of 1000 (max. 8388607)
  205 compressed objects within 3 object streams
