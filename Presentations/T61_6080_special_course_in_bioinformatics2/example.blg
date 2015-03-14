@@ -3,48 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: example.aux
 The style file: apalike.bst
 Database file #1: dissertation.bib
-Warning--I didn't find a database entry for "su11"
-Warning--I didn't find a database entry for "su14b"
 Warning--empty institution in Evgeniou99a
-You've used 19 entries,
+You've used 21 entries,
             1935 wiz_defined-function locations,
-            615 strings with 7366 characters,
-and the built_in function-call counts, 7907 in all, are:
-= -- 795
-> -- 284
-< -- 20
-+ -- 100
-- -- 90
-* -- 632
-:= -- 1333
-add.period$ -- 63
-call.type$ -- 19
-change.case$ -- 134
-chr.to.int$ -- 19
-cite$ -- 20
-duplicate$ -- 324
-empty$ -- 575
-format.name$ -- 127
-if$ -- 1604
+            623 strings with 7666 characters,
+and the built_in function-call counts, 8757 in all, are:
+= -- 880
+> -- 310
+< -- 24
++ -- 108
+- -- 98
+* -- 700
+:= -- 1467
+add.period$ -- 69
+call.type$ -- 21
+change.case$ -- 148
+chr.to.int$ -- 21
+cite$ -- 22
+duplicate$ -- 365
+empty$ -- 639
+format.name$ -- 141
+if$ -- 1785
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 99
-num.names$ -- 61
-pop$ -- 124
+missing$ -- 21
+newline$ -- 109
+num.names$ -- 67
+pop$ -- 137
 preamble$ -- 1
-purify$ -- 137
+purify$ -- 151
 quote$ -- 0
-skip$ -- 253
+skip$ -- 287
 stack$ -- 0
-substring$ -- 573
-swap$ -- 63
-text.length$ -- 6
+substring$ -- 625
+swap$ -- 76
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 108
+type$ -- 120
 warning$ -- 1
-while$ -- 67
+while$ -- 73
 width$ -- 0
-write$ -- 255
-(There were 3 warnings)
+write$ -- 282
+(There was 1 warning)
