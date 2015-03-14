@@ -470,13 +470,17 @@
 
 \begin{frame}{Obtain $\vw$ by regularized learning}
 	\begin{itemize}
-		\item $L_2$ norm regularization on $\vw$, $$\Omega(f) = ||\vw||^2$$.
+		\item $L_2$ norm regularization on $\vw$, $\Omega(f) = ||\vw||^2$.
 		\item Risk term
 		\begin{itemize}
 			\footnotesize
 			\item $f$ will not make mistake if
 			\begin{align*}
 				F(\vx_i,\vy_i) - F(\vx_i,\vy) \ge 0, \forall \vy\in\vYcal/\vy_i, i\in\{1,\cdots,m\}.
+			\end{align*}
+			\item We only have to evaluate the score of best incorrect label 
+			\begin{align*}
+				F(\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}F(\vx_i,\vy) \ge 0, \forall i\in\{1,\cdots,m\}.
 			\end{align*}
 		\end{itemize}
 		
