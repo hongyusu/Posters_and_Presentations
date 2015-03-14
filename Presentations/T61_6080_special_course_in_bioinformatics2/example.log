@@ -1548,22 +1548,19 @@ File: ./figures/cancernet.pdf Graphic file (type pdf)
 
 <use ./figures/cancernet.pdf>
 Package pdftex.def Info: ./figures/cancernet.pdf used on input line 538.
-(pdftex.def)             Requested size: 102.25557pt x 94.52829pt.
-
-Overfull \vbox (15.72833pt too high) detected at line 538
- []
-
+(pdftex.def)             Requested size: 76.68973pt x 70.89441pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 538.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
- [28
 
- <./figures/cancernet.pdf>]
-(./example.bbl)
+[28
+
+ <./figures/cancernet.pdf>] (./example.bbl)
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 544.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
@@ -1644,7 +1641,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (31 pages, 806435 bytes).
+Output written on example.pdf (31 pages, 806437 bytes).
 PDF statistics:
  495 PDF objects out of 1000 (max. 8388607)
  378 compressed objects within 4 object streams
