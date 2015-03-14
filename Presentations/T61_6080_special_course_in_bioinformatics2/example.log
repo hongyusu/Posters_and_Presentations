@@ -1201,9 +1201,6 @@ ne 58.
 LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <4> not available
 (Font)              size <5> substituted on input line 58.
 
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 58.
-
 [2
 
  <./Aalto_EN_ScienceandTech_13_RGB_y1.pdf>]
@@ -1228,24 +1225,15 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 73.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 73.
-
-[3
+ [3
 
  <./figures/dog.jpg> <./figures/cat.jpg>]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 83.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 83.
-
-[4
+ [4
 
 ]
 
@@ -1277,11 +1265,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 99.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 99.
-
-[5
+ [5
 
 ]
 
@@ -1297,13 +1281,10 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 120.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [6
 
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 120.
-
-[6
-
-] <./figures/empirical_risk_1.pdf, id=67, 578.16pt x 578.16pt>
+]
+<./figures/empirical_risk_1.pdf, id=67, 578.16pt x 578.16pt>
 File: ./figures/empirical_risk_1.pdf Graphic file (type pdf)
 
 <use ./figures/empirical_risk_1.pdf>
@@ -1324,11 +1305,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 135.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 135.
-
-[7
+ [7
 
  <./figures/empirical_risk_1.pdf> <./figures/empirical_risk_2.pdf>]
 
@@ -1354,11 +1331,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 157.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 157.
-
-[8
+ [8
 
  <./figures/vc_dimension.jpg>]
 
@@ -1390,11 +1363,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 178.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 178.
-
-[9
+ [9
 
 ]
 
@@ -1422,23 +1391,16 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 195.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 195.
-
-[10
+ [10
 
 ]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 214.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 214.
-
-[11
+ [11
 
 ]
 Overfull \vbox (0.85114pt too high) detected at line 239
@@ -1449,15 +1411,12 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 239.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 239.
-
-[12
+ [12
 
 ]
 File: ./figures/empirical_risk_2.pdf Graphic file (type pdf)
- <use ./figures/empirical_risk_2.pdf>
+
+<use ./figures/empirical_risk_2.pdf>
 Package pdftex.def Info: ./figures/empirical_risk_2.pdf used on input line 259.
 
 (pdftex.def)             Requested size: 57.81938pt x 57.81938pt.
@@ -1481,9 +1440,6 @@ Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 259.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
 
-
-LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 259.
-
 [13
 
  <./figures/maxmargin.pdf> <./figures/soft_margin.pdf>]
@@ -1493,13 +1449,10 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 278.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [14
 
-
-LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 278.
-
-[14
-
-] <./figures/nonlinearsvm.jpg, id=126, 617.30624pt x 194.7275pt>
+]
+<./figures/nonlinearsvm.jpg, id=126, 617.30624pt x 194.7275pt>
 File: ./figures/nonlinearsvm.jpg Graphic file (type jpg)
 
 <use ./figures/nonlinearsvm.jpg>
@@ -1510,9 +1463,6 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 297.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 297.
 
 [15
 
@@ -1530,48 +1480,33 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 314.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 314.
-
-[16
+ [16
 
  <./figures/polynomialfeaturemap.jpg>]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 332.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [17
+
+]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 332.
-(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 332.
-
-[17
-
-]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
-Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 358.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 358.
-
-[18
+ [18
 
 ]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 376.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 376.
-
-[19
+ [19
 
 ]
 
@@ -1587,40 +1522,30 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 387.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 387.
-
-[20
+ [20
 
 ]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 393.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 393.
-
-[21
+ [21
 
 ]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 399.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [22
 
-
-LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 399.
-
-[22
-
-] <./figures/mol1.png, id=171, 100.375pt x 100.375pt>
+]
+<./figures/mol1.png, id=171, 100.375pt x 100.375pt>
 File: ./figures/mol1.png Graphic file (type png)
-
-<use ./figures/mol1.png>
+ <use ./figures/mol1.png>
 Package pdftex.def Info: ./figures/mol1.png used on input line 421.
 (pdftex.def)             Requested size: 30.11272pt x 30.11272pt.
 
@@ -1642,11 +1567,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 421.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 421.
-
-[23
+ [23
 
  <./figures/mol1.png>]
 <./figures/outputgraph.pdf, id=178, 199.74625pt x 186.6975pt>
@@ -1660,9 +1581,6 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 438.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 24 undefined on input line 438.
 
 [24
 
@@ -1690,1024 +1608,115 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 469.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 25 undefined on input line 469.
-
-[25
+ [25
 
  <./figures/tensor_label.pdf> <./figures/jointfeaturespace.pdf>]
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-? q
-OK, entering \batchmode...
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 475.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
+[26
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+] (./example.bbl)
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 482.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [27
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
+]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 482.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [28
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 482.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [29
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
+]
+\tf@nav=\write6
+\openout6 = `example.nav'.
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+\tf@toc=\write7
+\openout7 = `example.toc'.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
+\tf@snm=\write8
+\openout8 = `example.snm'.
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+AED: lastpage setting LastPage
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
+Package natbib Warning: There were undefined citations.
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 485.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 485.
+(./example.aux
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 485.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 485.
+Package rerunfilecheck Info: File `example.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
 
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten $.
-<inserted text> }
-                 
-l.480 \end{frame}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 \end{frame}
-                 
-(That makes 100 errors; please try again.) 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 485.
+ ) 
 Here is how much of TeX's memory you used:
- 16962 strings out of 493315
- 307724 string characters out of 6137904
- 394412 words of memory out of 5000000
- 19908 multiletter control sequences out of 15000+600000
- 17452 words of font info for 65 fonts, out of 8000000 for 9000
+ 17054 strings out of 493315
+ 309603 string characters out of 6137904
+ 394441 words of memory out of 5000000
+ 19980 multiletter control sequences out of 15000+600000
+ 22617 words of font info for 85 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,23n,55p,393b,748s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
+b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9
+.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
+local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/lo
+cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/lo
+cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local
+/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on example.pdf (29 pages, 771123 bytes).
+PDF statistics:
+ 462 PDF objects out of 1000 (max. 8388607)
+ 353 compressed objects within 4 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-!  ==> Fatal error occurred, no output PDF file produced!
