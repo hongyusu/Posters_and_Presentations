@@ -1489,10 +1489,6 @@ Package pdftex.def Info: ./figures/outputgraph.pdf used on input line 437.
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 437.
 
-
-Overfull \vbox (11.44574pt too high) detected at line 437
- []
-
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
@@ -1581,7 +1577,7 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on example.pdf (27 pages, 414574 bytes).
+Output written on example.pdf (27 pages, 414431 bytes).
 PDF statistics:
  302 PDF objects out of 1000 (max. 8388607)
  222 compressed objects within 3 object streams
