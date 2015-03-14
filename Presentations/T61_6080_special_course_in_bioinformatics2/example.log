@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 11:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1467,97 +1467,72 @@ Overfull \hbox (1.65997pt too wide) in paragraph at lines 420--420
 
 
 Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 +1| 
+[]$\OT1/cmss/m/n/8 +1$| 
  []
 
 
 Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 +1| 
+[]$\OT1/cmss/m/n/8 +1$| 
  []
 
 
 Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 +1| 
- []
-
-
-Overfull \hbox (0.55711pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 -
- []
-
-
-Overfull \hbox (1.9738pt too wide) in paragraph at lines 420--420
-\OT1/cmss/m/n/8 1| 
- []
-
-
-Overfull \hbox (0.55711pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 -
- []
-
-
-Overfull \hbox (1.9738pt too wide) in paragraph at lines 420--420
-\OT1/cmss/m/n/8 1| 
+[]$\OT1/cmss/m/n/8 +1$| 
  []
 
 
 Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 +1| 
+[]$\OMS/cmsy/m/n/8 ^^@\OT1/cmss/m/n/8 1$| 
  []
 
 
 Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 +1| 
+[]$\OMS/cmsy/m/n/8 ^^@\OT1/cmss/m/n/8 1$| 
  []
 
 
 Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 +1| 
+[]$\OT1/cmss/m/n/8 +1$| 
  []
 
 
 Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 +1| 
- []
-
-
-Overfull \hbox (0.55711pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 -
- []
-
-
-Overfull \hbox (1.9738pt too wide) in paragraph at lines 420--420
-\OT1/cmss/m/n/8 1| 
- []
-
-
-Overfull \hbox (0.55711pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 -
- []
-
-
-Overfull \hbox (1.9738pt too wide) in paragraph at lines 420--420
-\OT1/cmss/m/n/8 1| 
- []
-
-
-Overfull \hbox (0.55711pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 -
- []
-
-
-Overfull \hbox (1.9738pt too wide) in paragraph at lines 420--420
-\OT1/cmss/m/n/8 1| 
+[]$\OT1/cmss/m/n/8 +1$| 
  []
 
 
 Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 +1| 
+[]$\OT1/cmss/m/n/8 +1$| 
  []
 
 
 Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
-[]\OT1/cmss/m/n/8 +1| 
+[]$\OT1/cmss/m/n/8 +1$| 
+ []
+
+
+Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
+[]$\OMS/cmsy/m/n/8 ^^@\OT1/cmss/m/n/8 1$| 
+ []
+
+
+Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
+[]$\OMS/cmsy/m/n/8 ^^@\OT1/cmss/m/n/8 1$| 
+ []
+
+
+Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
+[]$\OMS/cmsy/m/n/8 ^^@\OT1/cmss/m/n/8 1$| 
+ []
+
+
+Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
+[]$\OT1/cmss/m/n/8 +1$| 
+ []
+
+
+Overfull \hbox (8.585pt too wide) in paragraph at lines 420--420
+[]$\OT1/cmss/m/n/8 +1$| 
  []
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
@@ -1652,15 +1627,15 @@ sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
-r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-
-Output written on example.pdf (27 pages, 395939 bytes).
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
+/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/
+local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on example.pdf (27 pages, 403122 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 199 compressed objects within 2 object streams
+ 270 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
  56 named destinations out of 1000 (max. 500000)
  103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
