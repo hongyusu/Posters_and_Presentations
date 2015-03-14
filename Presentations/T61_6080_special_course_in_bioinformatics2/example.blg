@@ -4,45 +4,45 @@ The top-level auxiliary file: example.aux
 The style file: apalike.bst
 Database file #1: dissertation.bib
 Warning--empty institution in Evgeniou99a
-You've used 21 entries,
+You've used 20 entries,
             1935 wiz_defined-function locations,
-            623 strings with 7666 characters,
-and the built_in function-call counts, 8757 in all, are:
-= -- 880
-> -- 310
-< -- 24
-+ -- 108
-- -- 98
-* -- 700
-:= -- 1467
-add.period$ -- 69
-call.type$ -- 21
-change.case$ -- 148
-chr.to.int$ -- 21
-cite$ -- 22
-duplicate$ -- 365
-empty$ -- 639
-format.name$ -- 141
-if$ -- 1785
+            617 strings with 7449 characters,
+and the built_in function-call counts, 8227 in all, are:
+= -- 826
+> -- 297
+< -- 21
++ -- 104
+- -- 94
+* -- 659
+:= -- 1392
+add.period$ -- 66
+call.type$ -- 20
+change.case$ -- 141
+chr.to.int$ -- 20
+cite$ -- 21
+duplicate$ -- 337
+empty$ -- 596
+format.name$ -- 134
+if$ -- 1665
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 21
-newline$ -- 109
-num.names$ -- 67
-pop$ -- 137
+missing$ -- 20
+newline$ -- 104
+num.names$ -- 64
+pop$ -- 128
 preamble$ -- 1
-purify$ -- 151
+purify$ -- 144
 quote$ -- 0
-skip$ -- 287
+skip$ -- 265
 stack$ -- 0
-substring$ -- 625
-swap$ -- 76
-text.length$ -- 8
+substring$ -- 585
+swap$ -- 64
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 120
+type$ -- 114
 warning$ -- 1
-while$ -- 73
+while$ -- 69
 width$ -- 0
-write$ -- 282
+write$ -- 268
 (There was 1 warning)
