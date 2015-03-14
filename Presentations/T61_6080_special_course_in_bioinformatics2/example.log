@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 00:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1215,8 +1215,12 @@ File: ./figures/cat.jpg Graphic file (type jpg)
  <use ./figures/cat.jpg>
 Package pdftex.def Info: ./figures/cat.jpg used on input line 73.
 (pdftex.def)             Requested size: 60.52658pt x 59.92433pt.
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
+
+Package natbib Warning: Citation `Golle08machine' on page 3 undefined on input 
+line 73.
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 73.
@@ -1233,8 +1237,28 @@ ne 83.
 
 ]
 
+Package natbib Warning: Citation `Cortes95support' on page 5 undefined on input
+ line 99.
+
+
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 99.
+
+
+Package natbib Warning: Citation `THJA04' on page 5 undefined on input line 99.
+
+
+
+Package natbib Warning: Citation `Hoerl00ridge' on page 5 undefined on input li
+ne 99.
+
+
+Package natbib Warning: Citation `Schapire99improved' on page 5 undefined on in
+put line 99.
+
+
+Package natbib Warning: Citation `Chen99' on page 5 undefined on input line 99.
+
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
@@ -1244,8 +1268,15 @@ ne 99.
  [5
 
 ]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
+Package natbib Warning: Citation `Vapnik92principles' on page 6 undefined on in
+put line 120.
+
+
+Package natbib Warning: Citation `Vapnik92principles' on page 6 undefined on in
+put line 120.
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 120.
@@ -1277,6 +1308,14 @@ ne 135.
  [7
 
  <./figures/empirical_risk_1.pdf> <./figures/empirical_risk_2.pdf>]
+
+Package natbib Warning: Citation `Evgeniou99a' on page 8 undefined on input lin
+e 157.
+
+
+Package natbib Warning: Citation `Evgeniou02regularization' on page 8 undefined
+ on input line 157.
+
 <./figures/vc_dimension.jpg, id=79, 651.43375pt x 320.19624pt>
 File: ./figures/vc_dimension.jpg Graphic file (type jpg)
 
@@ -1295,8 +1334,31 @@ ne 157.
  [8
 
  <./figures/vc_dimension.jpg>]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
+Package natbib Warning: Citation `Vapnik92principles' on page 9 undefined on in
+put line 178.
+
+
+Package natbib Warning: Citation `Hoerl00ridge' on page 9 undefined on input li
+ne 178.
+
+
+Package natbib Warning: Citation `Chen00' on page 9 undefined on input line 178
+.
+
+
+Package natbib Warning: Citation `Cortes95support' on page 9 undefined on input
+ line 178.
+
+
+Package natbib Warning: Citation `Tibshirani94regression' on page 9 undefined o
+n input line 178.
+
+
+Package natbib Warning: Citation `Zhou04learning' on page 9 undefined on input 
+line 178.
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 178.
@@ -1304,8 +1366,27 @@ ne 178.
  [9
 
 ]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
+Package natbib Warning: Citation `Boser92' on page 10 undefined on input line 1
+95.
+
+
+Package natbib Warning: Citation `Cortes95support' on page 10 undefined on inpu
+t line 195.
+
+
+Package natbib Warning: Citation `Vapnik98statistical' on page 10 undefined on 
+input line 195.
+
+
+Package natbib Warning: Citation `Taylor00an' on page 10 undefined on input lin
+e 195.
+
+
+Package natbib Warning: Citation `Taylor04kernel' on page 10 undefined on input
+ line 195.
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 195.
@@ -1428,8 +1509,15 @@ ne 376.
  [19
 
 ]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
+Package natbib Warning: Citation `Chang11libsvm' on page 20 undefined on input 
+line 387.
+
+
+Package natbib Warning: Citation `Joachims98making' on page 20 undefined on inp
+ut line 387.
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 387.
@@ -1532,6 +1620,11 @@ ne 495.
 [26
 
 ]
+
+Package natbib Warning: Citation `Wainwright08graphical' on page 27 undefined o
+n input line 517.
+
+
 Overfull \vbox (3.5579pt too high) detected at line 517
  []
 
@@ -1567,44 +1660,30 @@ ne 547.
 [29
 
  <./figures/cancernet.pdf>]
-Overfull \vbox (1.24081pt too high) detected at line 574
- []
-
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 574.
+ne 565.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
- [30
+
+[30
+
+]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 575.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [31
 
 ] (./example.bbl)
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 582.
-(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
- [31
-
-]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
-Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 582.
+ne 581.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [32
-
-
-]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
-Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 582.
-(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
- [33
-
 
 ]
 \tf@nav=\write6
@@ -1619,11 +1698,14 @@ ne 582.
 
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 585.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 585.
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 584.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 584.
 (./example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 585.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 585.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 584.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 584.
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1631,13 +1713,16 @@ Package rerunfilecheck Info: File `example.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 585.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 584.
  ) 
 Here is how much of TeX's memory you used:
- 17115 strings out of 493315
- 310984 string characters out of 6137904
- 395097 words of memory out of 5000000
- 20032 multiletter control sequences out of 15000+600000
+ 17058 strings out of 493315
+ 309838 string characters out of 6137904
+ 394439 words of memory out of 5000000
+ 19978 multiletter control sequences out of 15000+600000
  22617 words of font info for 85 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,23n,55p,393b,781s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1661,10 +1746,10 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (33 pages, 809125 bytes).
+Output written on example.pdf (32 pages, 805221 bytes).
 PDF statistics:
- 506 PDF objects out of 1000 (max. 8388607)
- 387 compressed objects within 4 object streams
- 68 named destinations out of 1000 (max. 500000)
+ 499 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
