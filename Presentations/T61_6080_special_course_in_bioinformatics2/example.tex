@@ -422,21 +422,18 @@
 	\begin{itemize}
 		\item Observe an output $G=(E,V)$, a vertex $v_i\in V$ correspond to a microlabel $y_i$, an edge $(v_i,v_j)\in E$ correspond to the pairwise correlation of the microlabel $y_i$ and $y_j$.
 		\begin{center}
-			\includegraphics[scale=0.2]{./figures/outputgraph.pdf}
+			\includegraphics[scale=0.3]{./figures/outputgraph.pdf}
 		\end{center}
 		\item Feature maps
-		\begin{itemize}
-			\footnotesize
 			\item $\varphib(\vx)$ is the  input feature map, $\varphib(\vx)\in\RR^d$.
-			\item $\psib(\vy)$ is the output feature map that maps the multilabel $\vy$ into a set of edges and labels.
-			\begin{align*}
-				\vy&=(+1,-1,+1,+1)\\
-				\psib(\vy) &= ( \underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_2)} 
-				\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_2)}
-				\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_2)})
-			\end{align*}
-			\item Joint feature map $\phib(\vx,\vy) = \varphi(\vx)\times\psi(\vy)$, $\times$ is Kronecker tensor.
-		\end{itemize}
+		\item $\psib(\vy)$ is the output feature map that maps the multilabel $\vy$ into a set of edges and labels.
+		\begin{align*}
+			\vy&=(+1,-1,+1,+1)\\
+			\psib(\vy) &= ( \underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_2)} 
+			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_2)}
+			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++}}_{(v_1,v_2)})
+		\end{align*}
+		\item Joint feature map $\phib(\vx,\vy) = \varphi(\vx)\times\psi(\vy)$, $\times$ is Kronecker tensor.
 	\end{itemize}
 \end{frame}
 
