@@ -442,9 +442,9 @@
 	\begin{itemize}
 		\item Joint feature map put input and output feature into a joint feature space
 		\begin{align*}
-			\phib(\vx,\vy) = \varphi(\vx)\otimes\psi(\vy) = (\varphib(\vx)[i]\,\psib(\vy)[j])_{i,j}
+			\phib(\vx,\vy) = \varphi(\vx)\otimes\psi(\vy) = (\varphib(\vx)[i]\,\psib(\vy)[j])_{i,j},
 		\end{align*} 
-			$\otimes$ is Kronecker product. $\phib(\vx,\vy)\in\RR^{d\times4|E|}$
+			$\otimes$ is the Kronecker product. $\phib(\vx,\vy)\in\RR^{d\times4|E|}$
 		\begin{center}
 			\includegraphics[scale = 1]{./figures/tensor_label.pdf}	
 			\text{     }
@@ -462,7 +462,7 @@
 		\end{align*}
 		\item Prediction is by solving the $\argmax$ in exponential space $|\vYcal|=2^k$
 		\begin{align*}
-			\vy^*= \underset{\vy\in\vYcal}{\argmax} \, \ip{\vw}{\phib(\vx,\vy)}.
+			\vy^*= \underset{\vy\in\vYcal}{\argmax} \, F(\vx,\vy) =  \ip{\vw}{\phib(\vx,\vy)}.
 		\end{align*}
 		\item 
 	\end{itemize}
