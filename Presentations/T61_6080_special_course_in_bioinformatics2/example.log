@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 12:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1201,9 +1201,6 @@ ne 58.
 LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <4> not available
 (Font)              size <5> substituted on input line 58.
 
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 58.
-
 [2
 
  <./Aalto_EN_ScienceandTech_13_RGB_y1.pdf>]
@@ -1228,24 +1225,15 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 73.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 73.
-
-[3
+ [3
 
  <./figures/dog.jpg> <./figures/cat.jpg>]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 83.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 83.
-
-[4
+ [4
 
 ]
 
@@ -1277,11 +1265,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 99.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 99.
-
-[5
+ [5
 
 ]
 
@@ -1297,13 +1281,10 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 120.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [6
 
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 120.
-
-[6
-
-] <./figures/empirical_risk_1.pdf, id=67, 578.16pt x 578.16pt>
+]
+<./figures/empirical_risk_1.pdf, id=67, 578.16pt x 578.16pt>
 File: ./figures/empirical_risk_1.pdf Graphic file (type pdf)
 
 <use ./figures/empirical_risk_1.pdf>
@@ -1324,11 +1305,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 135.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 135.
-
-[7
+ [7
 
  <./figures/empirical_risk_1.pdf> <./figures/empirical_risk_2.pdf>]
 
@@ -1354,11 +1331,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 157.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 157.
-
-[8
+ [8
 
  <./figures/vc_dimension.jpg>]
 
@@ -1390,11 +1363,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 178.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 178.
-
-[9
+ [9
 
 ]
 
@@ -1422,23 +1391,16 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 195.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 195.
-
-[10
+ [10
 
 ]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 214.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 214.
-
-[11
+ [11
 
 ]
 Overfull \vbox (0.85114pt too high) detected at line 239
@@ -1449,15 +1411,12 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 239.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 239.
-
-[12
+ [12
 
 ]
 File: ./figures/empirical_risk_2.pdf Graphic file (type pdf)
- <use ./figures/empirical_risk_2.pdf>
+
+<use ./figures/empirical_risk_2.pdf>
 Package pdftex.def Info: ./figures/empirical_risk_2.pdf used on input line 259.
 
 (pdftex.def)             Requested size: 57.81938pt x 57.81938pt.
@@ -1481,9 +1440,6 @@ Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 259.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
 
-
-LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 259.
-
 [13
 
  <./figures/maxmargin.pdf> <./figures/soft_margin.pdf>]
@@ -1493,13 +1449,10 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 278.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [14
 
-
-LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 278.
-
-[14
-
-] <./figures/nonlinearsvm.jpg, id=126, 617.30624pt x 194.7275pt>
+]
+<./figures/nonlinearsvm.jpg, id=126, 617.30624pt x 194.7275pt>
 File: ./figures/nonlinearsvm.jpg Graphic file (type jpg)
 
 <use ./figures/nonlinearsvm.jpg>
@@ -1510,9 +1463,6 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 297.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 297.
 
 [15
 
@@ -1530,48 +1480,33 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 314.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 314.
-
-[16
+ [16
 
  <./figures/polynomialfeaturemap.jpg>]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 332.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [17
+
+]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 332.
-(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 332.
-
-[17
-
-]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
-Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 358.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 358.
-
-[18
+ [18
 
 ]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 376.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 376.
-
-[19
+ [19
 
 ]
 
@@ -1587,40 +1522,30 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 387.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 387.
-
-[20
+ [20
 
 ]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 393.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 393.
-
-[21
+ [21
 
 ]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 399.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [22
 
-
-LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 399.
-
-[22
-
-] <./figures/mol1.png, id=171, 100.375pt x 100.375pt>
+]
+<./figures/mol1.png, id=171, 100.375pt x 100.375pt>
 File: ./figures/mol1.png Graphic file (type png)
-
-<use ./figures/mol1.png>
+ <use ./figures/mol1.png>
 Package pdftex.def Info: ./figures/mol1.png used on input line 419.
 (pdftex.def)             Requested size: 30.11272pt x 30.11272pt.
 
@@ -1638,53 +1563,68 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 419.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 419.
-
-[23
+ [23
 
  <./figures/mol1.png>]
-File: ./figures/mol1.png Graphic file (type png)
- <use ./figures/mol1.png>
-Package pdftex.def Info: ./figures/mol1.png used on input line 441.
-(pdftex.def)             Requested size: 30.11272pt x 30.11272pt.
+<./figures/outputgraph.pdf, id=178, 199.74625pt x 186.6975pt>
+File: ./figures/outputgraph.pdf Graphic file (type pdf)
 
-Overfull \hbox (1.65997pt too wide) in paragraph at lines 441--441
+<use ./figures/outputgraph.pdf>
+Package pdftex.def Info: ./figures/outputgraph.pdf used on input line 440.
+(pdftex.def)             Requested size: 59.92433pt x 56.00967pt.
+
+Overfull \vbox (26.30971pt too high) detected at line 440
+ []
+
+
+Overfull \hbox (31.47159pt too wide) in paragraph at lines 440--440
 [][]| 
  []
 
 
-Overfull \hbox (92.04323pt too wide) in paragraph at lines 441--441
+Overfull \hbox (92.04323pt too wide) in paragraph at lines 440--440
  [] 
  []
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 441.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 440.
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 441.
+ne 440.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [24
 
-
-LaTeX Warning: Reference `LastPage' on page 24 undefined on input line 441.
-
-[24
-
-] (./example.bbl)
+ <./figures/outputgraph.pdf>]
+(./example.bbl)
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
  <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 447.
+ne 446.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [25
+
+]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 446.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [26
 
 
-LaTeX Warning: Reference `LastPage' on page 25 undefined on input line 447.
+]
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
-[25
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
+ne 446.
+(pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [27
+
 
 ]
 \tf@nav=\write6
@@ -1698,18 +1638,20 @@ LaTeX Warning: Reference `LastPage' on page 25 undefined on input line 447.
 
 
 
-Package lastpage Warning: Rerun to get the references right on input line 450.
-
-
 AED: lastpage setting LastPage
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 450.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 450.
-(./example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 450.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 450.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 449.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 449.
+(./example.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 449.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 449.
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1718,21 +1660,18 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 450.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 449.
  ) 
 Here is how much of TeX's memory you used:
- 16958 strings out of 493315
- 307731 string characters out of 6137904
- 392412 words of memory out of 5000000
- 19900 multiletter control sequences out of 15000+600000
+ 17012 strings out of 493315
+ 308912 string characters out of 6137904
+ 392441 words of memory out of 5000000
+ 19948 multiletter control sequences out of 15000+600000
  17753 words of font info for 66 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 55i,20n,55p,393b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,20n,55p,393b,764s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9
 .pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
@@ -1750,10 +1689,10 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on example.pdf (25 pages, 387712 bytes).
+Output written on example.pdf (27 pages, 413727 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
 
