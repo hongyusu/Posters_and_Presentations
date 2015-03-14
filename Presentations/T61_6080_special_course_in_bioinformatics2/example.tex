@@ -472,8 +472,17 @@
 	\begin{itemize}
 		\item $L_2$ norm regularization on $\vw$
 		\begin{align*}
-			\omega(f) = ||\vw||^2.
+			\Omega(f) = ||\vw||^2.
 		\end{align*}
+		\item Risk term
+		\begin{itemize}
+			\footnotesize
+			\item $f$ will not make mistake if
+			\begin{align*}
+				F(\vx_i,\vy_i) - F(\vx_i,\vy) \ge 0, \forall \vy\in\vYcal/\vy_i, i\in\{1,\cdots,m\}.
+			\end{align*}
+		\end{itemize}
+		
 		\item The \mmcrf\ optimization problem
 		\begin{align*}
 			\underset{\vw,\vxi}{\minimize} &\quad \underbrace{\frac{1}{2}||\vw||^2}_{\text{regularization}} + \underbrace{C\sum_{i=1}^m\xi_i}_{\text{risk}}\\
