@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 12:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1494,18 +1494,7 @@ Overfull \hbox (3.01883pt too wide) in paragraph at lines 440--440
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
-[]$\OT1/cmss/bx/n/9 y \OT1/cmss/m/n/9 =
- []
-
-
-Overfull \hbox (38.35237pt too wide) in paragraph at lines 440--440
-\OT1/cmss/m/n/9 (+1\OML/cmm/m/it/9 ; \OMS/cmsy/m/n/9 ^^@\OT1/cmss/m/n/9 1\OML/c
-mm/m/it/9 ; \OT1/cmss/m/n/9 +1\OML/cmm/m/it/9 ; \OT1/cmss/m/n/9 +1)$| 
- []
-
-
-Overfull \hbox (120.49599pt too wide) in paragraph at lines 440--440
+Overfull \hbox (177.4015pt too wide) in paragraph at lines 440--440
  [] 
  []
 
@@ -1601,7 +1590,7 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on example.pdf (27 pages, 414028 bytes).
+Output written on example.pdf (27 pages, 414023 bytes).
 PDF statistics:
  302 PDF objects out of 1000 (max. 8388607)
  222 compressed objects within 3 object streams
