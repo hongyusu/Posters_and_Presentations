@@ -527,9 +527,8 @@
 		\item We now focus on the problem in structured output learning where the output graph is not observed.
 		\begin{itemize}
 			\footnotesize
-			\item We can try to extract the correlation graph from other data sources if available.
-
-			\item Generate a set random output graphs, build a collection of structured output learners, and try to combine the predictions.
+			\item We can try to extract the correlation graph from some external data sources if available.
+			\item Generate a set random output graphs $\{G_1,\cdots,G_n\}$, build a collection of structured output learners $\{f_{G_1}(\vx,\vy;\vw_{G_1},\cdots,f_{G_1}(\vx,\vy;\vw_{G_n}))\}$, and try to combine the predictions.
 		\end{itemize}
 		\item Can we do better than these?
 	\end{itemize}
