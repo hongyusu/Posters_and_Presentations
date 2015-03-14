@@ -95,6 +95,11 @@ Vapnik, V.~N. (1998).
 \newblock {\em Statistical Learning Theory}.
 \newblock Wiley-Interscience.
 
+\bibitem[Wainwright and Jordan, 2003]{Wainwright08graphical}
+Wainwright, M.~J. and Jordan, M.~I. (2003).
+\newblock Graphical models, exponential families, and variational inference.
+\newblock {\em Foundation and Trends in Machine Learning}, 1(1-2):1--305.
+
 \bibitem[Zhou et~al., 2004]{Zhou04learning}
 Zhou, D., Bousquet, O., Lal, T.~N., Weston, J., and Sch\"{o}lkopf, B. (2004).
 \newblock Learning with local and global consistency.
