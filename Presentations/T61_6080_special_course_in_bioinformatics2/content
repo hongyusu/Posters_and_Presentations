@@ -1,0 +1,31 @@
+
+
+
+
+
+
+applications
+	molecular classification
+	hierarchical taxonomy classification
+	social network analysis
+methods
+	support vector machines
+	kernel methods
+	kernel for molecules
+	feature representations
+	structure output predictions
+	semi-supervised learning
+
+
+	support vector machine
+	kernel methods
+	kernel for molecules
+		walk kernel
+		decomposition kernel
+		fingerprint Tanimoto kernel
+		
+
+
+- It is better to write down equations/tables rather than cutting them from elsewhere, e.g., page 4.
+- Write more sentences in your slides to explain things rather than listing equations, e.g., page 7 and page 8.
+- Make your slides explain itself so that people don't need to follow your talk to know what it is about. e.g., page 8 and page 11.
