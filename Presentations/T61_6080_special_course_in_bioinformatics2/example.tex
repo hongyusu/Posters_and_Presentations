@@ -420,7 +420,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Output graph and feature maps}
+\begin{frame}{Output graph and feature maps}
 	\begin{itemize}
 		\item Observe an output $G=(E,V)$, a vertex $v_i\in V$ correspond to a microlabel $y_i$, an edge $(v_i,v_j)\in E$ correspond to the pairwise correlation of the microlabel $y_i$ and $y_j$.
 		\begin{center}
@@ -434,8 +434,13 @@
 			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{0}_{+-}, \underbrace{1}_{++},}_{(v_1,v_2)}
 			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{0}_{+-}, \underbrace{1}_{++}}_{(v_3,v_4)})
 		\end{align*}
-		\framebreak
-		\item Joint feature map
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{}
+	\begin{itemize}
+		\item Joint feature map put input and output feature into a joint feature space
 		\begin{align*}
 			\phib(\vx,\vy) = \varphi(\vx)\otimes\psi(\vy) = (\varphib(\vx)[i]\,\psib(\vy)[j])_{i,j}
 		\end{align*} 
@@ -449,9 +454,12 @@
 		% \put(-40,75){\tiny $\psib(\vy)[j]$}
 		% \put(-60,30){\tiny $\phi(\vx,\vy)[i,j] = \varphi(\vx)[i]\psib(\vy)[j]$}
 		% \end{center}
+		\item Compatibility score
+		\begin{align*}
+			F(\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)}.
+		\end{align*}
 	\end{itemize}
 \end{frame}
-
 \begin{frame}[allowframebreaks]{Bibliography}
 %\bibliographystyle{plain}
 \bibliographystyle{apalike}
