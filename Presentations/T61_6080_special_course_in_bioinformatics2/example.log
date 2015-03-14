@@ -1464,6 +1464,11 @@ Package pdftex.def Info: ./figures/mol1.png used on input line 419.
 Overfull \vbox (4.46278pt too high) detected at line 419
  []
 
+
+Overfull \hbox (307.6653pt too wide) in paragraph at lines 419--419
+ [] 
+ []
+
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
@@ -1565,7 +1570,7 @@ exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local
 /texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/lo
 cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (27 pages, 410866 bytes).
+Output written on example.pdf (27 pages, 410873 bytes).
 PDF statistics:
  274 PDF objects out of 1000 (max. 8388607)
  205 compressed objects within 3 object streams
