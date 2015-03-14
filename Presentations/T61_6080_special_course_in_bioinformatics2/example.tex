@@ -472,7 +472,7 @@
 	\begin{itemize}
 		\item The \mmcrf\ optimization problem
 		\begin{align*}
-			\underset{\vw,\vxi}{\minimize} &\quad \underbrace{\text{regularization}}{\frac{1}{2}||\vw||^2} + C\sum_{i=1}^m\xi_i\\
+			\underset{\vw,\vxi}{\minimize} &\quad \underbrace{\frac{1}{2}||\vw||^2}_{\text{regularization}} + C\sum_{i=1}^m\xi_i\\
 			\st &\quad F(\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}{\maximize}F(\vx_i,\vy) \ge \ell(\vy_i,\vy) + \xi_i,\\
 			&\quad \xi_i\ge0, \forall i\in\{1,\cdots,m\}.
 		\end{align*}
