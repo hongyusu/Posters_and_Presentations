@@ -16,3 +16,7 @@ pdflatex example
 # rm example.out
 # rm example.snm
 # rm example.toc
+
+
+git commit -m'auto upload' .
+git push -u origin mater
