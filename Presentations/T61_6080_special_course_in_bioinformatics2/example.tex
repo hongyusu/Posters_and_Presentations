@@ -401,7 +401,7 @@
 \begin{frame}{Max-margin conditional random field}{Preliminaries}
 	\begin{itemize}
 		\item Training examples come in pairs $(\vx,\vy)\in\vXcal\times\vYcal$ sampled from some unknown joint distribution $P(\vx,\vy)$.
-		\item $\vx\in\vXcal$ is an instant from input domain $\vXcal$.
+		\item $\vx\in\vXcal$ is an instant from input domain $\vXcal$ (e.g. a document, a molecule, a picture).
 		\item $\vy=(y_1,\cdots,y_k)\in\vYcal$ is a vector of labels from output domain. $\vYcal=\Ycal_k\times\cdots\times\Ycal_k$, $\Ycal=\{-1,+1\}$ and $\vYcal=\{-1,+1\}^k$.
 		\item $\vy$ is called a multilabel, $y_i$ is called a microlabel of the multilabel.
 		\item Observe an output $G=(E,V)$, a vertex $v_i\in V$ correspond to a microlabel $y_i$, an edge $(v_i,v_j)\in E$ correspond to the pairwise correlation of the microlabel $y_i$ and $y_j$. 
@@ -410,7 +410,7 @@
 			\footnotesize
 			\item $\varphib(\vx)$ is the  input feature map, $\varphib(\vx)\in\RR^d$.
 			\item $\psib(\vy)$ is the output feature map that maps the multilabel $\vy$ into a set of edges and labels.
-			\item Joint feature map $\phib(\vx,\vy) = \varphi(\vx)\times\psi(\vy)$. $\times$ is Kronecker tensor.
+			\item Joint feature map $\phib(\vx,\vy) = \varphi(\vx)\times\psi(\vy)$, $\times$ is Kronecker tensor.
 		\end{itemize}
 	\end{itemize}
 \end{frame}
