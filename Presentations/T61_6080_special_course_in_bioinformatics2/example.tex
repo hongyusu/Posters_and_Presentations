@@ -403,9 +403,25 @@
 		\item Training examples come in pairs $(\vx,\vy)\in\vXcal\times\vYcal$ sampled from some unknown joint distribution $P(\vx,\vy)$.
 		\item $\vx\in\vXcal$ is an instant from input domain $\vXcal$ (e.g., a document, a molecule, a picture).
 		\item $\vy=(y_1,\cdots,y_k)\in\vYcal$ is a vector of labels from output domain (e.g., categories of a documents, potentials of a molecules, annotations of a picture).
-		\item The output domain $\vYcal=\Ycal_k\times\cdots\times\Ycal_k$, $\Ycal=\{-1,+1\}$ and $\vYcal=\{-1,+1\}^k$.
+		\item The output domain $\vYcal=\Ycal_1\times\cdots\times\Ycal_k$, $\Ycal_j=\{-1,+1\}$ and $\vYcal=\{-1,+1\}^k$.
 		\item $\vy$ is called a multilabel, $y_i$ is called a microlabel of the multilabel.
-		\item Observe an output $G=(E,V)$, a vertex $v_i\in V$ correspond to a microlabel $y_i$, an edge $(v_i,v_j)\in E$ correspond to the pairwise correlation of the microlabel $y_i$ and $y_j$. 
+		\item For example in predicting anti-cancer potential:
+		\begin{table}
+        \scriptsize
+        \begin{tabular}{p{1cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}p{0.08cm}}
+        \multirow{4}{*}{\includegraphics[scale = 0.3]{./figures/mol1.png}} & 
+        \cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1 \\ 
+        &\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{blue}0&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{blue}0&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1 \\ 
+        &\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{blue}0&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{blue}0&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{blue}0&\cellcolor{purple}1&\cellcolor{purple}1 \\ 
+        &\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{blue}0&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1&\cellcolor{purple}1 \\ 
+        \end{tabular}
+        \end{table}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+	\begin{itemize}
+		\item Observe an output $G=(E,V)$, a vertex $v_i\in V$ correspond to a microlabel $y_i$, an edge $(v_i,v_j)\in E$ correspond to the pairwise correlation of the microlabel $y_i$ and $y_j$.
 		\item Feature maps
 		\begin{itemize}
 			\footnotesize
