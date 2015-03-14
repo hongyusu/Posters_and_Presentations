@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 14:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1501,24 +1501,21 @@ ne 438.
 File: ./figures/tensor_label.pdf Graphic file (type pdf)
 
 <use ./figures/tensor_label.pdf>
-Package pdftex.def Info: ./figures/tensor_label.pdf used on input line 465.
+Package pdftex.def Info: ./figures/tensor_label.pdf used on input line 464.
 (pdftex.def)             Requested size: 112.3056pt x 82.59764pt.
 
 <./figures/jointfeaturespace.pdf, id=220, 96.35277pt x 97.55081pt>
 File: ./figures/jointfeaturespace.pdf Graphic file (type pdf)
 
 <use ./figures/jointfeaturespace.pdf>
-Package pdftex.def Info: ./figures/jointfeaturespace.pdf used on input line 465
+Package pdftex.def Info: ./figures/jointfeaturespace.pdf used on input line 464
 .
-(pdftex.def)             Requested size: 67.44647pt x 68.2851pt.
-
-Overfull \vbox (40.25613pt too high) detected at line 465
- []
-
+(pdftex.def)             Requested size: 77.0823pt x 78.04074pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 465.
+ne 464.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [25
 
@@ -1528,7 +1525,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 470.
+ne 469.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [26
 
@@ -1537,7 +1534,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 470.
+ne 469.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [27
 
@@ -1547,7 +1544,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 470.
+ne 469.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [28
 
@@ -1565,11 +1562,11 @@ ne 470.
 
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 473.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 472.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 472.
 (./example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 473.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 473.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 472.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 472.
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1577,7 +1574,7 @@ Package rerunfilecheck Info: File `example.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 473.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 472.
  ) 
 Here is how much of TeX's memory you used:
  17032 strings out of 493315
@@ -1607,7 +1604,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (28 pages, 769704 bytes).
+Output written on example.pdf (28 pages, 769729 bytes).
 PDF statistics:
  457 PDF objects out of 1000 (max. 8388607)
  349 compressed objects within 4 object streams
