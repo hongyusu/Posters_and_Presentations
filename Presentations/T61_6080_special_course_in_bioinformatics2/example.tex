@@ -487,7 +487,10 @@
 				F(\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\,F(\vx_i,\vy) - \ell(\vy_i,\vy) \ge 0, \forall i\in\{1,\cdots,m\}.
 			\end{align*}
 		\end{itemize}
-		
+		\item Regularization theory suggests we minimize
+		\begin{align*}
+			\Jcal(f) = \underbrace{||\vw||^2}_{\text{regularization}} + \underbrace{\sum_{i=1}^m\underset{\vy\in\vYcal/\vy_i}{\maximize}\,F(\vx_i,\vy) + \ell(\vy_i,\vy) -F(\vx_i,\vy_i) }
+		\end{align*}
 		\item The \mmcrf\ optimization problem
 		\begin{align*}
 			\underset{\vw,\vxi}{\minimize} &\quad \underbrace{\frac{1}{2}||\vw||^2}_{\text{regularization}} + \underbrace{C\sum_{i=1}^m\xi_i}_{\text{risk}}\\
