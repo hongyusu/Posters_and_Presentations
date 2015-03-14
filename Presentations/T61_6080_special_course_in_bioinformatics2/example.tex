@@ -551,8 +551,11 @@
 \begin{frame}{Random spanning tree approximation}
 	\begin{itemize}
 		\item We assume a complete set of pairwise correlations is sufficient to describe the dependencies between multiple labels.
-		\item We use a complete graph $G$ as the output graph (power of expression).
-		\item Compatibility score is $f_G(\vx,\vy;\vw_G) = \ip{\vw_G}{\phib_G(\vx,\vy)}$.
+		\item We use a complete graph $G$ as the output graph (have enough power of expression).
+		\item Compatibility score defined on the complete graph  
+		\begin{align*}
+			f_G(\vx,\vy;\vw_G) = \ip{\vw_G}{\phib_G(\vx,\vy)}.
+		\end{align*}
 		\item Problems
 		\begin{itemize}
 			\footnotesize
