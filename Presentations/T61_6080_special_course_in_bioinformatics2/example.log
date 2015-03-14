@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 22:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  14 MAR 2015 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1543,20 +1543,29 @@ ne 517.
  [27
 
 ]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+<./figures/cancernet.pdf, id=393, 511.28696pt x 472.64987pt>
+File: ./figures/cancernet.pdf Graphic file (type pdf)
 
+<use ./figures/cancernet.pdf>
+Package pdftex.def Info: ./figures/cancernet.pdf used on input line 538.
+(pdftex.def)             Requested size: 255.64285pt x 236.32436pt.
+
+Overfull \vbox (157.5244pt too high) detected at line 538
+ []
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 535.
+ne 538.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [28
 
-] (./example.bbl)
+ <./figures/cancernet.pdf>]
+(./example.bbl)
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 541.
+ne 544.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [29
 
@@ -1565,7 +1574,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 541.
+ne 544.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [30
 
@@ -1575,7 +1584,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 541.
+ne 544.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [31
 
@@ -1593,11 +1602,11 @@ ne 541.
 
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 544.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 544.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 547.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 547.
 (./example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 544.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 544.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 547.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 547.
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1605,13 +1614,13 @@ Package rerunfilecheck Info: File `example.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 544.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 547.
  ) 
 Here is how much of TeX's memory you used:
- 17074 strings out of 493315
- 309852 string characters out of 6137904
+ 17079 strings out of 493315
+ 309976 string characters out of 6137904
  395099 words of memory out of 5000000
- 19996 multiletter control sequences out of 15000+600000
+ 20000 multiletter control sequences out of 15000+600000
  22617 words of font info for 85 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,23n,55p,393b,748s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1635,10 +1644,10 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (31 pages, 775940 bytes).
+Output written on example.pdf (31 pages, 806433 bytes).
 PDF statistics:
- 474 PDF objects out of 1000 (max. 8388607)
- 363 compressed objects within 4 object streams
+ 495 PDF objects out of 1000 (max. 8388607)
+ 378 compressed objects within 4 object streams
  64 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
