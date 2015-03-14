@@ -468,8 +468,12 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Learn $\vw$}
+\begin{frame}{Obtain $\vw$ by regularized learning}
 	\begin{itemize}
+		\item $L_2$ norm regularization on $\vw$
+		\begin{align*}
+			\omega(f) = ||\vw||^2.
+		\end{align*}
 		\item The \mmcrf\ optimization problem
 		\begin{align*}
 			\underset{\vw,\vxi}{\minimize} &\quad \underbrace{\frac{1}{2}||\vw||^2}_{\text{regularization}} + \underbrace{C\sum_{i=1}^m\xi_i}_{\text{risk}}\\
