@@ -489,7 +489,7 @@
 		\end{itemize}
 		\item Regularization theory suggests we minimize
 		\begin{align*}
-			\Jcal(f) = \underbrace{||\vw||^2}_{\text{regularization}} + \underbrace{\sum_{i=1}^m\underset{\vy\in\vYcal/\vy_i}{\maximize}\,f(\vx_i,\vy) + \ell(\vy_i,\vy) f(\vx_i,\vy_i) }_{\text{risk term}}
+			\Jcal(f) = \underbrace{||\vw||^2}_{\text{regularization}} + \underbrace{\sum_{i=1}^m\underset{\vy\in\vYcal/\vy_i}{\maximize}\,f(\vx_i,\vy) + \ell(\vy_i,\vy) -  f(\vx_i,\vy_i) }_{\text{risk term}}
 		\end{align*}
 	\end{itemize}
 \end{frame}
@@ -499,7 +499,7 @@
 		\item The \mmcrf\ optimization problem
 		\begin{align*}
 			\underset{\vw,\vxi}{\minimize} &\quad {\frac{1}{2}||\vw||^2} + {C\sum_{i=1}^m\xi_i}\\
-			\st &\quad f(\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}{\maximize}f(\vx_i,\vy) \ge \ell(\vy_i,\vy) + \xi_i,\\
+			\st &\quad f(\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}{\maximize}f(\vx_i,\vy) \ge \ell(\vy_i,\vy) - \xi_i,\\
 			&\quad \xi_i\ge0, \forall i\in\{1,\cdots,m\}.
 		\end{align*}
 	\end{itemize}
