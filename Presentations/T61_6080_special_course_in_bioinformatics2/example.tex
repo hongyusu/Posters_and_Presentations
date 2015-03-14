@@ -428,9 +428,9 @@
 		\item $\psib(\vy)$ is the output feature map that maps the multilabel $\vy$ into a set of edges and labels.
 		\begin{align*}
 			\vy&=(+1,-1,+1,+1)\\
-			\psib(\vy) &= ( \underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_2)} 
-			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_2)}
-			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++}}_{(v_1,v_2)})
+			\psib(\vy) &= ( \underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_3)} 
+			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{0}_{+-}, \underbrace{1}_{++},}_{(v_1,v_2)}
+			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{0}_{+-}, \underbrace{1}_{++}}_{(v_3,v_4)})
 		\end{align*}
 		\item Joint feature map $\phib(\vx,\vy) = \varphi(\vx)\times\psi(\vy)$, $\times$ is Kronecker tensor.
 	\end{itemize}
