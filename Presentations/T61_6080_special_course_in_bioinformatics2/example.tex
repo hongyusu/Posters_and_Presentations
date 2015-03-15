@@ -384,13 +384,14 @@
 
 \begin{frame}{Kernel matrix}
 	\begin{itemize}
-		\item Given a dataset $S=\{\vx_1,\cdots,\vx_m\}$ of arbitrary choice of $m$ examples sampled from $\vXcal$ and a kernel function $k$ on $S$, an $m\times m$ matrix $K=(k(\vx_i,\vx_j))_{i,j}$ is called the kernel matrix of kernel $k$ with respect to $S$.
+		\item Given a dataset $S=\{\vx_1,\cdots,\vx_m\}$ of arbitrary choice of $m$ examples sampled from $\vXcal$ and a kernel function $k$ on $S$, an $m\times m$ matrix $K=(k(\vx_i,\vx_j))_{i,j}$ is called the kernel matrix (gram matrix) of kernel $k$ with respect to $S$.
 		\begin{center}
 				\includegraphics[scale = 0.14]{./figures/tensor.pdf}
 				\put(-90,40){\tiny $i$}
 				\put(-40,75){\tiny $j$}
 				\put(-60,30){\tiny $K(i,j) = k(\vx_i,\vx_j)$}
 		\end{center}
+		\item Kernel matrix can be seen as a matrix of pairwise similarities. 
 	\end{itemize}
 \end{frame}
 
