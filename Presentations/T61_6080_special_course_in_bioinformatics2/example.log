@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 09:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1582,7 +1582,7 @@ File: ./figures/spanningtrees.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figures/spanningtrees.pdf used on input line 590.
 (pdftex.def)             Requested size: 241.69872pt x 37.33884pt.
 
-Overfull \vbox (12.35599pt too high) detected at line 590
+Overfull \vbox (1.35599pt too high) detected at line 590
  []
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
@@ -1685,7 +1685,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (35 pages, 864979 bytes).
+Output written on example.pdf (35 pages, 864930 bytes).
 PDF statistics:
  633 PDF objects out of 1000 (max. 8388607)
  458 compressed objects within 5 object streams
