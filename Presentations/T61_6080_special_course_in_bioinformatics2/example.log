@@ -1461,13 +1461,13 @@ ne 417.
 [22
 
  <./figures/datamatrix.pdf>]
-<./figures/cpd.png, id=225, 301.125pt x 301.125pt>
+<./figures/cpd.png, id=224, 301.125pt x 301.125pt>
 File: ./figures/cpd.png Graphic file (type png)
  <use ./figures/cpd.png>
 Package pdftex.def Info: ./figures/cpd.png used on input line 434.
 (pdftex.def)             Requested size: 60.22392pt x 60.22392pt.
 
-<./figures/cpd_sdf.png, id=226, 547.04375pt x 753.81625pt>
+<./figures/cpd_sdf.png, id=225, 547.04375pt x 753.81625pt>
 File: ./figures/cpd_sdf.png Graphic file (type png)
 
 <use ./figures/cpd_sdf.png>
@@ -1500,7 +1500,7 @@ ne 461.
  [25
 
 ]
-<./figures/mol1.png, id=246, 100.375pt x 100.375pt>
+<./figures/mol1.png, id=245, 100.375pt x 100.375pt>
 File: ./figures/mol1.png Graphic file (type png)
  <use ./figures/mol1.png>
 Package pdftex.def Info: ./figures/mol1.png used on input line 483.
@@ -1527,7 +1527,7 @@ ne 483.
  [26
 
  <./figures/mol1.png>]
-<./figures/outputgraph.pdf, id=253, 199.74625pt x 186.6975pt>
+<./figures/outputgraph.pdf, id=252, 199.74625pt x 186.6975pt>
 File: ./figures/outputgraph.pdf Graphic file (type pdf)
 
 <use ./figures/outputgraph.pdf>
@@ -1542,14 +1542,14 @@ ne 502.
 [27
 
  <./figures/outputgraph.pdf>]
-<./figures/tensor_label.pdf, id=294, 112.30588pt x 82.59785pt>
+<./figures/tensor_label.pdf, id=293, 112.30588pt x 82.59785pt>
 File: ./figures/tensor_label.pdf Graphic file (type pdf)
 
 <use ./figures/tensor_label.pdf>
 Package pdftex.def Info: ./figures/tensor_label.pdf used on input line 533.
 (pdftex.def)             Requested size: 112.3056pt x 82.59764pt.
 
-<./figures/jointfeaturespace.pdf, id=295, 96.35277pt x 97.55081pt>
+<./figures/jointfeaturespace.pdf, id=294, 96.35277pt x 97.55081pt>
 File: ./figures/jointfeaturespace.pdf Graphic file (type pdf)
 
 <use ./figures/jointfeaturespace.pdf>
@@ -1597,7 +1597,7 @@ ne 605.
  [31
 
 ]
-<./figures/cancernet.pdf, id=474, 511.28696pt x 472.64987pt>
+<./figures/cancernet.pdf, id=473, 511.28696pt x 472.64987pt>
 File: ./figures/cancernet.pdf Graphic file (type pdf)
 
 <use ./figures/cancernet.pdf>
@@ -1620,7 +1620,7 @@ ne 632.
 
 [33
 
-] <./figures/spanningtrees.pdf, id=505, 1208.515pt x 186.6975pt>
+] <./figures/spanningtrees.pdf, id=504, 1208.515pt x 186.6975pt>
 File: ./figures/spanningtrees.pdf Graphic file (type pdf)
 
 <use ./figures/spanningtrees.pdf>
@@ -1717,11 +1717,11 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 704.
  ) 
 Here is how much of TeX's memory you used:
- 17169 strings out of 493315
- 311837 string characters out of 6137904
+ 17167 strings out of 493315
+ 311818 string characters out of 6137904
  395099 words of memory out of 5000000
- 20069 multiletter control sequences out of 15000+600000
- 23085 words of font info for 87 fonts, out of 8000000 for 9000
+ 20068 multiletter control sequences out of 15000+600000
+ 22918 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,23n,55p,393b,805s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
@@ -1741,14 +1741,13 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
 ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (39 pages, 937250 bytes).
+/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on example.pdf (39 pages, 925385 bytes).
 PDF statistics:
- 722 PDF objects out of 1000 (max. 8388607)
- 517 compressed objects within 6 object streams
+ 718 PDF objects out of 1000 (max. 8388607)
+ 514 compressed objects within 6 object streams
  80 named destinations out of 1000 (max. 500000)
  143 words of extra memory for PDF output out of 10000 (max. 10000000)
 
