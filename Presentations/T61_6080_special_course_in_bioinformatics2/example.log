@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 20:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1478,7 +1478,7 @@ File: ./figures/kernelnormalization.png Graphic file (type png)
 <use ./figures/kernelnormalization.png>
 Package pdftex.def Info: ./figures/kernelnormalization.png used on input line 4
 15.
-(pdftex.def)             Requested size: 97.96426pt x 57.81497pt.
+(pdftex.def)             Requested size: 122.4572pt x 72.26982pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
@@ -1820,7 +1820,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (42 pages, 1332379 bytes).
+Output written on example.pdf (42 pages, 1332361 bytes).
 PDF statistics:
  746 PDF objects out of 1000 (max. 8388607)
  529 compressed objects within 6 object streams
