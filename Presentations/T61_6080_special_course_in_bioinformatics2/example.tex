@@ -400,7 +400,7 @@
 		\item Kernel matrix is often centered
 		\begin{align*}
 			K(i,j) &\eqdef K(i,j)-\frac{1}{m}\sum_{i=1}^mK(i,j)-\frac{1}{m}\sum_{j=1}^mK(i,j)+\frac{1}{m^2}\sum_{i,j=1}^mK(i,j)\\
-			&=\ip{\varphib(\vx_i)-\underset{x}{E}\varphib}{}
+			&=\ip{\varphib(\vx_i)-\underset{\vx_i}{E}[\varphib]}{\varphib(\vx_j)-\underset{\vx_j}{E}[\varphib]}
 		\end{align*}
 		\item Kernel matrix is often normalized
 		\begin{align*}
