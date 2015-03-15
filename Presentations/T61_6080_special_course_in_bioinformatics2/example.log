@@ -1451,17 +1451,14 @@ File: ./figures/datamatrix.pdf Graphic file (type pdf)
 
 <use ./figures/datamatrix.pdf>
 Package pdftex.def Info: ./figures/datamatrix.pdf used on input line 417.
-(pdftex.def)             Requested size: 118.34303pt x 118.94528pt.
-
-Overfull \vbox (11.89532pt too high) detected at line 417
- []
-
+(pdftex.def)             Requested size: 78.89334pt x 79.29483pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 417.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
- [22
+
+[22
 
  <./figures/datamatrix.pdf>]
 <./figures/mol1.png, id=224, 100.375pt x 100.375pt>
@@ -1743,7 +1740,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texli
 ve/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (38 pages, 907816 bytes).
+Output written on example.pdf (38 pages, 907831 bytes).
 PDF statistics:
  714 PDF objects out of 1000 (max. 8388607)
  510 compressed objects within 6 object streams
