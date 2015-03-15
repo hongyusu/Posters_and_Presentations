@@ -391,7 +391,11 @@
 				\put(-40,75){\tiny $j$}
 				\put(-60,30){\tiny $K(i,j) = k(\vx_i,\vx_j)$}
 		\end{center}
-		\item Kernel matrix can be seen as a matrix of pairwise similarities. 
+		\item Kernel matrix can be seen as a matrix of pairwise similarities.
+		\item Kernel matrix is often centered
+		\begin{align*}
+			K(i,j) \eqdef K(i,j)-\frac{1}{m}\sum_{i=1}^mK(i,j)-\frac{1}{m}\sum_{j=1}^mK(i,j)+\frac{1}{m^2}\sum_{i,j=1}^mK(i,j)
+		\end{align*}
 	\end{itemize}
 \end{frame}
 
