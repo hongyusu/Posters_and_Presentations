@@ -11,7 +11,7 @@
 \subtitle{T-61.6080 Special Course in Bioinformatics}
 \author[H. Su]{Hongyu Su}
 \institute[ICS]{Department of Information and Computer Science\\Aalto University, School of Science and Technology\\hongyu.su@aalto.fi}
-\aaltofootertext{Classification learning (H.Su)}{\today}{\arabic{page}/\pageref{LastPage}\ }
+\aaltofootertext{Molecular classification}{\today}{\arabic{page}/\pageref{LastPage}\ }
 
 %\date{Version 1.0, \today}
 \date{ \today}
@@ -808,6 +808,7 @@
 		\item Can we do better?
 		\item Max-margin regression 
 		\begin{itemize}
+			\footnotesize
 			\item Regression with semi-supervised learning
 			\begin{align*}
 				\underset{\vw}{\minimize} \, \underbrace{\sum_{i=1}^m (f(\vx_i)-\vy_i)^2}_{\text{risk}} + \underbrace{\lambda_1 ||\vw||^2}_{\text{regularization}} + \underbrace{\lambda_2\sum_{i,j=1}^{m+u}W_{i,j}||f(\vx_i)-f(\vx_j)||^2}_{\text{consistency constraint}}
