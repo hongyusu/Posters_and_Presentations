@@ -517,6 +517,21 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Apply single-task classification}
+	\begin{itemize}
+		\item For both predicting anti-cancer potential and hierarchical molecular classification, we want to predict multiple output given an input.
+		\begin{align*}
+			\vx \overset{f}{\rightarrow} (y_{1},\cdots,y_{k})
+		\end{align*}
+		\item We can learn a single-task classification model for each output
+		\begin{align*}
+			\vx &\overset{f_1}{\rightarrow} (y_{1},\cdots)\\
+			\vx &\overset{f_j}{\rightarrow} (\cdots,y_{j},\cdots)\\
+			\vx &\overset{f_k}{\rightarrow} (\cdots,y_{k})\\
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{Max-margin conditional random field}{Preliminaries}
 	\begin{itemize}
 		\item Training examples come in pairs $(\vx,\vy)\in\vXcal\times\vYcal$ sampled from some unknown joint distribution $P(\vx,\vy)$.
