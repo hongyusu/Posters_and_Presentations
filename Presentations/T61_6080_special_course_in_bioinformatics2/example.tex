@@ -392,13 +392,18 @@
 				\put(-60,30){\tiny $K(i,j) = k(\vx_i,\vx_j)$}
 		\end{center}
 		\item Kernel matrix can be seen as a matrix of pairwise similarities.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Kernel centering and normalization}
+	\begin{itemize}
 		\item Kernel matrix is often centered
 		\begin{align*}
 			K(i,j) \eqdef K(i,j)-\frac{1}{m}\sum_{i=1}^mK(i,j)-\frac{1}{m}\sum_{j=1}^mK(i,j)+\frac{1}{m^2}\sum_{i,j=1}^mK(i,j)
 		\end{align*}
 		\item Kernel matrix is often normalized
 		\begin{align*}
-			K(i,j) \eqdef = \frac{K(i,j)}{}
+			K(i,j) \eqdef = \frac{K(i,j)}{\sqrt{K(i,i)K(j,j)}}
 		\end{align*}
 	\end{itemize}
 \end{frame}
