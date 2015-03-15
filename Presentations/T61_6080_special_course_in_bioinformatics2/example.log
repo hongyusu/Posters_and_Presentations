@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 22:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1597,17 +1597,14 @@ File: ./figures/taxonomy.pdf Graphic file (type pdf)
 
 <use ./figures/taxonomy.pdf>
 Package pdftex.def Info: ./figures/taxonomy.pdf used on input line 583.
-(pdftex.def)             Requested size: 222.33008pt x 125.46843pt.
-
-Overfull \vbox (42.41847pt too high) detected at line 583
- []
-
+(pdftex.def)             Requested size: 111.16504pt x 62.7342pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 583.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
- [31
+
+[31
 
  <./figures/taxonomy.pdf>]
 <./figures/mol1.png, id=337, 100.375pt x 100.375pt>
@@ -1854,7 +1851,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (45 pages, 1363584 bytes).
+Output written on example.pdf (45 pages, 1363576 bytes).
 PDF statistics:
  811 PDF objects out of 1000 (max. 8388607)
  572 compressed objects within 6 object streams
