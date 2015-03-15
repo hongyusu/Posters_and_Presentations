@@ -416,6 +416,10 @@
 	\end{itemize}
 \end{frame}
 
+
+
+
+
 \begin{frame}{Structural data of molecules}
 	\begin{itemize}
 		\item Each molecule is represented by a small graph, with vertices correspond to chemical atoms and edges correspond to covalent bond.
@@ -428,13 +432,23 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Task}
+\begin{frame}{Auxiliary data}
 	\begin{itemize}
-		\item Given a set of molecules $\{\vx_i\}_{i=1}^m$ with activities in $60$ cancer cell line $\{(y_{i,1},\cdots,y_{i,60})\}_{i=1}^m$.
-		\item Build a model that is about to predict the activities of a unknown molecules.
-		\begin{align*}
-			\vx \rightarrow f(\vx) = (y_{1},\cdots,y_{60})
-		\end{align*}
+		\item There are auxiliary data to describe the similarities between cancer cell lines.
+		\begin{itemize}
+			\footnotesize
+			\item Data comes from CellMiner project.
+			\item Microarray experiments on $60$ cell lines (DNA, RNA, Protein).
+		\end{itemize}
+		\item Task of predicting anti-cancer potentials of molecules
+		\begin{itemize}
+			\footnotesize
+			\item Given a set of molecules $\{\vx_i\}_{i=1}^m$ with activities in $60$ cancer cell line $\{(y_{i,1},\cdots,y_{i,60})\}_{i=1}^m$.
+			\item Build a model that is about to predict the activities of a unknown molecules.
+			\begin{align*}
+				\vx \rightarrow f(\vx) = (y_{1},\cdots,y_{60})
+			\end{align*}
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
