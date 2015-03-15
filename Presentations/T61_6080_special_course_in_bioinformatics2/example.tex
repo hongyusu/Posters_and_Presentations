@@ -801,11 +801,18 @@
 
 \begin{frame}{Partially labeled data}
 	\begin{itemize}
-		\item We have huge amount of partially labeled data
+		\item We have huge amount of partially labeled data.
 		\begin{center}
 			\includegraphics[scale=0.2]{./figures/partiallylabeled.pdf}
 		\end{center}
 		\item Can we do better?
+		\item Max-margin regression 
+		\begin{itemize}
+			\item Regression with semi-supervised learning
+			\begin{align*}
+				\underset{\vw}{\minimize} \, \sum_{i=1}^m \ell(\ip{\vw}{\vx_i}+b,\vy_i) + \lambda_1 ||\vw||^2 + \lambda_2\sum_{i,j=1}^{m+u}W_{i,j}||f(\vx_i)-f(\vx_j)||^2
+			\end{align*}
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
