@@ -570,11 +570,11 @@
 \begin{frame}{Random spanning tree approximation}
 	\begin{itemize}
 		\item We want to maintain a small parameter space, and feasible inference.
-		\item When the output graph is a tree
+		\item When the output graph is a tree $T=(E_T,V), |V|=k, |E|=k-1$
 		\begin{itemize}
 			\footnotesize
 			\item $f_T(\vx,\vy;\vw_T) = \ip{\vw_T}{\phib_T(\vx,\vy)}$
-			\item $|\vw_T| = d\times 4|E| = d\time4(k-1)$
+			\item $|\vw_T| = d\time4(k-1)$
 			\item Polynomial time to compute $\vy^* = \underset{\vy\in\vYcal}{\argmax}\, \ip{\vw_T}{\phib_T(\vx,\vy)}$
 		\end{itemize}
 		\item Sample a collection of spanning tree from $G$ uniformly at random $\Tcal = \{T_1,\cdots,T_n\}$.
