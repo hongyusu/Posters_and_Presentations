@@ -363,13 +363,19 @@
 		\item Linear kernel, $k_{linear}(\vx_i,\vx_j) = \ip{\vx_i}{\vx_j}, \vx_i,\vx_j\in\vXcal$.
 		\item Polynomial kernel, $k_{poly}(\vx_i,\vx_j) = (\ip{\vx_i}{\vx_j} + b)^d, \vx_i,\vx_j\in\vXcal$.
 		\item Gaussian kernel, $k_{gaussian}(\vx_i,\vx_j) = \exp\left(\frac{||\vx_i-\vx_j||^2}{2\delta^2}\right), \vx_i,\vx_j\in\vXcal$.
-		\item Graph kernels
+		\item Graph kernel measure the similarity between two graphs (molecular graphs).
 		\begin{itemize}
 			\footnotesize
-			\item Graph kernel measure the similarity between two molecules.
 			\item Figureprint kernel: map molecule into a binary bit vector of predefined fingerprints
 			\item Walk kernel: counting the number of same walks on two molecules.
 			\item Decomposition kernel: compare similar regions on two molecules.
+			\begin{center}
+				\includegraphics[scale=0.1]{./figures/tk.jpg}
+				\text{      }
+				\includegraphics[scale=0.1]{./figures/wk.jpg}
+				\text{      }
+				\includegraphics[scale=0.1]{./figures/dk.jpg}
+			\end{center}
 		\end{itemize}
 		
 		
