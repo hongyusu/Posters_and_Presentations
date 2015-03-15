@@ -1450,12 +1450,9 @@ ne 399.
 File: ./figures/mol1.png Graphic file (type png)
  <use ./figures/mol1.png>
 Package pdftex.def Info: ./figures/mol1.png used on input line 417.
-(pdftex.def)             Requested size: 100.37474pt x 100.37474pt.
-
-Overfull \vbox (15.32478pt too high) detected at line 417
- []
-
+(pdftex.def)             Requested size: 50.18736pt x 50.18736pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 417.
@@ -1715,7 +1712,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (37 pages, 869181 bytes).
+Output written on example.pdf (37 pages, 869185 bytes).
 PDF statistics:
  648 PDF objects out of 1000 (max. 8388607)
  471 compressed objects within 5 object streams
