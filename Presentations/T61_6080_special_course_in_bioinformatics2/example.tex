@@ -523,13 +523,20 @@
 		\begin{align*}
 			\vx \overset{f}{\rightarrow} (y_{1},\cdots,y_{k})
 		\end{align*}
-		\item We can learn a single-task classification model for each output
+		\item We can learn a collection of single-task learner, one for each output
 		\begin{align*}
 			\vx &\overset{f_1}{\rightarrow} (y_{1},\cdots,\cdots)\\
 			&\cdots\\
 			\vx &\overset{f_j}{\rightarrow} (\cdots,y_{j},\cdots)\\
 			\vx &\overset{f_k}{\rightarrow} (\cdots,\cdots,y_{k})\\
 		\end{align*}
+		\item Different output variables are interdependent.
+		\item The dependency structure is given
+		\begin{itemize}
+			\item Explicitly, as the hierarchical structure.
+			\item Implicitly, by the auxiliary data.
+		\end{itemize}
+		\item Can we do better than single-task classification?
 	\end{itemize}
 \end{frame}
 
