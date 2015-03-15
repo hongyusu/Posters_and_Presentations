@@ -597,7 +597,7 @@
 			f_G(\vx,\vy;\vw_G) \approx \frac{1}{n}\sum_{t=1}^nf_{T_i}(\vx,\vy;\vw_{T_i}) = \frac{1}{n}\sum_{t=1}^n\ip{\vw_{T_i}}{\phib_{T_i}(\vx,\vy)}
 		\end{align*}
 		\item The optimization problem is 
-		\begin{align*}
+		\begin{align*}\footnotesize
 			\underset{\vw,\vxi}{\minimize} &\quad \underbrace{\frac{1}{2}\sum_{t=1}^{n}||\vw_{T_t}||^2}_{\text{regularization}} + \underbrace{C\sum_{i=1}^m\xi_i}_{risk}\\
 			\st &\quad \sum_{t=1}^{n}f_{T_t}(\vx_i,\vy_i;\vw_{T_t}) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\sum_{t=1}^{n}f_{T_t}(\vx_i,\vy;\vw_{T_t}) \ge \ell(\vy_i,\vy) - \xi_i,\\
 			&\quad \xi_i\ge0, i\in\{1,\cdots,m\}.

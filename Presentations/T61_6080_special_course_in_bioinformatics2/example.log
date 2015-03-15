@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 10:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 10:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1593,8 +1593,15 @@ ne 590.
  [31
 
  <./figures/spanningtrees.pdf>]
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 60
+6.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 60
+6.
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 606.
