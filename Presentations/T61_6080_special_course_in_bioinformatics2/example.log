@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 10:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1582,6 +1582,11 @@ File: ./figures/spanningtrees.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figures/spanningtrees.pdf used on input line 590.
 (pdftex.def)             Requested size: 241.69872pt x 37.33884pt.
 
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 590.
+
+
 Overfull \vbox (1.35599pt too high) detected at line 590
  []
 
@@ -1667,11 +1672,11 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 640.
  ) 
 Here is how much of TeX's memory you used:
- 17135 strings out of 493315
- 311287 string characters out of 6137904
+ 17137 strings out of 493315
+ 311322 string characters out of 6137904
  395099 words of memory out of 5000000
- 20045 multiletter control sequences out of 15000+600000
- 22617 words of font info for 85 fonts, out of 8000000 for 9000
+ 20047 multiletter control sequences out of 15000+600000
+ 22918 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,23n,55p,393b,781s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
@@ -1694,7 +1699,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (36 pages, 867047 bytes).
+Output written on example.pdf (36 pages, 867113 bytes).
 PDF statistics:
  640 PDF objects out of 1000 (max. 8388607)
  464 compressed objects within 5 object streams
