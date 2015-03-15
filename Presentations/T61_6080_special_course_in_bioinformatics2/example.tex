@@ -400,7 +400,7 @@
 
 \begin{frame}{Activity data}
 	\begin{itemize}
-		\item Actual data is extracted from PubChem, a chemical compound database.
+		\item Activity data is extracted from PubChem, a chemical compound database.
 		\item An example of the data in a single cell line (\url{https://www.ncbi.nlm.nih.gov/pcassay?term=\%22DTP\%2FNCI\%22}).
 		\item Collect data from different cell lines:
 		\begin{itemize}
@@ -418,7 +418,7 @@
 
 \begin{frame}{Structural data of molecules}
 	\begin{itemize}
-		\item Each molecule is represent by a small graph, with vertices correspond to chemical atoms and edges correspond to covalent bond.
+		\item Each molecule is represented by a small graph, with vertices correspond to chemical atoms and edges correspond to covalent bond.
 		\begin{center}
 			\includegraphics[scale=0.2]{./figures/cpd.png}
 			\text{   }
@@ -437,7 +437,7 @@
 \begin{frame}{Max-margin conditional random field}{Preliminaries}
 	\begin{itemize}
 		\item Training examples come in pairs $(\vx,\vy)\in\vXcal\times\vYcal$ sampled from some unknown joint distribution $P(\vx,\vy)$.
-		\item $\vx\in\vXcal$ is an instant from input domain $\vXcal$ (e.g., a document, a molecule, a picture).
+		\item $\vx\in\vXcal$ is an instant from input domain $\vXcal$ (e.g., a document, a molecule).
 		\item $\vy=(y_1,\cdots,y_k)\in\vYcal$ is a vector of labels from output domain (e.g., categories of a documents, potentials of a molecules, annotations of a picture).
 		\item The output domain $\vYcal=\Ycal_1\times\cdots\times\Ycal_k$, $\Ycal_j=\{-1,+1\}$ and $\vYcal=\{-1,+1\}^k$.
 		\item $\vy$ is called a multilabel, $y_i$ is called a microlabel of the multilabel.
