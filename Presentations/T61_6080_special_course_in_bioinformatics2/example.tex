@@ -449,7 +449,7 @@
 		\item Task of predicting anti-cancer potentials of molecules
 		\begin{itemize}
 			\footnotesize
-			\item Given a set of molecules $\{\vx_i\}_{i=1}^m$ with activities in $60$ cancer cell line $\{(y_{i,1},\cdots,y_{i,60})\}_{i=1}^m$.
+			\item Given a set of molecules $\{\vx_i\}_{i=1}^m$ with activities in $60$ cancer cell line $\{(y_{i,1},\cdots,y_{i,60})\}_{i=1}^m$, similarities between cell lines.
 			\item Build a model which predicts the activities of a unknown molecules.
 			\begin{align*}
 				\vx \overset{f}{\rightarrow} (y_{1},\cdots,y_{60})
@@ -461,7 +461,10 @@
 
 \begin{frame}{Hierarchical molecular classification}
 	\begin{itemize}
-		\item 
+		\item There is hierarchical classification system for molecules.
+		\begin{center}
+			\includegraphics[scale=0.5]{./figures/classificationhierarchy.png}
+		\end{center}
 	\end{itemize}
 \end{frame}
 
