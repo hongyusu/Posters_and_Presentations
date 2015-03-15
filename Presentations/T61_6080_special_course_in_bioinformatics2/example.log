@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 19:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1432,21 +1432,25 @@ ne 369.
 File: ./figures/tk.jpg Graphic file (type jpg)
  <use ./figures/tk.jpg>
 Package pdftex.def Info: ./figures/tk.jpg used on input line 383.
-(pdftex.def)             Requested size: 95.15381pt x 47.12521pt.
+(pdftex.def)             Requested size: 118.94408pt x 58.90742pt.
 
 <./figures/wk.jpg, id=156, 388.45125pt x 260.47313pt>
 File: ./figures/wk.jpg Graphic file (type jpg)
  <use ./figures/wk.jpg>
 Package pdftex.def Info: ./figures/wk.jpg used on input line 383.
-(pdftex.def)             Requested size: 77.68886pt x 52.09369pt.
+(pdftex.def)             Requested size: 97.11256pt x 65.11812pt.
 
 <./figures/dk.jpg, id=157, 463.7325pt x 310.15875pt>
 File: ./figures/dk.jpg Graphic file (type jpg)
  <use ./figures/dk.jpg>
 Package pdftex.def Info: ./figures/dk.jpg used on input line 383.
-(pdftex.def)             Requested size: 92.74484pt x 62.03064pt.
-File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+(pdftex.def)             Requested size: 115.93283pt x 77.53949pt.
 
+Overfull \hbox (46.59966pt too wide) in paragraph at lines 383--383
+ [][][] 
+ []
+
+File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 383.
@@ -1786,7 +1790,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (40 pages, 1313013 bytes).
+Output written on example.pdf (40 pages, 1313011 bytes).
 PDF statistics:
  731 PDF objects out of 1000 (max. 8388607)
  519 compressed objects within 6 object streams
