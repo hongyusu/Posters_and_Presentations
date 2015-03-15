@@ -601,6 +601,7 @@
 			\underset{\vw,\vxi}{\minimize} &\quad \underbrace{\frac{1}{2}\sum_{t=1}^{n}||\vw_{T_t}||^2}_{\text{regularization}} + \underbrace{C\sum_{i=1}^m\xi_i}_{risk}\\
 			\st &\quad \sum_{t=1}^{n}f_{T_t}(\vx_i,\vy_i;\vw_{T_t}) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\sum_{t=1}^{n}f_{T_t}(\vx_i,\vy;\vw_{T_t}) \ge \ell(\vy_i,\vy) - \xi_i,\xi_i\ge0.\forall i.
 		\end{align*}
+		\item The inference problem can be solve by polynomial time algorithm in $\Theta(n\kappa k)$
 	\end{itemize}
 \end{frame}
 
