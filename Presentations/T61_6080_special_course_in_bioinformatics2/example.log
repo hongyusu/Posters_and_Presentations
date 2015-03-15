@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 09:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 09:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1581,18 +1581,21 @@ File: ./figures/spanningtrees.pdf Graphic file (type pdf)
 <use ./figures/spanningtrees.pdf>
 Package pdftex.def Info: ./figures/spanningtrees.pdf used on input line 587.
 (pdftex.def)             Requested size: 241.69872pt x 37.33884pt.
+
+Overfull \vbox (2.65176pt too high) detected at line 587
+ []
+
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
- <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 587.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
+ [31
 
-[31
-
- <./figures/spanningtrees.pdf>] (./example.bbl)
+ <./figures/spanningtrees.pdf>]
+(./example.bbl)
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
-
-<use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
+ <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 593.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
@@ -1673,7 +1676,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (34 pages, 863484 bytes).
+Output written on example.pdf (34 pages, 863544 bytes).
 PDF statistics:
  628 PDF objects out of 1000 (max. 8388607)
  454 compressed objects within 5 object streams
