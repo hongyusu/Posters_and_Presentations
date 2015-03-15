@@ -598,7 +598,8 @@
 		\end{align*}
 		\item The optimization problem is 
 		\begin{align*}
-			\underset{\vw}{\minimize}\quad \frac{1}{2}\sum_{t=1}^{n}||\vw_{T_t}||^2 + C\sum_{i=1}^m\xi_i
+			\underset{\vw,\vxi}{\minimize} &\quad \frac{1}{2}\sum_{t=1}^{n}||\vw_{T_t}||^2 + C\sum_{i=1}^m\xi_i\\
+			\st &\quad \sum_{t=1}^{n}f_{T_t}*(\vx_i,\vy_i;\vw_{T_t}) - \underset{\vy\in\vYcal/\vy_i}{\maximize}\sum_{t=1}^{n}f_{T_t}*(\vx_i,\vy;\vw_{T_t})
 		\end{align*}
 	\end{itemize}
 \end{frame}
