@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 18:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1506,17 +1506,9 @@ File: ./figures/classificationhierarchy.png Graphic file (type png)
 <use ./figures/classificationhierarchy.png>
 Package pdftex.def Info: ./figures/classificationhierarchy.png used on input li
 ne 469.
-(pdftex.def)             Requested size: 379.41658pt x 249.43126pt.
-
-Overfull \hbox (94.02676pt too wide) in paragraph at lines 469--469
- [] 
- []
-
-
-Overfull \vbox (67.6313pt too high) detected at line 469
- []
-
+(pdftex.def)             Requested size: 227.65225pt x 149.66028pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
+
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
 ne 469.
@@ -1769,7 +1761,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (39 pages, 1098718 bytes).
+Output written on example.pdf (39 pages, 1098726 bytes).
 PDF statistics:
  722 PDF objects out of 1000 (max. 8388607)
  514 compressed objects within 6 object streams
