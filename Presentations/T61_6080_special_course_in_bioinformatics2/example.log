@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 11:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 12:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1441,7 +1441,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 393.
+ne 397.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [21
 
@@ -1450,7 +1450,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 399.
+ne 403.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [22
 
@@ -1458,26 +1458,26 @@ ne 399.
 <./figures/mol1.png, id=171, 100.375pt x 100.375pt>
 File: ./figures/mol1.png Graphic file (type png)
  <use ./figures/mol1.png>
-Package pdftex.def Info: ./figures/mol1.png used on input line 421.
+Package pdftex.def Info: ./figures/mol1.png used on input line 425.
 (pdftex.def)             Requested size: 30.11272pt x 30.11272pt.
 
-Overfull \hbox (1.65997pt too wide) in paragraph at lines 421--421
+Overfull \hbox (1.65997pt too wide) in paragraph at lines 425--425
 [][]| 
  []
 
 
-Overfull \hbox (92.04323pt too wide) in paragraph at lines 421--421
+Overfull \hbox (92.04323pt too wide) in paragraph at lines 425--425
  [] 
  []
 
 
-Overfull \vbox (15.20004pt too high) detected at line 421
+Overfull \vbox (15.20004pt too high) detected at line 425
  []
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 421.
+ne 425.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [23
 
@@ -1486,12 +1486,12 @@ ne 421.
 File: ./figures/outputgraph.pdf Graphic file (type pdf)
 
 <use ./figures/outputgraph.pdf>
-Package pdftex.def Info: ./figures/outputgraph.pdf used on input line 438.
+Package pdftex.def Info: ./figures/outputgraph.pdf used on input line 442.
 (pdftex.def)             Requested size: 59.92433pt x 56.00967pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
  <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 438.
+ne 442.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
 
 [24
@@ -1501,24 +1501,24 @@ ne 438.
 File: ./figures/tensor_label.pdf Graphic file (type pdf)
 
 <use ./figures/tensor_label.pdf>
-Package pdftex.def Info: ./figures/tensor_label.pdf used on input line 469.
+Package pdftex.def Info: ./figures/tensor_label.pdf used on input line 473.
 (pdftex.def)             Requested size: 112.3056pt x 82.59764pt.
 
 <./figures/jointfeaturespace.pdf, id=220, 96.35277pt x 97.55081pt>
 File: ./figures/jointfeaturespace.pdf Graphic file (type pdf)
 
 <use ./figures/jointfeaturespace.pdf>
-Package pdftex.def Info: ./figures/jointfeaturespace.pdf used on input line 469
+Package pdftex.def Info: ./figures/jointfeaturespace.pdf used on input line 473
 .
 (pdftex.def)             Requested size: 67.44647pt x 68.2851pt.
 
-Overfull \vbox (17.33946pt too high) detected at line 469
+Overfull \vbox (17.33946pt too high) detected at line 473
  []
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 469.
+ne 473.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [25
 
@@ -1526,19 +1526,19 @@ ne 469.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
  <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 495.
+ne 499.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
 
 [26
 
 ]
-Overfull \vbox (3.5579pt too high) detected at line 517
+Overfull \vbox (3.5579pt too high) detected at line 521
  []
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 517.
+ne 521.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [27
 
@@ -1547,7 +1547,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 541.
+ne 545.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [28
 
@@ -1556,12 +1556,12 @@ ne 541.
 File: ./figures/cancernet.pdf Graphic file (type pdf)
 
 <use ./figures/cancernet.pdf>
-Package pdftex.def Info: ./figures/cancernet.pdf used on input line 547.
+Package pdftex.def Info: ./figures/cancernet.pdf used on input line 551.
 (pdftex.def)             Requested size: 204.51115pt x 189.0566pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
  <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 547.
+ne 551.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
 
 [29
@@ -1570,7 +1570,7 @@ ne 547.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
  <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 568.
+ne 572.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
 
 [30
@@ -1579,21 +1579,21 @@ ne 568.
 File: ./figures/spanningtrees.pdf Graphic file (type pdf)
 
 <use ./figures/spanningtrees.pdf>
-Package pdftex.def Info: ./figures/spanningtrees.pdf used on input line 590.
+Package pdftex.def Info: ./figures/spanningtrees.pdf used on input line 594.
 (pdftex.def)             Requested size: 241.69872pt x 37.33884pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 590.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 594.
 
 
-Overfull \vbox (1.35599pt too high) detected at line 590
+Overfull \vbox (1.35599pt too high) detected at line 594
  []
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 590.
+ne 594.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [31
 
@@ -1602,7 +1602,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 606.
+ne 610.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [32
 
@@ -1611,7 +1611,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 632.
+ne 636.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [33
 
@@ -1620,7 +1620,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 637.
+ne 641.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [34
 
@@ -1629,7 +1629,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 637.
+ne 641.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [35
 
@@ -1639,7 +1639,7 @@ File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
 
 <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
-ne 637.
+ne 641.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [36
 
@@ -1657,11 +1657,11 @@ ne 637.
 
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 640.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 640.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 644.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 644.
 (./example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 640.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 640.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 644.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 644.
 Package rerunfilecheck Info: File `example.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1669,7 +1669,7 @@ Package rerunfilecheck Info: File `example.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 640.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 644.
  ) 
 Here is how much of TeX's memory you used:
  17137 strings out of 493315
@@ -1699,7 +1699,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (36 pages, 867211 bytes).
+Output written on example.pdf (36 pages, 867824 bytes).
 PDF statistics:
  640 PDF objects out of 1000 (max. 8388607)
  464 compressed objects within 5 object streams
