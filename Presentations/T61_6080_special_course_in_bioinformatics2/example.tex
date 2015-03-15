@@ -400,13 +400,15 @@
 		\item Kernel matrix is often centered
 		\begin{align*}
 			K(i,j) &\eqdef K(i,j)-\frac{1}{m}\sum_{i=1}^mK(i,j)-\frac{1}{m}\sum_{j=1}^mK(i,j)+\frac{1}{m^2}\sum_{i,j=1}^mK(i,j)\\
-			&=\ip{\varphib(\vx_i)-\underset{\vx_i}{E}[\varphib]}{\varphib(\vx_j)-\underset{\vx_j}{E}[\varphib]}
+			&=\ip{\varphib(\vx_i)-\underset{\vx_i}{E}[\varphib]}{\varphib(\vx_j)-\underset{\vx_j}{E}[\varphib]},
 		\end{align*}
+		which corresponds to center feature space.
 		\item Kernel matrix is often normalized
 		\begin{align*}
 			K(i,j) &\eqdef \frac{K(i,j)}{\sqrt{K(i,i)K(j,j)}}\\
-			&= \ip{\frac{\varphib(\vx_i)}{||\varphib(\vx_i)||}}{\frac{\varphib(\vx_j)}{||\varphib(\vx_j)||}}
+			&= \ip{\frac{\varphib(\vx_i)}{||\varphib(\vx_i)||}}{\frac{\varphib(\vx_j)}{||\varphib(\vx_j)||}},
 		\end{align*}
+		which corresponds to move data point into a unisphere in feature space.
 	\end{itemize}
 \end{frame}
 
