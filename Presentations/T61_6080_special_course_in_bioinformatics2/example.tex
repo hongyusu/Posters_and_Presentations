@@ -405,12 +405,11 @@
 		which corresponds to center feature space.
 		\item Kernel matrix is often normalized
 		\begin{align*}
-			K(i,j) &\eqdef \frac{K(i,j)}{\sqrt{K(i,i)K(j,j)}}\\
-			&= \ip{\frac{\varphib(\vx_i)}{||\varphib(\vx_i)||}}{\frac{\varphib(\vx_j)}{||\varphib(\vx_j)||}},
+			K(i,j) \eqdef \frac{K(i,j)}{\sqrt{K(i,i)K(j,j)}}= \ip{\frac{\varphib(\vx_i)}{||\varphib(\vx_i)||}}{\frac{\varphib(\vx_j)}{||\varphib(\vx_j)||}},
 		\end{align*}
 		which corresponds to move data point into a unit hypersphere in feature space.
 		\begin{center}
-			\includegraphics[scale=0.5]{./figures/kernelnormalization.png}
+			\includegraphics[scale=0.3]{./figures/kernelnormalization.png}
 		\end{center}
 	\end{itemize}
 \end{frame}
