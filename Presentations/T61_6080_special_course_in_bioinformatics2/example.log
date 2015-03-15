@@ -1465,16 +1465,16 @@ ne 417.
 File: ./figures/cpd.png Graphic file (type png)
  <use ./figures/cpd.png>
 Package pdftex.def Info: ./figures/cpd.png used on input line 429.
-(pdftex.def)             Requested size: 150.56212pt x 150.56212pt.
+(pdftex.def)             Requested size: 60.22392pt x 60.22392pt.
 
 <./figures/cpd_sdf.png, id=225, 554.07pt x 776.9025pt>
 File: ./figures/cpd_sdf.png Graphic file (type png)
 
 <use ./figures/cpd_sdf.png>
 Package pdftex.def Info: ./figures/cpd_sdf.png used on input line 429.
-(pdftex.def)             Requested size: 277.03432pt x 388.45029pt.
+(pdftex.def)             Requested size: 166.22227pt x 233.07254pt.
 
-Overfull \vbox (359.96245pt too high) detected at line 429
+Overfull \vbox (53.02258pt too high) detected at line 429
  []
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
@@ -1738,7 +1738,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texli
 ve/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (38 pages, 936783 bytes).
+Output written on example.pdf (38 pages, 936778 bytes).
 PDF statistics:
  715 PDF objects out of 1000 (max. 8388607)
  511 compressed objects within 6 object streams
