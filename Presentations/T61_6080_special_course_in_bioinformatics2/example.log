@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 19:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.10)  15 MAR 2015 19:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1433,19 +1433,20 @@ File: ./figures/tk.jpg Graphic file (type jpg)
  <use ./figures/tk.jpg>
 Package pdftex.def Info: ./figures/tk.jpg used on input line 387.
 (pdftex.def)             Requested size: 95.15381pt x 47.12521pt.
-File: ./figures/tk.jpg Graphic file (type jpg)
 
-<use ./figures/tk.jpg>
-Package pdftex.def Info: ./figures/tk.jpg used on input line 387.
-(pdftex.def)             Requested size: 95.15381pt x 47.12521pt.
- <./figures/dk.jpg, id=156, 463.7325pt x 310.15875pt>
+<./figures/wk.jpg, id=156, 388.45125pt x 260.47313pt>
+File: ./figures/wk.jpg Graphic file (type jpg)
+ <use ./figures/wk.jpg>
+Package pdftex.def Info: ./figures/wk.jpg used on input line 387.
+(pdftex.def)             Requested size: 77.68886pt x 52.09369pt.
+
+<./figures/dk.jpg, id=157, 463.7325pt x 310.15875pt>
 File: ./figures/dk.jpg Graphic file (type jpg)
-
-<use ./figures/dk.jpg>
+ <use ./figures/dk.jpg>
 Package pdftex.def Info: ./figures/dk.jpg used on input line 387.
 (pdftex.def)             Requested size: 92.74484pt x 62.03064pt.
 
-Overfull \vbox (15.73111pt too high) detected at line 387
+Overfull \vbox (20.69958pt too high) detected at line 387
  []
 
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
@@ -1455,7 +1456,7 @@ ne 387.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [20
 
- <./figures/tk.jpg> <./figures/dk.jpg>]
+ <./figures/tk.jpg> <./figures/wk.jpg> <./figures/dk.jpg>]
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
  <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
@@ -1473,7 +1474,7 @@ ne 409.
  [22
 
 ]
-<./figures/datamatrix.pdf, id=175, 394.47375pt x 396.48125pt>
+<./figures/datamatrix.pdf, id=176, 394.47375pt x 396.48125pt>
 File: ./figures/datamatrix.pdf Graphic file (type pdf)
 
 <use ./figures/datamatrix.pdf>
@@ -1488,13 +1489,13 @@ ne 428.
 [23
 
  <./figures/datamatrix.pdf>]
-<./figures/cpd.png, id=231, 301.125pt x 301.125pt>
+<./figures/cpd.png, id=232, 301.125pt x 301.125pt>
 File: ./figures/cpd.png Graphic file (type png)
  <use ./figures/cpd.png>
 Package pdftex.def Info: ./figures/cpd.png used on input line 445.
 (pdftex.def)             Requested size: 60.22392pt x 60.22392pt.
 
-<./figures/cpd_sdf.png, id=232, 547.04375pt x 753.81625pt>
+<./figures/cpd_sdf.png, id=233, 547.04375pt x 753.81625pt>
 File: ./figures/cpd_sdf.png Graphic file (type png)
 
 <use ./figures/cpd_sdf.png>
@@ -1509,7 +1510,7 @@ ne 445.
 [24
 
  <./figures/cpd.png> <./figures/cpd_sdf.png>]
-<./figures/auxiliarydata.png, id=241, 798.985pt x 290.08376pt>
+<./figures/auxiliarydata.png, id=242, 798.985pt x 290.08376pt>
 File: ./figures/auxiliarydata.png Graphic file (type png)
 
 <use ./figures/auxiliarydata.png>
@@ -1527,7 +1528,7 @@ ne 469.
  [25
 
  <./figures/auxiliarydata.png>]
-<./figures/classificationhierarchy.png, id=249, 758.835pt x 498.86375pt>
+<./figures/classificationhierarchy.png, id=250, 758.835pt x 498.86375pt>
 File: ./figures/classificationhierarchy.png Graphic file (type png)
 
 <use ./figures/classificationhierarchy.png>
@@ -1542,7 +1543,7 @@ ne 489.
 (pdftex.def)             Requested size: 63.17406pt x 14.22636pt.
  [26
 
- <./figures/classificationhierarchy.png>] <./figures/mol1.png, id=257, 100.375p
+ <./figures/classificationhierarchy.png>] <./figures/mol1.png, id=258, 100.375p
 t x 100.375pt>
 File: ./figures/mol1.png Graphic file (type png)
 
@@ -1571,7 +1572,7 @@ ne 511.
  [27
 
  <./figures/mol1.png>]
-<./figures/outputgraph.pdf, id=264, 199.74625pt x 186.6975pt>
+<./figures/outputgraph.pdf, id=265, 199.74625pt x 186.6975pt>
 File: ./figures/outputgraph.pdf Graphic file (type pdf)
 
 <use ./figures/outputgraph.pdf>
@@ -1586,14 +1587,14 @@ ne 530.
 [28
 
  <./figures/outputgraph.pdf>]
-<./figures/tensor_label.pdf, id=305, 112.30588pt x 82.59785pt>
+<./figures/tensor_label.pdf, id=306, 112.30588pt x 82.59785pt>
 File: ./figures/tensor_label.pdf Graphic file (type pdf)
 
 <use ./figures/tensor_label.pdf>
 Package pdftex.def Info: ./figures/tensor_label.pdf used on input line 561.
 (pdftex.def)             Requested size: 112.3056pt x 82.59764pt.
 
-<./figures/jointfeaturespace.pdf, id=306, 96.35277pt x 97.55081pt>
+<./figures/jointfeaturespace.pdf, id=307, 96.35277pt x 97.55081pt>
 File: ./figures/jointfeaturespace.pdf Graphic file (type pdf)
 
 <use ./figures/jointfeaturespace.pdf>
@@ -1641,7 +1642,7 @@ ne 633.
  [32
 
 ]
-<./figures/cancernet.pdf, id=485, 511.28696pt x 472.64987pt>
+<./figures/cancernet.pdf, id=486, 511.28696pt x 472.64987pt>
 File: ./figures/cancernet.pdf Graphic file (type pdf)
 
 <use ./figures/cancernet.pdf>
@@ -1664,7 +1665,7 @@ ne 660.
 
 [34
 
-] <./figures/spanningtrees.pdf, id=516, 1208.515pt x 186.6975pt>
+] <./figures/spanningtrees.pdf, id=517, 1208.515pt x 186.6975pt>
 File: ./figures/spanningtrees.pdf Graphic file (type pdf)
 
 <use ./figures/spanningtrees.pdf>
@@ -1761,10 +1762,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 732.
  ) 
 Here is how much of TeX's memory you used:
- 17192 strings out of 493315
- 312387 string characters out of 6137904
+ 17197 strings out of 493315
+ 312476 string characters out of 6137904
  395099 words of memory out of 5000000
- 20087 multiletter control sequences out of 15000+600000
+ 20091 multiletter control sequences out of 15000+600000
  22918 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,23n,55p,393b,813s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1788,10 +1789,10 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (40 pages, 1255043 bytes).
+Output written on example.pdf (40 pages, 1313041 bytes).
 PDF statistics:
- 730 PDF objects out of 1000 (max. 8388607)
+ 731 PDF objects out of 1000 (max. 8388607)
  519 compressed objects within 6 object streams
  82 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
