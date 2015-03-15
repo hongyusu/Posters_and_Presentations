@@ -569,7 +569,12 @@
 
 \begin{frame}{Random spanning tree approximation}
 	\begin{itemize}
-		\item We want to main a small parameter space, and feasible inference.
+		\item We want to maintain a small parameter space, and feasible inference.
+		\item When the output graph is a tree
+		\begin{itemize}
+			\item $f_T(\vx,\vy;\vw_T) = \ip{\vw_T}{\phib_T(\vx,\vy)}$
+			\item $|\vw| = d\times 4|E| = d\time4(k-1)$
+		\end{itemize}
 		\item Sample a collection of spanning tree from $G$ uniformly at random $\Tcal = \{T_1,\cdots,T_n\}$.
 		\begin{center}
 			\includegraphics[scale=0.2]{./figures/spanningtrees.pdf}
