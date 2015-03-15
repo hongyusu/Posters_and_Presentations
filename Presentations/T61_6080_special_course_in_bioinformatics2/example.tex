@@ -41,7 +41,7 @@
 			\item Statistic learning
 			\item Empirical risk minimization
 			\item Regularization
-			\item Support vector machines for single-task classification
+			\item Support vector machines for single label classification
 			\item Kernel methods 
 		\end{itemize}
 		\item Molecular classification problem
@@ -50,7 +50,7 @@
 			\item Predicting anti-cancer potentials of molecules
 			\item Hierarchical molecule classification
 		\end{itemize}
-		\item Multi-task classification with structured output learning model
+		\item Multilabel classification with structured output learning model
 		\begin{itemize}
 			\item Max-margin conditional random field
 			\item Random spanning tree approximation
@@ -517,13 +517,13 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Apply single-task classification}
+\begin{frame}{Apply single label classification}
 	\begin{itemize}
 		\item For both predicting anti-cancer potential and hierarchical molecular classification, we want to predict multiple output given an input.
 		\begin{align*}
 			\vx \overset{f}{\rightarrow} (y_{1},\cdots,y_{k})
 		\end{align*}
-		\item We can learn a collection of single-task learner, one for each output
+		\item We can learn a collection of single label learner, one for each output
 		\begin{align*}
 			\vx &\overset{f_1}{\rightarrow} (y_{1},\cdots,\cdots)\\
 			&\cdots\\
@@ -537,7 +537,19 @@
 			\item Explicitly, as the hierarchical structure.
 			\item Implicitly, by the auxiliary data.
 		\end{itemize}
-		\item Can we do better than single-task classification?
+		\item Can we do better than single label classification?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Multilabel classification}
+	\begin{itemize}
+		\item Multilabel classification is an important research field in machine learning.
+		\begin{itemize}
+			\footnotesize
+			\item For example, a document can be classified as “science”, “genomics”, and “drug discovery”.
+			\item Each input variable is simultaneously associated with multiple output variables.
+			\item The goal is to reliably predict the values of multiple output variables given an input variable.
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -759,7 +771,7 @@
 			\item Predicting anti-cancer potentials of molecules
 			\item Hierarchical molecular classification
 		\end{itemize}
-		\item Start from single-task classification
+		\item Start from single label classification
 		\begin{itemize}
 			\footnotesize
 			\item Risk minimization, regularization
