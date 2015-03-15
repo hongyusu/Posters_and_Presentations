@@ -400,7 +400,7 @@
 
 \begin{frame}{Data}
 	\begin{itemize}
-		\item Actual data is extracted from PubChem \url{https://pubchem.ncbi.nlm.nih.gov}.
+		\item Actual data is extracted from PubChem, a chemical compound database.
 		\item An example of the data in a single cell line (\url{https://www.ncbi.nlm.nih.gov/pcassay?term=\%22DTP\%2FNCI\%22}).
 		\item Collect data from different cell lines:
 		\begin{itemize}
@@ -409,6 +409,15 @@
 			\item $43889$ molecules, $43340$ with structural information available.
 			\item About $4000$ molecules with activities in all $60$ cell lines.
 		\end{itemize}
+		\item Organize data into a matrix
+		\begin{center}
+			\includegraphics[scale=0.5]{./figures/datamatrix.pdf}
+		\end{center}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Molecules}
+	\begin{itemize}
 		\item Each molecule is represent as a small graph, with vertices correspond to chemical atoms and edges correspond to covalent bond.
 		\begin{center}
 			\includegraphics[scale=0.5]{./figures/mol1.png}
@@ -416,7 +425,8 @@
 			\includegraphics[scale=0.5]{./figures/mol2.png}
 			\text{   }
 			\includegraphics[scale=0.5]{./figures/mol3.png}
-		\end{center} 
+		\end{center}
+		
 	\end{itemize}
 \end{frame}
 
