@@ -1597,7 +1597,7 @@ File: ./figures/taxonomy.pdf Graphic file (type pdf)
 
 <use ./figures/taxonomy.pdf>
 Package pdftex.def Info: ./figures/taxonomy.pdf used on input line 583.
-(pdftex.def)             Requested size: 111.16504pt x 62.7342pt.
+(pdftex.def)             Requested size: 133.3994pt x 75.28181pt.
 File: Aalto_EN_ScienceandTech_13_RGB_y1.pdf Graphic file (type pdf)
  <use Aalto_EN_ScienceandTech_13_RGB_y1.pdf>
 Package pdftex.def Info: Aalto_EN_ScienceandTech_13_RGB_y1.pdf used on input li
@@ -1851,7 +1851,7 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 /2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on example.pdf (45 pages, 1363576 bytes).
+Output written on example.pdf (45 pages, 1363569 bytes).
 PDF statistics:
  811 PDF objects out of 1000 (max. 8388607)
  572 compressed objects within 6 object streams
