@@ -384,7 +384,13 @@
 
 \begin{frame}{Kernel matrix}
 	\begin{itemize}
-		\item Given a dataset $S=\{\vx_1,\cdots,\vx_m\}$ of arbitrary choice of $m$ example sampled from $\vXcal$ and a kernel function $k$ on $S$, an $m\times m$ matrix $K=(k(\vx_i,\vx_j))_{i,j}$ is called the kernel matrix of kernel $k$ with respect to $S$.
+		\item Given a dataset $S=\{\vx_1,\cdots,\vx_m\}$ of arbitrary choice of $m$ examples sampled from $\vXcal$ and a kernel function $k$ on $S$, an $m\times m$ matrix $K=(k(\vx_i,\vx_j))_{i,j}$ is called the kernel matrix of kernel $k$ with respect to $S$.
+		\begin{center}
+				\includegraphics[scale = 0.14]{./figures/tensor.pdf}
+				\put(-90,40){\tiny $\varphib(\vx)[i]$}
+				\put(-40,75){\tiny $\psib(\vy)[j]$}
+				\put(-60,30){\tiny $\phi(\vx,\vy)[i,j] = \varphi(\vx)[i]\psib(\vy)[j]$}
+		\end{center}
 	\end{itemize}
 \end{frame}
 
