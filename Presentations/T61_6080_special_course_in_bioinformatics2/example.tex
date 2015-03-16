@@ -808,8 +808,11 @@
 		\item Can we do better?
 		\item Semi-supervised learning 
 		\begin{align*}
-			\underset{\vw}{\minimize} \, \underbrace{\sum_{i=1}^m \ell(f(\vx_i)\vy_i)}_{\text{risk}} + \underbrace{\lambda_1 \Omega(f)}_{\text{regularization}} + \underbrace{\lambda_2\sum_{i,j=1}^{m+u}W_{i,j}||f(\vx_i)-f(\vx_j)||^2}_{\text{consistency constraint}}
+			\underset{\vw}{\minimize} \, \underbrace{\sum_{i=1}^m \ell(f(\vx_i)\vy_i)}_{\text{risk}} + \underbrace{\lambda_1 \Omega(f)}_{\text{regularization}} + \underbrace{\lambda_2\sum_{i,j=1}^{m+u}W_{i,j}||f(\vx_i)-f(\vx_j)||^2}_{\text{consistency regularizer}}
 		\end{align*}
+		\begin{itemize}
+			\item Consistency regularizer required similar input patterns generate similar output patterns.
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
