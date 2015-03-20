@@ -8,7 +8,7 @@ Instructor: Hongyu Su (hongyu.su@aalto.fi)
 
 Background:
 
-Can you figure out the cancer inhibition potentials of drug molecules without getting your hands dirty? How to compute the similarity of two graphs using kernel methods? How to work with the support vector machines in practice? What if you have varying kinds of similarity measures on a same collection of objects? How to compute a better measures out of many? Is machine learning more about mathematical modeling, or programmings, or both? You will have a chance to explore the answers by approaching the anti-cancer drug potential prediction with the multiple kernel learning method.
+Can you figure out the cancer inhibition potentials of drug molecules without getting your hands dirty? How to compute the similarity of two graphs using kernel methods? How to work with the support vector machines in practice? What if you have varying kinds of similarity measures on a same collection of objects? How to compute a better measures out of many? Is machine learning more about mathematical modeling, or programming, or both? You will have a chance to explore the answers by approaching the anti-cancer drug potential prediction with the multiple kernel learning method.
 
 
 Goal:
@@ -23,15 +23,16 @@ The background knowledge required by the project includes, e.g., basic knowledge
 
 Materials and methods:
 
-The dataset used in this project is NCI-60 tumor screen data [1]. The raw data can be obtained from PubChem. The preprocessed data with complete preprocessing scripts are available from GitHub (https://github.com/hongyusu/molecular_classification). The student is expected to understand the preprocessing steps (https://github.com/hongyusu/molecular_classification/blob/master/data/Readme). The student is also encouraged to repeat the preprocessing steps to get an overview of the data (not required). The results from preprocessing can be directly used in the machine learning algorithms.
+The dataset used in this project is NCI-60 tumor screen data [1]. The raw data can be obtained from PubChem. The preprocessed data with complete preprocessing scripts are available from GitHub (https://github.com/hongyusu/molecular_classification). The student is expected to understand the preprocessing steps (https://github.com/hongyusu/molecular_classification/blob/master/data/Readme), and is encouraged to repeat the preprocessing steps to get an overview of the data. However, this is not required. The results provided from preprocessing can be directly used in the machine learning algorithms.
 
-The methods used in this project is centered kernel alignment [2] which is a multiple kernel learning method that combines different kernels (similarity measures). Additionally, we will model the problem as single label classification and use support vector machines to make predictions.
+Graph kernels will be applied to measure the similarity of molecules. In this project, the student will get familiar with the computation of three different kinds of fingerprint kernels (results are provided), and compute other graph kernels (e.g., random walk kernel, shortest path kernel, graphlet kernel) using a Matlab package (http://www.bsse.ethz.ch/mlcb/research/machine-learning/graph-kernels.html). Varying graph kernels are combined with centered kernel alignment [2] which is recently developed algorithm with good empirical results. Additionally, we will model the problem as single label classification and use support vector machines to make predictions.
 
 
 References: 
 
 [1] Su, Hongyu; Heinonen, Markus; Rousu, Juho. Structured Output Prediction of Anti-cancer Drug Activity. In Proceedings of the 5th International Conference on Pattern Recognition in Bioinformatics (PRIB 2010), Springer Lecture Note in Computer Science (LNCS) 6282:265--273.
 [2] Corina Cortes, Mehryar Mohri, Afshin Rostamizadeh. Algorithms for learning kernels based on center alignment. Journal of Machine Learning Research 13(2012) 795--828
+[3] More references about graph kernels are from http://www.bsse.ethz.ch/mlcb/research/machine-learning/graph-kernels.html.
 
 
 
