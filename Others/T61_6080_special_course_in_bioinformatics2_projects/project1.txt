@@ -1,0 +1,37 @@
+
+
+Topic #: Predicting anti-cancer drug potentials (as a multilabel classification problem)
+
+
+Instructor: Hongyu Su (hongyu.su@aalto.fi)
+
+
+Background:
+
+Can you figure out the cancer inhibition potentials of drug molecules without getting your hands dirty? How to compute the similarity of two graphs using kernel methods? How to work with some complicated machine learning algorithms in practice? Is machine learning more about mathematical modeling, or programming, or both? What is single label classification, what is multilabel classification? You will have a chance to explore the answers by modeling the anti-cancer drug potential prediction as a multilabel classification problem. 
+
+
+Goal:
+
+The goal of the project lies in the following aspects. (1) Model a biological question as a classification learning problem, e.g., applying data structures, defining input and output, and solving the optimization problem. (2) Retrieve data from public online database, perform preprocessing steps on the raw data. (3) Compute the similarity of two graphs (molecular structures). (3) Get familiar with the structured output learning algorithm [2]. (4) Prepare the input and the output into required forms. (5) Run the algorithm, select parameters, and observe similar classification performance as reported in the paper. 
+
+
+Required background knowledge and skills: 
+
+The background knowledge required by the project includes, e.g., basic knowledge in statistical machine learning, basic knowledge in classification learning, understanding the basic principle of support vector machines, some knowledge in kernel methods for high-dimensional feature maps. The practical work requires some programming skills of the following languages, Matlab, Python. Bash scripting can be helpful. Perl/R/C is also needed but not required. Some addition knowledge in working with computer cluster will give extra advantage of working out the problem. The project does not assume strong knowledge in biology (e.g., drug screen). Extra knowledge in biology may help better understand the problem.
+
+
+Materials and methods:
+
+The dataset used in this project is NCI-60 tumor screen data [1]. The raw data can be obtained from PubChem. The preprocessed data with complete preprocessing scripts are available from GitHub (https://github.com/hongyusu/molecular_classification). The student is expected to understand the preprocessing steps (https://github.com/hongyusu/molecular_classification/blob/master/data/Readme). The student is also encouraged to repeat the preprocessing steps to get an overview of the data (not required). The results from preprocessing can be directly used in the learning algorithms.
+
+The method used in this project is random spanning tree approximation (RTA) algorithm [2] which is a structured output learning algorithm for multilabel classification. The student can either use the original implementation of the algorithm (https://github.com/hongyusu/RTA) or use the latest version currently under test (https://github.com/hongyusu/L2RTA). The only difference is the inference algorithm in which the latter one is faster.
+
+
+References: 
+
+[1] Su, Hongyu; Heinonen, Markus; Rousu, Juho. Structured Output Prediction of Anti-cancer Drug Activity. In Proceedings of the 5th International Conference on Pattern Recognition in Bioinformatics (PRIB 2010), Springer Lecture Note in Computer Science (LNCS) 6282:265--273.
+[2] Mario Marchand, Hongyu Su, Emilie Morvant, Juho Rousu, John Shawe-Taylor Multilabel Structured Output Learning with Random Spanning Trees of Max-Margin Markov Networks. In Advances in Neural Information Processing Systems 27(NIPS 2014), 873--881.
+
+
+
