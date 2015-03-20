@@ -15,7 +15,7 @@ How difficult is it to accurately predict the ontology? How to work with the sup
 
 Goal:
 
-The goal of the project lies in the following aspects. (1) Model a biological question as a classification learning problem, e.g., applying data structure, defining input and output. (2) Prepare the input and output into required forms. (3) Get familiar with structured output learning algorithms and apply it to the hierarchical molecular classification problem. (4) Design the experiments and report the performances.
+The goal of the project lies in the following aspects. (1) Model a biological question as a classification learning problem, e.g., applying data structure, defining input and output. (2) Prepare the input and output into required forms. (3) Get familiar with structured output learning algorithm and apply it to the hierarchical molecular classification problem. (4) Design the experiments and report the performances.
 
 
 Required background knowledge and skills: 
@@ -25,15 +25,13 @@ The background knowledge required by the project includes, e.g., basic knowledge
 
 Materials and methods:
 
-The ontology data can be retrieved from ChEBI. The data is represented as a directed acyclic graph (DAG) where each node in the DAG is a term in the hierarchical annotation system. Additional, for each chemical compound, we obtain the fingerprint from PubChem and OpenBabel, which will be used as feature representation of the compound. Specifically, the fingerprint is a binary bit vector where each position corresponds to the presence or absence of a predefined substructure. As a result, we obtain 1143 compounds with both fingerprint and ontology information. 
+The ontology data is retrieved from ChEBI. The data is represented as a directed acyclic graph (DAG) where each node in the DAG is a term in the hierarchical annotation system. Additionally, for each chemical compound, we obtain the fingerprint from PubChem and OpenBabel, which will be used as feature representation of the compound. Specifically, the fingerprint is a binary bit vector where each position corresponds to the presence or absence of a predefined substructure. As a result, we obtain 1143 compounds with both fingerprint and ontology information. 
 
-The method used in this project is random spanning tree approximation (RTA) algorithm [2] which is a structured output learning algorithm for multilabel classification. The student can either use the original implementation of the algorithm (https://github.com/hongyusu/RTA) or use the latest version currently under test (https://github.com/hongyusu/L2RTA). The only difference is the inference algorithm in which the latter one is faster.
+The method used in this project is random spanning tree approximation (RTA) algorithm [1] which is a structured output learning algorithm for multilabel classification. The student can either use the original implementation of the algorithm (https://github.com/hongyusu/RTA) or use the latest version currently under test (https://github.com/hongyusu/L2RTA). The only difference is the inference algorithm in which the latter one is faster.
 
 
 References: 
-
-[1] Su, Hongyu; Heinonen, Markus; Rousu, Juho. Structured Output Prediction of Anti-cancer Drug Activity. In Proceedings of the 5th International Conference on Pattern Recognition in Bioinformatics (PRIB 2010), Springer Lecture Note in Computer Science (LNCS) 6282:265--273.
-[2] Mario Marchand, Hongyu Su, Emilie Morvant, Juho Rousu, John Shawe-Taylor Multilabel Structured Output Learning with Random Spanning Trees of Max-Margin Markov Networks. In Advances in Neural Information Processing Systems 27(NIPS 2014), 873--881.
+[1] Mario Marchand, Hongyu Su, Emilie Morvant, Juho Rousu, John Shawe-Taylor Multilabel Structured Output Learning with Random Spanning Trees of Max-Margin Markov Networks. In Advances in Neural Information Processing Systems 27(NIPS 2014), 873--881.
 
 
 
