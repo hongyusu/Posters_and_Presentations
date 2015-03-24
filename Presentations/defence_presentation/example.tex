@@ -158,8 +158,9 @@
 		\item The problem is known as \textit{\color{aaltoblue}multilabel classification}, which is a natural extension to single label classification.
 		\begin{itemize}
 			\footnotesize
-			\item Input is an object.
-			\item Output is multiple attributes called \textit{\color{aaltoblue}multilabel}. 
+			\item Data comes in pairs $(\vx,\vy)\in\vXcal\times\vYcal$, $\vXcal=\RR^d$ is an input space, $\Ycal=\{+1,-1\}^k$ is an output space.
+			\item We are given a set of training data $\Scal=\{(\vx_i,\vy_i)\}_{i=1}^{m}$.
+			\item Learn a mapping function $f\in\Hcal$ that predict the best output of an input $\vx\overset{f}{\rightarrow}\vy = \{y_1,\cdots,y_k\}$.
 		\end{itemize}
 	\end{itemize}
 \end{frame}
