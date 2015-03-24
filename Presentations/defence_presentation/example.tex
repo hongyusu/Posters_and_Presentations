@@ -127,8 +127,9 @@
 		\item For example, we want to annotate all images with multiple labels \\
 		\{boat, sea, sun, beach, people, dog, cat, $\cdots$\}
 		\item Correct annotations will allow us to search with multiple attributes.
-		\only<1>{\item Search with \textbf{boat, sea, sun}}
-		\only<1>{\item Search with \textbf{dog \& cat}}
+		\only<1>{\item Search with \textbf{boat \& sea \& sun}}
+		\only<2>{\item Search with \textbf{sun \& beach \& people}}
+		\only<3>{\item Search with \textbf{dog \& cat}}
 	\end{itemize}
 	\only<1>{
 	\begin{center}
@@ -136,6 +137,11 @@
 	\end{center}
 	}
 	\only<2>{
+	\begin{center}
+		\includegraphics[scale=0.11]{./figures/googlesun.png}
+	\end{center}
+	}
+	\only<3>{
 	\begin{center}
 		\includegraphics[scale=0.11]{./figures/googledogcat.png}
 	\end{center}
