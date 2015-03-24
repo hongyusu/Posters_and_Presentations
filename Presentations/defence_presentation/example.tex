@@ -102,6 +102,13 @@
 			\item Learn a \textit{\color{aaltoblue}mapping function} that predicts the label of a new object\\
 			e.g., (new image, dog or cat?)
 		\end{itemize}
+		\item Mathematically, we define the single label classification problem
+		\begin{itemize}
+			\footnotesize
+			\item Data comes in pairs $(\vx,y)\in\vXcal\times\Ycal$, $\vXcal=\RR^d$ is an input space, $\Ycal=\{+1,-1\}$ is an output space.
+			\item We are given a set of training data $\Scal=\{(\vx_i,y_i)\}_{i=1}^{m}$.
+			\item Learn a mapping function $f\in\Hcal$ that predict the best output of an input $\vx\overset{f}{\rightarrow}y$.
+		\end{itemizes}
 		\item Many algorithms are available to tackle single label classification problems, e.g., support vector machines \citep{Cortes95support}, logistic regression \citep{Chen99}.
 	\end{itemize}
 \end{frame}
