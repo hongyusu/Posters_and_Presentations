@@ -102,23 +102,22 @@
 			\item Learn a \textit{\color{aaltoblue}mapping function} that predict the label of a new object\\
 			e.g., (new image, dog or cat?)
 		\end{itemize}
-		\begin{comment}
-		\item Mathematically, we define the single label classification problem
-		\begin{itemize}
-			\footnotesize
-			\item Data come in pairs $(\vx,y)\in\vXcal\times\Ycal$, sampled from some unknown distribution $P(\vx.y)$.
-			\item $\vXcal=\RR^d$ is a domain of input, $\Ycal=\{+1,-1\}$ is a domain of output.
-			\item We are given a set of training data $\Scal=\{(\vx_i,y_i)\}_{i=1}^{m}$.
-			\item Learn a mapping function $f\in\Hcal$ that predict the best output of an input
-			\begin{align*}
-				\vx\overset{f}{\rightarrow}y
-			\end{align*}
-		\end{itemize}
-		\end{comment}
 	\end{itemize}
 \end{frame}
 
-
+\iffalse
+\item Mathematically, we define the single label classification problem
+\begin{itemize}
+	\footnotesize
+	\item Data come in pairs $(\vx,y)\in\vXcal\times\Ycal$, sampled from some unknown distribution $P(\vx.y)$.
+	\item $\vXcal=\RR^d$ is a domain of input, $\Ycal=\{+1,-1\}$ is a domain of output.
+	\item We are given a set of training data $\Scal=\{(\vx_i,y_i)\}_{i=1}^{m}$.
+	\item Learn a mapping function $f\in\Hcal$ that predict the best output of an input
+	\begin{align*}
+		\vx\overset{f}{\rightarrow}y
+	\end{align*}
+\end{itemize}
+\fi
 
 
 
