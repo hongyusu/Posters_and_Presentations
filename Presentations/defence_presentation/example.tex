@@ -97,7 +97,10 @@
 			\item Output is an attribute $y$ called \textit{label} (e.g., $y=+1$:dog, $y=-1$:cat).
 			\item Explore a set of known object and label pairs called \textit{training data} \\
 			(e.g., $\{(\vx_1,+1),\cdots,(\vx_{5001},-1),\cdots\}$).
-			\item Learn a \textit{mapping function} that predicts the label of a new object.
+			\item Learn a \textit{mapping function} that predicts the label of a new object.\\
+			\begin{align*}
+				\vx\overset{f}{\rightarrow}y,y\in\{+1,-1\}.
+			\end{align*}
 		\end{itemize}
 		\item Many algorithms are available to tackle single label classification problems, e.g., support vector machines \citep{Cortes95support}, logistic regression \citep{Chen99}.
 	\end{itemize}
