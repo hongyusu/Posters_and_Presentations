@@ -95,14 +95,14 @@
 			\footnotesize
 			\item Input is an \textit{\color{aaltoblue} object}\\
 			e.g., an image.
-			\item Output is an attribute of the object called \textit{\color{aaltoblue} label}\\
+			\item Output is an attribute called \textit{\color{aaltoblue} label}\\
 			e.g., dog or cat?
 			\item Explore a set of known object and label pairs called \textit{\color{aaltoblue} Training data} \\
 			e.g., \{(image\#1, dog), $\cdots$, (image\#5001, cat), $\cdots$\}.
-			\item Learn a \textit{\color{aaltoblue}mapping function} that predict the label of a new object\\
+			\item Learn a \textit{\color{aaltoblue}mapping function} that predicts the label of a new object\\
 			e.g., (new image, dog or cat?)
 		\end{itemize}
-		\item Many algorithms are available to tackle single label classification problems: support vector machines \citep{Cortes95support}, logistic regression \citep{Chen99}, etc.
+		\item Many algorithms are available to tackle single label classification problems, e.g., support vector machines \citep{Cortes95support}, logistic regression \citep{Chen99}.
 	\end{itemize}
 \end{frame}
 
@@ -121,8 +121,11 @@
 \fi
 
 
-\begin{frame}{}
-	How nice
+\begin{frame}{Image annotation task}
+	\begin{itemize}
+		\item We are interested in multiple attributes (labels) of a single image.
+		\item For example, we want to annotate all images with a collection of labels \{boat, sea, sun, beach, people, $\cdots$\}
+	\end{itemize}
 \end{frame}
 
 
