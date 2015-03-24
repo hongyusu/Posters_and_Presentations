@@ -90,21 +90,14 @@
 
 \begin{frame}{Single label classification}
 	\begin{itemize}
-		\item In machine learning, the problem is known as \textit{\color{aaltoblue} single label classification}.
+		\item In machine learning, the problem is known as \textit{single label classification}.
 		\begin{itemize}
 			\footnotesize
-			\item Input is an \textit{\color{aaltoblue} object} (e.g., an image).
-			\item Output is an attribute called \textit{\color{aaltoblue} label} (e.g., dog or cat).
-			\item Explore a set of known object and label pairs called \textit{\color{aaltoblue} Training data} \\
-			e.g., (image\#1, dog), $\cdots$, (image\#5001, cat), $\cdots$.
-			\item Learn a \textit{\color{aaltoblue}mapping function} that predicts the label of a new object.
-		\end{itemize}
-		\item Mathematically, we define the single label classification problem
-		\begin{itemize}
-			\footnotesize
-			\item Data comes in pairs $(\vx,y)\in\vXcal\times\Ycal$, $\vXcal=\RR^d$ is an input space, $\Ycal=\{+1,-1\}$ is an output space.
-			\item We are given a set of training data $\Scal=\{(\vx_i,y_i)\}_{i=1}^{m}$.
-			\item Learn a mapping function $f\in\Hcal$ that predict the best output of an input $\vx\overset{f}{\rightarrow}y$.
+			\item Input is an object $\vx$ (e.g., an image).
+			\item Output is an attribute $y$ called \textit{label} (e.g., $y=+1$:dog, $y=-1$:cat).
+			\item Explore a set of known object and label pairs called \textit{training data} \\
+			(e.g., $\{(\vx_1,+1),\cdots,(\vx_{5001},-1),\cdots\}$).
+			\item Learn a \textit{mapping function} that predicts the label of a new object.
 		\end{itemize}
 		\item Many algorithms are available to tackle single label classification problems, e.g., support vector machines \citep{Cortes95support}, logistic regression \citep{Chen99}.
 	\end{itemize}
@@ -155,7 +148,7 @@
 
 \begin{frame}{Multilabel classification}
 	\begin{itemize}
-		\item The problem is known as \textit{\color{aaltoblue}multilabel classification}, which is a natural extension to single label classification.
+		\item The problem is known as \textit{multilabel classification}, which is a natural extension to single label classification.
 		\begin{itemize}
 			\footnotesize
 			\item Data comes in pairs $(\vx,\vy)\in\vXcal\times\vYcal$, $\vXcal=\RR^d$ is an input space, $\vYcal=\Ycal_1\times\cdots\times\Ycal_k, \Ycal_j = \{+1,-1\}$ is an output space.
