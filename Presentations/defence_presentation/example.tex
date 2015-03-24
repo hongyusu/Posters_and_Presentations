@@ -154,10 +154,12 @@
 		\item The problem is known as \textit{multilabel classification}, which is a natural extension to single label classification.
 		\begin{itemize}
 			\footnotesize
-			\item Data comes in pairs $(\vx,\vy)\in\vXcal\times\vYcal$, $\vXcal=\RR^d$ is an input space, $\vYcal=\Ycal_1\times\cdots\times\Ycal_k, \Ycal_j = \{+1,-1\}$ is an output space.
-			\item We are given a set of training data $\Scal=\{(\vx_i,\vy_i)\}_{i=1}^{m}$.
-			\item Learn a mapping function $f\in\Hcal$ that predict the best output of an input $\vx\overset{f}{\rightarrow}\vy = \{y_1,\cdots,y_k\}$.
-		\end{itemize}
+			\item Input is an object $\vx$ (e.g., an image).
+			\item Output are multiple attributes $\vy$ called \textit{multilabel}\\
+			(e.g., $\vy=(\underbrace{+1}_{\text{sea}})$).
+			\item Explore a set of known object and label pairs called \textit{training data} \\
+			(e.g., $\{(\vx_1,+1),\cdots,(\vx_{5001},-1),\cdots\}$).
+			\item Learn a \textit{mapping function} that predicts the label of a new object.\\		\end{itemize}
 	\end{itemize}
 \end{frame}
 
