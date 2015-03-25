@@ -11,7 +11,7 @@
 \subtitle{Multilabel classification}
 \author[H. Su]{Hongyu Su}
 \institute[ICS]{Department of Computer Science\\School of Science, Aalto University\\hongyu.su@aalto.fi}
-\aaltofootertext{Molecular classification}{\today}{\arabic{page}/\pageref{LastPage}\ }
+\aaltofootertext{Molecular classification}{\today}%{\arabic{page}/\pageref{LastPage}\ }
 
 %\date{Version 1.0, \today}
 \date{ \today}
@@ -260,21 +260,17 @@
 \begin{frame}{Structured output prediction}
 	\begin{itemize}
 		\item We want to explore the correlations of attributes to improve the performance on multilabel classification problems.
-		\item Graph is a natural way to model correlations.
+		\item In statistics, graph is a natural way to model correlations. \textit{Output graph} is defined by
 		\begin{itemize}
 			\footnotesize
 			\item Nodes correspond to multiple attributes.
 			\item Edges correspond to correlations of attributes.
 		\end{itemize}
-		\item \textit{Structured output prediction} 
+		\item \textit{Structured output prediction} method
 		\begin{itemize}
 			\footnotesize
-			\item predict multiple attributes of an object at the same time.
-			\item use an $output graph$ which describes the correlations.
-		\end{itemize}
-		\begin{itemize}
-			\footnotesize
-			\item
+			\item predicts multiple attributes of an object at the same time.
+			\item explores the correlations described by an output graph.
 		\end{itemize}
 	\end{itemize}
 \end{frame}
