@@ -196,8 +196,15 @@
 \begin{frame}{How to solve multilabel classification?}
 	\begin{itemize}
 		\item Reduce the multilabel classification problem as a collection of single label classification problems.
-		\item 
+		\item Solve each individual problem independently. 
+		\item Combine the results.
 	\end{itemize}
+	\only<1>{
+	\begin{tabular}{p{3cm}p{10cm}}
+    \multirow{2}{*}{\includegraphics[scale = 0.13]{./figures/boatsea.png}} & \\
+	& $(\underbrace{+1}_{\text{boat}},\underbrace{+1}_{\text{sea}},\underbrace{-1}_{\text{sun}},\underbrace{-1}_{\text{beach}},\underbrace{-1}_{\text{people}},\underbrace{+1}_{\text{ice}},\underbrace{+1}_{\text{land}})$\\
+    \end{tabular}
+	}
 \end{frame}
 
 \begin{frame}{To get benefit?}
