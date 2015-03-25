@@ -124,8 +124,8 @@ Author: Kimmo Jarvinen (kimmo.jarvinen@tkk.fi)^^J%
 \iffooter\setbeamertemplate{footline}{\vspace{1.1cm}}\fi % B. Brumley's fix to the "text too low problem"
 
 % Set fonts
-%\renewcommand{\rmdefault}{phv} % Helvetica (resembles Arial)
-%\renewcommand{\sfdefault}{phv} % Helvetica (resembles Arial)
+\renewcommand{\rmdefault}{phv} % Helvetica (resembles Arial)
+\renewcommand{\sfdefault}{phv} % Helvetica (resembles Arial)
 \setbeamerfont{title}{size=\Large, series=\bfseries}
 \setbeamerfont{frametitle}{size=\Large, series=\bfseries}
 
