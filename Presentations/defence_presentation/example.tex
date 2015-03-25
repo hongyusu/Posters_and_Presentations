@@ -130,9 +130,18 @@
 
 
 \begin{frame}{Support vector machine}
+	\only<1>{
 	\begin{itemize}
-		\only<1>{\item} 
-	\end{itemize}
+		\item Map object into some feature space. Just think they are points in a 2D space.
+	\end{itemize}}
+	\only<2>{
+	\begin{itemize}
+		\item Find a line to separate object of two classes.
+	\end{itemize}}
+	\only<3>{
+	\begin{itemize}
+		\item Compute label of new object according to its side.
+	\end{itemize}}
 	\begin{center}
 		\only<1>{\includegraphics[scale=0.3]{./figures/svm0.pdf}}
 		\only<2>{\includegraphics[scale=0.3]{./figures/svm.pdf}}
