@@ -216,7 +216,7 @@
         \multirow{2}{*}{\includegraphics[scale = 0.4]{./figures/mol1.png}} & \\
 		& $(\underbrace{+1}_{\text{target1}},\underbrace{-1}_{\text{target2}},\underbrace{-1}_{\text{target3}},\underbrace{-1}_{\text{target4}},\underbrace{-1}_{\text{target5}},\underbrace{+1}_{\text{target6}},\underbrace{+1}_{\text{target7}})$\\
         \end{tabular}
-		\item Social network analysis is to predict how a message spreads.
+		\item Social network analysis is to predict how a message spreads 
 		\begin{tabular}{p{3cm}p{10cm}} 
         \multirow{2}{*}{\includegraphics[scale = 0.07]{./figures/facebookvideo.png}} & \\
 		& $(\underbrace{+1}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{+1}_{\text{Alex}},\underbrace{-1}_{\text{Zoe}},\underbrace{-1}_{\text{Frank}})$\\
@@ -231,45 +231,44 @@
 		\item Solve each individual problem independently. 
 		\item Combine the results.
 	\end{itemize}
-	\only<1>{
-	\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
-    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} & &\\
-	& $\overset{f}{\rightarrow}$ &$(\underbrace{?}_{\text{Ted}},\underbrace{?}_{\text{Alice}},\underbrace{?}_{\text{David}},\underbrace{?}_{\text{Mark}},\underbrace{?}_{\text{Alex}},\underbrace{?}_{\text{Zoe}},\underbrace{?}_{\text{Frank}})$\\
-    \end{tabular}
-	}
-	\only<2>{
-	\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
-    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} & &\\
-	& $\overset{f_1}{\rightarrow}$ &$(\underbrace{+1}_{\text{Ted}},\underbrace{}_{\text{Alice}},\underbrace{}_{\text{David}},\underbrace{}_{\text{Mark}},\underbrace{}_{\text{Alex}},\underbrace{}_{\text{Zoe}},\underbrace{}_{\text{Frank}})$\\
-    \end{tabular}
-	}
-	\only<3>{
-	\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
-    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} &  &\\
-	& $\overset{f_2}{\rightarrow}$ &$(\underbrace{}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{}_{\text{David}},\underbrace{}_{\text{Mark}},\underbrace{}_{\text{Alex}},\underbrace{}_{\text{Zoe}},\underbrace{}_{\text{Frank}})$\\
-    \end{tabular}
-	}
-	\only<4>{
-	\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
-    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} &  &\\
-	& $\overset{f_3}{\rightarrow}$ &$(\underbrace{}_{\text{Ted}},\underbrace{}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{}_{\text{Mark}},\underbrace{}_{\text{Alex}},\underbrace{}_{\text{Zoe}},\underbrace{}_{\text{Frank}})$\\
-    \end{tabular}
-	}
-	\only<5>{
-	\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
-    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} &  &\\
-	& $\overset{f_4}{\rightarrow}$ &$(\underbrace{}_{\text{Ted}},\underbrace{}_{\text{Alice}},\underbrace{}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{}_{\text{Alex}},\underbrace{}_{\text{Zoe}},\underbrace{}_{\text{Frank}})$\\
-    \end{tabular}
-	}
-	\only<6>{
-	\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
-    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} &  &\\
-	& $\overset{f_1,\cdots,f_7}{\rightarrow}$ &$(\underbrace{+1}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{+1}_{\text{Alex}},\underbrace{-1}_{\text{Zoe}},\underbrace{-1}_{\text{Frank}})$\\
-    \end{tabular}
-	}
-	
-	
-	
+	\begin{center}
+		\only<1>{
+		\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
+	    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} & &\\
+		& $\overset{f}{\rightarrow}$ &$(\underbrace{?}_{\text{Ted}},\underbrace{?}_{\text{Alice}},\underbrace{?}_{\text{David}},\underbrace{?}_{\text{Mark}},\underbrace{?}_{\text{Alex}},\underbrace{?}_{\text{Zoe}},\underbrace{?}_{\text{Frank}})$\\
+	    \end{tabular}
+		}
+		\only<2>{
+		\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
+	    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} & &\\
+		& $\overset{f_1}{\rightarrow}$ &$(\underbrace{+1}_{\text{Ted}},\underbrace{}_{\text{Alice}},\underbrace{}_{\text{David}},\underbrace{}_{\text{Mark}},\underbrace{}_{\text{Alex}},\underbrace{}_{\text{Zoe}},\underbrace{}_{\text{Frank}})$\\
+	    \end{tabular}
+		}
+		\only<3>{
+		\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
+	    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} &  &\\
+		& $\overset{f_2}{\rightarrow}$ &$(\underbrace{}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{}_{\text{David}},\underbrace{}_{\text{Mark}},\underbrace{}_{\text{Alex}},\underbrace{}_{\text{Zoe}},\underbrace{}_{\text{Frank}})$\\
+	    \end{tabular}
+		}
+		\only<4>{
+		\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
+	    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} &  &\\
+		& $\overset{f_3}{\rightarrow}$ &$(\underbrace{}_{\text{Ted}},\underbrace{}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{}_{\text{Mark}},\underbrace{}_{\text{Alex}},\underbrace{}_{\text{Zoe}},\underbrace{}_{\text{Frank}})$\\
+	    \end{tabular}
+		}
+		\only<5>{
+		\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
+	    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} &  &\\
+		& $\overset{f_4}{\rightarrow}$ &$(\underbrace{}_{\text{Ted}},\underbrace{}_{\text{Alice}},\underbrace{}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{}_{\text{Alex}},\underbrace{}_{\text{Zoe}},\underbrace{}_{\text{Frank}})$\\
+	    \end{tabular}
+		}
+		\only<6>{
+		\begin{tabular}{p{1.5cm}p{0.5cm}p{3cm}} 
+	    \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} &  &\\
+		& $\overset{f_1,\cdots,f_7}{\rightarrow}$ &$(\underbrace{+1}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{+1}_{\text{Alex}},\underbrace{-1}_{\text{Zoe}},\underbrace{-1}_{\text{Frank}})$\\
+	    \end{tabular}
+		}
+	\end{center}
 \end{frame}
 
 
