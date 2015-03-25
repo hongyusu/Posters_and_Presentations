@@ -200,9 +200,9 @@
 		\item Combine the results.
 	\end{itemize}
 	\only<1>{
-	\begin{tabular}{p{3cm}p{10cm}} 
+	\begin{tabular}{p{3cm}p{3cm}p{10cm}} 
     \multirow{2}{*}{\includegraphics[scale = 0.08]{./figures/facebookvideo.png}} & \\
-	& $(\underbrace{?}_{\text{Ted}},\underbrace{?}_{\text{Alice}},\underbrace{?}_{\text{David}},\underbrace{?}_{\text{Mark}},\underbrace{?}_{\text{Alex}},\underbrace{?}_{\text{Zoe}},\underbrace{?}_{\text{Frank}})$\\
+	$f$& $(\underbrace{?}_{\text{Ted}},\underbrace{?}_{\text{Alice}},\underbrace{?}_{\text{David}},\underbrace{?}_{\text{Mark}},\underbrace{?}_{\text{Alex}},\underbrace{?}_{\text{Zoe}},\underbrace{?}_{\text{Frank}})$\\
     \end{tabular}
 	}
 	\only<2>{
@@ -241,20 +241,19 @@
 \end{frame}
 
 
-\begin{frame}{Can we do better than this?}
+\begin{frame}{Label correlations}
 	\begin{itemize}
-		\item Multilabel are closely related.
-		\begin{align*}
-(\underbrace{+1}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{+1}_{\text{Alex}},\underbrace{-1}_{\text{Zoe}},\underbrace{-1}_{\text{Frank}})
-		\end{align*}
-		\begin{center}
-			\includegraphics[scale=0.5]{./figures/facebooknetwork.pdf}
-		\end{center}
+		\item Multiple attributes are closely related. Similar attributes will have similar response to an input.
 		\begin{itemize}
-			\footnotesize
-			\item 
-		\end{itemize}
-		
+			\item Social network analysis: friends have similar hobbies.
+			\begin{align*}
+		(\underbrace{+1}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{+1}_{\text{Alex}},\underbrace{-1}_{\text{Zoe}},\underbrace{-1}_{\text{Frank}})
+			\end{align*}
+			\begin{center}
+				\includegraphics[scale=0.5]{./figures/facebooknetwork.pdf}
+			\end{center}
+			\item Document classification: A news about movies m
+	\end{itemize}
 	\end{itemize}
 \end{frame}
 
