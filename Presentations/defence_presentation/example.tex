@@ -33,6 +33,25 @@
 
 \footnotesize{
 
+\iffalse
+\begin{frame}{Content}
+	\begin{itemize}
+		\item Single label classification
+		\item Multilabel classification
+		\item Structured output learning
+		\item 
+	\end{itemize}
+\end{frame}
+\fi
+
+
+\begin{frame}{Machine learning}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{frame}
+	
+	
 \begin{frame}{Example: dog vs. cat?}
 	\begin{itemize}
 		\item We have $5000$ pictures of dog and $5000$ pictures of cat.
@@ -93,10 +112,10 @@
 		\item In machine learning, the problem is known as \textit{single label classification}.
 		\begin{itemize}
 			\footnotesize
-			\item Input is an object $\vx$ (e.g., an image).
+			\item Input is an object $\vx$ (e.g., a picture).
 			\item Output is an attribute $y$ called \textit{label} (e.g., $y=+1$:dog, $y=-1$:cat).
 			\item Explore a set of known object and label pairs called \textit{training data} \\
-			(e.g., $\{(\vx_1,+1),\cdots,(\vx_{5001},-1),\cdots\}$).
+			(e.g., $\{\underbrace{(\vx_1,+1),\cdots,(\vx_{5000},+1)}_{\text{dog pictures}},\underbrace{(\vx_{5001},-1),\cdots, (\vx_{10000},-1)\}_{\text{cat pictures}}}$).
 			\item Learn a \textit{mapping function} that predicts the label of a new object.
 			\begin{align*}
 				\vx\overset{f}{\rightarrow}y,y\in\{+1,-1\}.
