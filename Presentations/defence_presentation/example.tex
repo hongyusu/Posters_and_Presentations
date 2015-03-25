@@ -243,7 +243,7 @@
 
 \begin{frame}{Label correlations}
 	\begin{itemize}
-		\item Multiple attributes are closely related. Similar attributes will have similar response to an input.
+		\item Multiple attributes are often closely related. Similar attributes will have similar response to an input.
 		\item Social network analysis: friends have similar hobbies.
 		\begin{align*}
 	(\underbrace{+1}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{+1}_{\text{Alex}},\underbrace{-1}_{\text{Zoe}},\underbrace{-1}_{\text{Frank}})
@@ -251,13 +251,19 @@
 		\begin{center}
 			\includegraphics[scale=0.5]{./figures/facebooknetwork.pdf}
 		\end{center}
-		\item Document classification: A news about politics may be also about economics.
+		\item Document classification: A news about politics may be also about economics. 
+		\item Label correlations can help make better predictions.
 	\end{itemize}
 \end{frame}
 
 
 \begin{frame}{Model label correlations}
 	\begin{itemize}
+		\item Graph is a natural way to model correlations.
+		\begin{itemize}
+			\item Nodes correspond to multiple attributes.
+			\item Edges correspond to correlations of a pair of attributes.
+		\end{itemize}
 		\item 
 	\end{itemize}
 \end{frame}
