@@ -4,6 +4,7 @@
 pdflatex example
 bibtex example
 bibtex example
+bibtex example
 pdflatex example
 
 
