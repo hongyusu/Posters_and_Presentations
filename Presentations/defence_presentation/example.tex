@@ -241,7 +241,7 @@
 	\begin{itemize}
 		\item Reduce the multilabel classification problem as a collection of single label classification problems.
 		\item Solve each individual problem independently. 
-		\item Combine the results.
+		\item Concatenate the predictions.
 	\end{itemize}
 	\begin{center}
 		\only<1>{
@@ -291,9 +291,14 @@
 		\begin{align*}
 	(\underbrace{+1}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{+1}_{\text{Alex}},\underbrace{-1}_{\text{Zoe}},\underbrace{-1}_{\text{Frank}})
 		\end{align*}
+		\only<1>{
 		\begin{center}
-			\includegraphics[scale=0.5]{./figures/facebooknetwork.pdf}
-		\end{center}
+			\includegraphics[scale=0.4]{./figures/facebooknetwork.pdf}
+		\end{center}}
+		\only<2>{
+		\begin{center}
+			\includegraphics[scale=0.4]{./figures/facebooknetwork1.pdf}
+		\end{center}}
 		\item Document classification: A news about politics may be also about economics. 
 		\item Label correlations can help make better predictions.
 	\end{itemize}
