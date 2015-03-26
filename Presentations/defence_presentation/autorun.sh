@@ -9,7 +9,6 @@ pdflatex example
 
 
  rm example.aux
- rm example.blg
  rm example.log
  rm example.nav
  rm example.out
