@@ -196,12 +196,12 @@
 		\item The problem is known as \textit{multilabel classification}, which is a natural extension to single label classification.
 		\begin{itemize}
 			\footnotesize
-			\item Input is an object $\vx$ (e.g., an picture).
-			\item Output are multiple attributes $\vy$ called \textit{multilabel}
+			\item Input $\vx$ is an object (e.g., a picture).
+			\item Output $\vy$ are multiple attributes called \textit{multilabel}
 			\begin{align*}
 \vy=(\underbrace{+1}_{\text{boat}},\underbrace{+1}_{\text{sea}},\underbrace{-1}_{\text{sun}},\underbrace{-1}_{\text{beach}},\underbrace{+1}_{\text{people}},\underbrace{-1}_{\text{dog}},\underbrace{-1}_{\text{cat}}).
 			\end{align*}
-			\item Explore a set of known object and label pairs called {training data} \\
+			\item Explore a set of known object and label pairs called {training data}.
 			\item Learn a \textit{mapping function} that predicts the best multilabel of a new object.
 			\begin{align*}
 				\vx\overset{f}{\rightarrow}\vy=(y_1,\cdots,y_k).
