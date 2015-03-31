@@ -1,0 +1,103 @@
+\begin{thebibliography}{}
+
+\bibitem[Ahn et~al., 2003]{Ahn03captcha}
+Ahn, L.~V., Blum, M., Hopper, N.~J., and Langford, J. (2003).
+\newblock Captcha: Using hard ai problems for security.
+\newblock In {\em Proceedings of the 22Nd International Conference on Theory
+  and Applications of Cryptographic Techniques}, EUROCRYPT'03, pages 294--311,
+  Berlin, Heidelberg. Springer-Verlag.
+
+\bibitem[Chen and Rosenfeld, 1999]{Chen99}
+Chen, S. and Rosenfeld, R. (1999).
+\newblock {\em A Gaussian Prior for Smoothing Maximum Entropy Models}.
+\newblock PhD thesis, Computer Science Department, Carnegie Mellon University.
+\newblock Technical Report CMU-CS-99-108.
+
+\bibitem[Cortes and Vapnik, 1995]{Cortes95support}
+Cortes, C. and Vapnik, V. (1995).
+\newblock Support-vector networks.
+\newblock {\em Machine Learning}, 20(3):273--297.
+
+\bibitem[Elson et~al., 2007]{Elson07asirra}
+Elson, J., Douceur, J.~R., Howell, J., and Saul, J. (2007).
+\newblock Asirra: A captcha that exploits interest-aligned manual image
+  categorization.
+\newblock In {\em Proceedings of 14th ACM Conference on Computer and
+  Communications Security (CCS)}. Association for Computing Machinery, Inc.
+
+\bibitem[Evgeniou et~al., 2002]{Evgeniou02regularization}
+Evgeniou, T., Poggio, T., Pontil, M., and Verri, A. (2002).
+\newblock Regularization and statistical learning theory for data analysis.
+\newblock {\em Comput. Stat. Data Anal.}, 38(4):421--432.
+
+\bibitem[Evgeniou et~al., 1999]{Evgeniou99a}
+Evgeniou, T., Pontil, M., and Poggio, T. (1999).
+\newblock A unified framework for regularization networks and support vector
+  machines.
+\newblock Technical report, Cambridge, MA, USA.
+
+\bibitem[Golle, 2008]{Golle08machine}
+Golle, P. (2008).
+\newblock Machine learning attacks against the asirra captcha.
+\newblock In {\em Proceedings of the 15th ACM Conference on Computer and
+  Communications Security}, CCS '08, pages 535--542, New York, NY, USA. ACM.
+
+\bibitem[Marchand et~al., 2014]{su14multilabelnips}
+Marchand, M., Su, H., Morvant, E., Rousu, J., and Shawe-Taylor, J. (2014).
+\newblock Multilabel structured output learning with random spanning trees of
+  max-margin markov networks.
+\newblock In {\em Advances in Neural Information Processing System NIPS2014},
+  page to appear.
+
+\bibitem[Rosenblatt, 1958]{Rosenblatt58}
+Rosenblatt, F. (1958).
+\newblock The perceptron: A probabilistic model for information storage and
+  organization in the brain.
+\newblock {\em Psychological Review}, 65:386--408.
+
+\bibitem[Shawe-Taylor and Cristianini, 2004]{Taylor04kernel}
+Shawe-Taylor, J. and Cristianini, N. (2004).
+\newblock {\em {Kernel Methods for Pattern Analysis}}.
+\newblock Cambridge University Press.
+
+\bibitem[Su et~al., 2014]{su14structured}
+Su, H., Gionis, A., and Rousu, J. (2014).
+\newblock Structured prediction of network response.
+\newblock In {\em Proceedings, 31th International Conference on Machine
+  Learning ICML2014}, volume~32 of {\em Journal of Machine Learning Research
+  WCP}, pages 442--450.
+
+\bibitem[Su et~al., 2010]{su10structured}
+Su, H., Heinonen, M., and Rousu, J. (2010).
+\newblock Structured output prediction of anti-cancer drug activity.
+\newblock In {\em Proceedings, 5th IAPR International Conference on Pattern
+  Recognition in Bioinformatics (PRIB2010)}, volume 6282 of {\em Lecture Note
+  in Computer Science}, pages 38--49.
+
+\bibitem[Su and Rousu, 2011]{su11mutitask}
+Su, H. and Rousu, J. (2011).
+\newblock Multi-task drug bioactivity classification with graph labeling
+  ensembles.
+\newblock In {\em Proceedings, 6th IAPR International Conference on Pattern
+  Recognition in Bioinformatics (PRIB2011)}, volume 7035 of {\em Lecture Note
+  in Computer Science}, pages 157--167.
+
+\bibitem[Su and Rousu, 2013]{su2013multilabelacml}
+Su, H. and Rousu, J. (2013).
+\newblock Multilabel classification through random graph ensembles.
+\newblock In {\em Proceedings, 5th Asian Conference on Machine Learning
+  (ACML2013)}, volume~29 of {\em Journal of Machine Learning Research WCP},
+  pages 404--418.
+
+\bibitem[Su and Rousu, 2014]{su14multilabel}
+Su, H. and Rousu, J. (2014).
+\newblock Multilabel classification through random graph ensembles.
+\newblock {\em Machine Learning}, 1(1).
+
+\bibitem[Vapnik, 1992]{Vapnik92principles}
+Vapnik, V. (1992).
+\newblock Principles of risk minimization for learning theory.
+\newblock In Moody, J., Hanson, S., and Lippmann, R., editors, {\em Advances in
+  Neural Information Processing Systems 4}, pages 831--838. Morgan-Kaufmann.
+
+\end{thebibliography}
