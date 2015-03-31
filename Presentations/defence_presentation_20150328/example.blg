@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: example.aux
+The style file: apalike.bst
+Database file #1: dissertation.bib
+Warning--empty institution in Evgeniou99a
+You've used 16 entries,
+            1935 wiz_defined-function locations,
+            590 strings with 7103 characters,
+and the built_in function-call counts, 7340 in all, are:
+= -- 740
+> -- 261
+< -- 21
++ -- 91
+- -- 85
+* -- 570
+:= -- 1178
+add.period$ -- 53
+call.type$ -- 16
+change.case$ -- 120
+chr.to.int$ -- 16
+cite$ -- 17
+duplicate$ -- 338
+empty$ -- 535
+format.name$ -- 113
+if$ -- 1545
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 15
+newline$ -- 84
+num.names$ -- 50
+pop$ -- 128
+preamble$ -- 1
+purify$ -- 121
+quote$ -- 0
+skip$ -- 266
+stack$ -- 0
+substring$ -- 487
+swap$ -- 103
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 94
+warning$ -- 1
+while$ -- 56
+width$ -- 0
+write$ -- 222
+(There was 1 warning)
