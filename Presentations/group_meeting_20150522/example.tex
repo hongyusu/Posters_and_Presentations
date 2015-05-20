@@ -1,0 +1,371 @@
+
+
+
+
+\documentclass[first=dgreen,second=purple,logo=yellowexc]{aaltoslides}
+%\documentclass{aaltoslides} % DEFAULT
+%\documentclass[first=purple,second=lgreen,logo=redque,normaltitle,nofoot]{aaltoslides} % SOME OPTION EXAMPLES
+
+
+
+\input{slide_macro_su.tex}
+
+
+
+
+\title{Newton update in L$_2$-norm random tree approximation}
+\author{Hongyu Su}
+
+
+
+\institute[ICS]{
+Helsinki Institute for Information Technology HIIT\\
+Department of Computer Science\\
+Aalto University
+}
+
+%\aaltofootertext{Random Spanning Tree Approximation}{\today}{\arabic{page}/\pageref{LastPage}\ }
+\aaltofootertext{Newton update in \rta}{\today}{\arabic{page}}
+
+
+\date{ \today} %\date{Version 1.0, \today}
+
+\iffalse
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,subsection]
+  \end{frame}
+}
+\fi
+
+
+
+
+%--------------------------------
+%
+% document
+%
+%--------------------------------
+
+\begin{document}
+
+
+\aaltotitleframe
+\footnotesize
+
+
+\begin{frame}{Preliminaries}
+	\begin{itemize}\footnotesize
+		\item $\Xcal$ is an arbitrary input space, $\vx\in\vXcal$.
+		\item $\Ycal$ is an output space of a set of $\ell$-dimensional {\em multilabels}
+		\begin{align*}\footnotesize
+			\vy=(y_1,\cdots,y_{\ell})\in\vYcal.
+		\end{align*}
+		\item $y_i$ is a {\em microlabel} and $y_i\in\{1,\cdots,r_i\}, r_i\in\ZZ$.
+		\item For example, multilabel binary classification $y_i\in\{-1,+1\}$.
+		\item Training examples are sampled from $(\vx,\vy)\in\vXcal\times\vYcal$.
+		\item Each example $(\vx,\vy)$ is mapped into a joint feature space $\phib(\vx,\vy)$.
+		\item $\vw$ is the weight vector in the joint feature space.
+		\item Define a linear score function $F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)}$.
+		\item The prediction $\vy_{\vw}(\vx)$ of an input $\vx$ is the multilabel $\vy$ that maximizes the score function 
+		\begin{align}\footnotesize
+			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw}{\phib(\vx,\vy)}. \label{inference}
+		\end{align}
+		\item (\ref{inference}) is called {\em inference} problem which is \nphard\ for most output feature maps.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Markov network}
+	\begin{itemize}\footnotesize
+		\item We assume that the output feature map $\phib$ is a potential function on a Markov network $G$.
+		\item $G$ is a complete graph with $|V| = \ell$ nodes and $|E| = \frac{\ell(\ell-1)}{2}$ edges.
+		\item Joint feature map is $\phib(\vx,\vy) = \varphib(\vx)\otimes\psib(\vy)$.
+		\item $\varphib(\vx)$ is the input feature map, e.g., bag-of-words feature of an example $\vx$.
+		\item $\psib(\vy)$ is the output feature map which is a collection of edges and labels
+		\begin{align*}\footnotesize
+			\varphib(\vy) = (u_{e})_{e\in E},u_e\in\{-1,+1\}^2.
+		\end{align*}
+		\item 
+		\begin{align*}\footnotesize
+			\phib(\vx,\vy) = (\phib_e(\vx,\vy))_{e\in E}=(\varphib(\vx)\otimes\psib_e(\vy_e))_{e\in E}.
+		\end{align*}
+		\item The score function is 
+		\begin{align*}
+			F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)} = \sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+
+%
+\begin{frame}{Multilabel classification}
+	\begin{itemize}\footnotesize
+		\item Multilabel classification is an important research field in machine learning.
+		\begin{itemize}\footnotesize
+			\item For example, a document can be classified as ``science'', ``genomics'', and ``drug discovery''.
+			\item Each input variable $\vx\in\vXcal$ is associated with multiple output variables $\vy\in\vYcal,\vYcal=\Ycal_1\times\cdots\times\Ycal_l,\Ycal_i=\{+1,-1\}$.
+			\item The goal is to find a mapping function that predicts the best values of an output given an input $f\in\Hcal:\vXcal\rightarrow\vYcal$.
+		\end{itemize}
+		\item The central problems of multilabel classification:
+		\begin{itemize}\footnotesize
+			\item The size of the output space $\vYcal$ is exponential in the number of microlabels.
+			\item The dependency of microlabels needs to be exploited to improve the prediction performance.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{Structured output learning}
+	\begin{itemize}\footnotesize
+		\item There is an \textit{output graph} connecting multiple labels.
+		\begin{itemize}\footnotesize
+			\item A set of nodes represents multiple labels.
+			\item A set of edges represents the correlation between labels.
+		\end{itemize}
+		\item Hierarchical classification:
+		\begin{itemize}\footnotesize
+			\item The output graph is a rooted tree or a directed graph defining different levels of granularities.
+			\item For example, \svmstruct, ...
+		\end{itemize}
+		\item Graph labeling:
+		\begin{itemize}\footnotesize
+			\item The output graph often takes a general form (e.g., a tree, a chain).
+			\item For example, \mmmn, \crf, \mmcrf, ...
+		\end{itemize}
+		\item The output graph is assumed to be known \textit{apriori}.
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{Research question}
+	\begin{itemize}\footnotesize
+		\item The output graph is hidden in many applications.
+		\begin{itemize}\footnotesize
+			\item For example, a surveillance photo can be tagged with ``building'', ``road'', ``pedestrian'', and ``vehicle''.
+		\end{itemize}
+		\item We study the problem in structured output learning when the output graph is not observed.
+		\item In particular:
+		\begin{itemize}\footnotesize
+			\item Assume the dependency can be expressed by a complete set of pairwise correlations.
+			\item Build a structured output learning model with a complete graph as the output graph.
+			\item Solve the optimization problem and the inference problem (\nphard).
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{Today}
+	\begin{itemize}\footnotesize
+		\item A structured prediction model which performs max-margin learning on a random sample of spanning tree.
+		\item Two ways to combine the set of random spanning trees
+		\begin{itemize}\footnotesize
+			\item conical combination in NIPS paper.
+			\item convex combination as future work.
+		\end{itemize}
+		\item Derivations and the corresponding optimization problems.
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}[allowframebreaks]{Model}
+	\begin{itemize}\footnotesize
+		\item Training examples comes in pair $S=\{(\vx_i,\vy_i)\}_{i=1}^{m}\in\vXcal\times\vYcal$.
+		\item A complete graph $G=(E,V)$ is used as the output graph.
+		\item $\varphi(\vx)$ is the input feature map, e.g., a feature vector of $d$ dimension.
+		\item $\Gamma_G(\vy)$ is the output feature map of $\vy$ on $G$ of $4\times |E|$ dimension
+		\begin{align*}\footnotesize
+			\Gamma_G(\vy) &= \{\Gamma_e(\vy_{e})\}_{e\in G},\\
+			 \Gamma_e(\vy_{e}) &= [\vone_{\vy_{e}==00},\vone_{\vy_{e}==01},\vone_{\vy_{e}==10},\vone_{\vy_{e}==11}]
+		\end{align*}
+		\item A joint feature map of $(\vx_i,\vy_i)$
+		\begin{align*}\footnotesize
+			\phi_G(\vx_i,\vy_i) = \varphi(\vx_i)\otimes\Gamma_G(\vy_i) = \{\phi_e(x_i,\vy_{i,e})\}_{e\in G}.
+		\end{align*}
+		\item A compatibility score is defined as
+		\begin{align*}\footnotesize
+			F(\vx,\vy;\vw_G) = \ip{\vw_G}{\phi_G(\vx,\vy)}=\sum_{e\in G}\ip{\vw_{G,e}}{\phi_e(\vx,\vy_{e})}
+		\end{align*}
+		\item $\vw$ ensures an input $\vx_i$ with a correct multilabel $\vy_i$ achieves a higher score than with any incorrect multilabel $\vy\in\Ycal$.
+		\item The predicted output $\vy(\vx)$ for a given input $\vx$ is computed by
+		\begin{align*}\footnotesize
+			\vy(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vx,\vy;\vw_G) = \underset{\vy\in\vYcal}{\argmax}\,\sum_{e\in G}\ip{\vw_{G,e}}{\phi_{G,e}(\vx,\vy_e)},
+		\end{align*}
+		which is called \textit{inference problem}.
+		\item The {inference problem} is \nphard\ for most joint feature maps on the complete graph.
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{How to learn $\vw$ on a complete graph?}
+	\begin{itemize}\footnotesize
+		\item The \textit{margin} of an example $\vx_i$ is
+		\begin{align*}\footnotesize
+			\gamma_G(\vx_i;\vw_G) = F(\vx_i,{\color{aaltored} \vy_i};\vw_G) - \underset{{\color{aaltoblue}\vy\in\vYcal/\vy_i}}{\maximize}\,F(\vx_i,{\color{aaltoblue}\vy};\vw_G).
+		\end{align*}
+		\item $\vw$ is solved by \textit{max-margin principle} which aims to maximize $\gamma(\vx_i;\vw_G)$ over all training example $\vx_i,i\in\{1,\cdots,m\}$.
+		\item The inference problem on a complete graph is \nphardness.
+		\item The parameter space is quadratic in the number of microlabels $k$.
+		\item We aim to use a joint feature map that allows the inference problem be solved in polynomial time.
+	\end{itemize}
+\end{frame}
+
+
+
+%
+\begin{frame}{Superposition of random trees}
+	\begin{itemize}\footnotesize
+		\item $S(G)$ is a complete set of spanning tree generate from $G$, $|S(G)| = \ell^{\ell-2}$.
+		\item Recall $\phi_G(\vx,\vy) = \{\phi_{G,e}(\vx,\vy_e)\}_{e\in G},\vw_G = \{\vw_{G,e}\}_{e\in G},||\phi_G(\vx,\vy)||=||\vw_{G}||=1$.
+		\item $\phi_T(\vx,\vy)=\{\phi_e(\vx,\vy)\}_{e\in T}$ is the projection of $\phi_G(\vx,\vy)$ on $T\in S(G)$.
+		\item $\vw_{T}=\{\vw_{G,e}\}_{e\in T}$ is the projection of $\vw_G$ on $T\in S(G)$.
+		\item Rewrite
+		\begin{align*}\footnotesize
+			F(\vx,\vy,\vw_G) &= \sum_{e\in G}\ip{\vw_{G,e}}{\phi_{G,e}(\vx,\vy_e)} \\
+			& = \frac{1}{\ell^{\ell-2}}\sum_{T\in S(G)}\sqrt{\frac{\ell}{2}}\ip{\vw_{T}}{\phi_{T}(\vx,\vy_e)}\\
+			& {\color{aaltored} =} \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)},\\
+			||\hat{\phi}_T(\vx,\vy)||=||\hat{\vw}_{T}||=1,\, & \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, n=\ell^{\ell-2}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+
+%
+\begin{frame}{How many trees?}
+	\begin{itemize}\footnotesize
+		\item If there is a predictor $\vw_G$ on complete graph achieves a margin on some training data, with high probability we need $n$ spanning tree predictors $\{\vw_{T_i}\}_{i=1}^n$ to achieve a close margin. $n$ is quadratic in terms of $\ell$.
+		\item Recall
+		\begin{align*}\footnotesize
+			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\underbrace{\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy_e)}}_{F(\vx,\vy,\vw_{T_i})},\\
+			||\hat{\phi}_T(\vx,\vy)||=||\hat{\vw}_{T}||=1,\, & \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}^2=1, \, \frac{1}{n}\sum_{i = 1}^{n}a_{T_i}\le1,\, a_{T_i}\ge0,\, \xcancel{n=\ell^{\ell-2}}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+
+%
+\begin{frame}[allowframebreaks]{Conical combination}
+	\begin{itemize}\footnotesize
+		\item A sample $\Tcal=\{T_1,\cdots,T_n\}$ of $n$ spanning trees drawn from $G$.
+		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
+		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
+		\item Conical combination of spanning trees
+		\begin{align*}\footnotesize
+			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\underbrace{\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy)}}_{F(\vx,\vy,\vw_{T_i})}\\
+			\sum_{i=1}^{n}q_i^2 &= 1,\, q_i \ge 0,\, \forall i\in\{1,\cdots,n\}.
+		\end{align*}
+		\item To solve $\{\vw_{T_i}\}_{T_i\in\Tcal}$, we need to work on the optimization problem
+		\begin{align*}\footnotesize
+			\underset{\vxi,\gamma,\vq,\Wcal}{\minimize} \quad& \frac{1}{2\gamma^2} + \frac{C}{\gamma}\sum_{k=1}^m\xi_k\\
+			\st \quad& \frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy_k)} -\underset{\vy\in\vYcal}{\maximize}\frac{1}{\sqrt{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy)}\\
+			&\ge \gamma-\xi_k, \xi_k\ge 0,\forall k\in\{1,\cdots,m\},\sum_{i=1}^nq_i^2=1,q_i\ge0,\forall i\in\{1,\cdots,n\}.
+		\end{align*}
+		\item This is equivalent to
+		\begin{align*}\footnotesize
+			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\sum_{i=1}^{n}\norm{\vw_{T_i}}^2 + C\sum_{k=1}^{m}\xi_k\\
+			\st & \quad \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
+			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Inference Problem}
+	\begin{itemize}
+		\item The inference problem of \rta\ is defined as finding the multilabel $\vy_{\Tcal}(\vx)$ that maximizes the sum of scores over a collection of trees
+		\begin{align*}\footnotesize
+			\vy_{\Tcal}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltoblue}F_{\Tcal}(\vx,\vy;\vw_{\Tcal})} = \underset{\vy\in\vYcal}{\argmax}\,\sum_{t=1}^{n}\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
+		\end{align*}
+		\item The inference problem on each individual spanning tree can be solve efficiently in $\Theta(l)$ by \textit{dynamic programming}
+		\begin{align*}\footnotesize
+			\vy_{T_t}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,{\color{aaltored}F_{T_t}(\vx,\vy;\vw_{T_t})}= \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw_{T_t}}{\phi_{T_t}(\vx,\vy)}.
+		\end{align*}
+		\item There is no guarantee that there exists a tree $T_t\in\Tcal$ in which the maximizer of ${\color{aaltored}F_{T_t}}$ is the maximizer of ${\color{aaltoblue}F_{\Tcal}}$.
+	\end{itemize}
+\end{frame}
+
+
+
+
+%
+\begin{frame}[allowframebreaks]{Fast Inference Over a Collection of Trees}
+	\begin{itemize}
+		\item For each tree $T_t$, instead of computing the best multilabel $\vy_{T_t}$, we compute $K$-best multilabels in $\Theta(Kl)$ time
+		\begin{align*}\footnotesize
+			\Ycal_{T_t,K} = \{\vy_{T_t,1},\cdots,\vy_{T_t,K}\}.
+		\end{align*}
+		\item Performing the same computation on all trees gives a candidate list of $n\times K$ multilabels in $\Theta(nKl)$ time
+		\begin{align*}\footnotesize
+			\Ycal_{\Tcal,K}=\Ycal_{T_1,K}\cup\cdots\Ycal_{T_n,K}.
+		\end{align*}
+		\item For now, we assume the best scoring multilabel of a collection of trees exists in the list $\Ycal_{\Tcal,K}$. 
+		\item We proved that with a high probability $\vy_{\Tcal}$ will appear in $\Ycal_{\Tcal,K}$.
+		\item We can identify $\vy_{\Tcal}$ from $\Ycal_{\Tcal,K}$.
+	\end{itemize}
+\end{frame}
+
+
+%
+\begin{frame}[allowframebreaks]{Convex combination}
+	\begin{itemize}\footnotesize
+		\item A sample $\Tcal$ of $n$ spanning trees drawn from $G$.
+		\item Normalized feature weights $\hat{\vw}_{T_i}=\frac{\vw_{T_i}}{||\vw_{T_i}||}, \, T_i\in\Tcal$.
+		\item Normalized feature vectors $\hat{\phi}_{T_i}(\vx,\vy)=\frac{\phi_{T_i}(\vx,\vy)}{||\phi_{T_i}(\vx,\vy)||}, \, T_i\in\Tcal$.
+		\item Convex combination of spanning trees
+		\begin{align*}\footnotesize
+			F(\vx,\vy,\vw_{\Tcal}) &= \frac{1}{{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx,\vy)}\\
+			\sum_{i=1}^{n}q_i &= 1,\, q_i \ge 0,\, \forall i\in\{1,\cdots,n\}.
+		\end{align*}
+		\item To solve $\{\vw_{T_i}\}_{T_i\in\Tcal}$, we need to work on the optimization problem
+		\begin{align*}\footnotesize
+			\underset{\vxi,\gamma,\vq,\Wcal}{\minimize} \quad& \frac{1}{2\gamma^2} + \frac{C}{\gamma}\sum_{k=1}^m\xi_k\\
+			\st \quad& \frac{1}{{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy_k)} -\underset{\vy\in\vYcal}{\maximize}\frac{1}{{n}}\sum_{i=1}^{n}q_i\ip{\hat{\vw}_{T_i}}{\hat{\phi}_{T_i}(\vx_k,\vy)}\\
+			&\ge \gamma-\xi_k, \xi_k\ge 0,\forall k\in\{1,\cdots,m\},\sum_{i=1}^nq_i=1,q_i\ge0,\forall i\in\{1,\cdots,n\}.
+		\end{align*}
+		\item This is equivalent to
+		\begin{align*}\footnotesize
+			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\left(\sum_{i=1}^{n}\norm{\vw_{T_i}}\right)^2 + C\sum_{k=1}^{m}\xi_k\\
+			\st & \quad \frac{1}{{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
+			& \quad \xi_k\ge0,\, \forall k \in \set{1,\dots,m}.
+		\end{align*}
+		\item This can be expressed equivalently as
+		\begin{align*}\footnotesize
+			\underset{\vw_{T_i},\xi_i,\lambda_i}{\minimize} & \quad \frac{1}{2}\sum_{i=1}^{n}\frac{1}{\lambda_{i}}\norm{\vw_{T_i}}^2 + C\sum_{k=1}^{m}\xi_k\\
+			\st & \quad \frac{1}{{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
+			& \quad \xi_k\ge0,\, \forall k \in \set{1,\dots,m},\, \sum_{i=1}^{n}\lambda_i=1,\,\lambda_i\ge0,\,\forall i\in\{1,\cdots,n\}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+
+%
+\begin{frame}{Conclusions}
+	\begin{itemize}\footnotesize
+		\item We show that if there is a learner $\vw_G$ defined on a complete graph achieves a margin on some training data, then with a random collection of spanning tree learners $\{\vw_{T_i}\}_{i=1}^n$ we can achieve a similar margin with high probability. Besides, $n$ is polynomial in $k$.
+		\item We propose two methods to combine the random collection of trees, namely, convex combination and conical combination.
+	\end{itemize}
+\end{frame}
+
+
+
+
+\iffalse
+\begin{frame}[allowframebreaks]{Bibliography}
+	%\bibliographystyle{plain}
+	\bibliographystyle{apalike}
+	\bibliography{example}
+\end{frame}
+\fi
+
+
+\end{document}
