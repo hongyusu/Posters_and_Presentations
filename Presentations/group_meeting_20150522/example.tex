@@ -121,7 +121,10 @@ Aalto University
 			F_{\Tcal}(\vw,\vx,\vy) &= \frac{1}{n}\sum_{i=1}^{n}a_{T_i}\ip{\vw_{T_i}}{\phib_{T_i}(\vx,\vy)}\\
 			  &\frac{1}{n}\sum_{i=1}^{n}a_{T_i}^2=1,  \frac{1}{n}\sum_{i=1}^{n}a_{T_i}<1.
 		\end{align*}
-		\item With high probability, we have $|F_{\Tcal}(\vw,\vx,\vy)-F(\vw,\vx,\vy)|\le\epsilon$
+		\item With high probability, we have $|F_{\Tcal}(\vw,\vx,\vy)-F(\vw,\vx,\vy)|\le\epsilon$ when
+		\begin{align*}
+			n\ge\frac{\ell^2}{\epsilon*2}(\frac{1}{16}+\frac{1}{2}\ln\frac{8\sqrt{n}}{\delta})
+		\end{align*}
 	\end{itemize}
 \end{frame}
 
