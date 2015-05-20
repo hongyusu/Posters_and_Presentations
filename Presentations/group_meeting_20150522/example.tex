@@ -114,15 +114,15 @@ Aalto University
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{A sample of spanning trees}
-	\begin{itemize}
+\begin{frame}{A sample of $n$ spanning trees}
+	\begin{itemize}\footnotesize
 		\item Instead of using all spanning trees, we can just use $n$ spanning trees
-		\begin{align*}
+		\begin{align*}\footnotesize
 			F_{\Tcal}(\vw,\vx,\vy) &= \frac{1}{n}\sum_{i=1}^{n}a_{T_i}\ip{\vw_{T_i}}{\phib_{T_i}(\vx,\vy)}\\
 			  &\frac{1}{n}\sum_{i=1}^{n}a_{T_i}^2=1,  \frac{1}{n}\sum_{i=1}^{n}a_{T_i}<1.
 		\end{align*}
 		\item When
-		\begin{align*}
+		\begin{align*}\footnotesize
 			n\ge\frac{\ell^2}{\epsilon^2}(\frac{1}{16}+\frac{1}{2}\ln\frac{8\sqrt{n}}{\delta}),
 		\end{align*}
 		with high probability, we have $|F_{\Tcal}(\vw,\vx,\vy)-F(\vw,\vx,\vy)|\le\epsilon$.
@@ -132,11 +132,36 @@ Aalto University
 \end{frame}
 
 
+\begin{frame}{Optimization problem}
+	\begin{itemize}\footnotesize
+		\item The optimization problem is defined as
+		\begin{align*}\footnotesize
+			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\sum_{i=1}^{n}\norm{\vw_{T_i}}^2 + C\sum_{k=1}^{m}\xi_k\\
+			\st & \quad \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
+			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
 % \begin{frame}{}
 % 	\begin{itemize}
 % 		\item
 % 	\end{itemize}
 % \end{frame}
+
+% \begin{frame}{}
+% 	\begin{itemize}
+% 		\item
+% 	\end{itemize}
+% \end{frame}
+
+% \begin{frame}{}
+% 	\begin{itemize}
+% 		\item
+% 	\end{itemize}
+% \end{frame}
+
+
 
 %
 \begin{frame}{Multilabel classification}
