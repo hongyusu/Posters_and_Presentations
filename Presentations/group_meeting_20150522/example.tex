@@ -78,7 +78,7 @@ Aalto University
 
 \begin{frame}{Markov network}
 	\begin{itemize}\footnotesize
-		\item We assume that the output feature map $\phib$ is a potential function on a Markov network $G$.
+		\item We assume that the output feature map $\phib$ is a potential function on a Markov network $G=(E,V)$.
 		\item $G$ is a complete graph with $|V| = \ell$ nodes and $|E| = \frac{\ell(\ell-1)}{2}$ undirected edges.
 		% \item Joint feature map is $\phib(\vx,\vy) = \varphib(\vx)\otimes\psib(\vy)$.
 		\item $\varphib(\vx)$ is the input feature map, e.g., bag-of-words feature of an example $\vx$.
@@ -92,11 +92,25 @@ Aalto University
 		\end{align*}
 		\item The score function is 
 		\begin{align*}
-			F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)} = \sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}
+			F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)} = \sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}.
 		\end{align*}
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{}
+	\begin{itemize}
+		\item Solving the following inference on a complete graph is difficult
+		\begin{align*}
+			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+% \begin{frame}{}
+% 	\begin{itemize}
+% 		\item
+% 	\end{itemize}
+% \end{frame}
 
 %
 \begin{frame}{Multilabel classification}
