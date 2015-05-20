@@ -97,7 +97,7 @@ Aalto University
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Inference in terms of spanning trees}
+\begin{frame}{Inference in terms of all spanning trees}
 	\begin{itemize}
 		\item Solving the following inference problem on a complete graph is \nphard
 		\begin{align*}
@@ -110,6 +110,12 @@ Aalto University
 			  &\underset{T\in U(G)}{\E}a_T^2=1,  \underset{T\in U(G)}{\E}a_T<1.
 		\end{align*}
 		\item $U(G)$ is the uniform distribution over $\ell^{\ell-2}$ spanning trees.
+		\item There is a exponential dependency on the number of spanning trees.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{A sample of spanning trees}
+	\begin{itemize}
 		\item Instead of using all spanning trees, we can just use $n$ spanning trees
 		\begin{align*}
 			F_{\Tcal}(\vw,\vx,\vy) &= \frac{1}{n}\sum_{i=1}^{n}a_{T_i}\ip{\vw_{T_i}}{\phib_{T_i}(\vx,\vy)}\\
@@ -117,6 +123,7 @@ Aalto University
 		\end{align*}
 	\end{itemize}
 \end{frame}
+
 
 % \begin{frame}{}
 % 	\begin{itemize}
