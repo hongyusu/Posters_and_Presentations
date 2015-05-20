@@ -4,7 +4,8 @@
 name='example'
 
 pdflatex $name
-bibtex $name
+pdflatex $name
+#bibtex $name
 #bibtex $name
 #pdflatex $name
 
