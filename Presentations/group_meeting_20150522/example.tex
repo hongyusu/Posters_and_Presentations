@@ -105,13 +105,11 @@ Aalto University
 		\end{align*}
 		\item For a complete graph, there are $\ell^{\ell-2}$ unique spanning trees.
 		\item We can write $F(\vw,\vx,\vy)$ as a conic combination of all spanning trees
-		% \begin{align*}
-		% 	\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\frac{1}{\ell^{\ell-2}}\frac{\ell}{2}\sum_{T\in S(G)}\sum_{e\in E_T}\ip{\vw_e}{\phib_e(\vx,\vy_e)}.
-		% \end{align*}
 		\begin{align*}
 			F(\vw,\vx,\vy) &= \underset{T\in U(G)}{\E}a_T\ip{\vw_T}{\phib_T(\vx,\vy)}\\
 			  &\underset{T\in U(G)}{\E}a_T^2=1,  \underset{T\in U(G)}{\E}a_T<1.
 		\end{align*}
+		\item $U(G)$ is the uniform distribution over $\ell^{\ell-2}$ spanning trees.
 		\item Instead of using all spanning trees, we can just use $n$ spanning trees
 		\begin{align*}
 			F_{\Tcal}(\vw,\vx,\vy) &= \frac{1}{n}\sum_{i=1}^{n}a_{T_i}\ip{\vw_{T_i}}{\phib_{T_i}(\vx,\vy)}\\
