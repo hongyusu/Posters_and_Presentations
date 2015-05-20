@@ -100,9 +100,9 @@ Aalto University
 \begin{frame}{Inference in terms of spanning trees}
 	\begin{itemize}
 		\item Solving the following inference problem on a complete graph is \nphard
-		\begin{align}
-			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vw,\vx,\vy)  = \underset{\vy\in\vYcal}{\argmax}\,\sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}. \label{inference_complete_graph}
-		\end{align}
+		\begin{align*}
+			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vw,\vx,\vy)  = \underset{\vy\in\vYcal}{\argmax}\,\sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}. 
+		\end{align*}
 		\item For a complete graph, there are $\ell^{\ell-2}$ unique spanning trees.
 		\item We can write $F(\vw,\vx,\vy)$ as a conic combination of all spanning trees
 		% \begin{align*}
