@@ -213,7 +213,7 @@ Aalto University
 				\tilde{\vmu}_{\color{aaltoblue}G}^{k+1}(j) {\color{aaltoblue}\leftarrow} \sum_{i=1}^{n}\tau_i\hat{\vmu}_{T_i}^{k+1}(j)
 			\end{align*}
 			\item Compute the difference $\Delta\vmu_{G}^{k+1}(j) = \hat{\vmu}_{G}^{k+1}(j) - \hat{\vmu}_{G}^{k}(j)$.
-			\item Perform the update $\vmu_{T_i}^{k+1}(j) = \vmu_{T_i}^k(j) + \tau\Delta\vmu_{T_i}^{k+1}(j),\,{\color{aaltored}\forall i}.$
+			\item Perform the update $\vmu_{G}^{k+1}(j) = \vmu_{G}^k(j) + \Delta\vmu_{G}^{k+1}(j),\,{\color{aaltored}\forall i}.$
 		\end{enumerate}
 		\item The step size along the update direction $\tau$ is given by the exact line search.
 		\begin{align*}\footnotesize
