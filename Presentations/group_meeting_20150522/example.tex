@@ -197,9 +197,29 @@ Aalto University
 \end{frame}
 
 
-\begin{frame}{}
-	\begin{itemize}
-		\item 
+\begin{frame}{Update with multiple directions}
+	\begin{itemize}\footnotesize
+		\item The algorithm iterates over all training example until convergence.
+		\item For the $k$th iteration:
+		\begin{enumerate}\footnotesize
+			\item Obtain the solutions of the $j$th example over all trees $(\vmu_{T_i}^k(j)){\color{aaltored}_{i=1}^n}$.
+			\item Compute the gradients over all trees $(g_{T_i}^k(j)){\color{aaltored}_{i=1}^n}$.
+			\item Compute the update directions
+			\begin{align*}
+				\hat{\vmu}_{T_i}^{k+1}(j) = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k(j),\,{\color{aaltored}\forall i}.
+			\end{align*}
+			\item Define a conic combination of update directions $\tilde{\vmu}_{T_i}^{k+1}(j) = \sum_{i=1}^{n}\hat{\vmu}_{T_i}^{k+1}(j)$
+			\item Compute the best direction
+			\begin{align*}
+				\tilde{\vmu}_{T_i}^{k+1}(j) = \underset{\vmu\in(\hat{\vmu}_{T_i}^{k+1}(j)){\color{aaltored}_{i=1}^n}}{\argmax}\,{\color{aaltored}\sum_{i=1}^n}\vmu\tp g_{T_i}^k(j)
+			\end{align*}
+			\item Compute the difference $\Delta\vmu_{T_i}^{k+1}(j) = \hat{\vmu}_{T_i}^{k+1}(j) - \hat{\vmu}_{T_i}^{k}(j),\,{\color{aaltored}\forall i}$.
+			\item Perform the update $\vmu_{T_i}^{k+1}(j) = \vmu_{T_i}^k(j) + \tau\Delta\vmu_{T_i}^{k+1}(j),\,{\color{aaltored}\forall i}.$
+		\end{enumerate}
+		\item The step size along the update direction $\tau$ is given by the exact line search.
+		\begin{align*}\footnotesize
+			\frac{\partial \left({\color{aaltored}\sum_{i=1}^n}f(\vmu_{T_i}^{k+1}(j))-{\color{aaltored}\sum_{i=1}^n}f(\vmu_{T_i}^k(j))\right)}{\partial \tau} = 0, 0\le\tau\le1.
+		\end{align*}
 	\end{itemize}
 \end{frame}
 
