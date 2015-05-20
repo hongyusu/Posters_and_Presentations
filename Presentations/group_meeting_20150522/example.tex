@@ -134,12 +134,13 @@ Aalto University
 
 \begin{frame}{Optimization problem}
 	\begin{itemize}\footnotesize
-		\item The optimization problem is defined as
+		\item The primal optimization problem is defined as
 		\begin{align*}\footnotesize
 			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\sum_{i=1}^{n}\norm{\vw_{T_i}}^2 + C\sum_{k=1}^{m}\xi_k\\
 			\st & \quad \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
 			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
 		\end{align*}
+		\item 
 	\end{itemize}
 \end{frame}
 
