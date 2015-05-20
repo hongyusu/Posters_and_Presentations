@@ -228,7 +228,10 @@ Aalto University
 	\begin{itemize}
 		\item We want to find $\tau$ that maximize the objective function given the update
 		\begin{align*}
-			\underset{\tau}{\maximize} & \quad f(\vmu^{G,k} + \Delta{\vmu}^{G,k+1})\\
+			f(\vmu^{G,k} + \Delta{\vmu}^{G,k+1}) = (\vmu^{G,k} + \Delta{\vmu}^{G,k+1})\tp\ell_G - \frac{1}{2}(\vmu^{G,k} + \Delta{\vmu}^{G,k+1})\tp K_G (\vmu^{G,k} + \Delta{\vmu}^{G,k+1}).
+		\end{align*}
+		\begin{align*}
+			\underset{\tau}{\maximize} & \quad 
 			\st & \quad 0\le\tau_i\le1.
 		\end{align*}
 		\item We use Newton method to solve the maximization problem and project the solution into feasible region.
