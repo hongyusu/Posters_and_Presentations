@@ -78,7 +78,7 @@ Aalto University
 
 \begin{frame}{Markov network}
 	\begin{itemize}\footnotesize
-		\item We assume that the output feature map $\phib$ is a potential function on a Markov network $G=(E,V)$.
+		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network $G=(E,V)$.
 		\item $G$ is a complete graph with $|V| = \ell$ nodes and $|E| = \frac{\ell(\ell-1)}{2}$ undirected edges.
 		% \item Joint feature map is $\phib(\vx,\vy) = \varphib(\vx)\otimes\psib(\vy)$.
 		\item $\varphib(\vx)$ is the input feature map, e.g., bag-of-words feature of an example $\vx$.
@@ -90,7 +90,7 @@ Aalto University
 		\begin{align*}\footnotesize
 			\phib(\vx,\vy) = (\phib_e(\vx,\vy))_{e\in E}=(\varphib(\vx)\otimes\psib_e(\vy_e))_{e\in E}.
 		\end{align*}
-		\item The score function is 
+		\item The score function can be factorized by $G$
 		\begin{align*}
 			F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)} = \sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}.
 		\end{align*}
@@ -257,10 +257,10 @@ Aalto University
 			f(\vw) &= \frac{1}{2}||\vw||^2 + C\sum_{i=1}^m\left(\ell_i-\ip{\vw}{\Delta\phib(\vx_i,\vy_i)}\right)\\
 			g(\valpha) &= \sum_{i=1}^m\alpha_i\ell_i - \frac{1}{2}\sum_{i=1}^m\sum_{j=1}^m\alpha_iK^{\Delta\phib}(\vx_i,\vy_i;\vx_j,\vy_j)\alpha_j
 		\end{align*}
-		\item $\maximize g(\valpha)\le \minimize f(\vw)$, minimum gap when optimal.
+		\item $\underset{\valpha}{\maximize}\,g(\valpha)\le \underset{\vw}{\minimize}\,f(\vw)$, minimum gap when optimal.
 		\item Duality gap at $\valpha^k$
 		\begin{align*}\footnotesize
-			f(\vw) - g(\valpha^k) &= C\left(\vell-K^{\Delta\phib}\valpha^k\right) - \valpha^k\left(\vell-K^{\Delta\phib}\valpha^k\right)\\
+			f(\vw^k) - g(\valpha^k) &= C\left(\vell-K^{\Delta\phib}\valpha^k\right) - \valpha^k\left(\vell-K^{\Delta\phib}\valpha^k\right)\\
 			&= C\tp \nabla g(\valpha^k) -{\valpha^k} \tp \nabla g(\valpha^k)
 		\end{align*}
 	\end{itemize}
