@@ -244,14 +244,30 @@ Aalto University
 		\end{align*}
 		\item The objective is quadratic with respect to $\tau$.
 		\item We use Newton method to find $\tau$ that maximize the objective.
-		\item $\tau$ is then projected into feasible region.
+		\item $\tau$ is projected into the feasible region.
 	\end{itemize}
 \end{frame}
 
 
 \begin{frame}{Compute duality gap}
-	\begin{itemize}
-		\item 
+	\begin{itemize}\footnotesize
+		\item We use duality gap to measure the progress of the optimization.
+		\item Primal and dual objective function
+		\begin{align*}\footnotesize
+			f(\vw) &= \frac{1}{2}||\vw||^2 + C\sum_{i=1}^m\left(\ell_i-\ip{\vw}{\Delta\phib(\vx_i,\vy_i)}\right)\\
+			g(\valpha) &= \sum_{i=1}^m\alpha_i\ell_i - \frac{1}{2}\sum_{i=1}^m\sum_{j=1}^m\alpha_iK^{\Delta\phib}(\vx_i,\vy_i;\vx_j,\vy_j)\alpha_j
+		\end{align*}
+		\item $g(\valpha)\le f(\vw)$, $g(\valpha) = f(\vw)$ at optimal.
+		\item Duality gap at $\valpha^k$
+		\begin{align*}\footnotesize
+			f(\vw) - g(\valpha^k) &= C\left(\vell-K^{\Delta\phib}\valpha^k\right) - \valpha^k\left(\vell-K^{\Delta\phib}\valpha^k\right)\\
+			&= C\tp \nabla g(\valpha^k) -{\valpha^k} \tp \nabla g(\valpha^k)
+		\end{align*}
+		\begin{enumerate}\footnotesize
+			\item Estimate the dual objective function using a linear approximation $\nabla g$.
+			\item Dual objective value at $\valpha^k$ is computed by ${\valpha^k} \tp \nabla g(\valpha^k)$.
+			\item Primal objective value is estimate by $C\tp \nabla g(\valpha^k)$.
+		\end{enumerate}
 	\end{itemize}
 \end{frame}
 
