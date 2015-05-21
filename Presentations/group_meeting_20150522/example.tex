@@ -80,7 +80,7 @@ Aalto University
 	\begin{itemize}\footnotesize
 		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network $G=(E,V)$.
 		\item $G$ is a complete graph with $|V| = \ell$ nodes and $|E| = \frac{\ell(\ell-1)}{2}$ undirected edges.
-		% \item Joint feature map is $\phib(\vx,\vy) = \varphib(\vx)\otimes\psib(\vy)$.
+		\item $G$ models all pairwise correlations.
 		\item $\varphib(\vx)$ is the input feature map, e.g., bag-of-words feature of an example $\vx$.
 		\item $\psib(\vy)$ is the output feature map which is a collection of edges and labels
 		\begin{align*}\footnotesize
@@ -90,7 +90,7 @@ Aalto University
 		\begin{align*}\footnotesize
 			\phib(\vx,\vy) = (\phib_e(\vx,\vy))_{e\in E}=(\varphib(\vx)\otimes\psib_e(\vy_e))_{e\in E}.
 		\end{align*}
-		\item The score function can be factorized by $G$
+		\item The score function can be factorized by the complete graph $G$
 		\begin{align*}
 			F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)} = \sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}.
 		\end{align*}
@@ -110,7 +110,7 @@ Aalto University
 			  &\underset{T\in U(G)}{\E}a_T^2=1,  \underset{T\in U(G)}{\E}a_T<1.
 		\end{align*}
 		\item $U(G)$ is the uniform distribution over $\ell^{\ell-2}$ spanning trees.
-		\item There is a exponential dependency on the number of spanning trees.
+		\item The number of spanning trees is exponentially dependent on the number of nodes $\ell$.
 	\end{itemize}
 \end{frame}
 
@@ -125,7 +125,7 @@ Aalto University
 		\begin{align*}\footnotesize
 			n\ge\frac{\ell^2}{\epsilon^2}(\frac{1}{16}+\frac{1}{2}\ln\frac{8\sqrt{n}}{\delta}),
 		\end{align*}
-		with high probability, we have $|F_{\Tcal}(\vw,\vx,\vy)-F(\vw,\vx,\vy)|\le\epsilon$.
+		we have $|F_{\Tcal}(\vw,\vx,\vy)-F(\vw,\vx,\vy)|\le\epsilon$, with high probability.
 		\item A sample of $n\in\Theta(\ell^2/\delta^2)$ random spanning tree is sufficient to estimate the score function.
 		\item Margin achieved by $F(\vw,\vx,\vy)$ is also preserved by the sample of $n$ random spanning trees $F_{\Tcal}(\vw,\vx,\vy)$.
 	\end{itemize}
@@ -137,35 +137,38 @@ Aalto University
 		\item The primal optimization problem is defined as
 		\begin{align*}\footnotesize
 			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\sum_{i=1}^{n}\norm{\vw_{T_i}}^2 + C\sum_{k=1}^{m}\xi_k\\
-			\st & \quad \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
+			\st & \quad \sum_{i=1}^{n}{ \langle \vw_{T_i}, \Delta\phib_{T_t}(\vx_k,\vy_k) \rangle}  \geq \ell_{T_i,k} -  \xi_k, \\
 			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
 		\end{align*}
 		\item The marginalized dual problem is defined as
 		\begin{align*}\footnotesize
-			\underset{\vmu\in\Mcal}{\maximize} & \quad \sum_{i=1}^{n}\left( \vmu_{T_i}\vell_{T_i} - \frac{1}{2}\vmu_{T_i}K_{T_i}\vmu_{T_i}\right)\\
+			\underset{\vmu\in\Mcal}{\maximize} & \quad \sum_{i=1}^{n}\left( \vmu_{T_i}\vell_{T_i} - \frac{1}{2}\vmu_{T_i}K^{\Delta\phib}_{T_i}\vmu_{T_i}\right)\\
 			\st & \quad \sum_{u_e}\vmu_{T_i,e}(u_e)\le C.
 		\end{align*}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Optimization algorithm for a single spanning tree}
+\begin{frame}{Optimization algorithm for a single spanning tree $T_i$}
 	\begin{itemize}\footnotesize
 		\item We can solve the optimization problem efficiently for each individual spanning tree. 
 		\item The algorithm iterates over all training example until convergence.
+		\item $\mu:\mu(j),\,g:g(j),\,\ell:\ell(j)$.
 		\item For the $k$th iteration:
 		\begin{enumerate}\footnotesize
-			\item Obtain the solution of the $j$th example in $k$th iteration $\vmu_{T_i}^k(j)$.
-			\item Compute the gradient $g_{T_i}^k(j) = \ell_{T_i}(j) - K_{T_i}\vmu_{T_i}^k(j)$.
+			\item Obtain the solution of the $j$th example in $k$th iteration $\vmu_{T_i}^k$.
+			\item Compute the gradient $g_{T_i}^k = \ell_{T_i} - K^{\Delta\phib}_{T_i}\vmu_{T_i}^k$.
 			\item Compute the update direction 
 			\begin{align*}
-				\hat{\vmu}_{T_i}^{k+1}(j) = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k(j).
+				{\vmu}_{T_i}^{k,*} = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k.
 			\end{align*}
-			\item Compute the difference $\Delta\vmu_{T_i}^{k+1}(j) = \hat{\vmu}_{T_i}^{k+1}(j) - \hat{\vmu}_{T_i}^{k}(j)$.
-			\item Perform the update $\vmu_{T_i}^{k+1}(j) = \vmu_{T_i}^k(j) + \tau\Delta\vmu_{T_i}^{k+1}(j)$
+			\item Compute the difference $\Delta\vmu_{T_i}^{k} = {\vmu}_{T_i}^{k} - {\vmu}_{T_i}^{k,*}$.
+			\item Compute a step size $\tau$.
+			\item Perform the update $\vmu_{T_i}^{k+1} = \vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k}$
 		\end{enumerate}
-		\item The step size along the update direction $\tau$ is given by the exact line search.
+		\item The step size along the update direction $\tau$ is given by the line search.
 		\begin{align*}
-			\frac{\partial \left(f(\vmu_{T_i}^{k+1}(j))-f(\vmu_{T_i}^k(j))\right)}{\partial \tau} = 0, 0\le\tau\le1.
+			\underset{\tau}{\maximize} &\quad f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})\\
+			\st &\quad 0\le\tau\le1.
 		\end{align*}
 	\end{itemize}
 \end{frame}
@@ -194,11 +197,12 @@ Aalto University
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Exact line search to get the step size}
+\begin{frame}{Line search to get the step size}
 	\begin{itemize}
 		\item The step size along the update direction $\tau$ is given by the exact line search.
 		\begin{align*}\footnotesize
-			\frac{\partial \left({\color{aaltored}\sum_{i=1}^n}f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})-{\color{aaltored}\sum_{i=1}^n}f(\vmu_{T_i}^k)\right)}{\partial \tau} = 0, 0\le\tau\le1.
+			\underset{\tau}{\maximize} &\quad {\color{aaltored}\sum_{i=1}^n}f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})\\
+			\st &\quad 0\le\tau\le1.
 		\end{align*}
 	\end{itemize}
 \end{frame}
@@ -222,7 +226,7 @@ Aalto University
 			\end{align*}
 			\item Define a conic combination of update directions 
 			\begin{align*}
-				\Delta{\vmu}^{G,k} = \sum_{i=1}^{n}\tau_i \left({\vmu}^{G,k} -{\vmu}_{T_i}^{G,k,*}\right) = \sum_{i=1}^{n}\tau_i \Delta{\vmu}_{T_i}^{G,k,*}
+				\Delta{\vmu}^{G,k} = \sum_{i=1}^{n}\tau_i \Delta{\vmu}_{T_i}^{G,k,*} = \sum_{i=1}^{n}\tau_i \left({\vmu}^{G,k} -{\vmu}_{T_i}^{G,k,*}\right), 0\le\tau_i\le1,\forall i.
 			\end{align*}
 			\item Perform the update $\vmu^{G,k+1} = \vmu^{G,k} + \Delta{\vmu}^{G,k+1}.$
 			\item Project the global solution on spanning trees $(\vmu_{T_i}^{k+1}){\color{aaltored}_{i=1}^{n}}{\leftarrow}\vmu^{G,k+1}.$
@@ -272,16 +276,122 @@ Aalto University
 \end{frame}
 
 
-% \begin{frame}{}
-% 	\begin{itemize}
-% 	\end{itemize}
-% \end{frame}
+\begin{frame}{Experimental results - Objective value}
+	\only<1>{
+	\begin{itemize}\footnotesize
+		\item Compare update with the best direction v.s. update with multiple directions
+		\item Number of spanning trees $|T|=\{5,10,20\}$.
+		\item Each spanning tree outputs top $\kappa=1$ best direction.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.22]{./slide_objective_k1.jpg}
+		\end{center}
+	\end{figure}}
+	\only<2>{
+	\begin{itemize}\footnotesize
+		\item Compare update with the best direction v.s. update with multiple directions
+		\item Number of spanning trees $|T|=\{5,10,20\}$.
+		\item Each spanning tree outputs top $\kappa=10$ best directions.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.22]{./slide_objective_k10.jpg}
+		\end{center}
+	\end{figure}
+	}
+\end{frame}
+
+\begin{frame}{Experimental results - Duality gap}
+	\only<1>{
+	\begin{itemize}\footnotesize
+		\item Compare update with the best direction v.s. update with multiple directions
+		\item Number of spanning trees $|T|=\{5,10,20\}$.
+		\item Each spanning tree outputs top $\kappa=1$ best direction.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.22]{./slide_duality_gap_value_k1.jpg}
+		\end{center}
+	\end{figure}}
+	\only<2>{
+	\begin{itemize}\footnotesize
+		\item Compare update with the best direction v.s. update with multiple directions
+		\item Number of spanning trees $|T|=\{5,10,20\}$.
+		\item Each spanning tree outputs top $\kappa=10$ best directions.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.22]{./slide_duality_gap_value_k10.jpg}
+		\end{center}
+	\end{figure}
+	}
+\end{frame}
+
+\begin{frame}{Experimental results - Relative duality gap}
+	\only<1>{
+	\begin{itemize}\footnotesize
+		\item Compare update with the best direction v.s. update with multiple directions
+		\item Number of spanning trees $|T|=\{5,10,20\}$.
+		\item Each spanning tree outputs top $\kappa=1$ best direction.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.22]{./slide_duality_gap_percentage_k1.jpg}
+		\end{center}
+	\end{figure}}
+	\only<2>{
+	\begin{itemize}\footnotesize
+		\item Compare update with the best direction v.s. update with multiple directions
+		\item Number of spanning trees $|T|=\{5,10,20\}$.
+		\item Each spanning tree outputs top $\kappa=10$ best directions.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.22]{./slide_duality_gap_percentage_k10.jpg}
+		\end{center}
+	\end{figure}
+	}
+\end{frame}
 
 
-% \begin{frame}{}
-% 	\begin{itemize}
-% 	\end{itemize}
-% \end{frame}
+\begin{frame}{Experimental results - Hamming loss training}
+	\only<1>{
+	\begin{itemize}\footnotesize
+		\item Compare update with the best direction v.s. update with multiple directions
+		\item Number of spanning trees $|T|=\{5,10,20\}$.
+		\item Each spanning tree outputs top $\kappa=1$ best direction.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.22]{./slide_hamming_loss_k1.jpg}
+		\end{center}
+	\end{figure}}
+	\only<2>{
+	\begin{itemize}\footnotesize
+		\item Compare update with the best direction v.s. update with multiple directions
+		\item Number of spanning trees $|T|=\{5,10,20\}$.
+		\item Each spanning tree outputs top $\kappa=10$ best directions.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.22]{./slide_hamming_loss_k10.jpg}
+		\end{center}
+	\end{figure}
+	}
+\end{frame}
+
+\begin{frame}{Experimental results}
+	\begin{itemize}
+		\item Number of spanning trees $|T|=\{5,10,20\}$.
+		\item Each spanning tree outputs $\kappa=\{1,\cdots,16\}$ best directions.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.22]{./slide_overall_objective.jpg}
+		\end{center}
+	\end{figure}
+\end{frame}
 
 
 % \begin{frame}{}
