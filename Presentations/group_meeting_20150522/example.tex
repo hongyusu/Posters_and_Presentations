@@ -257,7 +257,7 @@ Aalto University
 			f(\vw) &= \frac{1}{2}||\vw||^2 + C\sum_{i=1}^m\left(\ell_i-\ip{\vw}{\Delta\phib(\vx_i,\vy_i)}\right)\\
 			g(\valpha) &= \sum_{i=1}^m\alpha_i\ell_i - \frac{1}{2}\sum_{i=1}^m\sum_{j=1}^m\alpha_iK^{\Delta\phib}(\vx_i,\vy_i;\vx_j,\vy_j)\alpha_j
 		\end{align*}
-		\item $g(\valpha)\le f(\vw)$, $g(\valpha) = f(\vw)$ at optimal.
+		\item $\maximize g(\valpha)\le \minimize f(\vw)$, minimum gap when optimal.
 		\item Duality gap at $\valpha^k$
 		\begin{align*}\footnotesize
 			f(\vw) - g(\valpha^k) &= C\left(\vell-K^{\Delta\phib}\valpha^k\right) - \valpha^k\left(\vell-K^{\Delta\phib}\valpha^k\right)\\
