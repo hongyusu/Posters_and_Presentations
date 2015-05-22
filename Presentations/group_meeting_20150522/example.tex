@@ -157,10 +157,10 @@ Aalto University
 		\begin{enumerate}\footnotesize
 			\item Obtain the current solution of the $j$th example $\vmu_{T_i}^k$.
 			\item Compute the current gradient on $\vmu_{T_i}^k$, $g_{T_i}^k = \ell_{T_i} - K^{\Delta\phib}_{T_i}\vmu_{T_i}^k$.
-			\item Compute a feasible solution ${\vmu}_{T_i}^{k,*}$ as an update direction
-			\begin{align*}
-				{\vmu}_{T_i}^{k,*} = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k.
-			\end{align*}
+			\item Compute a feasible solution ${\vmu}_{T_i}^{k,*}$ as an update direction ({\color{aaltored}efficiently})
+			\begin{align}
+				{\vmu}_{T_i}^{k,*} = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k. \label{tree_inference}
+			\end{align}
 			\item Compute a stationary point ($\tau$) and perform the update
 			\begin{align*}
 				\vmu_{T_i}^{k+1} = \vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k} =  \vmu_{T_i}^k + \tau({\vmu}_{T_i}^{k,*} - {\vmu}_{T_i}^{k}).
@@ -176,15 +176,15 @@ Aalto University
 \end{frame}
 
 
-\begin{frame}{The best update on a collection of $n$ spanning trees}
+\begin{frame}{Optimization on a collection of $n$ spanning trees}
 	\begin{itemize}\footnotesize
 		\item The algorithm iterates over all training examples until convergence.
 		\item We drop the index momentarily $\mu\leftarrow\mu(j),\,g\leftarrow g(j),\,\ell\leftarrow\ell(j)$.
 		\item For the $k$th iteration:
 		\begin{enumerate}\footnotesize
-			\item Obtain the solutions of the $j$th example over all trees $(\vmu_{T_i}^k){\color{aaltored}_{i=1}^n}$.
-			\item Compute the gradients over all trees $(g_{T_i}^k){\color{aaltored}_{i=1}^n}$.
-			\item Compute the update directions
+			\item Obtain the current solutions over all spanning trees ${\color{aaltored}(}\vmu_{T_i}^k{\color{aaltored})_{i=1}^n}$.
+			\item Compute the gradients over all trees ${\color{aaltored}(}g_{T_i}^k{\color{aaltored})_{i=1}^n}$.
+			\item Compute a feasible solution for each individual spanning tree
 			\begin{align*}
 				{\vmu}_{T_i}^{k,*} = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k,\,{\color{aaltored}\forall i}.
 			\end{align*}
