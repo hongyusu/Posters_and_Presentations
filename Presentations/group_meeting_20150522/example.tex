@@ -145,8 +145,17 @@ Aalto University
 			\underset{\vmu\in\Mcal}{\maximize} & \quad \sum_{i=1}^{n}\left( \vmu_{T_i}\vell_{T_i} - \frac{1}{2}\vmu_{T_i}K^{\Delta\phib}_{T_i}\vmu_{T_i}\right)\\
 			\st & \quad \sum_{u_e}\vmu_{T_i,e}(u_e)\le C.
 		\end{align*}
-		\item How to optimize a collection of $n$ spanning trees jointly.
+		\item How to optimize a collection of $n$ spanning trees jointly?
 	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Optimization on a single random spanning tree $T_i$}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.5]{optimization_single_tree.pdf}
+		\end{center}
+	\end{figure}
 \end{frame}
 
 \begin{frame}{Optimization on a single random spanning tree $T_i$}
@@ -181,12 +190,19 @@ Aalto University
 			\underset{\tau}{\maximize} &\quad f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})\label{tree_line_search}\\
 			\st &\quad 0\le\tau\le1.\nonumber
 		\end{align}
-		\item No update at $\tau=0$.
+		\item $\tau=0$ corresponds to no update.
 		\item Feasible maximum update is achieved at $\tau=1$. 
 		\item The cost of (\ref{tree_line_search}) is significantly smaller than the cost of (\ref{tree_inference}).
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Optimization on a collection of $n$ spanning trees}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.3]{best_update.pdf}
+		\end{center}
+	\end{figure}
+\end{frame}
 
 \begin{frame}{Optimization on a collection of $n$ spanning trees}
 	\begin{itemize}\footnotesize
@@ -236,6 +252,14 @@ Aalto University
 			\end{align*}
 		\end{enumerate}
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Update with multiple directions}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.3]{multiple_update.pdf}
+		\end{center}
+	\end{figure}
 \end{frame}
 
 \begin{frame}{Update with multiple directions}
