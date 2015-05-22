@@ -278,9 +278,9 @@ Aalto University
 			\begin{align*}
 				{\vmu}_{T_i}^{G,k,*} \leftarrow {\vmu}_{T_i}^{k,*},\,{\color{aaltored}\forall i}.
 			\end{align*}
-			\item Define a conic combination of update directions 
+			\item Define a convex combination of update directions 
 			\begin{align*}
-				\Delta{\vmu}^{G,k} = \sum_{i=1}^{n}\tau_i \Delta{\vmu}_{T_i}^{G,k,*} = \sum_{i=1}^{n}\tau_i \left({\vmu}^{G,k} -{\vmu}_{T_i}^{G,k,*}\right), 0\le\tau_i\le1,\forall i.
+				\Delta{\vmu}^{G,k} = \sum_{i=1}^{n}\tau_i \Delta{\vmu}_{T_i}^{G,k,*} = \sum_{i=1}^{n}\tau_i \left({\vmu}^{G,k} -{\vmu}_{T_i}^{G,k,*}\right), 0\le\tau_i\le1,\sum_{i=1}^n\tau_i\le1\forall i.
 			\end{align*}
 			\item Perform the update $\vmu^{G,k+1} = \vmu^{G,k} + \Delta{\vmu}^{G,k+1}.$
 			\item Project the global solution on spanning trees ${\color{aaltored}(}\vmu_{T_i}^{k+1}{\color{aaltored})_{i=1}^n}{\leftarrow}\vmu^{G,k+1}.$
