@@ -237,20 +237,19 @@ Aalto University
 	\end{itemize}
 \end{frame}
 
-
 \begin{frame}{Update with multiple directions}
 	\begin{itemize}\footnotesize
-		\item The algorithm iterates over all training example until convergence.
-		\item $\vmu:\vmu(j)$, and $g:g(j)$.
+		\item The algorithm iterates over all training examples until convergence.
+		\item We drop the index momentarily $\mu\leftarrow\mu(j),\,g\leftarrow g(j),\,\ell\leftarrow\ell(j)$.
 		\item For the $k$th iteration:
 		\begin{enumerate}\footnotesize
-			\item Obtain the solutions of the $j$th example over all trees $(\vmu_{T_i}^k){\color{aaltored}_{i=1}^n}$.
-			\item Compute the gradients over all trees $(g_{T_i}^k){\color{aaltored}_{i=1}^n}$.
-			\item Compute local update direction from each spanning tree
+			\item Obtain the current solutions over all spanning trees ${\color{aaltored}(}\vmu_{T_i}^k{\color{aaltored})_{i=1}^n}$.
+			\item Compute the gradients over all trees ${\color{aaltored}(}g_{T_i}^k{\color{aaltored})_{i=1}^n}$.
+			\item Compute a feasible solution for each individual spanning tree
 			\begin{align*}
 				{\vmu}_{T_i}^{k,*} = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k,\,{\color{aaltored}\forall i}.
 			\end{align*}
-			\item Project local directions into global directions
+			\item Project each local feasible solution to a global feasible solution
 			\begin{align*}
 				{\vmu}_{T_i}^{G,k,*} \leftarrow {\vmu}_{T_i}^{k,*},\,{\color{aaltored}\forall i}.
 			\end{align*}
@@ -259,13 +258,13 @@ Aalto University
 				\Delta{\vmu}^{G,k} = \sum_{i=1}^{n}\tau_i \Delta{\vmu}_{T_i}^{G,k,*} = \sum_{i=1}^{n}\tau_i \left({\vmu}^{G,k} -{\vmu}_{T_i}^{G,k,*}\right), 0\le\tau_i\le1,\forall i.
 			\end{align*}
 			\item Perform the update $\vmu^{G,k+1} = \vmu^{G,k} + \Delta{\vmu}^{G,k+1}.$
-			\item Project the global solution on spanning trees $(\vmu_{T_i}^{k+1}){\color{aaltored}_{i=1}^{n}}{\leftarrow}\vmu^{G,k+1}.$
+			\item Project the global solution on spanning trees ${\color{aaltored}(}\vmu_{T_i}^{k+1}{\color{aaltored})_{i=1}^n}{\leftarrow}\vmu^{G,k+1}.$
 		\end{enumerate}
 	\end{itemize}
 \end{frame}
 
 
-\begin{frame}{Newton method to compute $\tau$}
+\begin{frame}{Newton method to compute $\vtau$}
 	\begin{itemize}\footnotesize
 		\item We want to find $\tau$ that maximize the objective function given the update
 		% \begin{align*}\footnotesize
@@ -276,9 +275,9 @@ Aalto University
 			\underset{\tau}{\maximize} & \quad f(\vmu^{G,k} + \Delta{\vmu}^{G,k+1})\\
 			\st & \quad 0\le\tau_i\le1.
 		\end{align*}
-		\item The objective is quadratic with respect to $\tau$.
-		\item We use Newton method to find $\tau$ that maximize the objective.
-		\item $\tau$ is projected into the feasible region.
+		\item The objective is quadratic with respect to $\vtau$.
+		\item We use Newton method to find $\vtau$ that maximize the objective.
+		\item $\vtau$ is projected into the feasible region.
 	\end{itemize}
 \end{frame}
 
