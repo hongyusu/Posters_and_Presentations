@@ -161,17 +161,28 @@ Aalto University
 			\begin{align}
 				{\vmu}_{T_i}^{k,*} = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k. \label{tree_inference}
 			\end{align}
+			\item Compute an update direction from the current solution ${\vmu}_{T_i}^{k}$ towards the feasible solution ${\vmu}_{T_i}^{k,*}$
+			\begin{align*}
+				\Delta\vmu_{T_i}^{k} = {\vmu}_{T_i}^{k,*} - {\vmu}_{T_i}^{k}.
+			\end{align*}
 			\item Compute a stationary point ($\tau$) and perform the update
 			\begin{align*}
-				\vmu_{T_i}^{k+1} = \vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k} =  \vmu_{T_i}^k + \tau({\vmu}_{T_i}^{k,*} - {\vmu}_{T_i}^{k}).
+				\vmu_{T_i}^{k+1} = \vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k}.
 			\end{align*}
 		\end{enumerate}
-		\item Line search gives the optimal feasible solution as a stationary point ($\tau$).
-		\begin{align*}
-			\underset{\tau}{\maximize} &\quad f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})\\
-			\st &\quad 0\le\tau\le1.
-		\end{align*}
-		\item Feasible maximum update is achieved at $\tau=1$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Exact line search for a single tree}
+	\begin{itemize}
+		\item Line search gives the optimal feasible solution as a stationary point ($\tau$)
+		\begin{align}
+			\underset{\tau}{\maximize} &\quad f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})\label{tree_line_search}\\
+			\st &\quad 0\le\tau\le1.\nonumber
+		\end{align}
+		\item No update at $\tau=0$.
+		\item Feasible maximum update is achieved at $\tau=1$. 
+		\item The cost of (\ref{tree_line_search}) is significantly smaller than the cost of (\ref{tree_inference}).
 	\end{itemize}
 \end{frame}
 
