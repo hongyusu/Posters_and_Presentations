@@ -199,24 +199,41 @@ Aalto University
 			\begin{align*}
 				{\vmu}_{T_i}^{k,*} = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k,\,{\color{aaltored}\forall i}.
 			\end{align*}
-			\item Compute the best direction
+			\item Compute the best feasible solution over the collection
 			\begin{align*}
-				{\vmu}_{T}^{k,*} = \underset{\vmu\in({\vmu}_{T_i}^{k,*}){\color{aaltored}_{i=1}^n}}{\argmax}\,{\color{aaltored}\sum_{i=1}^n}\vmu\tp g_{T_i}^k
+				{\vmu}_{T}^{k,*} = \underset{\vmu\in{\color{aaltored}(}{\vmu}_{T_i}^{k,*}{\color{aaltored})_{i=1}^n}}{\argmax}\,{\color{aaltored}\sum_{i=1}^n}\vmu\tp g_{T_i}^k
 			\end{align*}
-			\item Compute the difference $\Delta\vmu_{T_i}^{k} = {\vmu}_{T_i}^{k} - {\vmu}_{T}^{k,*},\,{\color{aaltored}\forall i}$.
-			\item Compute the step size $\tau$.
-			\item Perform the update $\vmu_{T_i}^{k+1} = \vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k},\,{\color{aaltored}\forall i}.$
+			\item Compute the update direction 
+			\begin{align*}
+				\Delta\vmu_{T_i}^{k} = {\vmu}_{T_i}^{k} - {\vmu}_{T}^{k,*},\,{\color{aaltored}\forall i}.
+			\end{align*}
+			\item Perform the update to the optimal feasible solution 
+			\begin{align*}
+				\vmu_{T_i}^{k+1} = \vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k},\,{\color{aaltored}\forall i}.
+			\end{align*}
 		\end{enumerate}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Line search to get the step size}
+\begin{frame}{Exact line search for the collection of trees}
 	\begin{itemize}
-		\item The step size along the update direction $\tau$ is given by the exact line search.
+		\item The step size along the update direction $\tau$ is given by the exact line search
 		\begin{align*}\footnotesize
 			\underset{\tau}{\maximize} &\quad {\color{aaltored}\sum_{i=1}^n}f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})\\
 			\st &\quad 0\le\tau\le1.
 		\end{align*}
+		\item Problems with the {\em best update}
+		\begin{enumerate}\footnotesize
+			\item The best feasible solution on a single tree might not be the best feasible solution on a collection of trees
+			\begin{align*}
+				{\vmu}_{T}^{k,*}\notin{\color{aaltored}(}{\vmu}_{T_i}^{k,*}{\color{aaltored})_{i=1}^n}.
+			\end{align*}
+			\item $\kappa$-best inference algorithm
+			\begin{align*}
+				({\vmu}_{T_i}^{k,*_h})_{h=1}^{\kappa} &= \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k,\,{\color{aaltored}\forall i}\\
+				{\vmu}_{T}^{k,*} &\in {\color{aaltored}(}{\vmu}_{T_i}^{k,*_h}{\color{aaltored})_{i=\{1,\cdots,n\},h\in\{1,\cdots,\kappa\}}}.
+			\end{align*}
+		\end{enumerate}
 	\end{itemize}
 \end{frame}
 
