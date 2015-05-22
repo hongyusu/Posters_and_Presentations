@@ -145,6 +145,7 @@ Aalto University
 			\underset{\vmu\in\Mcal}{\maximize} & \quad \sum_{i=1}^{n}\left( \vmu_{T_i}\vell_{T_i} - \frac{1}{2}\vmu_{T_i}K^{\Delta\phib}_{T_i}\vmu_{T_i}\right)\\
 			\st & \quad \sum_{u_e}\vmu_{T_i,e}(u_e)\le C.
 		\end{align*}
+		\item How to optimize a collection of $n$ spanning trees jointly.
 	\end{itemize}
 \end{frame}
 
@@ -468,7 +469,17 @@ Aalto University
 %
 \begin{frame}{Conclusions}
 	\begin{itemize}\footnotesize
-		\item 
+		\item {\em Pros:}
+		\begin{enumerate}\footnotesize
+			\item Achieves much better objectives, duality gaps.
+			\item The quality of the optimization increases as more update directions are used.
+			\item Improves training and test error in many datasets.
+		\end{enumerate}
+		\item {\em Cons:}
+		\begin{enumerate}\footnotesize
+			\item Consumes more CPU times.
+			\item The improvements are not dramatic compare to the {\em best update}.
+		\end{enumerate}
 	\end{itemize}
 \end{frame}
 
