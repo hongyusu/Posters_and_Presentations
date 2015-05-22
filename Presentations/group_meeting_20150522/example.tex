@@ -148,36 +148,38 @@ Aalto University
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Optimization algorithm for a single spanning tree $T_i$}
+\begin{frame}{Optimization on a single random spanning tree $T_i$}
 	\begin{itemize}\footnotesize
-		\item We can solve the optimization problem efficiently for each individual spanning tree. 
-		\item The algorithm iterates over all training example until convergence.
-		\item $\mu:\mu(j),\,g:g(j),\,\ell:\ell(j)$.
+		\item The optimization problem can be solved efficiently on a single tree $T_i$. 
+		\item The algorithm iterates over all training examples until convergence.
+		\item We drop the index momentarily $\mu\leftarrow\mu(j),\,g\leftarrow g(j),\,\ell\leftarrow\ell(j)$.
 		\item For the $k$th iteration:
 		\begin{enumerate}\footnotesize
-			\item Obtain the solution of the $j$th example in $k$th iteration $\vmu_{T_i}^k$.
-			\item Compute the gradient $g_{T_i}^k = \ell_{T_i} - K^{\Delta\phib}_{T_i}\vmu_{T_i}^k$.
-			\item Compute the update direction 
+			\item Obtain the current solution of the $j$th example $\vmu_{T_i}^k$.
+			\item Compute the current gradient on $\vmu_{T_i}^k$, $g_{T_i}^k = \ell_{T_i} - K^{\Delta\phib}_{T_i}\vmu_{T_i}^k$.
+			\item Compute a feasible solution ${\vmu}_{T_i}^{k,*}$ as an update direction
 			\begin{align*}
 				{\vmu}_{T_i}^{k,*} = \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k.
 			\end{align*}
-			\item Compute the difference $\Delta\vmu_{T_i}^{k} = {\vmu}_{T_i}^{k} - {\vmu}_{T_i}^{k,*}$.
-			\item Compute a step size $\tau$.
-			\item Perform the update $\vmu_{T_i}^{k+1} = \vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k}$
+			\item Compute a stationary point ($\tau$) and perform the update
+			\begin{align*}
+				\vmu_{T_i}^{k+1} = \vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k} =  \vmu_{T_i}^k + \tau({\vmu}_{T_i}^{k,*} - {\vmu}_{T_i}^{k}).
+			\end{align*}
 		\end{enumerate}
-		\item The step size along the update direction $\tau$ is given by the line search.
+		\item Line search gives the optimal feasible solution as a stationary point ($\tau$).
 		\begin{align*}
 			\underset{\tau}{\maximize} &\quad f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})\\
 			\st &\quad 0\le\tau\le1.
 		\end{align*}
+		\item Feasible maximum update is achieved at $\tau=1$.
 	\end{itemize}
 \end{frame}
 
 
 \begin{frame}{$\kappa$-best inference for a collection of $n$ spanning trees}
 	\begin{itemize}\footnotesize
-		\item The algorithm iterates over all training example until convergence.
-		\item $\vmu:\vmu(j)$, and $g:g(j)$.
+		\item The algorithm iterates over all training examples until convergence.
+		\item We drop the index momentarily $\mu\leftarrow\mu(j),\,g\leftarrow g(j),\,\ell\leftarrow\ell(j)$.
 		\item For the $k$th iteration:
 		\begin{enumerate}\footnotesize
 			\item Obtain the solutions of the $j$th example over all trees $(\vmu_{T_i}^k){\color{aaltored}_{i=1}^n}$.
