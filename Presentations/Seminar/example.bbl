@@ -1,0 +1,140 @@
+\begin{thebibliography}{}
+
+\bibitem[Argyriou et~al., 2008]{Argyriou08convex}
+Argyriou, A., Evgeniou, T., and Pontil, M. (2008).
+\newblock Convex multi-task feature learning.
+\newblock {\em Machine Learning}, 73(3):243--272.
+
+\bibitem[Bian et~al., 2012]{Bian12corrlog}
+Bian, W., Xie, B., and Tao, D. (2012).
+\newblock Corrlog: Correlated logistic models for joint prediction of multiple
+  labels.
+\newblock {\em Journal of Machine Learning Research - Proceedings Track}, pages
+  109--117.
+
+\bibitem[Cheng and Hüllermeier, 2009]{Cheng09combining}
+Cheng, W. and Hüllermeier, E. (2009).
+\newblock Combining instance-based learning and logistic regression for
+  multilabel classification.
+\newblock {\em Machine Learning}, 76(2-3):211--225.
+
+\bibitem[Esuli et~al., 2008]{Esuli2008boosting}
+Esuli, A., Fagni, T., and Sebastiani, F. (2008).
+\newblock Boosting multi-label hierarchical text categorization.
+\newblock {\em Information Retrieval}, 11(4):287--313.
+
+\bibitem[Lafferty et~al., 2001]{lafferty01}
+Lafferty, J.~D., McCallum, A., and Pereira, F. C.~N. (2001).
+\newblock Conditional random fields: Probabilistic models for segmenting and
+  labeling sequence data.
+\newblock In {\em Proceedings of the 8th International Conference on Machine
+  Learning (ICML 2001)}, pages 282--289. Morgan Kaufmann Publishers Inc.
+
+\bibitem[Marchand et~al., 2014]{su14multilabelnips}
+Marchand, M., Su, H., Morvant, E., Rousu, J., and Shawe-Taylor, J. (2014).
+\newblock Multilabel structured output learning with random spanning trees of
+  max-margin markov networks.
+\newblock In {\em Advances in Neural Information Processing System NIPS2014},
+  page to appear.
+
+\bibitem[Read et~al., 2009]{Read09classifier}
+Read, J., Pfahringer, B., Holmes, G., and Frank, E. (2009).
+\newblock Classifier chains for multi-label classification.
+\newblock In Buntine, W., Grobelnik, M., Mladenić, D., and Shawe-Taylor, J.,
+  editors, {\em Machine Learning and Knowledge Discovery in Databases}, volume
+  5782, pages 254--269. Springer Berlin Heidelberg.
+
+\bibitem[Read et~al., 2011]{Read11classifier}
+Read, J., Pfahringer, B., Holmes, G., and Frank, E. (2011).
+\newblock Classifier chains for multi-label classification.
+\newblock {\em Machine Learning}, 85(3):333--359.
+
+\bibitem[Rousu et~al., 2007]{Rousu07}
+Rousu, J., Saunders, C., Szedmak, S., and Shawe-Taylor, J. (2007).
+\newblock {Efficient algorithms for max-margin structured classification}.
+\newblock {\em Predicting Structured Data}, pages 105--129.
+
+\bibitem[Schapire and Singer, 1999]{Schapire99improved}
+Schapire, R. and Singer, Y. (1999).
+\newblock Improved boosting algorithms using confidence-rated predictions.
+\newblock {\em Machine Learning}, 37(3):297--336.
+
+\bibitem[Su, 2015]{Su2014Multilabel}
+Su, H. (2015).
+\newblock {\em Multilabel Classification through Structured Output Learning -
+  Methods and Applications}.
+\newblock PhD thesis, Department of Information and Computer Science, Aalto
+  University.
+
+\bibitem[Su et~al., 2014]{su14structured}
+Su, H., Gionis, A., and Rousu, J. (2014).
+\newblock Structured prediction of network response.
+\newblock In {\em Proceedings, 31th International Conference on Machine
+  Learning ICML2014}, volume~32 of {\em Journal of Machine Learning Research
+  WCP}, pages 442--450.
+
+\bibitem[Su et~al., 2010]{su10structured}
+Su, H., Heinonen, M., and Rousu, J. (2010).
+\newblock Structured output prediction of anti-cancer drug activity.
+\newblock In {\em Proceedings, 5th IAPR International Conference on Pattern
+  Recognition in Bioinformatics (PRIB2010)}, volume 6282 of {\em Lecture Note
+  in Computer Science}, pages 38--49.
+
+\bibitem[Su and Rousu, 2011]{su11mutitask}
+Su, H. and Rousu, J. (2011).
+\newblock Multi-task drug bioactivity classification with graph labeling
+  ensembles.
+\newblock In {\em Proceedings, 6th IAPR International Conference on Pattern
+  Recognition in Bioinformatics (PRIB2011)}, volume 7035 of {\em Lecture Note
+  in Computer Science}, pages 157--167.
+
+\bibitem[Su and Rousu, 2013]{su2013multilabelacml}
+Su, H. and Rousu, J. (2013).
+\newblock Multilabel classification through random graph ensembles.
+\newblock In {\em Proceedings, 5th Asian Conference on Machine Learning
+  (ACML2013)}, volume~29 of {\em Journal of Machine Learning Research WCP},
+  pages 404--418.
+
+\bibitem[Su and Rousu, 2015]{su15multilabel}
+Su, H. and Rousu, J. (2015).
+\newblock Multilabel classification through random graph ensembles.
+\newblock {\em Machine Learning}, 99(2):231--256.
+
+\bibitem[Taskar et~al., 2002]{taskar02}
+Taskar, B., Abbeel, P., and Koller, D. (2002).
+\newblock Discriminative probabilistic models for relational data.
+\newblock In {\em Proceedings of the Eighteenth Conference on Uncertainty in
+  Artificial Intelligence (UAI 2002)}, pages 485--492, San Francisco, CA, USA.
+  Morgan Kaufmann Publishers Inc.
+
+\bibitem[Taskar et~al., 2004]{Taskar04max}
+Taskar, B., Guestrin, C., and Koller, D. (2004).
+\newblock Max-margin markov networks.
+\newblock In Thrun, S., Saul, L., and Sch\"{o}lkopf, B., editors, {\em Advances
+  in Neural Information Processing Systems 16}, pages 25--32. MIT Press.
+
+\bibitem[Tsochantaridis et~al., 2004]{THJA04}
+Tsochantaridis, I., Hofmann, T., Joachims, T., and Altun, Y. (2004).
+\newblock Support vector machine learning for interdependent and structured
+  output spaces.
+\newblock In {\em Proceedings of the 21th International Conference on Machine
+  Learning (ICML 2004)}, pages 823--830. ACM.
+
+\bibitem[Tsochantaridis et~al., 2005]{TJTA05}
+Tsochantaridis, I., Joachims, T., Hofmann, T., and Altun, Y. (2005).
+\newblock Large margin methods for structured and interdependent output
+  variables.
+\newblock {\em Journal of Machine Learning Research}, 6:1453--1484.
+
+\bibitem[Tsoumakas et~al., 2010]{Tsoumakas10mining}
+Tsoumakas, G., Katakis, I., and Vlahavas, I. (2010).
+\newblock Mining multi-label data.
+\newblock In Maimon, O. and Rokach, L., editors, {\em Data Mining and Knowledge
+  Discovery Handbook}, pages 667--685. Springer US.
+
+\bibitem[Zhang and Zhou, 2007]{Zhang07mlknn}
+Zhang, M. and Zhou, Z. (2007).
+\newblock Ml-knn: A lazy learning approach to multi-label learning.
+\newblock {\em Pattern Recognition}, 40:2007.
+
+\end{thebibliography}
