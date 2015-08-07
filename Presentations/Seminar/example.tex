@@ -259,6 +259,7 @@ Department of Computer Science, Aalto University
 %
 \begin{frame}{Primal optimization problem}
 	\begin{itemize}\footnotesize
+		\item To learn parameter $\vw$, we aim to maximize the magin between correct pair $(\vx_i,\vy_i)$ and all the other incorrect pairs $(\vx_i,\vy),\vy/in/vYcal\/vy_i$.
 		\item The primal optimization problem is defined as \cite{Rousu07, su10structured}
 		\begin{align*}
 			\underset{\vw,\xi_k}{\minimize} & \quad \frac{1}{2}\norm{\vw}^2 + C\sum_{k=1}^{m}\xi_k\\
