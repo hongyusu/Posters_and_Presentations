@@ -121,7 +121,7 @@ Department of Computer Science, Aalto University
 		\end{itemize}
 		\item Algorithm adaptation 
 		\begin{itemize}\footnotesize
-			\item Modify the single-label classification algorithm for multilabel classification problem.
+			\item Modify the single-label classification algorithm for multilabel classification problems.
 			\item For example, \adaboostmh\ \cite{Schapire99improved,Esuli2008boosting}, \corrlog\ \cite{Bian12corrlog}, \mtl\ \cite{Argyriou08convex}.
 		\end{itemize}
 		\item These approaches does not model the dependency structure explicitly.
@@ -153,7 +153,7 @@ Department of Computer Science, Aalto University
 		\item Structured output prediction models when the output graph is known.
 		\begin{itemize}\footnotesize
 			\item \spin\ for network influence prediction \cite{su14structured}.
-			\item \mmcrf\ to work with general output graph structure \cite{su10structured}.
+			\item \mmcrf\ to work with general output graph structures \cite{su10structured}.
 		\end{itemize}
 		\item Structured output prediction models working with unknown output graph.
 		\begin{itemize}\footnotesize
@@ -161,7 +161,7 @@ Department of Computer Science, Aalto University
 			\item \amm\ and \mam\ to aggregate the inference results from multiple structured output predictors \cite{su2013multilabelacml,su15multilabel}.
 			\item \rta\ to perform joint learning and inference over a collection of random spanning trees \cite{su14multilabelnips}.
 		\end{itemize}
-		\item Codes for developed models are available from \href{http://hongyusu.github.io}{hongyusu.github.io}.
+		\item Codes for developed models are available from \href{http://hongyusu.github.io}{http://hongyusu.github.io}.
 	\end{itemize}
 \end{frame}
 
@@ -173,11 +173,142 @@ Department of Computer Science, Aalto University
 %
 \begin{frame}{Preliminaries}
 	\begin{itemize}\footnotesize
-		\item 
+		\item Training examples come in pairs $(\vx,\vy)\in\vXcal\times\vYcal$.
+		\item $\vx\in\vXcal$ is an arbitrary input space.
+		\item $\vYcal$ is an output space of a collection of $\ell$-dimensional {\em multilabels}.
+		\begin{align*}\footnotesize
+			\vy=(y_1,\cdots,y_{\ell})\in\vYcal.
+		\end{align*}
+		\item $y_i$ is a {\em microlabel} and $y_i\in\{1,\cdots,r_i\}, r_i\in\ZZ$.
+		\item For example, multilabel binary classification $y_i\in\{-1,+1\}$.
+		\item We are given a set of $m$ training examples $\{(\vx_i,\vy_i)\}_{i=1}^m$.
+		%\item An arbitrary pair $(\vx_i,\vy),\,\vy_\in\vYcal$ is called pseudo-example.
+		\item Each example $(\vx,\vy)$ is mapped into a joint feature space $\phib(\vx,\vy)$.
+		\item $\vw$ is the weight vector in the joint feature space.
+		\item Define a linear score function $F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)}$.
+		\item $\vw$ makes sure example $\vx$ with correct multilabel $\vy$ achieves higher score than with any other incorrect multilabel $\vy'\in\vYcal$.
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Inference problem}
+	\begin{itemize}
+		\item The prediction $\vy_{\vw}(\vx)$ of an input $\vx$ is the multilabel $\vy$ that maximizes the score function 
+		\begin{align}\footnotesize
+			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw}{\phib(\vx,\vy)}. \label{inference}
+		\end{align}
+		\item Search space $|\vYcal|=2^{\ell}$ is exponential in size.
+		\item (\ref{inference}) is called {\em inference} problem which is \nphard\ for most output feature maps.
+		\item We aim at using an output feature map in which the inference can be solved with a polynomial algorithm, e.g., dynamic programming.
+	\end{itemize}
+\end{frame}
 
+%
+\begin{frame}{Input-output feature maps}
+	\begin{itemize}\footnotesize
+		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network $G=(E,V)$.
+		\item A vertex $v_i\in V$ corresponds to a microlabel $y_i$, an edge $(v_i,v_j)\in E$ corresponds to the pairwise correlation of the microlabel $y_i$ and $y_j$.
+		\item $G$ models potential pairwise correlations.
+		\begin{center}
+			\includegraphics[scale=0.3]{./figures/outputgraph.pdf}
+		\end{center}
+		\item $\varphib(\vx)\in\RR^d$ is the input feature map, e.g., bag-of-words of a document.
+		\item $\psib(\vy)\in\RR^{4|E|}$ is the output feature map which maps the multilabel $\vy$ into a collection of edges and labels
+		\begin{align*}\footnotesize
+			\varphib(\vy) = (u_{e})_{e\in E},u_e\in\{-1,+1\}^2.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{An example of output feature map}
+	\begin{itemize}\footnotesize
+		\item Markov network $G=(E,V)$
+		\begin{center}
+			\includegraphics[scale=0.3]{./figures/outputgraph.pdf}
+		\end{center}
+		\item Multilabel $\vy$
+		\begin{align*}
+			\vy&=(y_1,y_2,y_3,y_4)=(+1,-1,+1,+1)
+		\end{align*}
+		\item Output feature map $\psib(\vy)$
+		\begin{align*}
+			\psib(\vy) &= ( \underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_3)} 
+			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{0}_{+-}, \underbrace{1}_{++},}_{(v_1,v_2)}
+			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{0}_{+-}, \underbrace{1}_{++}}_{(v_3,v_4)})
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{Joint feature map}
+	\begin{itemize}\footnotesize
+		\item The joint feature is the Kronecker product of $\varphib(\vx)$ and $\psib(\vy)$
+		\begin{align*}\footnotesize
+			\phib(\vx,\vy) = (\phib_e(\vx,\vy))_{e\in E}=(\varphib(\vx)\otimes\psib_e(\vy_e))_{e\in E}.
+		\end{align*}
+		\begin{center}
+			\includegraphics[scale = 1]{./figures/tensor_label.pdf}
+		\end{center}
+		\item The score function can be factorized by the output graph $G$
+		\begin{align*}
+			F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)} = \sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{Primal optimization problem}
+	\begin{itemize}\footnotesize
+		\item The primal optimization problem is defined as \cite{Rousu07, su10structured}
+		\begin{align*}
+			\underset{\vw,\xi_k}{\minimize} & \quad \frac{1}{2}\norm{\vw}^2 + C\sum_{k=1}^{m}\xi_k\\
+			\st & \quad \ip{\vw}{\phib(\vx_k,\vy_k)} - \ip{\vw}{\phib(\vx_k,\vy)}  \geq \ell(\vy_k,\vy) -  \xi_k, \\
+			& \quad \xi_k\ge0\, , \forall\ \vy\in\vYcal, k \in \set{1,\dots,m}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{}
+	\begin{itemize}\footnotesize
+		\item
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{}
+	\begin{itemize}\footnotesize
+		\item
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{}
+	\begin{itemize}\footnotesize
+		\item
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{}
+	\begin{itemize}\footnotesize
+		\item
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{}
+	\begin{itemize}\footnotesize
+		\item
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{}
+	\begin{itemize}\footnotesize
+		\item
+	\end{itemize}
+\end{frame}
 
 %
 \begin{frame}{Structured output learning}
