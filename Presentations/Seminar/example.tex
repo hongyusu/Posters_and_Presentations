@@ -364,14 +364,16 @@ Department of Computer Science, Aalto University
 
 
 %
-\begin{frame}{So far}
+\begin{frame}{So far in slides}
 	\begin{itemize}\footnotesize
-		\item We work with multilabel classification problems in general.
-		\item In addition, we assume there is an output graph given {\em apriori}.
-		\item We develop structured output prediction method which model the label correlations with an output graph.
-		\item If the output graph is tree-like, the inference problem can be solved exactly with a polynomial time algorithm, e.g., dynamic programming.
-		\item If the output graph is a general graph structure, the inference problem is \nphard and can be solved with approximation algorithm, e.g., loopy belief propagation.
-		\item The next question is what if the output graph is not observed.
+		\item We have been working with multilabel classification problems in general.
+		\item We assume label correlation is described an output graph given {\em apriori}.
+		\item We develop structured output prediction model utilizing the output graph. 
+		\begin{itemize}
+			\item Tree, the inference problem can be solved exactly with a polynomial time algorithm, e.g., dynamic programming.
+			\item General graph, the inference problem is \nphard\ and can be solved with approximation algorithm, e.g., loopy belief propagation.
+		\end{itemize}
+		\item What if the output graph is not observed?
 	\end{itemize}
 \end{frame}
 %
