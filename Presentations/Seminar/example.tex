@@ -369,7 +369,7 @@ Department of Computer Science, Aalto University
 		\item We have been working with multilabel classification problems in general.
 		\item We assume label correlation is described an output graph given {\em apriori}.
 		\item We develop structured output prediction model utilizing the output graph. 
-		\begin{itemize}
+		\begin{itemize}\footnotesize
 			\item Tree, the inference problem can be solved exactly with a polynomial time algorithm, e.g., dynamic programming.
 			\item General graph, the inference problem is \nphard\ and can be solved with approximation algorithm, e.g., loopy belief propagation.
 		\end{itemize}
@@ -422,7 +422,10 @@ Department of Computer Science, Aalto University
 		\begin{align*}
 			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,F(\vw,\vx,\vy)  = \underset{\vy\in\vYcal}{\argmax}\,\sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}. 
 		\end{align*}
+		$\phi_G(\vx,\vy) = \{\phi_{G,e}(\vx,\vy_e)\}_{e\in G},\vw_G = \{\vw_{G,e}\}_{e\in G},||\phi_G(\vx,\vy)||=||\vw_{G}||=1$
 		\item For a complete graph, there are $\ell^{\ell-2}$ unique spanning trees.
+		\item $\phi_T(\vx,\vy)=\{\phi_e(\vx,\vy)\}_{e\in T}$ is the projection of $\phi_G(\vx,\vy)$ on $T\in S(G)$.
+		\item $\vw_{T}=\{\vw_{G,e}\}_{e\in T}$ is the projection of $\vw_G$ on $T\in S(G)$.
 		\item We can write $F(\vw,\vx,\vy)$ as a conic combination of all spanning trees
 		\begin{align*}
 			F(\vw,\vx,\vy) &= \underset{T\in U(G)}{\E}a_T\ip{\vw_T}{\phib_T(\vx,\vy)}\\
@@ -460,6 +463,13 @@ Department of Computer Science, Aalto University
 			\st & \quad \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{\sqrt{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
 			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
 		\end{align*}
+		\item The marginal-dual form is given by
+		\begin{align*}\footnotesize
+			\underset{\vmu\in\Mcal}{\maximize} & \quad \sum_{i=1}^{n}\left( \vmu_{T_i}\vell_{T_i} - \frac{1}{2}\vmu_{T_i}K^{\Delta\phib}_{T_i}\vmu_{T_i}\right)\\
+			\st & \quad \sum_{u_e}\vmu_{T_i,e}(u_e)\le C.
+		\end{align*}
+		\item Inside the summation, there is a structure output model with parameter $\vmu_{T_i}$ defined on a spanning tree $T_i$.
+		\item The problem is how to jointly optimize structured output models defined on $n$ spanning trees.
 	\end{itemize}
 \end{frame}
 
@@ -478,40 +488,140 @@ Department of Computer Science, Aalto University
 	\end{itemize}
 \end{frame}
 
-
-
-
 %
-\begin{frame}[allowframebreaks]{Fast inference over a collection of trees}
+\begin{frame}[allowframebreaks]{Fast inference for a collection of trees}
 	\begin{itemize}
 		\item For each tree $T_t$, instead of computing the best multilabel $\vy_{T_t}$, we compute $K$-best multilabels in $\Theta(K\ell)$ time
 		\begin{align*}
 			\Ycal_{T_t,K} = \{\vy_{T_t,1},\cdots,\vy_{T_t,K}\}.
 		\end{align*}
-		\item Performing the same computation on all trees gives a candidate list of $n\times K$ multilabels in $\Theta(nK\ell)$ time
+		\item Performing the same computation on all trees gives a candidate list of $n\times K$ multilabels (K best list) in $\Theta(nK\ell)$ time
 		\begin{align*}
 			\Ycal_{\Tcal,K}=\Ycal_{T_1,K}\cup\cdots\Ycal_{T_n,K}.
 		\end{align*}
-		\item For now, we assume the best scoring multilabel of a collection of trees exists in the list $\Ycal_{\Tcal,K}$. 
-		\item We proved that with a high probability $\vy_{\Tcal}$ will appear in $\Ycal_{\Tcal,K}$.
-		\item We can identify $\vy_{\Tcal}$ from $\Ycal_{\Tcal,K}$.
+		\item We prove that with high probability the global best multilabel will exist in K best list.
+		\item We have developed a condition to verify the global best multilabel from K best list in linear time $\Theta(nK)$.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Exact line search for a single tree}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.3]{optimization_single_tree.pdf}
+		\end{center}
+	\end{figure}
+	\begin{itemize}
+		\item Line search gives the optimal feasible solution as a stationary point ($\tau$)
+		\begin{align}
+			\underset{\tau}{\maximize} &\quad f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})\label{tree_line_search}\\
+			\st &\quad 0\le\tau\le1.\nonumber
+		\end{align}
+		\item $\tau=0$ corresponds to no update.
+		\item Feasible maximum update is achieved at $\tau=1$. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Optimization on a collection of $n$ spanning trees}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.3]{best_update.pdf}
+		\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Exact line search for the collection of trees}
+	\begin{itemize}
+		\item The step size along the update direction $\tau$ is given by the exact line search
+		\begin{align*}\footnotesize
+			\underset{\tau}{\maximize} &\quad {\color{aaltored}\sum_{i=1}^n}f(\vmu_{T_i}^k + \tau\Delta\vmu_{T_i}^{k})\\
+			\st &\quad 0\le\tau\le1.
+		\end{align*}
+		\item Problems with the {\em best update}
+		\begin{enumerate}\footnotesize
+			\item The best feasible solution on a single tree might not be the best feasible solution on a collection of trees
+			\begin{align*}
+				{\vmu}_{T}^{k,*}\notin{\color{aaltored}{}{\vmu}_{T_i}^{k,*}{\color{aaltored}}_{i=1}^n}.
+			\end{align*}
+			\item $\kappa$-best inference algorithm
+			\begin{align*}
+				({\vmu}_{T_i}^{k,*_h})_{h=1}^{\kappa} &= \underset{\vmu\in\Mcal}{\argmax}\,\vmu\tp g_{T_i}^k,\,{\color{aaltored}\forall i}\\
+				{\vmu}_{T}^{k,*} &\in {\color{aaltored}{}{\vmu}_{T_i}^{k,*_h}{\color{aaltored}}_{i=\{1,\cdots,n\},h\in\{1,\cdots,\kappa\}}}.
+			\end{align*}
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Update with multiple directions}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[scale=0.3]{multiple_update.pdf}
+		\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Newton method to compute $\vtau$}
+	\begin{itemize}\footnotesize
+		\item We want to find $\tau$ that maximize the objective function given the update
+		% \begin{align*}\footnotesize
+		% 	&f(\vmu^{G,k} + \Delta{\vmu}^{G,k+1}) \\
+		% 	&= (\vmu^{G,k} + \Delta{\vmu}^{G,k+1})\tp\ell_G - \frac{1}{2}(\vmu^{G,k} + \Delta{\vmu}^{G,k+1})\tp K_G (\vmu^{G,k} + \Delta{\vmu}^{G,k+1}).
+		% \end{align*}
+		\begin{align*}
+			\underset{\tau}{\maximize} & \quad f(\vmu^{G,k} + \Delta{\vmu}^{G,k+1})\\
+			\st & \quad 0\le\tau_i\le1,\,\sum_{i=1}^n\tau_i\le1,\,\forall i.
+		\end{align*}
+		\item The objective is quadratic with respect to $\vtau$.
+		\item We use Newton method to find $\vtau$ that maximize the objective.
+		\item $\vtau$ is projected into the feasible region.
 	\end{itemize}
 \end{frame}
 
 
 %
-\begin{frame}{}
+\begin{frame}{Performance of the Inference Algorithm}
 	\begin{itemize}\footnotesize
-		\item
+		\item $10$ datasets, $|\Tcal| = \{5,10,40\}, K=\{2,4,8,16,32,40,60\}$
+		\item Y-axis is the percentage of examples with exact inference.
+		\item X-axis is the value of $K$ as the percentage of the number of microlabels.
+		\item $K=100\%|Y|$ corresponds to a complexity of $\Theta(nl^2)$.
+	\end{itemize}
+	\begin{figure}
+		\begin{center}
+			\includegraphics[width=11cm]{./result_plot.pdf}
+			%\caption{Percentage of examples with provably optimal $\vy$ being in the $K$-best lists plotted as a function of K, scaled with respect to the number of microlabels in the dataset.}
+		\end{center}
+	\end{figure}
+\end{frame}
+
+
+
+%
+\begin{frame}{\rta\ on multilabel benchmark datasets}
+	\begin{figure}\footnotesize
+		\begin{center}
+			\includegraphics[width=11cm]{./result_table.pdf}
+			\caption{\footnotesize Prediction performance of each algorithm in terms of microlabel loss and 0/1 loss. The best performing algorithm is highlighted with boldface, the second best is in italic}
+		\end{center}
+	\end{figure}
+\end{frame}
+
+
+
+
+%
+\begin{frame}{Conclusion}
+	\begin{itemize}\footnotesize
+		\item Structured output prediction in multilabel classification problems.
+		\item Utilize label correlation described by an output graph to make accuracy predictions.
+		\item We focus on the problems where the output graph is unknown.
+		\item We model the complete pairwise correlation with an complete graph.
+		\item We approach the \nphard\ inference problem on the complete graph by a collection of its spanning trees.
+		\item The proposed model has better performance on multilabel benchmark datasets.
+		\item 
 	\end{itemize}
 \end{frame}
 
-%
-\begin{frame}{}
-	\begin{itemize}\footnotesize
-		\item
-	\end{itemize}
-\end{frame}
 
 
 
