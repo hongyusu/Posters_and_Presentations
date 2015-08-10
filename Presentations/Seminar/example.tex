@@ -212,7 +212,7 @@ Department of Computer Science, Aalto University
 %
 \begin{frame}{Input-output feature maps}
 	\begin{itemize}\footnotesize
-		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network $G=(E,V)$.
+		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network (undirected graph) $G=(E,V)$.
 		\item A vertex $v_i\in V$ corresponds to a microlabel $y_i$, an edge $(v_i,v_j)\in E$ corresponds to the pairwise correlation of the microlabel $y_i$ and $y_j$.
 		\item $G$ models potential pairwise correlations.
 		\begin{center}
@@ -229,7 +229,7 @@ Department of Computer Science, Aalto University
 %
 \begin{frame}{An example of output feature map}
 	\begin{itemize}\footnotesize
-		\item Markov network $G=(E,V)$
+		\item Markov network (undirected graph) $G=(E,V)$
 		\begin{center}
 			\includegraphics[scale=0.3]{./figures/outputgraph.pdf}
 		\end{center}
@@ -317,10 +317,13 @@ Department of Computer Science, Aalto University
 			\mu_k^* = \underset{\mu_k\in\Mcal}{\argmax} \, \mu_k^{\tp}g_k = \underset{\mu_k\in\Mcal}{\argmax} \, \sum_e\mu(k,e)^{\tp}g(k,e). \label{inferencemarginaldual}
 		\end{align}
 		\item (\ref{inferencemarginaldual}) is an instantiation of \map\ problem 
-		\begin{itemize}\footnotesize
-			\item $G$ is tree, exact inference with polynomial time algorithm, e.g, dynamic programming in \cite{Rousu07}
-			\item $G$ is general graph, approximate inference, e.g. loopy belief propagation in \cite{su10structured}
-		\end{itemize}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\footnotesize
+			 Output graph & Inference problem & Inference algorithm \\ \hline
+			 Tree & Polynomial & DP \cite{Rousu07}  \\
+			 Graph & \nphard & LBP \cite{su10structured}  \\ \hline
+		\end{tabular}
 		\item Perform the update via exact line search $\mu_k \leftarrow \mu_k + \tau(\mu_k^*-\mu_k)$.
 	\end{itemize}
 \end{frame}
@@ -362,17 +365,139 @@ Department of Computer Science, Aalto University
 		\end{enumerate}
 \end{frame}
 
+%
+\begin{frame}{Output graph is directed}{Predicting network response}
+	\only<1>{A twitter (follower-ship) network consists of five users. \includegraphics[scale=0.5]{./figures/motivation_1.pdf}}
+	\only<2>{Alice tweets a message after World Cup final. \includegraphics[scale=0.5]{./figures/motivation_2.pdf}}
+	\only<3>{Bob sees the message and retweets the message from Alice. \includegraphics[scale=0.5]{./figures/motivation_3.pdf}}
+	\only<4>{Jacob retweets the message from Bob. \includegraphics[scale=0.5]{./figures/motivation_4.pdf}}
+	\only<5>{Ben retweets the message from Jacob. \includegraphics[scale=0.5]{./figures/motivation_5.pdf}}
+	\only<6>{David does not like soccer.  \includegraphics[scale=0.5]{./figures/motivation_6.pdf}}
+\end{frame}
+
+
+\begin{frame}{Network Response Problem}
+	\begin{itemize}\footnotesize
+		\item Definition:
+		\begin{itemize}\footnotesize
+			\item Given a complex network $G=(E,V)$, and an action $\vx$ performed on the network.
+			\item Task: predict the subnetwork that responses to the action.
+			\begin{itemize}\footnotesize
+				\item Which nodes $v\in V$ perform the action? $V_{\vx}=\{Alice,Bob,Jacob,Ben\}$
+				\item Which directed edges $e\in E_{\vx}$ relay the action from one node to its neighbors? $E_{\vx}=\{a,c,d\}$
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\vspace{-10mm}
+	\begin{figure}
+		\center
+		\includegraphics[scale=0.25]{./figures/problem_definition.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Direct output graph}
+	\begin{itemize}\footnotesize
+		\item Model is defined on directed network.
+		\begin{itemize}\footnotesize
+			\item Any undirected network can be seen as special case by replacing undirected edges with two directed ones.
+			\begin{figure}
+				\center
+				\includegraphics[scale=0.2]{./figures/model_definition.pdf}
+			\end{figure}
+		\end{itemize}
+		\item Notation of edge labels:
+		\begin{figure}
+			\center
+			\includegraphics[scale=0.2]{./figures/notations.pdf}
+		\end{figure}
+		\item {\it Input feature}: Encode $\vx$ as $\varphib(\vx)$ (e.g. bag-of-word of a tweet).
+		\item {\it Output feature}: Encode $G_{\vy}$ as $\psib(\vy)$ (e.g. a set of edges and their labels)
+	\end{itemize}
+	\begin{multicols}{2}
+	{\scriptsize
+		\begin{align*}
+			&\psib(\vy) = \\
+			& ( \underbrace{\underbrace{1}_{++}, \underbrace{0}_{+-}, \underbrace{0}_{--}}_{a}, 
+			\underbrace{\underbrace{1}_{++}, \underbrace{0}_{+-}, \underbrace{0}_{--}}_{b},
+			\underbrace{\underbrace{0}_{++}, \underbrace{1}_{+-}, \underbrace{0}_{--}}_{c},\cdots)
+		\end{align*}}
+	\begin{figure}
+		\includegraphics[scale=0.25]{./figures/propagation_example.pdf}
+	\end{figure}
+	\end{multicols}
+\end{frame}
+
+\begin{frame}{Structure Output Prediction Model}
+	\begin{itemize}
+		\item Compatibility score for $(\vx,\vy)$: $F(\vx,\vy,\vw) = \ip{\vw}{\phib(\vx,\vy)}$
+			\begin{itemize}\footnotesize
+				\item $\vw$ is the feature weight to be learned.
+				\item $\phib(\vx,\vy)=\varphib(\vx)\otimes\psib(\vy)$ is joint feature map.
+				\item Intuition: given an action $\vx$, the score of correct response graph $(\vx,\vy)$ should be higher than any incorrect response graph $(\vx,\vy')$
+				\begin{align*}
+					F(\vx,\vy,\vw)>F(\vx,\vy',\vw), \quad \forall \vy'\in\Hcal(G).
+				\end{align*}
+			\end{itemize}
+		\item $\vw$ is learned by solving structured output learning problem
+		\begin{align*}
+			\underset{\vw,\xi}{\minimize} &\quad \frac{1}{2}||\vw||^2_2+C\sum_{i=1}^{m}\xi_i \\
+			\textbf{s.t.} &\quad F(\vx_i,\vy_i;\vw) > \underset{G_{\vx_i}'\in\Hcal(G)}{\maximize} (F(\vx_i,\vy_i', )\\
+			&\quad +\ell_G(\vy_i,\vy_i'))-\xi_i, \xi_i\ge 0,\forall i\in\{1,\cdots,m\},
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Inference Problem}
+	\begin{itemize}
+		\item To solve the optimization, we have to solve similar inference problem appeared both in training and in prediction.
+		\item In prediction phase:
+		\begin{itemize}\footnotesize
+			\item Given the feature weight $\vw$ and the complex network $G$.
+			\item To find out a \daggraph\ $H^*=(V_H,E_H)$ that gives the maximal compatibility score for a given action $\vx$
+		\end{itemize}
+	\begin{align}
+		H^*(\vx) = \underset{H\in \Hcal(G)}{\argmax}\, \sum_{e\in E^H}s_{\vy_e}(e,\vx,\vw).\label{spininference}
+	\end{align}
+	\begin{lemma}\footnotesize
+		Finding the graph that maximizes Eq.~(\ref{spininference}) is an $\mathcal{NP}$-hard problem.
+	\end{lemma}
+	\begin{proof}\footnotesize
+		Reduction from {\sc max-cut} problem.
+	\end{proof}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Approximate Inference via {\sc SDP} relaxation}
+	\begin{itemize}\footnotesize
+		\item We formulate the inference problem as {\it integer quadratic program} ({\sc iqp}).
+		\begin{itemize}\footnotesize
+			\item Introduce for each node $u\in V$ a binary variable $x_u\in\{-1,+1\}$.
+			\item Introduce a special variable $x_0\in\{-1,+1\}$ to distinguish activated node.
+		\end{itemize}
+		{\scriptsize
+		\begin{align*}
+		\maximize \; \frac{1}{4} \sum_{(u, v)\in E}\, [ & s_{\pn}(u,v) (1 + x_0 x_u - x_0 x_v - x_u x_v)  \\ 
+			+ & s_{\nn}(u,v) (1 - x_0 x_u - x_0 x_v + x_u x_v)  \\ 
+			+ & s_{\pp}(u,v) (1 + x_0 x_u + x_0 x_v + x_u x_v) ] \\
+		\textbf{s.t.} \quad  x_0, x_u, x_v &\in \{-1,+1\}, \text{ for all } u,v\in V,
+		\end{align*}}
+		\item {\sc iqp} is relaxed into {\em quadratic program} ({\sc qp}) and solved by {\it semidefinite programming relaxation} ({\sc sdp}).
+		\item Optimization guarantee $E[Z] \ge (\alpha-\epsilon) Z_{R} $ with $\alpha>0.796$, $Z$ is objective achieved by {\sc sdp}, $Z_R$ is objective of {\sc iqp}.
+	\end{itemize}
+\end{frame}
 
 %
-\begin{frame}{So far in slides}
+\begin{frame}{So far in sides}
 	\begin{itemize}\footnotesize
-		\item We have been working with multilabel classification problems in general.
-		\item We assume label correlation is described an output graph given {\em apriori}.
-		\item We develop structured output prediction model utilizing the output graph. 
-		\begin{itemize}\footnotesize
-			\item Tree, the inference problem can be solved exactly with a polynomial time algorithm, e.g., dynamic programming.
-			\item General graph, the inference problem is \nphard\ and can be solved with approximation algorithm, e.g., loopy belief propagation.
-		\end{itemize}
+		\item We develop structured output prediction model which model the label correlation with an output graph. 
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\footnotesize
+			 Output graph & Inference problem & Inference algorithm \\ \hline
+			 Tree & Polynomial & DP \cite{Rousu07}  \\
+			 Graph & \nphard & LBP \cite{su10structured}  \\ 
+			 \daggraph & \nphard & \sdp\ \cite{su14structured} \\ \hline
+		\end{tabular}
 		\item What if the output graph is not observed?
 	\end{itemize}
 \end{frame}
@@ -397,7 +522,7 @@ Department of Computer Science, Aalto University
 %
 \begin{frame}{Complete graph as output graph}
 	\begin{itemize}\footnotesize
-		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network $G=(E,V)$.
+		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network (undirected graph) $G=(E,V)$.
 		\item $G$ is a complete graph with $|V| = \ell$ nodes and $|E| = \frac{\ell(\ell-1)}{2}$ undirected edges.
 		\item $G$ models all pairwise correlations.
 		\item $\varphib(\vx)$ is the input feature map, e.g., bag-of-words feature of an example $\vx$.
@@ -579,7 +704,7 @@ Department of Computer Science, Aalto University
 
 
 %
-\begin{frame}{Performance of the Inference Algorithm}
+\begin{frame}{\rta\ inference algorithm}
 	\begin{itemize}\footnotesize
 		\item $10$ datasets, $|\Tcal| = \{5,10,40\}, K=\{2,4,8,16,32,40,60\}$
 		\item Y-axis is the percentage of examples with exact inference.
@@ -598,27 +723,120 @@ Department of Computer Science, Aalto University
 
 %
 \begin{frame}{\rta\ on multilabel benchmark datasets}
+	\begin{itemize}\footnotesize
+		\item Prediction performance on multilabel benchmark datasets.
+		\item Measurement of success is microlabel accuracy and multilabel accuracy.
+		\item The result is shown in the following table.
+	\end{itemize}
 	\begin{figure}\footnotesize
 		\begin{center}
 			\includegraphics[width=11cm]{./result_table.pdf}
-			\caption{\footnotesize Prediction performance of each algorithm in terms of microlabel loss and 0/1 loss. The best performing algorithm is highlighted with boldface, the second best is in italic}
 		\end{center}
 	\end{figure}
 \end{frame}
 
 
+\begin{frame}{\spin\ for context-sensitive prediction}
+	\begin{itemize}\footnotesize
+		\item We assume action $\varphib(\vx)$ is known (e.g. bag-of-word of a tweet).
+		\item Task is to predict the response network given the action.
+		%\item {\em Predicted Subgraph Coverage} (PSC) is defined as $\mathrm{PSC}=\frac{1}{mn} \sum_{i=1}^{m} \sum_{v\in V_i} |G_v|$.
+		\item {\em Predicted Subgraph Coverage} (PSC) is the relative size of correctly predicted subgraph in terms of node labels.
+		\item The result is shown in the following table.
+	\end{itemize}	
+		\begin{table}[t]
+		\scriptsize
+		\centering
+		\begin{tabular}{|@{  }c@{  }|@{}c@{  }c@{  }c@{}|@{}c@{  }c@{  }c@{}|@{}c@{ }c@{}|@{}c@{  }c@{  }c@{}|}
+		  \hline
+		\multirow{2}{*}{\textbf{Dataset}} & \multicolumn{3}{c}{\textbf{Node Accuracy}} & \multicolumn{3}{|c}{\textbf{Node $F_1$ Score}} & \multicolumn{2}{|c}{\textbf{Edge Acc}} & \multicolumn{3}{|c|}{{\em PSC}}  \\ \cline{2-12}
+		 & \scriptsize{SVM} & \scriptsize{MMCRF} & \scriptsize{SPIN} & \scriptsize{SVM} & \scriptsize{MMCRF} & \scriptsize{SPIN} & \scriptsize{SVM}  & \scriptsize{SPIN}  & \scriptsize{SVM} & \scriptsize{MMCRF} & \scriptsize{SPIN}  \\ \hline
+		   memeS  & \textbf{73.4} & {68.0} & \em{72.2} & {39.0} & \em{39.8} & \textbf{47.1} & \textbf{62.7} & {45.6} & {23.4} & \em{25.3} & \textbf{33.6} \\ 
+		   memeM  & \textbf{82.1} & {79.0} & \em{81.5} & {29.1} & \em{30.1} & \textbf{38.0} & {61.1} & \textbf{68.8} & {18.6} & \em{18.8} & \textbf{28.3} \\ 
+		   memeL  & \textbf{89.9} & {88.3} & \em{89.8} & {26.7} & \em{27.1} & \textbf{35.0} & {45.5} & \textbf{80.0} & {17.7} & \em{18.9} & \textbf{27.6} \\ 
+		%M100  & {71.2} & \em{73.6} & \textbf{76.7} & {49.3} & \em{50.8} & \textbf{54.3} & {33.3} & \textbf{61.7} & {33.3} & \textbf{35.6} & \em{34.6} & \textbf{0.1} & {0.2} & \textbf{0.1}\\ 
+		%M500  & {89.0} & \em{91.4} & \textbf{92.0} & \textbf{18.8} & {13.5} & \em{14.6} & {28.2} & \textbf{92.6} & \em{29.3} & {26.4} & \textbf{29.5} & {9.0} & \em{3.8} & \textbf{3.2}\\ 
+		M700  & {91.9} & \textbf{94.1} & \em{92.1} & \em{13.8} & {7.3} & \textbf{14.2}  & {26.3} & \textbf{93.0} & \em{29.4} & {23.9} & \textbf{34.4} \\ 
+		M1k & {94.1} & \textbf{95.8} & \em{94.2} & \textbf{10.9} & {3.5} & \em{9.3}   & {26.6} & \textbf{94.7} & \em{33.7} & {16.6} & \textbf{35.2} \\ 
+		M2k & \em{96.8} & \textbf{97.6} & {96.7} & \textbf{6.2} & {1.4} & \em{3.4}    & {25.3} & \textbf{97.6} & \textbf{34.6} & {9.6} & \em{14.7} \\ 
+		%L100  & {69.4} & \em{72.2} & \textbf{75.7} & {51.1} & \em{53.1} & \textbf{57.4} & {31.6} & \textbf{62.3} & {30.9} & \em{31.7} & \textbf{33.4} & \textbf{0.1} & \em{0.2} & {0.3}\\ 
+		%L500  & {85.9} & \textbf{89.1} & \em{86.8} & \em{21.7} & {15.1} & \textbf{24.7} & {27.9} & \textbf{87.9} & \em{14.2} & {11.2} & \textbf{19.7} & {6.5} & \em{3.2} & \textbf{2.1}\\ 
+		L700  & {89.7} & \textbf{92.4} & \em{89.7} & \em{16.2} & {9.4} & \textbf{17.3}  & {26.5} & \textbf{90.4} & \em{9.5} & {6.7} & \textbf{12.5} \\ 
+		L1k & \em{92.4} & \textbf{94.4} & {91.5} & \em{12.4} & {6.4} & \textbf{13.9}  & {26.4} & \textbf{92.3} & \em{6.1} & {4.4} & \textbf{8.4} \\ 
+		L2k & \em{92.5} & \textbf{94.5} & {91.9} & \em{12.3} & {5.4} & \textbf{12.7}  & {26.5} & \textbf{93.2} & \em{6.0} & {2.9} & \textbf{7.2} \\ \hline
+		\textbf{Geom.}  & {85.5} & \em{86.4} & \textbf{86.6} & \em{19.8} & {12.6} & \textbf{20.3} & {32.6} & \textbf{79.7} & \em{18.9} & {14.2} & \textbf{21.7} \\
+		\hline
+		\end{tabular}
+		\label{table_global_res_svm}
+		\end{table}
+\end{frame}
+
+\begin{frame}{\spin\ for context-free prediction}
+	\begin{itemize}
+		\item We assume action is unknown during prediction phase.
+		\item Task is to predict directed edges (network skeleton) from a cascade of actions.
+		\item The measure of success is {\em Precision@$K$}, where we ask for top-$K$ percent edge predictions and compute the precision.
+		\item The result is shown in the following table.
+	\end{itemize}
+			\begin{table}[t]
+			\scriptsize
+			\centering
+			\begin{tabular}{|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|}
+			  \hline
+			\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Model}} & \multirow{2}{*}{\textbf{T ({\tiny$10^3$s})}} & \multicolumn{6}{c|}{Precision @ $K$} \\ \cline{4-9}
+			 & & & {$10\%$} & {$20\%$} & {$30\%$} & {$40\%$} & {$50\%$} & {$60\%$} \\ \hline
+			\multirow{3}{*}{\textbf{memeS}}
+			& SPIN & \em{5.50} & \textbf{82.9} & \textbf{81.0} & \textbf{76.0} & \textbf{74.0} & \textbf{74.0} & \textbf{70.0}  \\  
+			& ICM-EM & \textbf{0.01} & {60.3} & {63.5} & {65.1} & {62.0} & {62.0} & {61.5}  \\ 
+			& NETRATE & {5.83} & \em{76.2} & \em{73.8} & \em{70.4} & \em{68.7} & \em{68.7} & \em{66.8} \\ \hline 
+			\multirow{3}{*}{\textbf{memeM}}
+			& SPIN & \em{5.52} & \textbf{82.7} & \textbf{72.1} & \textbf{70.5} & \textbf{69.2} & \textbf{69.2} & \textbf{67.9}  \\  
+			& ICM-EM & \textbf{0.02} & {56.3} & {55.3} & {56.8} & {57.4} & {57.4} & {56.3}  \\ 
+			& NETRATE & {13.93} & \em{61.2} & \em{64.6} & \em{62.9} & \em{62.5} & \em{62.5} & \em{62.4}  \\ \hline 
+			\multirow{3}{*}{\textbf{memeL}}
+			& SPIN & \em{4.75} & \textbf{82.2} & \textbf{73.6} & \textbf{69.1} & \textbf{66.7} & \textbf{66.7} & \textbf{65.9}  \\  
+			& ICM-EM & \textbf{0.01} & {52.1} & {55.7} & {54.2} & {56.5} & {56.5} & {56.7}  \\ 
+			& NETRATE & {12.63} & \em{56.5} & \em{57.8} & \em{60.0} & \em{59.3} & \em{59.3} & \em{59.4}  \\ \hline
+			\end{tabular}
+			\end{table}
+\end{frame}
+
+\begin{frame}{Conclusion}
+	\begin{itemize}
+		\item 
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\footnotesize
+			 Output graph & Inference problem & Inference algorithm \\ \hline
+			 Tree & Polynomial & DP \cite{Rousu07}  \\
+			 Graph & \nphard & LBP \cite{su10structured}  \\ 
+			 \daggraph & \nphard & \sdp\ \cite{su14structured} \\ 
+			 {\bf unknown} & \nphard & \rta\ \cite{su14multilabelnips} \\ \hline
+		\end{tabular}
+	\end{itemize}
+\end{frame}
 
 
 %
 \begin{frame}{Conclusion}
 	\begin{itemize}\footnotesize
-		\item Structured output prediction in multilabel classification problems.
-		\item Utilize label correlation described by an output graph to make accuracy predictions.
-		\item We focus on the problems where the output graph is unknown.
-		\item We model the complete pairwise correlation with an complete graph.
-		\item We approach the \nphard\ inference problem on the complete graph by a collection of its spanning trees.
-		\item The proposed model has better performance on multilabel benchmark datasets.
-		\item 
+		\item Structured output prediction is family of methods designed for multilabel classification problems.
+		\item The output graph is often assume to known {\em apriori}.
+		\begin{itemize}\footnotesize
+			\item \mmcrf\ assumes tree or general undirected graph as output graph.
+			\item \spin\ assumes \daggraph\ as output graph.
+		\end{itemize}
+		\item In addition, we focus on the problems where the output graph is unobserved.
+		\begin{itemize}\footnotesize
+			\item \mve\, \amm\, \mam\ aggregates the inference results from based models.
+			\item \rta\ is a unified learning and inference framework.
+			\begin{itemize}\footnotesize
+				\item Model all pairwise correlations with a complete graph.
+				\item Under margin assumption, the properties of a complete graph can be achieved by a collection of its spanning tree.
+			\end{itemize} 
+		\end{itemize}
+		\item All developed models are tested with real-world applications or benchmark datasets.
+		\item Codes are available from \href{http://hongyusu.github.io}{http://hongyusu.github.io}.
 	\end{itemize}
 \end{frame}
 
