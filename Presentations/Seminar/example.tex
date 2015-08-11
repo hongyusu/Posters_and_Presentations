@@ -52,21 +52,34 @@ Department of Computer Science, Aalto University
 \footnotesize
 
 %
+\begin{frame}{}
+	\begin{center}
+		The update-to-date version of this slide is available from \href{https://github.com/hongyusu/Posters_and_Presentations/raw/master/Presentations/Seminar/example.pdf}{my GitHub page}.
+	\end{center}
+\end{frame}
+
+\begin{frame}{About me}
+	\begin{center}
+		Take a look at \href{http://hongyusu.github.io}{my homepage} and \href{http://hongyusu.github.io/pages.html}{my technical blog}.
+	\end{center}
+\end{frame}
+
+%
 \begin{frame}{Multilabel classification}
 	\begin{itemize}\footnotesize
 		\item {\em Multilabel classification} is an important research field in machine learning.
 		\item Input variable $\vx\in\vXcal$ is in $d$ dimensional input space $\vXcal=\RR^d$.
-		\item Output variable $\vy=(y_1,\cdots,y_l)\in\vYcal$ is a binary vector consist of $l$ binary variables $y_j\in\{+1,-1\}$.
+		\item Output variable $\vy=(y_1,\cdots,y_l)\in\vYcal$ is a binary vector consist of $\ell$ binary variables $y_j\in\{+1,-1\}$.
 		\item $\vy$ is called a multilabel, $y_j$ is called a microlabel.
-		\item Output space is composed by a Cartesian product of $l$ sets
+		\item Output space is composed by a Cartesian product of $\ell$ sets
 		\begin{align*}
-			\vYcal=\Ycal_1\times\cdots\times\Ycal_l,\,\Ycal_i=\{+1,-1\}.
+			\vYcal=\Ycal_1\times\cdots\times\Ycal_{\ell},\,\Ycal_i=\{+1,-1\}.
 		\end{align*}
 		\item For example, in document classification, a document $\vx$ can be classified as ``news'', ``movie'', and ``science''
 		\begin{align*}
 \vy=(\underbrace{+1}_{\text{news}},\underbrace{+1}_{\text{movie}},\underbrace{-1}_{\text{sports}},\underbrace{-1}_{\text{politics}},\underbrace{-1}_{\text{finance}},\underbrace{+1}_{\text{science}},\underbrace{-1}_{\text{art}}).
 		\end{align*}\footnotesize
-		\item The goal is to find a mapping function $f\in\Hcal$ that predicts the best values of an output given an input $f:\vXcal\rightarrow\vYcal$.
+		\item The goal is to find a mapping function $f\in\Hcal$ that predicts the best values of an output $\vy$ given an input $\vx$, $f:\vXcal\rightarrow\vYcal$.
 	\end{itemize}
 \end{frame}
 
@@ -75,9 +88,9 @@ Department of Computer Science, Aalto University
 	\begin{itemize}\footnotesize
 		\item The size of the output space (searching space) is exponential in the number of microlabels.
 		\begin{align*}
-			\vYcal=\Ycal_1\times\cdots\times\Ycal_l,\,\Ycal_i=\{+1,-1\}\quad|\vYcal| = 2^l.
+			\vYcal=\Ycal_1\times\cdots\times\Ycal_{\ell},\,\Ycal_i=\{+1,-1\}\quad|\vYcal| = 2^{\ell}.
 		\end{align*}
-		\item The dependency of microlabels needs to be exploited to improve the prediction performance.
+		\item The dependency of microlabels needs to be exploited in order to improve the prediction performance.
 		\begin{itemize}\footnotesize
 			\item If a document is about ``movie'', then it is more likely to be about ``art'' than ``science''.
 		\end{itemize}
@@ -114,28 +127,29 @@ Department of Computer Science, Aalto University
 \begin{frame}{Flat multilabel classification approaches}
 	\begin{itemize}\footnotesize
 		\item The categorization is proposed in \cite{Tsoumakas10mining}
+		\item The output variable $\vy$ is assumed to be a flat vector.
 		\item Problem transformation
 		\begin{itemize}\footnotesize
-			\item Model the multilabel classification as a collection of single-label classification problems and solve each problem independently.
-			\item For example, \mlknn\ \cite{Zhang07mlknn}, \cc\ \cite{Read09classifier,Read11classifier}, \iblr\ \cite{Cheng09combining}.
+			\item Model multilabel classification as a collection of single-label classification problems and solve each problem independently.
+			\item For example, \mlknn\ \cite{Zhang07mlknn}, \cc\ \cite{Read11classifier}, \iblr\ \cite{Cheng09combining}.
 		\end{itemize}
 		\item Algorithm adaptation 
 		\begin{itemize}\footnotesize
-			\item Modify the single-label classification algorithm for multilabel classification problems.
-			\item For example, \adaboostmh\ \cite{Schapire99improved,Esuli2008boosting}, \corrlog\ \cite{Bian12corrlog}, \mtl\ \cite{Argyriou08convex}.
+			\item Modify single-label classification models for multilabel classification problems.
+			\item For example, \corrlog\ \cite{Bian12corrlog}, \mtl\ \cite{Argyriou08convex}, \adaboostmh\ \cite{Schapire99improved,Esuli2008boosting}.
 		\end{itemize}
-		\item These approaches does not model the dependency structure explicitly.
+		\item These approaches does not model the dependency structure of microlabels explicitly.
 	\end{itemize}
 \end{frame}
 
 %
 \begin{frame}{Structured output prediction}
 	\begin{itemize}\footnotesize
-		\item Model the dependency structure with an output graph defined on microlabels.
+		\item Model the dependency structure with an {\em output graph} defined on microlabels.
 		\item The categorization is proposed in \cite{Su2014Multilabel}.
 		\item Hierarchical classification
 		\begin{itemize}\footnotesize
-			\item The output graph is a rooted tree or a \daggraph\ defining different levels of granularities.
+			\item The output graph is a rooted tree defining different levels of granularities.
 			\item For example, \svmstruct\ \cite{THJA04,TJTA05}.
 		\end{itemize}
 		\item Graph labeling
@@ -157,9 +171,9 @@ Department of Computer Science, Aalto University
 		\end{itemize}
 		\item Structured output prediction models working with unknown output graph.
 		\begin{itemize}\footnotesize
-			\item \mve\ to combine multiple structured output predictors with ensemble \cite{su11mutitask}.
+			\item \mve\ to combine multiple structured output predictors by ensemble \cite{su11mutitask}.
 			\item \amm\ and \mam\ to aggregate the inference results from multiple structured output predictors \cite{su2013multilabelacml,su15multilabel}.
-			\item \rta\ to perform joint learning and inference over a collection of random spanning trees \cite{su14multilabelnips}.
+			\item \rta\ to perform joint learning and inference over a collection of random spanning tree predictors \cite{su14multilabelnips}.
 		\end{itemize}
 		\item Codes for developed models are available from \href{http://hongyusu.github.io}{http://hongyusu.github.io}.
 	\end{itemize}
@@ -170,10 +184,14 @@ Department of Computer Science, Aalto University
 \begin{frame}{Outline}
 	\begin{itemize}\footnotesize
 		\item Preliminaries
-		\item Structured output learning with known output graph
-		\item Structured output learning with unknown output graph
-		\item Future work
-		\item Experimental results
+		\item Structured output prediction
+		\begin{itemize}\footnotesize
+			\item Undirected graph structure
+			\item \daggraph\ structure
+			\item unknown structure
+		\end{itemize}
+		\item Experimental evaluations
+		\item Conclusion and future work
 	\end{itemize}
 \end{frame}
 
@@ -203,7 +221,7 @@ Department of Computer Science, Aalto University
 		\begin{align}\footnotesize
 			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw}{\phib(\vx,\vy)}. \label{inference}
 		\end{align}
-		\item Search space $|\vYcal|=2^{\ell}$ is exponential in size.
+		\item Search space is exponential in size, $|\vYcal|=2^{\ell}$.
 		\item (\ref{inference}) is called {\em inference} problem which is \nphard\ for most output feature maps.
 		\item We aim at using an output feature map in which the inference can be solved with a polynomial algorithm, e.g., dynamic programming.
 	\end{itemize}
@@ -214,7 +232,7 @@ Department of Computer Science, Aalto University
 	\begin{itemize}\footnotesize
 		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network (undirected graph) $G=(E,V)$.
 		\item A vertex $v_i\in V$ corresponds to a microlabel $y_i$, an edge $(v_i,v_j)\in E$ corresponds to the pairwise correlation of the microlabel $y_i$ and $y_j$.
-		\item $G$ models potential pairwise correlations.
+		\item $G$ models potential pairwise correlations and is given {\em apriori}.
 		\begin{center}
 			\includegraphics[scale=0.3]{./figures/outputgraph.pdf}
 		\end{center}
@@ -277,7 +295,7 @@ Department of Computer Science, Aalto University
 			\st & \quad \ip{\vw}{\phib(\vx_k,\vy_k)} - \ip{\vw}{\phib(\vx_k,\vy)}  \geq \ell(\vy_k,\vy) -  \xi_k, \nonumber\\
 			& \quad \xi_k\ge0\, , \forall\ \vy\in\vYcal, k \in \set{1,\dots,m}.\nonumber
 		\end{align}
-		\item $\ell(\vy,\vy_i)$ scales the margin according to the multilabel $\vy$.
+		\item $\ell(\vy,\vy_k)$ scales the margin according to the multilabel $\vy$.
 		%\item (\ref{primalmmcrf}) is difficult as the number of the constraints is $m\times|\vYcal|$.
 	\end{itemize}
 \end{frame}
@@ -289,30 +307,31 @@ Department of Computer Science, Aalto University
 		\item The dual optimization problem is defined as
 		\begin{align}
 			\underset{\valpha\ge0}{\maximize} & \quad \valpha^{\tp}\vell - \frac{1}{2}\valpha^{\tp}K\valpha\label{mmcrfdual}\\
-			\st & \quad \sum_{\vy\in\vYcal}\alpha(i,\vy)\le C, \, \forall i\in\{1,\cdots,m\}\nonumber.
+			\st & \quad \sum_{\vy\in\vYcal}\alpha(k,\vy)\le C, \, \forall k\in\{1,\cdots,m\}\nonumber.
 		\end{align}
 		\item (\ref{mmcrfdual}) is also challenging due to the exponential number of dual variables.
 		\item We use edge marginals to replace the dual variables \cite{Taskar04max}
 		\begin{align*}
-			\mu(i,e,u_e) = \sum_{\vy}\ind{\psib_e(\vy)=u_e}\alpha(i,\vy). 
+			\mu(k,e,u_e) = \sum_{\vy}\ind{\psib_e(\vy)=u_e}\alpha(k,\vy). 
 		\end{align*}
 		\item The margin-dual optimization problem is 
 		\begin{align}
 			\underset{\vmu\in\Mcal}{\maximize} & \quad \vmu^{\tp}\ell - \frac{1}{2}\vmu^{\tp}K\vmu. \label{mmcrfmarginaldual}
 		\end{align}
-		\item The number of marginal-dual variable is $m\times4|E|$.
+		\item The number of marginal-dual variables is $m\times4|E|$.
 	\end{itemize}
 \end{frame}
 
 %
 \begin{frame}{Conditional gradient optimization}
 	\begin{itemize}\footnotesize
-		\item (\ref{mmcrfmarginaldual}) is optimized by conditional gradient decent which optimizes $\mu_k$ that corresponds to a single example while keeps others ($\mu_j,j\neq k$) fixed 
+		\item (\ref{mmcrfmarginaldual}) is optimized by conditional gradient decent.
+		\item In each iteration it optimizes $\mu_k$ that corresponds to a single example while keeps others ($\mu_j,j\neq k$) fixed 
 		\begin{align*}
 			\underset{\vmu_k\in\Mcal}{\maximize} & \quad \vmu_k^{\tp}\ell_k - \frac{1}{2}\sum_{j}\vmu_k^{\tp}K\vmu_j, \, \forall k.
 		\end{align*}
 		\item Current gradient of $\mu_k$ is given by $g_i = \ell_{i}-\sum_{j}K\mu_j$.
-		\item Compute a feasible solution $\mu_k^*$ as an update direction
+		\item Compute the maximal feasible solution $\mu_k^*$ as an update direction
 		\begin{align}
 			\mu_k^* = \underset{\mu_k\in\Mcal}{\argmax} \, \mu_k^{\tp}g_k = \underset{\mu_k\in\Mcal}{\argmax} \, \sum_e\mu(k,e)^{\tp}g(k,e). \label{inferencemarginaldual}
 		\end{align}
@@ -372,11 +391,11 @@ Department of Computer Science, Aalto University
 	\only<3>{Bob sees the message and retweets the message from Alice. \includegraphics[scale=0.5]{./figures/motivation_3.pdf}}
 	\only<4>{Jacob retweets the message from Bob. \includegraphics[scale=0.5]{./figures/motivation_4.pdf}}
 	\only<5>{Ben retweets the message from Jacob. \includegraphics[scale=0.5]{./figures/motivation_5.pdf}}
-	\only<6>{David does not like soccer.  \includegraphics[scale=0.5]{./figures/motivation_6.pdf}}
+	\only<6>{David is not a fan.  \includegraphics[scale=0.5]{./figures/motivation_6.pdf}}
 \end{frame}
 
 
-\begin{frame}{Network Response Problem}
+\begin{frame}{Network response problem}
 	\begin{itemize}\footnotesize
 		\item Definition:
 		\begin{itemize}\footnotesize
@@ -427,7 +446,7 @@ Department of Computer Science, Aalto University
 	\end{multicols}
 \end{frame}
 
-\begin{frame}{Structure Output Prediction Model}
+\begin{frame}{Structure output prediction model}
 	\begin{itemize}
 		\item Compatibility score for $(\vx,\vy)$: $F(\vx,\vy,\vw) = \ip{\vw}{\phib(\vx,\vy)}$
 			\begin{itemize}\footnotesize
@@ -447,7 +466,7 @@ Department of Computer Science, Aalto University
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Inference Problem}
+\begin{frame}{Inference problem}
 	\begin{itemize}
 		\item To solve the optimization, we have to solve similar inference problem appeared both in training and in prediction.
 		\item In prediction phase:
@@ -467,7 +486,7 @@ Department of Computer Science, Aalto University
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{Approximate Inference via {\sc SDP} relaxation}
+\begin{frame}[allowframebreaks]{Approximate inference via {\sc SDP} relaxation}
 	\begin{itemize}\footnotesize
 		\item We formulate the inference problem as {\it integer quadratic program} ({\sc iqp}).
 		\begin{itemize}\footnotesize
@@ -487,16 +506,16 @@ Department of Computer Science, Aalto University
 \end{frame}
 
 %
-\begin{frame}{So far in sides}
+\begin{frame}{Short summary}
 	\begin{itemize}\footnotesize
-		\item We develop structured output prediction model which model the label correlation with an output graph. 
+		\item We have seen so far. 
 		\begin{tabular}{|c|c|c|}
 			\hline
 			\footnotesize
 			 Output graph & Inference problem & Inference algorithm \\ \hline
 			 Tree & Polynomial & DP \cite{Rousu07}  \\
 			 Graph & \nphard & LBP \cite{su10structured}  \\ 
-			 \daggraph & \nphard & \sdp\ \cite{su14structured} \\ \hline
+			 $\rightarrow$ \daggraph & \nphard & \sdp\ \cite{su14structured} \\ \hline
 		\end{tabular}
 		\item What if the output graph is not observed?
 	\end{itemize}
@@ -599,7 +618,7 @@ Department of Computer Science, Aalto University
 \end{frame}
 
 %
-\begin{frame}{Inference Problem for a collection of trees}
+\begin{frame}{Inference problem for a collection of trees}
 	\begin{itemize}
 		\item The inference problem of \rta\ is defined as finding the multilabel $\vy_{\Tcal}(\vx)$ that maximizes the sum of scores over a collection of trees
 		\begin{align*}
@@ -629,7 +648,7 @@ Department of Computer Science, Aalto University
 	\end{itemize}
 \end{frame}
 
-
+\iffalse
 \begin{frame}{Exact line search for a single tree}
 	\begin{figure}
 		\begin{center}
@@ -701,15 +720,30 @@ Department of Computer Science, Aalto University
 		\item $\vtau$ is projected into the feasible region.
 	\end{itemize}
 \end{frame}
+\fi
 
+\begin{frame}{Short summary}
+	\begin{itemize}\footnotesize
+		\item We have seem so far.		
+	\end{itemize}
+		\begin{tabular}{|c|c|p{5.5cm}|}
+			\hline
+			\footnotesize
+			 Output graph & Inference problem & Inference algorithm \\ \hline
+			 Tree & Polynomial & DP \cite{Rousu07}  \\
+			 Graph & \nphard & LBP \cite{su10structured}  \\ 
+			 \daggraph & \nphard & \sdp\ \cite{su14structured} \\ 
+			 $\rightarrow${unknown} & \nphard & \mve\ \amm\ \mam\ \cite{su15multilabel} \rta\ \cite{su14multilabelnips} \\ \hline
+		\end{tabular}
+\end{frame}
 
 %
 \begin{frame}{\rta\ inference algorithm}
 	\begin{itemize}\footnotesize
-		\item $10$ datasets, $|\Tcal| = \{5,10,40\}, K=\{2,4,8,16,32,40,60\}$
+		\item $10$ datasets, $|\Tcal| = \{5,10,40\}, K=\{2,4,8,16,32,40,60\}$.
 		\item Y-axis is the percentage of examples with exact inference.
 		\item X-axis is the value of $K$ as the percentage of the number of microlabels.
-		\item $K=100\%|Y|$ corresponds to a complexity of $\Theta(nl^2)$.
+		\item $K=100\%|Y|$ corresponds to a complexity of $\Theta(n\ell^2)$.
 	\end{itemize}
 	\begin{figure}
 		\begin{center}
@@ -801,27 +835,14 @@ Department of Computer Science, Aalto University
 			\end{table}
 \end{frame}
 
-\begin{frame}{Conclusion}
-	\begin{itemize}
-		\item 
-		\begin{tabular}{|c|c|c|}
-			\hline
-			\footnotesize
-			 Output graph & Inference problem & Inference algorithm \\ \hline
-			 Tree & Polynomial & DP \cite{Rousu07}  \\
-			 Graph & \nphard & LBP \cite{su10structured}  \\ 
-			 \daggraph & \nphard & \sdp\ \cite{su14structured} \\ 
-			 {\bf unknown} & \nphard & \rta\ \cite{su14multilabelnips} \\ \hline
-		\end{tabular}
-	\end{itemize}
-\end{frame}
+
 
 
 %
 \begin{frame}{Conclusion}
 	\begin{itemize}\footnotesize
 		\item Structured output prediction is family of methods designed for multilabel classification problems.
-		\item The output graph is often assume to known {\em apriori}.
+		\item The output graph is often assume to be known {\em apriori}.
 		\begin{itemize}\footnotesize
 			\item \mmcrf\ assumes tree or general undirected graph as output graph.
 			\item \spin\ assumes \daggraph\ as output graph.
@@ -830,13 +851,55 @@ Department of Computer Science, Aalto University
 		\begin{itemize}\footnotesize
 			\item \mve\, \amm\, \mam\ aggregates the inference results from based models.
 			\item \rta\ is a unified learning and inference framework.
-			\begin{itemize}\footnotesize
+			\begin{itemize}\scriptsize
 				\item Model all pairwise correlations with a complete graph.
 				\item Under margin assumption, the properties of a complete graph can be achieved by a collection of its spanning tree.
 			\end{itemize} 
 		\end{itemize}
 		\item All developed models are tested with real-world applications or benchmark datasets.
 		\item Codes are available from \href{http://hongyusu.github.io}{http://hongyusu.github.io}.
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{Future work}{Inference algorithm}
+	\begin{itemize}\footnotesize
+		\item From K-best inference algorithm developed for \rta\ to a Newton method that does a conic combination of multiple update directions.
+		\only<1>
+		{\begin{figure}
+			\begin{center}
+				\includegraphics[scale=0.25]{./best_update.pdf}
+			\end{center}
+		\end{figure}}
+		\only<2>
+		{\begin{figure}
+			\begin{center}
+				\includegraphics[scale=0.25]{./multiple_update.pdf}
+			\end{center}
+		\end{figure}}
+	\end{itemize}
+\end{frame}
+
+%
+%
+\begin{frame}{Future work}{L$_1$ norm random spanning tree approximation \lonerta}
+	\begin{itemize}\footnotesize
+		\item From conic combination of a collection of random spanning trees
+		\begin{align*}
+			F(\vw,\vx,\vy) &= \underset{T\in U(G)}{\E}a_T\ip{\vw_T}{\phib_T(\vx,\vy)}\\
+			  &\underset{T\in U(G)}{\E}a_T^2=1,  \underset{T\in U(G)}{\E}a_T<1.
+		\end{align*}
+		\item To convex combination of a collection of random spanning trees
+		\begin{align*}
+			F(\vw,\vx,\vy) &= \underset{T\in U(G)}{\E}a_T\ip{\vw_T}{\phib_T(\vx,\vy)}\\
+			  &\underset{T\in U(G)}{\E}a_T=1,  \underset{T\in U(G)}{\E}a_T<1.
+		\end{align*}
+		\item Optimization problem
+		\begin{align*}
+			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\left(\sum_{i=1}^{n}\norm{\vw_{T_i}}\right)^2 + C\sum_{k=1}^{m}\xi_k\\
+			\st & \quad \frac{1}{{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
+			& \quad \xi_k\ge0\, , \forall\ k \in \set{1,\dots,m}.
+		\end{align*}
 	\end{itemize}
 \end{frame}
 

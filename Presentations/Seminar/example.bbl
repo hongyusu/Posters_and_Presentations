@@ -37,13 +37,6 @@ Marchand, M., Su, H., Morvant, E., Rousu, J., and Shawe-Taylor, J. (2014).
 \newblock In {\em Advances in Neural Information Processing System NIPS2014},
   page to appear.
 
-\bibitem[Read et~al., 2009]{Read09classifier}
-Read, J., Pfahringer, B., Holmes, G., and Frank, E. (2009).
-\newblock Classifier chains for multi-label classification.
-\newblock In Buntine, W., Grobelnik, M., Mladenić, D., and Shawe-Taylor, J.,
-  editors, {\em Machine Learning and Knowledge Discovery in Databases}, volume
-  5782, pages 254--269. Springer Berlin Heidelberg.
-
 \bibitem[Read et~al., 2011]{Read11classifier}
 Read, J., Pfahringer, B., Holmes, G., and Frank, E. (2011).
 \newblock Classifier chains for multi-label classification.
