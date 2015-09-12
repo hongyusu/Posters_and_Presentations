@@ -67,38 +67,38 @@ Department of Computer Science, Aalto University
 %
 \begin{frame}{Multilabel classification}
 	\begin{itemize}\footnotesize
-		\item {\em Multilabel classification} is an important research field in machine learning.
-		\item Input variable $\vx\in\vXcal$ is in $d$ dimensional input space $\vXcal=\RR^d$.
-		\item Output variable $\vy=(y_1,\cdots,y_l)\in\vYcal$ is a binary vector consist of $\ell$ binary variables $y_j\in\{+1,-1\}$.
-		\item $\vy$ is called a multilabel, $y_j$ is called a microlabel.
-		\item Output space is composed by a Cartesian product of $\ell$ sets
+		\item It is an important research field in machine learning.
+		\item Input variable $\vx\in\vXcal$ lives in some input space $\vXcal$.
+		\item Output variable $\vy=(y_1,\cdots,y_l)\in\vYcal$ is a vector of $\ell$ binary variables $y_j\in\{+1,-1\}$.
+		\item $\vy$ is called {\em multilabel}, $y_j$ is called {\em microlabel}.
+		\item Output space $\vYcal$ is composed by a tensor product of $\ell$ sets
 		\begin{align*}
 			\vYcal=\Ycal_1\times\cdots\times\Ycal_{\ell},\,\Ycal_i=\{+1,-1\}.
 		\end{align*}
-		\item For example, in document classification, a document $\vx$ can be classified as ``news'', ``movie'', and ``science''
+		\item For example, in document classification, a document $\vx$ could be tagged with {\blue``news'' ``movie'' ``science''} but not {``sports'' ``politics'' ``finance''}.
 		\begin{align*}
-\vy=(\underbrace{+1}_{\text{news}},\underbrace{+1}_{\text{movie}},\underbrace{-1}_{\text{sports}},\underbrace{-1}_{\text{politics}},\underbrace{-1}_{\text{finance}},\underbrace{+1}_{\text{science}},\underbrace{-1}_{\text{art}}).
+\vy=(\underbrace{+1}_{\blue\text{news}},\underbrace{+1}_{\blue\text{movie}},\underbrace{-1}_{\text{sports}},\underbrace{-1}_{\text{politics}},\underbrace{-1}_{\text{finance}},\underbrace{+1}_{\blue\text{science}},\underbrace{-1}_{\text{art}}).
 		\end{align*}\footnotesize
 		\item The goal is to find a mapping function $f\in\Hcal$ that predicts the best values of an output $\vy$ given an input $\vx$, $f:\vXcal\rightarrow\vYcal$.
 	\end{itemize}
 \end{frame}
 
 %
-\begin{frame}{Central problems in multilabel classification}
+\begin{frame}{Concerns}
 	\begin{itemize}\footnotesize
-		\item The size of the output space (searching space) is exponential in the number of microlabels.
+		\item Dimension of the search space: exponential in the number of microlabels.
 		\begin{align*}
 			\vYcal=\Ycal_1\times\cdots\times\Ycal_{\ell},\,\Ycal_i=\{+1,-1\}\quad|\vYcal| = 2^{\ell}.
 		\end{align*}
-		\item The dependency of microlabels needs to be exploited in order to improve the prediction performance.
+		\item The dependency of microlabels needs to be exploited.
 		\begin{itemize}\footnotesize
-			\item If a document is about ``movie'', then it is more likely to be about ``art'' than ``science''.
+			\item If a document is tagged with ``movie'', then it is more likely to be in the category of ``art'' than ``science''.
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 %
-\begin{frame}{Real world applications}
+\begin{frame}{Applications}
 	\begin{itemize}\footnotesize
 		\item Social network, information can spread through multiple users. 
 		\begin{tabular}{p{3cm}p{10cm}} 

@@ -16,3 +16,5 @@ rm $name.log
 rm $name.snm
 rm $name.nav
 rm $name.out
+
+cp example.pdf seminar_slides.pdf
