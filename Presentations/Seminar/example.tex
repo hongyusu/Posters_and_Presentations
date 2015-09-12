@@ -138,15 +138,15 @@ Department of Computer Science, Aalto University
 			\item Adapt single-label classification models to multilabel classification problems.
 			\item E.g., \corrlog\ \cite{Bian12corrlog}, \mtl\ \cite{Argyriou08convex}, \adaboostmh\ \cite{Schapire99improved,Esuli2008boosting}.
 		\end{itemize}
-		\item These approaches does not model the dependency structure of microlabels explicitly.
+		\item These approaches do not model the dependency structure of microlabels.
 	\end{itemize}
 \end{frame}
 
 %
 \begin{frame}{Structured output prediction}
 	\begin{itemize}\footnotesize
+		\item The scheme is proposed in \cite{Su2014Multilabel}.
 		\item Model the dependency structure with an {\em output graph} defined on microlabels.
-		\item The categorization is proposed in \cite{Su2014Multilabel}.
 		\item Hierarchical classification
 		\begin{itemize}\footnotesize
 			\item The output graph is a rooted tree defining different levels of granularities.
