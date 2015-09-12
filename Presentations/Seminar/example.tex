@@ -124,19 +124,19 @@ Department of Computer Science, Aalto University
 \end{frame}
 
 %
-\begin{frame}{Flat multilabel classification approaches}
+\begin{frame}{Flat multilabel classification}
 	\begin{itemize}\footnotesize
-		\item The categorization is proposed in \cite{Tsoumakas10mining}
+		\item The scheme is proposed in \cite{Tsoumakas10mining}
 		\item The output variable $\vy$ is assumed to be a flat vector.
 		\item Problem transformation
 		\begin{itemize}\footnotesize
-			\item Model multilabel classification as a collection of single-label classification problems and solve each problem independently.
-			\item For example, \mlknn\ \cite{Zhang07mlknn}, \cc\ \cite{Read11classifier}, \iblr\ \cite{Cheng09combining}.
+			\item Model the problem as a collection of single-label classification problems and solve each problem independently.
+			\item E.g., \mlknn\ \cite{Zhang07mlknn}, \cc\ \cite{Read11classifier}, \iblr\ \cite{Cheng09combining}.
 		\end{itemize}
 		\item Algorithm adaptation 
 		\begin{itemize}\footnotesize
-			\item Modify single-label classification models for multilabel classification problems.
-			\item For example, \corrlog\ \cite{Bian12corrlog}, \mtl\ \cite{Argyriou08convex}, \adaboostmh\ \cite{Schapire99improved,Esuli2008boosting}.
+			\item Adapt single-label classification models to multilabel classification problems.
+			\item E.g., \corrlog\ \cite{Bian12corrlog}, \mtl\ \cite{Argyriou08convex}, \adaboostmh\ \cite{Schapire99improved,Esuli2008boosting}.
 		\end{itemize}
 		\item These approaches does not model the dependency structure of microlabels explicitly.
 	\end{itemize}

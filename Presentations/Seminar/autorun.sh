@@ -18,3 +18,8 @@ rm $name.nav
 rm $name.out
 
 cp example.pdf seminar_slides.pdf
+
+
+git commit -m'minor revisions' .
+git push -u origin master
+
