@@ -146,7 +146,7 @@ Department of Computer Science, Aalto University
 \begin{frame}{Structured output prediction}
 	\begin{itemize}\footnotesize
 		\item The scheme is proposed in \cite{Su2014Multilabel}.
-		\item Model the dependency by an {\em output graph} defined on microlabels.
+		\item Models the dependency by an {\em output graph} defined on microlabels.
 		\item Hierarchical classification
 		\begin{itemize}\footnotesize
 			\item The output graph is a rooted tree defining different levels of granularities.
@@ -154,7 +154,7 @@ Department of Computer Science, Aalto University
 		\end{itemize}
 		\item Graph labeling
 		\begin{itemize}\footnotesize
-			\item The output graph takes a more general form (e.g., a tree, a chain).
+			\item The output graph has a more general form (e.g., a tree, a chain).
 			\item E.g., \crf\ \cite{lafferty01,taskar02}, \mmmn\ \cite{Taskar04max}, \mmcrf\ \cite{Rousu07, su10structured}, \spin\ \cite{su14structured}.
 		\end{itemize}
 		\item These approaches assume the output graph is known {\em apriori}.
@@ -164,12 +164,12 @@ Department of Computer Science, Aalto University
 %
 \begin{frame}{Contributions}
 	\begin{itemize}\footnotesize
-		\item Structured output prediction models when the output graph is known.
+		\item SOP models for observed output graph.
 		\begin{itemize}\footnotesize
 			\item \spin\ for network influence prediction \cite{su14structured}.
 			\item \mmcrf\ to work with general output graph structures \cite{su10structured}.
 		\end{itemize}
-		\item Structured output prediction models working with unknown output graph.
+		\item SOP models with unknown output graph.
 		\begin{itemize}\footnotesize
 			\item \mve\ to combine multiple structured output predictors by ensemble \cite{su11mutitask}.
 			\item \amm\ and \mam\ to aggregate the inference results from multiple structured output predictors \cite{su2013multilabelacml,su15multilabel}.
