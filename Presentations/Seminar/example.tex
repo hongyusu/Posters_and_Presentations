@@ -199,7 +199,7 @@ Department of Computer Science, Aalto University
 \begin{frame}{Preliminaries}
 	\begin{itemize}\footnotesize
 		\item Training examples come in pairs $(\vx,\vy)\in\vXcal\times\vYcal$.
-		\item $\vx\in\vXcal$ is an arbitrary input space.
+		\item $\vXcal$ is an arbitrary input space.
 		\item $\vYcal$ is an output space of a collection of $\ell$-dimensional {\em multilabels}.
 		\begin{align*}\footnotesize
 			\vy=(y_1,\cdots,y_{\ell})\in\vYcal.
@@ -209,7 +209,7 @@ Department of Computer Science, Aalto University
 		\item We are given a set of $m$ training examples $\{(\vx_i,\vy_i)\}_{i=1}^m$.
 		%\item An arbitrary pair $(\vx_i,\vy),\,\vy_\in\vYcal$ is called pseudo-example.
 		\item Each example $(\vx,\vy)$ is mapped into a joint feature space $\phib(\vx,\vy)$.
-		\item $\vw$ is the weight vector in the joint feature space.
+		\item $\vw$ is the weight vector operates in the joint feature space.
 		\item Define a linear score function $F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)}$.
 		\item $\vw$ makes sure example $\vx$ with correct multilabel $\vy$ achieves higher score than with any other incorrect multilabel $\vy'\in\vYcal$.
 	\end{itemize}
