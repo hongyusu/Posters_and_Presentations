@@ -431,6 +431,9 @@ Department of Computer Science, Aalto University
 		\center
 		\includegraphics[scale=0.25]{./figures/problem_definition.pdf}
 	\end{figure}
+	\begin{itemize}
+		\item Information propagation, idea formation, disease spreads, adoption of new technologies. 
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Direct output graph}
@@ -542,18 +545,18 @@ Department of Computer Science, Aalto University
 %
 \begin{frame}{Research question}
 	\begin{itemize}\footnotesize
-		\item The output graph is hidden in many applications.
+		\item The output graph $G$ is hidden in many applications.
 		\begin{itemize}\footnotesize
-			\item For example, a surveillance photo can be tagged with ``building'', ``road'', ``pedestrian'', and ``vehicle''.
+			\item E.g., possible tags for a surveillance photo: ``building'', ``road'', ``pedestrian'', and ``vehicle''.
 		\end{itemize}
-		\item We study the problem in structured output learning when the output graph is not observed.
+		\item Structured output learning when the output graph is not observed.
 		\item In particular:
 		\begin{itemize}\footnotesize
-			\item Assume the dependency can be expressed by a complete set of pairwise correlations.
-			\item Build a structured output learning model with a complete graph as the output graph.
-			\item Solve the \nphard inference problem on the complete graph by a polynomial time algorithm.
+			\item Dependency via a complete set of pairwise correlations.
+			\item Structured output learning with a complete graph.
+			\item Solve the \nphard\ inference problem via a polynomial time approximation algorithm.
 		\end{itemize}
-		\item A structured prediction model which performs max-margin learning on a random collection of spanning trees sampled from the output graph.
+		\item In general, a structured prediction model which performs max-margin learning on a random collection of spanning trees sampled from the output graph.
 	\end{itemize}
 \end{frame}
 
@@ -561,7 +564,7 @@ Department of Computer Science, Aalto University
 \begin{frame}{Complete graph as output graph}
 	\begin{itemize}\footnotesize
 		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network (undirected graph) $G=(E,V)$.
-		\item $G$ is a complete graph with $|V| = \ell$ nodes and $|E| = \frac{\ell(\ell-1)}{2}$ undirected edges.
+		\item $G:$ complete graph with $|V| = \ell$ nodes and $|E| = \frac{\ell(\ell-1)}{2}$ undirected edges.
 		\item $G$ models all pairwise correlations.
 		\item $\varphib(\vx)$ is the input feature map, e.g., bag-of-words feature of an example $\vx$.
 		\item $\psib(\vy)$ is the output feature map which is a collection of edges and labels
@@ -612,7 +615,7 @@ Department of Computer Science, Aalto University
 			n\ge\frac{\ell^2}{\epsilon^2}(\frac{1}{16}+\frac{1}{2}\ln\frac{8\sqrt{n}}{\delta}),
 		\end{align*}
 		we have $|F_{\Tcal}(\vw,\vx,\vy)-F(\vw,\vx,\vy)|\le\epsilon$, with high probability.
-		\item A sample of $n\in\Theta(\ell^2/\delta^2)$ random spanning tree is sufficient to estimate the score function.
+		\item A sample of $n\in\Theta(\ell^2/\epsilon^2)$ random spanning tree is sufficient to estimate the score function.
 		\item Margin achieved by $F(\vw,\vx,\vy)$ is also preserved by the sample of $n$ random spanning trees $F_{\Tcal}(\vw,\vx,\vy)$ \cite{su14multilabelnips}.
 	\end{itemize}
 \end{frame}
@@ -858,9 +861,9 @@ Department of Computer Science, Aalto University
 
 
 %
-\begin{frame}{Conclusion}
+\begin{frame}{Conclusions}
 	\begin{itemize}\footnotesize
-		\item Structured output prediction is family of methods designed for multilabel classification problems.
+		\item Structured output learning is family of methods for multilabel classification.
 		\item The output graph is often assume to be known {\em apriori}.
 		\begin{itemize}\footnotesize
 			\item \mmcrf\ assumes tree or general undirected graph as output graph.
@@ -881,9 +884,10 @@ Department of Computer Science, Aalto University
 \end{frame}
 
 %
-\begin{frame}{Future work}{Inference algorithm}
+\begin{frame}{Ongoing work}{Optimization for \rta\ with Juho Rousu}
 	\begin{itemize}\footnotesize
-		\item From K-best inference algorithm developed for \rta\ to a Newton method that does a conic combination of multiple update directions.
+		\item From K-best inference algorithm
+		\item To a Newton method: a conic combination of multiple update directions
 		\only<1>
 		{\begin{figure}
 			\begin{center}
@@ -901,19 +905,17 @@ Department of Computer Science, Aalto University
 
 %
 %
-\begin{frame}{Future work}{L$_1$ norm random spanning tree approximation \lonerta}
+\begin{frame}{Ongoing work}{L$_1$ norm \rta\ with John Shawe-Taylor, Mario Marchand}
 	\begin{itemize}\footnotesize
 		\item From conic combination of a collection of random spanning trees
 		\begin{align*}
-			F(\vw,\vx,\vy) &= \underset{T\in U(G)}{\E}a_T\ip{\vw_T}{\phib_T(\vx,\vy)}\\
-			  &\underset{T\in U(G)}{\E}a_T^2=1,  \underset{T\in U(G)}{\E}a_T<1.
+			F(\vw,\vx,\vy) = \underset{T\in U(G)}{\E}a_T\ip{\vw_T}{\phib_T(\vx,\vy)}\quad {\blue\underset{T\in U(G)}{\E}a_T^2=1},  \underset{T\in U(G)}{\E}a_T<1.
 		\end{align*}
 		\item To convex combination of a collection of random spanning trees
 		\begin{align*}
-			F(\vw,\vx,\vy) &= \underset{T\in U(G)}{\E}a_T\ip{\vw_T}{\phib_T(\vx,\vy)}\\
-			  &\underset{T\in U(G)}{\E}a_T=1,  \underset{T\in U(G)}{\E}a_T<1.
+			F(\vw,\vx,\vy) = \underset{T\in U(G)}{\E}a_T\ip{\vw_T}{\phib_T(\vx,\vy)}\quad {\blue\underset{T\in U(G)}{\E}a_T=1},  \underset{T\in U(G)}{\E}a_T<1.
 		\end{align*}
-		\item Optimization problem
+		\item Optimization problem (tree selection!)
 		\begin{align*}
 			\underset{\vw_{T_i},\xi_i}{\minimize} & \quad \frac{1}{2}\left(\sum_{i=1}^{n}\norm{\vw_{T_i}}\right)^2 + C\sum_{k=1}^{m}\xi_k\\
 			\st & \quad \frac{1}{{n}}\sum_{i=1}^{n}{ \langle \vw_{T_i}, \phib_{T_t}(\vx_k,\vy_k) \rangle} - \underset{\vy \neq \vy_k}{\maximize\ } \frac{1}{{n}}\sum_{i=1}^{n}{\langle \vw_{T_t}, \phib_{T_i}(\vx_k,\vy) \rangle } \geq 1 -  \xi_k, \\
