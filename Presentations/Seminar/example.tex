@@ -211,11 +211,11 @@ Department of Computer Science, Aalto University
 		\item Each example $(\vx,\vy)$ is mapped into a joint feature space $\phib(\vx,\vy)$.
 		\item $\vw$ is the weight vector operates in the joint feature space.
 		\item Define a linear score function $F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)}$.
-		\item $\vw$ makes sure example $\vx$ with correct multilabel $\vy$ achieves higher score than with any other incorrect multilabel $\vy'\in\vYcal$.
+		\item $\vw$ ensures that example $\vx_i$ with correct multilabel $\vy_i$ achieves higher score than with any other incorrect multilabel $\vy'\in\vYcal$.
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Inference problem}
+\begin{frame}{Prediction}
 	\begin{itemize}
 		\item The prediction $\vy_{\vw}(\vx)$ of an input $\vx$ is the multilabel $\vy$ that maximizes the score function 
 		\begin{align}\footnotesize
@@ -223,12 +223,12 @@ Department of Computer Science, Aalto University
 		\end{align}
 		\item Search space is exponential in size, $|\vYcal|=2^{\ell}$.
 		\item (\ref{inference}) is called {\em inference} problem which is \nphard\ for most output feature maps.
-		\item We aim at using an output feature map in which the inference can be solved with a polynomial algorithm, e.g., dynamic programming.
+		\item Often, we want a feature map in which the inference can be solved with a polynomial algorithm, e.g., dynamic programming.
 	\end{itemize}
 \end{frame}
 
 %
-\begin{frame}{Input-output feature maps}
+\begin{frame}{Input/output feature maps}
 	\begin{itemize}\footnotesize
 		\item We assume that the joint feature map $\phib$ is a potential function on a Markov network (undirected graph) $G=(E,V)$.
 		\item A vertex $v_i\in V$ corresponds to a microlabel $y_i$, an edge $(v_i,v_j)\in E$ corresponds to the pairwise correlation of the microlabel $y_i$ and $y_j$.
@@ -245,7 +245,7 @@ Department of Computer Science, Aalto University
 \end{frame}
 
 %
-\begin{frame}{An example of output feature map}
+\begin{frame}{An example of $\psib(\vy)$}
 	\begin{itemize}\footnotesize
 		\item Markov network (undirected graph) $G=(E,V)$
 		\begin{center}
@@ -265,7 +265,7 @@ Department of Computer Science, Aalto University
 \end{frame}
 
 %
-\begin{frame}{Joint feature map}
+\begin{frame}{Joint feature map $\phib(\vx,\vy)$}
 	\begin{itemize}\footnotesize
 		\item The joint feature is the Kronecker product of $\varphib(\vx)$ and $\psib(\vy)$
 		\begin{align*}\footnotesize
@@ -284,7 +284,11 @@ Department of Computer Science, Aalto University
 %
 \begin{frame}{Optimization problem}
 	\begin{itemize}\footnotesize
-		\item To learn parameter $\vw$, we aim to maximize the magin between correct pair $(\vx_i,\vy_i)$ and all the other incorrect pairs $(\vx_i,\vy),\vy\in\vYcal/\vy_i$ in the joint feature space $\phib$.
+		\item Max-margin learning for $\vw$
+		\begin{align*}
+			\gamma(\vw,\vx_i) = F(\vw,\vx_i,\vy_i) - \underset{\vy\in\vYcal/\vy_i}{\max}F(\vw,\vx_i,\vy)
+		\end{align*}
+		%\item To learn parameter $\vw$, we aim to maximize the magin between correct pair $(\vx_i,\vy_i)$ and all the other incorrect pairs $(\vx_i,\vy),\vy\in\vYcal/\vy_i$ in the joint feature space $\phib$.
 		\begin{center}
 			\includegraphics[scale = 0.6]{./figures/jointfeaturespace.pdf}
 		\end{center}
@@ -293,7 +297,7 @@ Department of Computer Science, Aalto University
 		\begin{align}
 			\underset{\vw,\xi_k}{\minimize} & \quad \frac{1}{2}\norm{\vw}^2 + C\sum_{k=1}^{m}\xi_k \label{primalmmcrf}\\
 			\st & \quad \ip{\vw}{\phib(\vx_k,\vy_k)} - \ip{\vw}{\phib(\vx_k,\vy)}  \geq \ell(\vy_k,\vy) -  \xi_k, \nonumber\\
-			& \quad \xi_k\ge0\, , \forall\ \vy\in\vYcal, k \in \set{1,\dots,m}.\nonumber
+			& \quad \xi_k\ge0\, , {\blue \forall\ \vy\in\vYcal}, k \in \set{1,\dots,m}.\nonumber
 		\end{align}
 		\item $\ell(\vy,\vy_k)$ scales the margin according to the multilabel $\vy$.
 		%\item (\ref{primalmmcrf}) is difficult as the number of the constraints is $m\times|\vYcal|$.
@@ -362,7 +366,7 @@ Department of Computer Science, Aalto University
 \end{frame}
 
 %
-\begin{frame}{Compute duality gap}
+\begin{frame}{Duality gap}
 	\begin{itemize}\footnotesize
 		\item We use duality gap to measure the progress of the optimization.
 		\item Primal and marginal-dual objective functions
