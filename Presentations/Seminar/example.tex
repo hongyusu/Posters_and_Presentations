@@ -69,7 +69,7 @@ Department of Computer Science, Aalto University
 	\begin{itemize}\footnotesize
 		\item It is an important research field in machine learning.
 		\item Input variable $\vx\in\vXcal$ lives in some input space $\vXcal$.
-		\item Output variable $\vy=(y_1,\cdots,y_l)\in\vYcal$ is a vector of $\ell$ binary variables $y_j\in\{+1,-1\}$.
+		\item Output variable $\vy=(y_1,\cdots,y_j,\cdots,y_l)\in\vYcal$ is a vector of $\ell$ variables.
 		\item $\vy$ is called {\em multilabel}, $y_j$ is called {\em microlabel}.
 		\item Output space $\vYcal$ is composed by a tensor product of $\ell$ sets
 		\begin{align*}
@@ -166,7 +166,7 @@ Department of Computer Science, Aalto University
 	\begin{itemize}\footnotesize
 		\item SOP models developed for observed output graph.
 		\begin{itemize}\footnotesize
-			\item \mmcrf\ on general output graph structures \cite{su10structured}.
+			\item Extend \mmcrf\ to general output graph structures \cite{su10structured}.
 			\item \spin\ on \daggraph\ for network influence prediction \cite{su14structured}.
 		\end{itemize}
 		\item SOP models developed for unknown output graph.
@@ -181,7 +181,7 @@ Department of Computer Science, Aalto University
 
 
 %
-\begin{frame}{Outline}
+\begin{frame}{The rest of the talk}
 	\begin{itemize}\footnotesize
 		\item Preliminaries
 		\item Structured output prediction
@@ -344,8 +344,8 @@ Department of Computer Science, Aalto University
 			\hline
 			\footnotesize
 			 Output graph & Inference problem & Inference algorithm \\ \hline
-			 Tree & Polynomial & DP \cite{Rousu07}  \\
-			 Graph & \nphard & LBP \cite{su10structured}  \\ \hline
+			 Tree & Polynomial & \dp\ \cite{Rousu07}  \\
+			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ \hline
 		\end{tabular}
 		\item Perform the update via exact line search $\mu_k \leftarrow \mu_k + \tau(\mu_k^*-\mu_k)$.
 	\end{itemize}
@@ -396,8 +396,8 @@ Department of Computer Science, Aalto University
 			\hline
 			\footnotesize
 			 Output graph & Inference problem & Inference algorithm \\ \hline
-			 Tree & Polynomial & DP \cite{Rousu07}  \\
-			 Graph & \nphard & LBP \cite{su10structured}  \\ \hline
+			 Tree & Polynomial & \dp\ \cite{Rousu07}  \\
+			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ \hline
 		\end{tabular}
 		\item What if the output graph is \daggraph\ ?
 	\end{itemize}
@@ -535,8 +535,8 @@ Department of Computer Science, Aalto University
 			\hline
 			\footnotesize
 			 Output graph & Inference problem & Inference algorithm \\ \hline
-			 Tree & Polynomial & DP \cite{Rousu07}  \\
-			 Graph & \nphard & LBP \cite{su10structured}  \\ 
+			 Tree & Polynomial & \dp\ \cite{Rousu07}  \\
+			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ 
 			 $\rightarrow$ \daggraph & \nphard & \sdp\ \cite{su14structured} \\ \hline
 		\end{tabular}
 		\item What if the output graph is not observed?
@@ -752,8 +752,8 @@ Department of Computer Science, Aalto University
 			\hline
 			\footnotesize
 			 Output graph & Inference problem & Inference algorithm \\ \hline
-			 Tree & Polynomial & DP \cite{Rousu07}  \\
-			 Graph & \nphard & LBP \cite{su10structured}  \\ 
+			 Tree & Polynomial & \dp\ \cite{Rousu07}  \\
+			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ 
 			 \daggraph & \nphard & \sdp\ \cite{su14structured} \\ 
 			 $\rightarrow${unknown} & \nphard & \mve\ \amm\ \mam\ \cite{su15multilabel} \rta\ \cite{su14multilabelnips} \\ \hline
 		\end{tabular}
