@@ -1,0 +1,150 @@
+
+
+
+
+\documentclass[first=dgreen,second=purple,logo=yellowexc]{aaltoslides}
+%\documentclass{aaltoslides} % DEFAULT
+%\documentclass[first=purple,second=lgreen,logo=redque,normaltitle,nofoot]{aaltoslides} % SOME OPTION EXAMPLES
+
+
+
+\input{slide_macro_su.tex}
+
+
+
+
+\title{Transporter protein classification by structured prediction and multiple kernel }
+\author{Hongyu Su}
+
+
+
+\institute[ICS]{
+Helsinki Institute for Information Technology HIIT\\
+Department of Computer Science\\
+Aalto University
+}
+
+\aaltofootertext{Random Spanning Tree Approximation}{\today}{\arabic{page}/\pageref{LastPage}\ }
+
+
+\date{ \today} %\date{Version 1.0, \today}
+
+\iffalse
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,subsection]
+  \end{frame}
+}
+\fi
+
+
+
+
+%--------------------------------
+%
+% document
+%
+%--------------------------------
+
+\begin{document}
+
+\aaltotitleframe
+\footnotesize
+
+
+\begin{frame}{Feature extraction}
+	\begin{itemize}
+		\item \blast\ features
+			\begin{itemize}\footnotesize
+				\item Identify database sequences that are similar to a query sequence via \blast\ search.
+				\item `Similarity' is defined as \blast\ score (statistically significant matches).
+				\item In practice, we build a sequence database with all \tcdb\ sequences.
+			\end{itemize}
+		\item Features computed from {{\interproscan}}
+		\begin{itemize}\footnotesize
+			\item Identify sequence signatures via scanning many signature databases.
+			\item $18$ databases of $3$ `big categories': {\purple Families, domains, sites, repeats}; {\pink structural domain}; {\red other sequence features}.
+		\end{itemize}
+		\item Position-specific-score-matrix (\pssm)
+		\begin{itemize}\footnotesize
+			\item \href{http://www3.imperial.ac.uk/pls/portallive/docs/1/5037998.RPS}{\rpsblast}: identify sequence profiles via scanning $8$ profile database, profile is defined by \pssm.
+			\item \href{http://www.ncbi.nlm.nih.gov/books/NBK2590/}{\psiblast}: search a profile against a sequence database
+			\begin{enumerate}[(a)]\footnotesize
+				\item build a \pssm\ profile for a query sequence.
+				\item {\red search a profile against the database} or {\purple compute similarity of two profiles}.
+			\end{enumerate}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Summary of features}
+	\begin{itemize}
+		\item \blast\ features: similarity matrix in which elements are \blast\ scores.
+		\item \interproscan\ features\\
+		{\scriptsize\begin{tabular}{|c|c||c|c||c|c|}\hline
+		 Type & Dim & Type & Dim & Type & Dim  \\ \hline
+		 Protein Domain & 145 & Hapmap & 209 & SMART & 240 \\
+		 Protein Family & 512 & PRINTS & 579 & Panther & 4070 \\
+		 Gene3D & 611 & PIRSF & 283 & PfamA & 2025 \\
+		 Prosite Profile & 282  & TIGRFAM & 769 & Prosite Patterns & 285\\
+		 Coil & 1 & TMHMM& 1& Phobius &7 \\
+		 SignalP1& 2& SignalP2 & 2 & SignalP3 & 1\\\hline
+		\end{tabular}}
+		\item \pssm\ features\\
+		{\scriptsize\begin{tabular}{|c|c||c|c|}\hline
+		 Type & Dim & Type & Dim \\ \hline
+		 CDD & 47363 & Pfam & 14837\\
+		 COG & 4825  & KOG  & 4875 \\
+		 SMART & 1013 & PRK & 10885 \\
+		 TiGRFAM & 4488  & CDD NCBI & 11273\\ \hline
+		\end{tabular}}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Multiple kernel learning (\mkl)}
+	\begin{itemize}
+		\item A collection of $p$ feature maps $\{\varphi_k(\vx)\}_{k=1}^p$ is on hand.
+		\item We use \mkl\ to combine these feature maps.\\
+		\item Input kernels $\{K_1,\cdots,K_p\}$ and target kernel $K_{\vy} = YY^{\tp}$.
+		\item {\bf Uniform kernel combination (\kunif)}
+		\begin{align*}
+		    K_{\text{\kunif}}=\sum_{k=1}^{p}\frac{1}{p}K^c_k,
+		\end{align*}
+		\item {\bf Centred kernel alignment (\kalign)}
+		\begin{align*}
+			K_{\text{\kalign}}=\sum_{k=1}^{p}\alpha_kK^c_k,\quad \alpha_k = \frac{\ip{K^c_k}{K^{c}_{\vy}}_{F}}{\norm{K^c_k}_F\norm{K_{\vy}^{c}}_F} 
+		\end{align*}
+		\item {\bf Two stage \mkl\ (\kalignf)}
+		\begin{align*}
+			K_{\text{\kalignf}}=\sum_{k=1}^{p}\beta_k K^c_k, \quad
+			\underset{\beta}{\maximize}\, & \displaystyle \frac{\ip{K_{\text{\kalignf}}^c}{K_{\vy}^c}_F}{\norm{K_{\text{\kalignf}}}_F\norm{K_{\vy}^c}_F},
+		    \qquad \st\,  \displaystyle \sum_{k=1}^p\beta_k^2=1,  \beta_k\ge0,\,\forall k.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Experiments}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Discussion}
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{frame}
+
+
+\iffalse
+\begin{frame}[allowframebreaks]{Bibliography}
+	%\bibliographystyle{plain}
+	\bibliographystyle{apalike}
+	\bibliography{example}
+\end{frame}
+\fi
+
+
+\end{document}
