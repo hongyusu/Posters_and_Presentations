@@ -93,6 +93,12 @@ Su, H. and Rousu, J. (2015).
 \newblock Multilabel classification through random graph ensembles.
 \newblock {\em Machine Learning}, 99(2):231--256.
 
+\bibitem[Su et~al., 2015]{su2015transporter}
+Su, H., Valentini, G., Szedmark, S., and Rousu, J. (2015).
+\newblock Transporter protein classification through structured prediction and
+  multiple kernel learning.
+\newblock {\em MLSB and MLCB of NIPS 2015}.
+
 \bibitem[Taskar et~al., 2002]{taskar02}
 Taskar, B., Abbeel, P., and Koller, D. (2002).
 \newblock Discriminative probabilistic models for relational data.
