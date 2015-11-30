@@ -18,6 +18,17 @@ Cheng, W. and Hüllermeier, E. (2009).
   multilabel classification.
 \newblock {\em Machine Learning}, 76(2-3):211--225.
 
+\bibitem[Cousins et~al., 2015a]{Cousins2015large}
+Cousins, S., Shawe-Taylor, J., Marchand, M., Rousu, J., and Su, H. (2015a).
+\newblock Large margin learning for prediction over unknown graph structures -
+  a multiple kernel learning approach.
+\newblock {\em Large-Scale Kernel Learning Workshop of ICML 2015}.
+
+\bibitem[Cousins et~al., 2015b]{Cousins2015mutiple}
+Cousins, S., Shawe-Taylor, J., Marchand, M., Rousu, J., and Su, H. (2015b).
+\newblock Multiple kernel learning for prediction on unknown graph structures.
+\newblock {\em Optimization for machine learning Workshop of NIPS 2015}.
+
 \bibitem[Esuli et~al., 2008]{Esuli2008boosting}
 Esuli, A., Fagni, T., and Sebastiani, F. (2008).
 \newblock Boosting multi-label hierarchical text categorization.
@@ -97,7 +108,8 @@ Su, H. and Rousu, J. (2015).
 Su, H., Valentini, G., Szedmark, S., and Rousu, J. (2015).
 \newblock Transporter protein classification through structured prediction and
   multiple kernel learning.
-\newblock {\em MLSB and MLCB of NIPS 2015}.
+\newblock {\em Machine learning in computational biology and machine learning
+  in system biology workshop of NIPS 2015}.
 
 \bibitem[Taskar et~al., 2002]{taskar02}
 Taskar, B., Abbeel, P., and Koller, D. (2002).
