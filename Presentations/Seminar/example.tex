@@ -63,7 +63,7 @@ Department of Computer Science, Aalto University
 	\end{center}
 \end{frame}
 
-\begin{frame}{About me}
+\begin{frame}{More about me}
 	\begin{center}
 		Take a look at \href{http://hongyusu.github.io}{my homepage} and \href{http://hongyusu.github.io/pages.html}{my technical blog}.
 		\newline
@@ -80,63 +80,131 @@ Department of Computer Science, Aalto University
 \begin{frame}{Multilabel classification}
 	\begin{itemize}\footnotesize
 		\item An important research field in machine learning.
-		\item Input variable $\vx\in\vXcal$ lives in some input space $\vXcal$.
-		\item Output variable $\vy=(y_1,\cdots,y_j,\cdots,y_l)\in\vYcal$ is a vector of $\ell$ variables.
+		\item {\bf Input}: $\vx\in\vXcal$ lives in some input space $\vXcal$.
+		\item {\bf Output}: $\vy=(y_1,\cdots,y_j,\cdots,y_l)\in\vYcal$ is a vector of $\ell$ variables.
 		\item $\vy$: {\em multilabel}, $y_j$: {\em microlabel}.
 		\item Output space $\vYcal$ is composed by a tensor product of $\ell$ sets
 		\begin{align*}
 			\vYcal=\Ycal_1\times\cdots\times\Ycal_{\ell},\,\Ycal_i=\{+1,-1\}.
 		\end{align*}
-		\item For example, in document classification, a document $\vx$ could be tagged with {\blue``news'' ``movie'' ``science''} but not {``sports'' ``politics'' ``finance''}.
+		\item For example, in document classification, a document $\vx_0$ could be tagged with {\blue``news'' ``movie'' ``art''} but not {\gray ``sports'' ``politics'' ``finance''}.
 		\begin{align*}
-\vy=(\underbrace{+1}_{\blue\text{news}},\underbrace{+1}_{\blue\text{movie}},\underbrace{-1}_{\text{sports}},\underbrace{-1}_{\text{politics}},\underbrace{-1}_{\text{finance}},\underbrace{+1}_{\blue\text{science}},\underbrace{-1}_{\text{art}}).
+\vy_0=(\underbrace{+1}_{\blue\text{news}},\underbrace{+1}_{\blue\text{movie}},\underbrace{-1}_{\gray\text{sports}},\underbrace{-1}_{\gray\text{politics}},\underbrace{-1}_{\gray\text{finance}},\underbrace{+1}_{\gray\text{science}},\underbrace{-1}_{\blue\text{art}}).
 		\end{align*}\footnotesize
-		\item The goal is to find a mapping function $f\in\Hcal$ that predicts the best values of an output $\vy$ given an input $\vx$, $f:\vXcal\rightarrow\vYcal$.
+		\item {\bf Goal}: find a mapping function $f\in\Hcal$ that predicts the best values of an output $\vy$ given an input $\vx$, $f:\vXcal\rightarrow\vYcal$.
 	\end{itemize}
 \end{frame}
 
 %
 \begin{frame}{Concerns}
 	\begin{itemize}\footnotesize
-		\item Dimension of the search space: exponential in the number of microlabels.
+		\item Exponential Search space!
 		\begin{align*}
 			\vYcal=\Ycal_1\times\cdots\times\Ycal_{\ell},\,\Ycal_i=\{+1,-1\}\quad|\vYcal| = 2^{\ell}.
 		\end{align*}
-		\item The dependency of microlabels needs to be exploited.
+		\item Dependency of microlabels!
 		\begin{itemize}\footnotesize
-			\item If a document is tagged with ``movie'', then it is more likely to be in the category of ``art'' than ``science''.
+			\item If a document is tagged with {\blue``movie''}, then it is more likely to be in the category of {\blue``art''} than {\gray``science''}.
+			\begin{align*}
+	\vy=(\underbrace{?}_{\gray\text{news}},\underbrace{?}_{\gray\text{movie}},\underbrace{?}_{\gray\text{sports}},\underbrace{?}_{\gray\text{politics}},\underbrace{?}_{\gray\text{finance}},\underbrace{?}_{\gray\text{science}},\underbrace{?}_{\gray\text{art}}).
+			\end{align*}\footnotesize
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 %
-\begin{frame}{Applications}
+\begin{frame}[allowframebreaks]{{\red Motivated} by applications}
 	\begin{itemize}\footnotesize
-		\item Social network, information can spread through multiple users. 
-		\begin{tabular}{p{3cm}p{10cm}} 
-	    \multirow{2}{*}{\includegraphics[scale = 0.06]{./figures/facebookvideo.png}} & \\
-		& $\vy=(\underbrace{+1}_{\text{Ted}},\underbrace{-1}_{\text{Alice}},\underbrace{+1}_{\text{David}},\underbrace{-1}_{\text{Mark}},\underbrace{+1}_{\text{Alex}},\underbrace{-1}_{\text{Zoe}},\underbrace{-1}_{\text{Frank}})$\\
-	    \end{tabular}
-		\item Image annotation, an image can associate with multiple tags.
-		\begin{tabular}{p{3cm}p{10cm}}
-        \multirow{2}{*}{\includegraphics[scale = 0.11]{./figures/boatsea.png}} & \\
-		& $\vy=(\underbrace{+1}_{\text{boat}},\underbrace{+1}_{\text{sea}},\underbrace{-1}_{\text{sun}},\underbrace{-1}_{\text{beach}},\underbrace{-1}_{\text{people}},\underbrace{+1}_{\text{ice}},\underbrace{+1}_{\text{land}})$\\
-        \end{tabular}
+		%
 		\item Document classification, an article can be assigned to multiple categories.
-		\begin{tabular}{p{3cm}p{10cm}} 
-        \multirow{2}{*}{\includegraphics[scale = 0.11]{./figures/titanic.jpg}} & \\
-		& $\vy=(\underbrace{+1}_{\text{news}},\underbrace{+1}_{\text{economics}},\underbrace{-1}_{\text{sports}},\underbrace{-1}_{\text{politics}},\underbrace{-1}_{\text{movie}},\underbrace{-1}_{\text{science}},\underbrace{-1}_{\text{art}})$\\
-        \end{tabular}
+		\begin{center}
+			\begin{tabular}{cc} 
+		    $\vx_0=$ & \multirow{2}{*}{\includegraphics[scale = 0.2]{./figures/titanic.jpg}}\\
+		    \end{tabular}
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+$\vy=(\underbrace{+1}_{\blue\text{news}},\underbrace{+1}_{\gray\text{economics}},\underbrace{-1}_{\blue\text{sports}},\underbrace{-1}_{\gray\text{politics}},\underbrace{-1}_{\gray\text{movie}},\underbrace{-1}_{\gray\text{science}},\underbrace{-1}_{\gray\text{art}})$\\
+		\end{center}
+		\framebreak
+		
+		%
+		\item Image annotation, an image can associate with multiple tags.
+		\begin{center}
+			\begin{tabular}{cc} 
+		    $\vx_0=$ & \multirow{2}{*}{\includegraphics[scale = 0.2]{./figures/boatsea.png}}\\
+		    \end{tabular}
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+$\vy=(\underbrace{+1}_{\blue\text{boat}},\underbrace{+1}_{\blue\text{sea}},\underbrace{-1}_{\gray\text{sun}},\underbrace{-1}_{\gray\text{beach}},\underbrace{-1}_{\gray\text{people}},\underbrace{+1}_{\blue\text{ice}},\underbrace{+1}_{\blue\text{land}})$\\
+		\end{center}
+		\framebreak
+
+
+		%
 		\item Drug discovery, a drug can be effective for multiple symptoms.
-		\begin{tabular}{p{3cm}p{10cm}} 
-        \multirow{2}{*}{\includegraphics[scale = 0.25]{./figures/aspirin.jpg}} & \\
-		& $\vy=(\underbrace{+1}_{\text{heart}},\underbrace{+1}_{\text{stroke}},\underbrace{+1}_{\text{blood}},\underbrace{+1}_{\text{fever}},\underbrace{-1}_{\text{digest}},\underbrace{-1}_{\text{liver}},\underbrace{+1}_{\text{swelling}})$\\
-        \end{tabular}
+		\begin{center}
+			\begin{tabular}{cc} 
+		    $\vx_0=$ & \multirow{2}{*}{\includegraphics[scale = 0.4]{./figures/aspirin.jpg}}\\
+		    \end{tabular}
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+$\vy=(\underbrace{+1}_{\blue\text{heart}},\underbrace{+1}_{\blue\text{stroke}},\underbrace{+1}_{\blue\text{blood}},\underbrace{+1}_{\blue\text{fever}},\underbrace{-1}_{\gray\text{digest}},\underbrace{-1}_{\gray\text{liver}},\underbrace{+1}_{\blue\text{swelling}})$\\
+		\end{center}
+		\framebreak
+		
+		%
+		\item Protein function, a protein have multiple function in biological system.
+		\begin{center}
+			\begin{tabular}{cc} 
+		    $\vx_0=$ & \multirow{2}{*}{\includegraphics[scale = 0.15]{./figures/protein.png}}\\
+		    \end{tabular}
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+	$\vy=(\underbrace{+1}_{\blue\text{$\alpha-$channel}},\underbrace{+1}_{\blue\text{$\beta-$barrel}},\underbrace{+1}_{\blue\text{holins}},\underbrace{-1}_{\gray\text{vesicle fusion pores}},\underbrace{-1}_{\gray\text{Phosphotransfer-driven Group}})$\\
+		\end{center}
+		\framebreak
+		
+		%
+		\item Social network, information can spread through multiple users.
+		\begin{center}
+			\begin{tabular}{cc} 
+		    $\vx_0=$ & \multirow{2}{*}{\includegraphics[scale = 0.15]{./figures/facebookvideo.png}}\\
+		    \end{tabular}
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+$\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\underbrace{+1}_{\blue\text{David}},\underbrace{-1}_{\gray\text{Mark}},\underbrace{+1}_{\blue\text{Alex}},\underbrace{-1}_{\gray\text{Zoe}},\underbrace{-1}_{\gray\text{Frank}})$\\
+		\end{center}	
 	\end{itemize}
 \end{frame}
 
 %
-\begin{frame}{Flat multilabel classification}
+\begin{frame}{Flat classification approach}
 	\begin{itemize}\footnotesize
 		\item The scheme is proposed in \cite{Tsoumakas10mining}
 		\item The output variable $\vy$ is assumed to be a flat vector.
@@ -154,8 +222,53 @@ Department of Computer Science, Aalto University
 	\end{itemize}
 \end{frame}
 
+
 %
-\begin{frame}{Structured output prediction}
+\begin{frame}[allowframebreaks]{Output correlation structure}
+	\begin{itemize}\footnotesize
+		%
+		\item Protein function, a protein have multiple function in biological system.
+		\begin{center}
+			\begin{tabular}{cccc} 
+		    $\vx_0=$ & \multirow{2}{*}{\includegraphics[scale = 0.15]{./figures/protein.png}}
+			&$G=$&\multirow{2}{*}{\includegraphics[scale = 0.25]{./figures/tc.png}}\\
+		    \end{tabular}
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+	$\vy=(\underbrace{+1}_{\blue\text{$\alpha-$channel}},\underbrace{+1}_{\blue\text{$\beta-$barrel}},\underbrace{+1}_{\blue\text{holins}},\underbrace{-1}_{\gray\text{vesicle fusion pores}},\underbrace{-1}_{\gray\text{Phosphotransfer-driven Group}})$\\
+		\end{center}
+		\framebreak
+		
+		%
+		\item Social network, information can spread through multiple users.
+		\begin{center}
+			\begin{tabular}{cccc} 
+		    $\vx_0=$ & \multirow{2}{*}{\includegraphics[scale = 0.15]{./figures/facebookvideo.png}}
+			&$G=$& \multirow{2}{*}{\includegraphics[scale = 0.2]{./figures/motivation_1.pdf}}\\
+		    \end{tabular}
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+		\newline
+$\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\underbrace{+1}_{\blue\text{David}},\underbrace{-1}_{\gray\text{Mark}},\underbrace{+1}_{\blue\text{Alex}},\underbrace{-1}_{\gray\text{Zoe}},\underbrace{-1}_{\gray\text{Frank}})$\\
+		\end{center}	
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{Structured output prediction approach}
 	\begin{itemize}\footnotesize
 		\item The scheme is proposed in \cite{Su2014Multilabel}.
 		\item Models the dependency by an {\em output graph} defined on microlabels.
@@ -170,18 +283,20 @@ Department of Computer Science, Aalto University
 			\item E.g., \crf\ \cite{lafferty01,taskar02}, \mmmn\ \cite{Taskar04max}, \mmcrf\ \cite{Rousu07, su10structured}, \spin\ \cite{su14structured}.
 		\end{itemize}
 		\item These approaches assume the output graph is known {\em apriori}.
+		\item More general, there is no pre-defined output graph!
 	\end{itemize}
 \end{frame}
 
 %
 \begin{frame}{Contributions}
 	\begin{itemize}\footnotesize
-		\item SOP models developed for observed output graph.
+		\item \sop\ models developed for observed output graph.
 		\begin{itemize}\footnotesize
 			\item Extend \mmcrf\ to general output graph structures \cite{su10structured}.
 			\item \spin\ on \daggraph\ for network influence prediction \cite{su14structured}.
+			\item \sop\ model for transporter protein classification \cite{su15transporter}.
 		\end{itemize}
-		\item SOP models developed for unknown output graph.
+		\item \sop\ models developed for unknown output graph.
 		\begin{itemize}\footnotesize
 			\item \mve\ to combine multiple structured output predictors by ensemble \cite{su11mutitask}.
 			\item \amm\ and \mam\ to aggregate the inference results from multiple structured output predictors \cite{su2013multilabelacml,su15multilabel}.
