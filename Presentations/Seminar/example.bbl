@@ -63,8 +63,14 @@ Schapire, R. and Singer, Y. (1999).
 \newblock Improved boosting algorithms using confidence-rated predictions.
 \newblock {\em Machine Learning}, 37(3):297--336.
 
-\bibitem[Su, 2015]{Su2014Multilabel}
-Su, H. (2015).
+\bibitem[Su, 2015a]{su2015multilabel}
+Su, H. (2015a).
+\newblock Multilabel classification through structured output learning -
+  methods and applicatio.
+\newblock {\em Aalto university}.
+
+\bibitem[Su, 2015b]{Su2014Multilabel}
+Su, H. (2015b).
 \newblock {\em Multilabel Classification through Structured Output Learning -
   Methods and Applications}.
 \newblock PhD thesis, Department of Information and Computer Science, Aalto
