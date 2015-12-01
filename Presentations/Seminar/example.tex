@@ -553,20 +553,21 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 		\only<4>{\includegraphics[scale=0.2]{./figures/tc3.pdf}}
 		\only<5>{\includegraphics[scale=0.2]{./figures/tc4.pdf}}
 		\end{center}
+		\item {\bf Task}: predict $\vy_0$ given $\vx_0$.
 		\item It seems: $|\Ycal| = 2^{3145}$, \dpg\ on $G$.
 		\item A valid annotation is a path from root to leave, $|\Ycal|=~2000$
-		\item The primal optimization problem is defined as
-		\begin{align}
-			\underset{\vw,\xi_k}{\minimize} & \quad \frac{1}{2}\norm{\vw}^2 + C\sum_{k=1}^{m}\xi_k \label{primalmmcrf}\\
-			\st & \quad \ip{\vw}{\phib(\vx_k,\vy_k)} - \ip{\vw}{\phib(\vx_k,\vy)}  \geq \ell(\vy_k,\vy) -  \xi_k, \nonumber\\
-			& \quad \xi_k\ge0\, , {\blue \forall\ \vy\in\vYcal}, k \in \set{1,\dots,m}.\nonumber
-		\end{align}
 	\end{itemize}
 \end{frame}
 
 %
 \begin{frame}{Actual model}
 	\begin{itemize}
+		\item The primal optimization problem is defined as
+		\begin{align}
+			\underset{\vw,\xi_k}{\minimize} & \quad \frac{1}{2}\norm{\vw}^2 + C\sum_{k=1}^{m}\xi_k \label{primalmmcrf}\\
+			\st & \quad \ip{\vw}{\phib(\vx_k,\vy_k)} - \ip{\vw}{\phib(\vx_k,\vy)}  \geq \ell(\vy_k,\vy) -  \xi_k, \nonumber\\
+			& \quad \xi_k\ge0\, , {\blue \forall\ \vy\in\vYcal}, k \in \set{1,\dots,m}.\nonumber
+		\end{align}
 		\item In stead of conditional gradient descent, we can do gradient descent for all training examples.
 		\item Multi-view data: $30$ set of features, $\{\phi(\vx_i)_k\}_{k=1}^{30}$.
 		\item Multiple kernel learning {\sc alignf}.
