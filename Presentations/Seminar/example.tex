@@ -557,7 +557,11 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 		\end{center}
 		\item {\bf Task}: predict $\vy_0$ given $\vx_0$.
 		\item It seems: $|\Ycal| = 2^{3145}$, \dpg\ on $G$.
-		\item {\bf Pattern}: a valid annotation is a path from root to leave, $|\Ycal|\approx 2000$.
+		\item {\bf Pattern}:
+		\begin{itemize}\footnotesize
+			\item a valid annotation is a path from root to leave.
+			\item exponential reduction of search space $|\Ycal| = 2^{3145}\rightarrow|\Ycal|\approx 2000$.
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
