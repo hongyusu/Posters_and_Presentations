@@ -606,11 +606,11 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 
 %
 \begin{frame}{Output graph is \daggraph}{Predicting network response \cite{su14structured}}
-	\only<1>{A twitter (follower-ship) network consists of five users. \includegraphics[scale=0.5]{./figures/motivation_1.pdf}}
-	\only<2>{Alice tweets a message after World Cup final. \includegraphics[scale=0.5]{./figures/motivation_2.pdf}}
-	\only<3>{Bob sees the message and retweets the message from Alice. \includegraphics[scale=0.5]{./figures/motivation_3.pdf}}
-	\only<4>{Jacob retweets the message from Bob. \includegraphics[scale=0.5]{./figures/motivation_4.pdf}}
-	\only<5>{Ben retweets the message from Jacob. \includegraphics[scale=0.5]{./figures/motivation_5.pdf}}
+	\only<1>{A Twitter (follower-ship) network consists of five users. \includegraphics[scale=0.5]{./figures/motivation_1.pdf}}
+	\only<2>{Alice tweets after World Cup final. \includegraphics[scale=0.5]{./figures/motivation_2.pdf}}
+	\only<3>{Bob saw the tweet and retweets from Alice. \includegraphics[scale=0.5]{./figures/motivation_3.pdf}}
+	\only<4>{Jacob retweets from Bob. \includegraphics[scale=0.5]{./figures/motivation_4.pdf}}
+	\only<5>{Ben retweets from Jacob. \includegraphics[scale=0.5]{./figures/motivation_5.pdf}}
 	\only<6>{David is not a fan.  \includegraphics[scale=0.5]{./figures/motivation_6.pdf}}
 \end{frame}
 
@@ -619,21 +619,21 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 	\begin{itemize}\footnotesize
 		\item Definition:
 		\begin{itemize}\footnotesize
-			\item Given a complex network $G=(E,V)$, and an action $\vx$ performed on the network.
-			\item Task: predict the subnetwork that responses to the action.
+			\item {\bf Given}: a network $G=(E,V)$, and an action $\vx$ performed on $G$.
+			\item {\bf Task}: predict the subnetwork that responses to the action.
 			\begin{itemize}\footnotesize
 				\item Which nodes $v\in V$ perform the action? $V_{\vx}=\{Alice,Bob,Jacob,Ben\}$
 				\item Which directed edges $e\in E_{\vx}$ relay the action from one node to its neighbors? $E_{\vx}=\{a,c,d\}$
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
-	\vspace{-10mm}
+	\vspace{-7mm}
 	\begin{figure}
 		\center
 		\includegraphics[scale=0.25]{./figures/problem_definition.pdf}
 	\end{figure}
 	\begin{itemize}
-		\item Information propagation, idea formation, disease spreads, adoption of new technologies. 
+		\item {\bf Applications}: Information propagation, idea formation, disease spreads, adoption of new technologies. 
 	\end{itemize}
 \end{frame}
 
@@ -709,6 +709,14 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 	\end{itemize}
 \end{frame}
 
+%
+\begin{frame}{What is happing?}
+	\begin{center}
+		\includegraphics[scale=0.07]{./figures/networkresponseexample.jpg}
+	\end{center}
+\end{frame}
+
+%
 \begin{frame}[allowframebreaks]{Approximate inference via {\sc SDP} relaxation}
 	\begin{itemize}\footnotesize
 		\item We formulate the inference problem as {\it integer quadratic program} ({\sc iqp}).
