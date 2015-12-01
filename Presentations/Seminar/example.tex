@@ -582,7 +582,7 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 		\centering \footnotesize
 		\begin{tabular}{|p{1cm}|p{0.3cm}p{0.3cm}p{0.8cm}|p{0.3cm}p{0.3cm}p{0.8cm}|} \hline
 			\footnotesize
-		    & \multicolumn{6}{c|}{$0/1$} \\ \cline{2-7}
+		    & \multicolumn{6}{c|}{$0/1$ (full annotation)} \\ \cline{2-7}
 		    & \multicolumn{3}{c|}{$Linear$} & \multicolumn{3}{c|}{$Gaussian$} \\ \cline{2-7}
 		    & \svm & \mmr & \sop & \svm & \mmr & \sop \\ \hline
 		\unif    & 53.3 &  12.0  & 66.8  & 23.2  & 68.1  & 69.7                \\ 
@@ -744,6 +744,73 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 		\item Optimization guarantee $E[Z] \ge (\alpha-\epsilon) Z_{R} $ with $\alpha>0.796$, $Z$ is objective achieved by {\sc sdp}, $Z_R$ is objective of {\sc iqp}.
 	\end{itemize}
 \end{frame}
+
+\begin{frame}{\spin\ for context-sensitive prediction}
+	\begin{itemize}\footnotesize
+		\item We assume action $\varphib(\vx)$ is known (e.g. bag-of-word of a tweet).
+		\item Task is to predict the response network given the action.
+		%\item {\em Predicted Subgraph Coverage} (PSC) is defined as $\mathrm{PSC}=\frac{1}{mn} \sum_{i=1}^{m} \sum_{v\in V_i} |G_v|$.
+		\item {\em Predicted Subgraph Coverage} (PSC) is the relative size of correctly predicted subgraph in terms of node labels.
+		\item The result is shown in the following table.
+	\end{itemize}	
+		\begin{table}[t]
+		\scriptsize
+		\centering
+		\begin{tabular}{|@{  }c@{  }|@{}c@{  }c@{  }c@{}|@{}c@{  }c@{  }c@{}|@{}c@{ }c@{}|@{}c@{  }c@{  }c@{}|}
+		  \hline
+		\multirow{2}{*}{\textbf{Dataset}} & \multicolumn{3}{c}{\textbf{Node Accuracy}} & \multicolumn{3}{|c}{\textbf{Node $F_1$ Score}} & \multicolumn{2}{|c}{\textbf{Edge Acc}} & \multicolumn{3}{|c|}{{\em PSC}}  \\ \cline{2-12}
+		 & \scriptsize{SVM} & \scriptsize{MMCRF} & \scriptsize{SPIN} & \scriptsize{SVM} & \scriptsize{MMCRF} & \scriptsize{SPIN} & \scriptsize{SVM}  & \scriptsize{SPIN}  & \scriptsize{SVM} & \scriptsize{MMCRF} & \scriptsize{SPIN}  \\ \hline
+		   memeS  & \textbf{73.4} & {68.0} & \em{72.2} & {39.0} & \em{39.8} & \textbf{47.1} & \textbf{62.7} & {45.6} & {23.4} & \em{25.3} & \textbf{33.6} \\ 
+		   memeM  & \textbf{82.1} & {79.0} & \em{81.5} & {29.1} & \em{30.1} & \textbf{38.0} & {61.1} & \textbf{68.8} & {18.6} & \em{18.8} & \textbf{28.3} \\ 
+		   memeL  & \textbf{89.9} & {88.3} & \em{89.8} & {26.7} & \em{27.1} & \textbf{35.0} & {45.5} & \textbf{80.0} & {17.7} & \em{18.9} & \textbf{27.6} \\ 
+		%M100  & {71.2} & \em{73.6} & \textbf{76.7} & {49.3} & \em{50.8} & \textbf{54.3} & {33.3} & \textbf{61.7} & {33.3} & \textbf{35.6} & \em{34.6} & \textbf{0.1} & {0.2} & \textbf{0.1}\\ 
+		%M500  & {89.0} & \em{91.4} & \textbf{92.0} & \textbf{18.8} & {13.5} & \em{14.6} & {28.2} & \textbf{92.6} & \em{29.3} & {26.4} & \textbf{29.5} & {9.0} & \em{3.8} & \textbf{3.2}\\ 
+		M700  & {91.9} & \textbf{94.1} & \em{92.1} & \em{13.8} & {7.3} & \textbf{14.2}  & {26.3} & \textbf{93.0} & \em{29.4} & {23.9} & \textbf{34.4} \\ 
+		M1k & {94.1} & \textbf{95.8} & \em{94.2} & \textbf{10.9} & {3.5} & \em{9.3}   & {26.6} & \textbf{94.7} & \em{33.7} & {16.6} & \textbf{35.2} \\ 
+		M2k & \em{96.8} & \textbf{97.6} & {96.7} & \textbf{6.2} & {1.4} & \em{3.4}    & {25.3} & \textbf{97.6} & \textbf{34.6} & {9.6} & \em{14.7} \\ 
+		%L100  & {69.4} & \em{72.2} & \textbf{75.7} & {51.1} & \em{53.1} & \textbf{57.4} & {31.6} & \textbf{62.3} & {30.9} & \em{31.7} & \textbf{33.4} & \textbf{0.1} & \em{0.2} & {0.3}\\ 
+		%L500  & {85.9} & \textbf{89.1} & \em{86.8} & \em{21.7} & {15.1} & \textbf{24.7} & {27.9} & \textbf{87.9} & \em{14.2} & {11.2} & \textbf{19.7} & {6.5} & \em{3.2} & \textbf{2.1}\\ 
+		L700  & {89.7} & \textbf{92.4} & \em{89.7} & \em{16.2} & {9.4} & \textbf{17.3}  & {26.5} & \textbf{90.4} & \em{9.5} & {6.7} & \textbf{12.5} \\ 
+		L1k & \em{92.4} & \textbf{94.4} & {91.5} & \em{12.4} & {6.4} & \textbf{13.9}  & {26.4} & \textbf{92.3} & \em{6.1} & {4.4} & \textbf{8.4} \\ 
+		L2k & \em{92.5} & \textbf{94.5} & {91.9} & \em{12.3} & {5.4} & \textbf{12.7}  & {26.5} & \textbf{93.2} & \em{6.0} & {2.9} & \textbf{7.2} \\ \hline
+		\textbf{Geom.}  & {85.5} & \em{86.4} & \textbf{86.6} & \em{19.8} & {12.6} & \textbf{20.3} & {32.6} & \textbf{79.7} & \em{18.9} & {14.2} & \textbf{21.7} \\
+		\hline
+		\end{tabular}
+		\label{table_global_res_svm}
+		\end{table}
+\end{frame}
+
+\begin{frame}{\spin\ for context-free prediction}
+	\begin{itemize}
+		\item We assume action is unknown during prediction phase.
+		\item Task is to predict directed edges (network skeleton) from a cascade of actions.
+		\item The measure of success is {\em Precision@$K$}, where we ask for top-$K$ percent edge predictions and compute the precision.
+		\item The result is shown in the following table.
+	\end{itemize}
+			\begin{table}[t]
+			\scriptsize
+			\centering
+			\begin{tabular}{|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|}
+			  \hline
+			\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Model}} & \multirow{2}{*}{\textbf{T ({\tiny$10^3$s})}} & \multicolumn{6}{c|}{Precision @ $K$} \\ \cline{4-9}
+			 & & & {$10\%$} & {$20\%$} & {$30\%$} & {$40\%$} & {$50\%$} & {$60\%$} \\ \hline
+			\multirow{3}{*}{\textbf{memeS}}
+			& SPIN & \em{5.50} & \textbf{82.9} & \textbf{81.0} & \textbf{76.0} & \textbf{74.0} & \textbf{74.0} & \textbf{70.0}  \\  
+			& ICM-EM & \textbf{0.01} & {60.3} & {63.5} & {65.1} & {62.0} & {62.0} & {61.5}  \\ 
+			& NETRATE & {5.83} & \em{76.2} & \em{73.8} & \em{70.4} & \em{68.7} & \em{68.7} & \em{66.8} \\ \hline 
+			\multirow{3}{*}{\textbf{memeM}}
+			& SPIN & \em{5.52} & \textbf{82.7} & \textbf{72.1} & \textbf{70.5} & \textbf{69.2} & \textbf{69.2} & \textbf{67.9}  \\  
+			& ICM-EM & \textbf{0.02} & {56.3} & {55.3} & {56.8} & {57.4} & {57.4} & {56.3}  \\ 
+			& NETRATE & {13.93} & \em{61.2} & \em{64.6} & \em{62.9} & \em{62.5} & \em{62.5} & \em{62.4}  \\ \hline 
+			\multirow{3}{*}{\textbf{memeL}}
+			& SPIN & \em{4.75} & \textbf{82.2} & \textbf{73.6} & \textbf{69.1} & \textbf{66.7} & \textbf{66.7} & \textbf{65.9}  \\  
+			& ICM-EM & \textbf{0.01} & {52.1} & {55.7} & {54.2} & {56.5} & {56.5} & {56.7}  \\ 
+			& NETRATE & {12.63} & \em{56.5} & \em{57.8} & \em{60.0} & \em{59.3} & \em{59.3} & \em{59.4}  \\ \hline
+			\end{tabular}
+			\end{table}
+\end{frame}
+
+
 
 %
 \begin{frame}{Short summary}
@@ -963,21 +1030,7 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 \end{frame}
 \fi
 
-\begin{frame}{Short summary}
-	\begin{itemize}\footnotesize
-		\item We have seem so far.		
-	\end{itemize}
-		\begin{tabular}{|c|c|p{5.5cm}|}
-			\hline
-			\footnotesize
-			 Output graph & Inference problem & Inference algorithm \\ \hline
-			 Tree & Polynomial & \dpg\ \cite{Rousu07}  \\
-			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ 
-			 Pattern & Linear? & Reduction \cite{su2015transporter} \\ \hline
-			 \daggraph & \nphard & \sdp\ \cite{su14structured} \\ 
-			 $\rightarrow${unknown} & \nphard & \mve\ \amm\ \mam\ \cite{su15multilabel} \rta\ \cite{su14multilabelnips} \\ \hline
-		\end{tabular}
-\end{frame}
+
 
 %
 \begin{frame}{\rta\ inference algorithm}
@@ -1011,72 +1064,21 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 	\end{figure}
 \end{frame}
 
-
-\begin{frame}{\spin\ for context-sensitive prediction}
+\begin{frame}{Short summary}
 	\begin{itemize}\footnotesize
-		\item We assume action $\varphib(\vx)$ is known (e.g. bag-of-word of a tweet).
-		\item Task is to predict the response network given the action.
-		%\item {\em Predicted Subgraph Coverage} (PSC) is defined as $\mathrm{PSC}=\frac{1}{mn} \sum_{i=1}^{m} \sum_{v\in V_i} |G_v|$.
-		\item {\em Predicted Subgraph Coverage} (PSC) is the relative size of correctly predicted subgraph in terms of node labels.
-		\item The result is shown in the following table.
-	\end{itemize}	
-		\begin{table}[t]
-		\scriptsize
-		\centering
-		\begin{tabular}{|@{  }c@{  }|@{}c@{  }c@{  }c@{}|@{}c@{  }c@{  }c@{}|@{}c@{ }c@{}|@{}c@{  }c@{  }c@{}|}
-		  \hline
-		\multirow{2}{*}{\textbf{Dataset}} & \multicolumn{3}{c}{\textbf{Node Accuracy}} & \multicolumn{3}{|c}{\textbf{Node $F_1$ Score}} & \multicolumn{2}{|c}{\textbf{Edge Acc}} & \multicolumn{3}{|c|}{{\em PSC}}  \\ \cline{2-12}
-		 & \scriptsize{SVM} & \scriptsize{MMCRF} & \scriptsize{SPIN} & \scriptsize{SVM} & \scriptsize{MMCRF} & \scriptsize{SPIN} & \scriptsize{SVM}  & \scriptsize{SPIN}  & \scriptsize{SVM} & \scriptsize{MMCRF} & \scriptsize{SPIN}  \\ \hline
-		   memeS  & \textbf{73.4} & {68.0} & \em{72.2} & {39.0} & \em{39.8} & \textbf{47.1} & \textbf{62.7} & {45.6} & {23.4} & \em{25.3} & \textbf{33.6} \\ 
-		   memeM  & \textbf{82.1} & {79.0} & \em{81.5} & {29.1} & \em{30.1} & \textbf{38.0} & {61.1} & \textbf{68.8} & {18.6} & \em{18.8} & \textbf{28.3} \\ 
-		   memeL  & \textbf{89.9} & {88.3} & \em{89.8} & {26.7} & \em{27.1} & \textbf{35.0} & {45.5} & \textbf{80.0} & {17.7} & \em{18.9} & \textbf{27.6} \\ 
-		%M100  & {71.2} & \em{73.6} & \textbf{76.7} & {49.3} & \em{50.8} & \textbf{54.3} & {33.3} & \textbf{61.7} & {33.3} & \textbf{35.6} & \em{34.6} & \textbf{0.1} & {0.2} & \textbf{0.1}\\ 
-		%M500  & {89.0} & \em{91.4} & \textbf{92.0} & \textbf{18.8} & {13.5} & \em{14.6} & {28.2} & \textbf{92.6} & \em{29.3} & {26.4} & \textbf{29.5} & {9.0} & \em{3.8} & \textbf{3.2}\\ 
-		M700  & {91.9} & \textbf{94.1} & \em{92.1} & \em{13.8} & {7.3} & \textbf{14.2}  & {26.3} & \textbf{93.0} & \em{29.4} & {23.9} & \textbf{34.4} \\ 
-		M1k & {94.1} & \textbf{95.8} & \em{94.2} & \textbf{10.9} & {3.5} & \em{9.3}   & {26.6} & \textbf{94.7} & \em{33.7} & {16.6} & \textbf{35.2} \\ 
-		M2k & \em{96.8} & \textbf{97.6} & {96.7} & \textbf{6.2} & {1.4} & \em{3.4}    & {25.3} & \textbf{97.6} & \textbf{34.6} & {9.6} & \em{14.7} \\ 
-		%L100  & {69.4} & \em{72.2} & \textbf{75.7} & {51.1} & \em{53.1} & \textbf{57.4} & {31.6} & \textbf{62.3} & {30.9} & \em{31.7} & \textbf{33.4} & \textbf{0.1} & \em{0.2} & {0.3}\\ 
-		%L500  & {85.9} & \textbf{89.1} & \em{86.8} & \em{21.7} & {15.1} & \textbf{24.7} & {27.9} & \textbf{87.9} & \em{14.2} & {11.2} & \textbf{19.7} & {6.5} & \em{3.2} & \textbf{2.1}\\ 
-		L700  & {89.7} & \textbf{92.4} & \em{89.7} & \em{16.2} & {9.4} & \textbf{17.3}  & {26.5} & \textbf{90.4} & \em{9.5} & {6.7} & \textbf{12.5} \\ 
-		L1k & \em{92.4} & \textbf{94.4} & {91.5} & \em{12.4} & {6.4} & \textbf{13.9}  & {26.4} & \textbf{92.3} & \em{6.1} & {4.4} & \textbf{8.4} \\ 
-		L2k & \em{92.5} & \textbf{94.5} & {91.9} & \em{12.3} & {5.4} & \textbf{12.7}  & {26.5} & \textbf{93.2} & \em{6.0} & {2.9} & \textbf{7.2} \\ \hline
-		\textbf{Geom.}  & {85.5} & \em{86.4} & \textbf{86.6} & \em{19.8} & {12.6} & \textbf{20.3} & {32.6} & \textbf{79.7} & \em{18.9} & {14.2} & \textbf{21.7} \\
-		\hline
-		\end{tabular}
-		\label{table_global_res_svm}
-		\end{table}
-\end{frame}
-
-\begin{frame}{\spin\ for context-free prediction}
-	\begin{itemize}
-		\item We assume action is unknown during prediction phase.
-		\item Task is to predict directed edges (network skeleton) from a cascade of actions.
-		\item The measure of success is {\em Precision@$K$}, where we ask for top-$K$ percent edge predictions and compute the precision.
-		\item The result is shown in the following table.
+		\item We have seem so far.		
 	\end{itemize}
-			\begin{table}[t]
-			\scriptsize
-			\centering
-			\begin{tabular}{|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|@{  }c@{  }|}
-			  \hline
-			\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Model}} & \multirow{2}{*}{\textbf{T ({\tiny$10^3$s})}} & \multicolumn{6}{c|}{Precision @ $K$} \\ \cline{4-9}
-			 & & & {$10\%$} & {$20\%$} & {$30\%$} & {$40\%$} & {$50\%$} & {$60\%$} \\ \hline
-			\multirow{3}{*}{\textbf{memeS}}
-			& SPIN & \em{5.50} & \textbf{82.9} & \textbf{81.0} & \textbf{76.0} & \textbf{74.0} & \textbf{74.0} & \textbf{70.0}  \\  
-			& ICM-EM & \textbf{0.01} & {60.3} & {63.5} & {65.1} & {62.0} & {62.0} & {61.5}  \\ 
-			& NETRATE & {5.83} & \em{76.2} & \em{73.8} & \em{70.4} & \em{68.7} & \em{68.7} & \em{66.8} \\ \hline 
-			\multirow{3}{*}{\textbf{memeM}}
-			& SPIN & \em{5.52} & \textbf{82.7} & \textbf{72.1} & \textbf{70.5} & \textbf{69.2} & \textbf{69.2} & \textbf{67.9}  \\  
-			& ICM-EM & \textbf{0.02} & {56.3} & {55.3} & {56.8} & {57.4} & {57.4} & {56.3}  \\ 
-			& NETRATE & {13.93} & \em{61.2} & \em{64.6} & \em{62.9} & \em{62.5} & \em{62.5} & \em{62.4}  \\ \hline 
-			\multirow{3}{*}{\textbf{memeL}}
-			& SPIN & \em{4.75} & \textbf{82.2} & \textbf{73.6} & \textbf{69.1} & \textbf{66.7} & \textbf{66.7} & \textbf{65.9}  \\  
-			& ICM-EM & \textbf{0.01} & {52.1} & {55.7} & {54.2} & {56.5} & {56.5} & {56.7}  \\ 
-			& NETRATE & {12.63} & \em{56.5} & \em{57.8} & \em{60.0} & \em{59.3} & \em{59.3} & \em{59.4}  \\ \hline
-			\end{tabular}
-			\end{table}
+		\begin{tabular}{|c|c|p{5.5cm}|}
+			\hline
+			\footnotesize
+			 Output graph & Inference problem & Inference algorithm \\ \hline
+			 Tree & Polynomial & \dpg\ \cite{Rousu07}  \\
+			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ 
+			 Pattern & Linear? & Reduction \cite{su2015transporter} \\ 
+			 \daggraph & \nphard & \sdp\ \cite{su14structured} \\ \hline
+			 $\rightarrow${unknown} & \nphard & \mve\ \amm\ \mam\ \cite{su15multilabel} \rta\ \cite{su14multilabelnips} \\ \hline
+		\end{tabular}
 \end{frame}
-
 
 
 
