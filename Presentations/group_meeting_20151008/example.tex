@@ -24,7 +24,7 @@ Department of Computer Science\\
 Aalto University
 }
 
-\aaltofootertext{Random Spanning Tree Approximation}{\today}{\arabic{page}/\pageref{LastPage}\ }
+\aaltofootertext{Transporter classification}{\today}{\arabic{page}}
 
 
 \date{ \today} %\date{Version 1.0, \today}
@@ -51,6 +51,149 @@ Aalto University
 
 \aaltotitleframe
 \footnotesize
+
+\begin{frame}{Motivation}
+	\begin{itemize}
+		\item Membrane transporter proteins cover $10\%$ proteins in a cell.
+		\item An accurate classification model can help in
+		\begin{itemize}\footnotesize
+			\item studying comparative and functional genomics
+			\item probing metabolic processes
+			\item developing new therapeutic targets
+			\item identifying pharmacologically proteins 
+		\end{itemize}
+		\item Transporter protein classification \tc\ is a hierarchical system of thousands of classes.
+		\item By predicting the whole \tc\ system, we implicitly predict
+		\begin{itemize}\footnotesize
+			\item mode of actions
+			\item energy coupling mechanism
+			\item phylogenetic group
+			\item substrate specificity
+		\end{itemize}
+		\item Additionally, we would also benefit from the relationship between classes (class-subclasses, different level of granularities).
+		\item The prediction task: input is a transporter protein sequence; output is the corresponding \tc.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Notations}
+	\begin{itemize}\footnotesize
+		\item Training examples come in pairs $(\vx,\vy)\in\vXcal\times\vYcal$.
+		\item $\vXcal$ is an arbitrary input space.
+		\item $\vYcal$ is an output space of a collection of $\ell$-dimensional {\em multilabels}.
+		\begin{align*}\footnotesize
+			\vy=(y_1,\cdots,y_{\ell})\in\vYcal.
+		\end{align*}
+		\item $y_i$ is a {\em microlabel} and $y_i\in\{+1,-1\}$.
+		\item $\vx$ is a protein sequence, $y_i$ is a function class, $\ell=3145$.
+		\item We are given a set of $m$ training examples $\{(\vx_i,\vy_i)\}_{i=1}^m$.
+		%\item An arbitrary pair $(\vx_i,\vy),\,\vy_\in\vYcal$ is called pseudo-example.
+		\item Each example $(\vx,\vy)$ is mapped into a joint feature space $\phib(\vx,\vy)$.
+		\item $\vw$ is the weight vector operates in the joint feature space.
+		\item Define a linear score function $F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)}$.
+		\item $\vw$ ensures that example $\vx_i$ with correct multilabel $\vy_i$ achieves higher score than with any other incorrect multilabel $\vy'\in\vYcal$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Prediction}
+	\begin{itemize}
+		\item The prediction $\vy_{\vw}(\vx)$ of an input $\vx$ is the multilabel $\vy$ that maximizes the score function 
+		\begin{align}\footnotesize
+			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw}{\phib(\vx,\vy)}. \label{inference}
+		\end{align}
+		\item Search space is exponential in size, $|\vYcal|=2^{\ell}$.
+		\item (\ref{inference}) is called {\em inference} problem which is \nphard\ for most output feature maps.
+		\item Often, we want a feature map in which the inference can be solved with a polynomial algorithm, e.g., dynamic programming.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{TC hierarchy as the output graph}
+	\begin{itemize}\footnotesize
+		\item Transporter classification (\tc) system is a hierarchical system.
+		\begin{center}
+			\includegraphics[scale=0.3]{./outputgraph.pdf}
+		\end{center}
+		\item A vertex $v_i\in V$ corresponds to a microlabel $y_i$ (function class).
+		\item An edge $(v_i,v_j)\in E$ corresponds to class-subclass of the microlabel $y_i$ and $y_j$.
+		\item We assume that the joint feature map $\phib$ is a potential function on the \tc\ hierarchy $G=(E,V)$.
+		\item $\varphib(\vx)\in\RR^d$ is the input feature map, e.g., N-gram feature of a sequence.
+		\item $\psib(\vy)\in\RR^{4|E|}$ is the output feature map which maps the multilabel $\vy$ into a collection of edges and labels
+		\begin{align*}\footnotesize
+			\varphib(\vy) = (\vone_{(\vy_e=u_{e})})_{e,u_e}, e\in E,u_e\in\{-1,+1\}^2.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{An example of $\psib(\vy)$}
+	\begin{itemize}\footnotesize
+		\item Given \tc\ hierarchy $G=(E,V)$
+		\begin{center}
+			\includegraphics[scale=0.3]{./outputgraph.pdf}
+		\end{center}
+		\item Multilabel $\vy$
+		\begin{align*}
+			\vy&=(y_1,y_2,y_3,y_4,y_5)=(+1,-1,+1,+1,-1)
+		\end{align*}
+		\item Output feature map $\psib(\vy)$
+		\begin{align*}\footnotesize
+			\psib(\vy) &= ( \underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{0}_{+-}, \underbrace{1}_{++},}_{(v_1,v_3)} 
+			\underbrace{\underbrace{0}_{--}, \underbrace{0}_{-+}, \underbrace{1}_{+-}, \underbrace{0}_{++},}_{(v_1,v_2)}\cdots)
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+%
+\begin{frame}{Joint feature map $\phib(\vx,\vy)$}
+	\begin{itemize}\footnotesize
+		\item The joint feature is the Kronecker product of $\varphib(\vx)$ and $\psib(\vy)$
+		\begin{align*}\footnotesize
+			\phib(\vx,\vy) = (\phib_e(\vx,\vy))_{e\in E}=(\varphib(\vx)\otimes\psib_e(\vy_e))_{e\in E}.
+		\end{align*}
+		\begin{center}
+			\includegraphics[scale = 1]{./tensor_label.pdf}
+		\end{center}
+		\item The score function can be factorized by the output graph $G$
+		\begin{align*}
+			F(\vw,\vx,\vy) = \ip{\vw}{\phib(\vx,\vy)} = \sum_{e\in E}\ip{\vw_e}{\phib_e(\vx,\vy_e)}.
+		\end{align*}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Search space reduction}
+	\begin{itemize}
+		\item Recall the inference problem
+		\begin{align*}\footnotesize
+			\vy_{\vw}(\vx) = \underset{\vy\in\vYcal}{\argmax}\,\ip{\vw}{\phib(\vx,\vy)}.
+		\end{align*}
+		\item Search space $|\vYcal| = 2^{\ell}$.
+		\item Given \tc\ hierarchy $G=(E,V)$
+		\begin{center}
+			\only<1>{\includegraphics[scale=0.3]{./outputgraph.pdf}}
+			\only<2>{\includegraphics[scale=0.3]{./validlabel1.pdf}}
+			\only<3>{\includegraphics[scale=0.3]{./validlabel2.pdf}}
+		\end{center}
+		\item Valid multilabels defined by the \tc\ hierarchy
+		\begin{align*}
+			\vy&=(y_1,y_2,y_3,y_4,y_5)=(+1,-1,+1,+1,-1),\\
+			\vy&=(y_1,y_2,y_3,y_4,y_5)=(+1,+1,-1,-1,+1).
+		\end{align*}
+		\item Search space reduction $|\vYcal| = |V_{\text{leave}}|$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Optimization problem}
+	\begin{itemize}
+		\item Solve the following optimization problem to learn $\vw$
+		\begin{align*}
+			\underset{\vw,\xi_i}{\minimize} & \quad \frac{1}{2}\norm{\vw}_2^2 + C\sum_{i=1}^{m}\xi_i 	\\
+			\st & \quad \ip{\vw}{\phib(x_i,\vy_i)} - \underset{\vy\in\Ycal/\vy_i}{\maximize} \ip{\vw}{\phib(x_i,\vy)} \geq \ell(\vy_i,\vy) -  \xi_k,  \\
+			& \quad \xi_i\ge0\, , \forall\ i \in \set{1,\dots,m},
+		\end{align*}
+		\item The impact of the constraints of the above optimization problem is to push the score of input $\vx_i$ with correct multilabel $\vy_i$ above the scores of all competing multilabels $\vy\in\Ycal/\vy_i$. 
+		\item The slack parameters $\xi_i$ is used to relax the constraints so that a feasible solution can always be found.
+		\item $C$ is the margin slack parameter that controls the amount of regularization in the model.
+		\item The objective minimizes the $L_2$-norm of the weights and the slacks allocated to the training data which is equivalent to maximizing the margin subject to allowing some data to be outliers.
+	\end{itemize}
+\end{frame}
 
 
 \begin{frame}{Feature extraction}
@@ -79,8 +222,9 @@ Aalto University
 \end{frame}
 
 
-\begin{frame}{Summary of features}
+\begin{frame}{Summary of data}
 	\begin{itemize}
+		\item Number of proteins $12515$, number of classes $3145$.
 		\item \blast\ features: similarity matrix in which elements are \blast\ scores.
 		\item \interproscan\ features\\
 		{\scriptsize\begin{tabular}{|c|c||c|c||c|c|}\hline
@@ -92,7 +236,7 @@ Aalto University
 		 Coil & 1 & TMHMM& 1& Phobius &7 \\
 		 SignalP1& 2& SignalP2 & 2 & SignalP3 & 1\\\hline
 		\end{tabular}}
-		\item \pssm\ features\\
+		\item \pssm\ features (size of DB)\\
 		{\scriptsize\begin{tabular}{|c|c||c|c|}\hline
 		 Type & Dim & Type & Dim \\ \hline
 		 CDD & 47363 & Pfam & 14837\\
@@ -120,20 +264,52 @@ Aalto University
 		\begin{align*}
 			K_{\text{\kalignf}}=\sum_{k=1}^{p}\beta_k K^c_k, \quad
 			\underset{\beta}{\maximize}\, & \displaystyle \frac{\ip{K_{\text{\kalignf}}^c}{K_{\vy}^c}_F}{\norm{K_{\text{\kalignf}}}_F\norm{K_{\vy}^c}_F},
-		    \qquad \st\,  \displaystyle \sum_{k=1}^p\beta_k^2=1,  \beta_k\ge0,\,\forall k.
+		    \quad \st\,  \displaystyle \sum_{k=1}^p\beta_k^2=1,  \beta_k\ge0,\,\forall k.
 		\end{align*}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Experiments}
-	\begin{itemize}
-		\item 
-	\end{itemize}
+\begin{frame}[allowframebreaks]{Experiments}{\svm\ + single feature map + linear kernel}
+	{\scriptsize
+	\begin{tabular}{|c|c||c|c||c|c|}\hline
+		    &   $F_1$		& 		        & $F_1$        &           & $F_1$        \\ \hline
+	Blast   &	{\bf 74.5}	& PIRSF	            & 11.2	& SignalP2	    & 3.6    \\
+	Coils   &	03.6	& PRINTS	        & 13.7	& SignalP3	    & 4.1    \\
+	Gene3D  &	04.0	& ProDom	        & 03.5	& SMART	        & 7.2    \\
+	Hamap   &	05.5	& ProSite Patterns	& 03.0	& SUPERFAMILY	& 14.9    \\
+	PANTHER &	42.4	& ProSite Profiles	& 15.6	& GRFAM	        & 22.3    \\
+	Pfam	&   38.2	& SignalP1	        & 1.1	& TMHMM	        & 06.8    \\
+	Phobius	&   11.7	&                   &       &               & \\\hline			
+	\end{tabular}}
+	\framebreak
+	\begin{figure}
+		\includegraphics[scale=0.2]{./svmauc.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Experiments}{(\svm, \mmr, \sop) + \mkl\ +  (linear, Gaussian)}
+	{\scriptsize
+	\begin{tabular}{|p{1cm}|p{0.5cm}|p{0.5cm}p{0.5cm}|p{0.5cm}p{0.5cm}|p{0.5cm}p{0.5cm}|p{0.5cm}p{0.5cm}|} \hline
+		& \multicolumn{5}{c|}{$F_1$} & \multicolumn{4}{c|}{$0/1$} \\ \cline{2-10}
+		& \multicolumn{3}{c|}{$Linear$} & \multicolumn{2}{c|}{$Gaussian$} & \multicolumn{2}{c|}{$Linear$} & \multicolumn{2}{c|}{$Gaussian$} \\ \cline{2-10}
+		& \svm & \mmr & \sop & \mmr & \sop & \mmr & \sop & \mmr & \sop \\ \hline
+	\kunif    & 68.3& 35.1 & 71.7 & 79.9&  79.9  & 06.9 & 55.1 & 64.1 &  64.3 \\ 
+	\kalign  & 74.6 & 33.9 & 76.9 & 83.0&  82.8  & 05.9 & 58.4 & 68.3 &  68.6 \\
+	\kalignf & 79.2 & 50.1 & 80.0 & {\bf 85.4} &  {\it 85.2}  & 21.0 & 62.9 & {\it 72.7}&  {\bf 72.8} \\ \hline
+	\end{tabular}}
 \end{frame}
 
 \begin{frame}{Discussion}
 	\begin{itemize}
-		\item 
+		\item Transporter classification \tc\ system is a hierarchical system.
+		\item We developed structured output prediction model \sop\ to predict \tc\ given a protein sequence.
+		\item Based on \tc, we are able to dramatically reduce the search space from exponential to linear which allows
+		\begin{itemize}\footnotesize
+			\item Feasible training
+			\item Accurate prediction
+		\end{itemize}
+		\item For each protein sequence, we generate various types of features and apply \mkl\ to merge multiple input feature maps.
+		\item The experiment shows that structured prediction approach significantly improves single label classification approach. 
 	\end{itemize}
 \end{frame}
 
