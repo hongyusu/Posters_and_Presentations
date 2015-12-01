@@ -544,14 +544,15 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 \begin{frame}{Pattern  and Exponential reduction}{Transporter protein classification \cite{su2015transporter}}
 	\begin{itemize}\footnotesize
 		\item $12456$ protein, $\vx_i,\forall i\in\{1,\cdots,12456\}$.
-		%\item $30$ set of features, $\{\phi(\vx_i)_k\}_{k=1}^{30}$.
-		\item $3145$ transporter function classes, $\vy=\{y_{1},\cdots,y_{3145}\}$.
+		\item $3145$ transporter function classes, $\vy=(y_{1},\cdots,y_{3145})$.
 		\item A hierarchical structured $G$ defined on $3145$ classes.\\
+		\begin{center}
 		\only<1>{\includegraphics[scale=0.2]{./figures/tc0.pdf}}
 		\only<2>{\includegraphics[scale=0.2]{./figures/tc1.pdf}}
 		\only<3>{\includegraphics[scale=0.2]{./figures/tc2.pdf}}
 		\only<4>{\includegraphics[scale=0.2]{./figures/tc3.pdf}}
 		\only<5>{\includegraphics[scale=0.2]{./figures/tc4.pdf}}
+		\end{center}
 		\item It seems: $|\Ycal| = 2^{3145}$, \dpg\ on $G$.
 		\item A valid annotation is a path from root to leave, $|\Ycal|=~2000$
 		\item The primal optimization problem is defined as
