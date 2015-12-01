@@ -569,18 +569,19 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 \begin{frame}{Actual model}
 	\begin{itemize}
 		\item The primal optimization problem is defined as
-		\begin{align}
-			\underset{\vw,\xi_k}{\minimize} & \quad \frac{1}{2}\norm{\vw}^2 + C\sum_{k=1}^{m}\xi_k \label{primalmmcrf}\\
+		\begin{align*}
+			\underset{\vw,\xi_k}{\minimize} & \quad \frac{1}{2}\norm{\vw}^2 + C\sum_{k=1}^{m}\xi_k \\
 			\st & \quad \ip{\vw}{\phib(\vx_k,\vy_k)} - \ip{\vw}{\phib(\vx_k,\vy)}  \geq \ell(\vy_k,\vy) -  \xi_k, \nonumber\\
 			& \quad \xi_k\ge0\, , {\blue \forall\ \vy\in\vYcal}, k \in \set{1,\dots,m}.\nonumber
-		\end{align}
-		\item In stead of conditional gradient descent, we can do gradient descent for all training examples.
+		\end{align*}
+		\item In stead of \cgd, we do gradient descent for all examples in each iteration.
 		\item Multi-view data: $30$ set of features, $\{\phi(\vx_i)_k\}_{k=1}^{30}$.
-		\item Multiple kernel learning {\sc alignf}.
-		\item Results:
+		\item Multiple kernel learning (\mkl): \kalign, \kalignf.
+		\item Experiments:
 		\begin{table}
 		\centering \footnotesize
 		\begin{tabular}{|p{1cm}|p{0.3cm}p{0.3cm}p{0.8cm}|p{0.3cm}p{0.3cm}p{0.8cm}|} \hline
+			\footnotesize
 		    & \multicolumn{6}{c|}{$0/1$} \\ \cline{2-7}
 		    & \multicolumn{3}{c|}{$Linear$} & \multicolumn{3}{c|}{$Gaussian$} \\ \cline{2-7}
 		    & \svm & \mmr & \mmcrf & \svm & \mmr & \mmcrf \\ \hline
@@ -589,7 +590,7 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 		\kalignf & 60.5 &  17.5  & 64.3  & 32.9  & 68.4  & 71.2              \\ \hline
 		\end{tabular}
 		\vspace{-3mm}
-		\caption{Prediction performance with kernels from \mkl.}
+		\caption{\footnotesize Prediction performance with kernels from \mkl.}
 		\end{table}
 	\end{itemize}
 \end{frame}
@@ -605,8 +606,8 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 			\footnotesize
 			 Output graph & Inference problem & Inference algorithm \\ \hline
 			 Tree & Polynomial & \dpg\ \cite{Rousu07}  \\
-			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ 
-			 Pattern & Linear & Exponential reduction \cite{su2015transporter} \\ \hline
+			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ \hline
+			 $\rightarrow$Pattern & Linear? & Reduction \cite{su2015transporter} \\ \hline
 		\end{tabular}
 		\item What if the output graph is \daggraph\ ?
 	\end{itemize}
@@ -754,7 +755,7 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 			 Output graph & Inference problem & Inference algorithm \\ \hline
 			 Tree & Polynomial & \dpg\ \cite{Rousu07}  \\
 			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ 
-			 Pattern & Linear & Exponential reduction \cite{su2015transporter} \\ \hline
+			 Pattern & Linear? & Reduction \cite{su2015transporter} \\ \hline
 			 $\rightarrow$ \daggraph & \nphard & \sdp\ \cite{su14structured} \\ \hline
 		\end{tabular}
 		\item What if the output graph is not observed?
@@ -972,7 +973,7 @@ $\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\und
 			 Output graph & Inference problem & Inference algorithm \\ \hline
 			 Tree & Polynomial & \dpg\ \cite{Rousu07}  \\
 			 Graph & \nphard & \lbp\ \cite{su10structured}  \\ 
-			 Pattern & Linear & Exponential reduction \cite{su2015transporter} \\ \hline
+			 Pattern & Linear? & Reduction \cite{su2015transporter} \\ \hline
 			 \daggraph & \nphard & \sdp\ \cite{su14structured} \\ 
 			 $\rightarrow${unknown} & \nphard & \mve\ \amm\ \mam\ \cite{su15multilabel} \rta\ \cite{su14multilabelnips} \\ \hline
 		\end{tabular}
