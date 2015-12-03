@@ -87,7 +87,7 @@ Department of Computer Science, Aalto University
 	\begin{itemize}
 		\item Postdoc in Helsinki Institute for Information Technology and Aalto University since 2015.5.
 		\item Research: build advance machine learning models to solve large scale data analysis problem (research project).
-		\item Equivalent to: continuously learning, thinking, implementing, reporting.
+		\item Equivalent to: learning, thinking, talking, implementing, reporting.
 	\end{itemize}
 	\begin{center}
 		\includegraphics[scale = 0.04]{../Aboutme/plots/phd.jpg}
@@ -202,7 +202,7 @@ Department of Computer Science, Aalto University
 		\end{align*}
 		\item For example, in document classification, a document $\vx_0$ could be tagged with {\blue``news'' ``movie'' ``art''} but not {\gray ``sports'' ``politics'' ``finance''}.
 		\begin{align*}
-\vy_0=(\underbrace{+1}_{\blue\text{news}},\underbrace{+1}_{\blue\text{movie}},\underbrace{-1}_{\gray\text{sports}},\underbrace{-1}_{\gray\text{politics}},\underbrace{-1}_{\gray\text{finance}},\underbrace{+1}_{\gray\text{science}},\underbrace{-1}_{\blue\text{art}}).
+\vy_0=(\underbrace{+1}_{\blue\text{news}},\underbrace{+1}_{\blue\text{movie}},\underbrace{-1}_{\gray\text{sports}},\underbrace{-1}_{\gray\text{politics}},\underbrace{-1}_{\gray\text{finance}},\underbrace{-1}_{\gray\text{science}},\underbrace{+1}_{\blue\text{art}}).
 		\end{align*}\footnotesize
 		\item {\bf Goal}: find a mapping function $f\in\Hcal$ that predicts the best values of an output $\vy$ given an input $\vx$, $f:\vXcal\rightarrow\vYcal$.
 	\end{itemize}
@@ -240,7 +240,7 @@ Department of Computer Science, Aalto University
 		\newline
 		\newline
 		\newline
-$\vy=(\underbrace{+1}_{\blue\text{news}},\underbrace{+1}_{\blue\text{economics}},\underbrace{-1}_{\gray\text{sports}},\underbrace{-1}_{\gray\text{politics}},\underbrace{-1}_{\gray\text{movie}},\underbrace{-1}_{\gray\text{science}},\underbrace{-1}_{\gray\text{art}})$\\
+$\vy_0=(\underbrace{+1}_{\blue\text{news}},\underbrace{+1}_{\blue\text{economics}},\underbrace{-1}_{\gray\text{sports}},\underbrace{-1}_{\gray\text{politics}},\underbrace{-1}_{\gray\text{movie}},\underbrace{-1}_{\gray\text{science}},\underbrace{-1}_{\gray\text{art}})$\\
 		\end{center}
 		\framebreak
 		
@@ -256,7 +256,7 @@ $\vy=(\underbrace{+1}_{\blue\text{news}},\underbrace{+1}_{\blue\text{economics}}
 		\newline
 		\newline
 		\newline
-$\vy=(\underbrace{+1}_{\blue\text{boat}},\underbrace{+1}_{\blue\text{sea}},\underbrace{-1}_{\gray\text{sun}},\underbrace{-1}_{\gray\text{beach}},\underbrace{-1}_{\gray\text{people}},\underbrace{+1}_{\blue\text{ice}},\underbrace{+1}_{\blue\text{land}})$\\
+$\vy_0=(\underbrace{+1}_{\blue\text{boat}},\underbrace{+1}_{\blue\text{sea}},\underbrace{-1}_{\gray\text{sun}},\underbrace{-1}_{\gray\text{beach}},\underbrace{-1}_{\gray\text{people}},\underbrace{+1}_{\blue\text{ice}},\underbrace{+1}_{\blue\text{land}})$\\
 		\end{center}
 		\framebreak
 
@@ -273,7 +273,7 @@ $\vy=(\underbrace{+1}_{\blue\text{boat}},\underbrace{+1}_{\blue\text{sea}},\unde
 		\newline
 		\newline
 		\newline
-$\vy=(\underbrace{+1}_{\blue\text{heart}},\underbrace{+1}_{\blue\text{stroke}},\underbrace{+1}_{\blue\text{blood}},\underbrace{+1}_{\blue\text{fever}},\underbrace{-1}_{\gray\text{digest}},\underbrace{-1}_{\gray\text{liver}},\underbrace{+1}_{\blue\text{swelling}})$\\
+$\vy_0=(\underbrace{+1}_{\blue\text{heart}},\underbrace{+1}_{\blue\text{stroke}},\underbrace{+1}_{\blue\text{blood}},\underbrace{+1}_{\blue\text{fever}},\underbrace{-1}_{\gray\text{digest}},\underbrace{-1}_{\gray\text{liver}},\underbrace{+1}_{\blue\text{swelling}})$\\
 		\end{center}
 		\framebreak
 		
@@ -291,7 +291,7 @@ $\vy=(\underbrace{+1}_{\blue\text{heart}},\underbrace{+1}_{\blue\text{stroke}},\
 		\newline
 		\newline
 		\newline
-	$\vy=(\underbrace{+1}_{\blue\text{$\alpha-$channel}},\underbrace{+1}_{\blue\text{$\beta-$barrel}},\underbrace{+1}_{\blue\text{holins}},\underbrace{-1}_{\gray\text{vesicle fusion pores}},\underbrace{-1}_{\gray\text{Phosphotransfer-driven Group}})$\\
+	$\vy_0=(\underbrace{+1}_{\blue\text{$\alpha-$channel}},\underbrace{+1}_{\blue\text{$\beta-$barrel}},\underbrace{+1}_{\blue\text{holins}},\underbrace{-1}_{\gray\text{vesicle fusion pores}},\underbrace{-1}_{\gray\text{Phosphotransfer-driven Group}})$\\
 		\end{center}
 		\framebreak
 		
@@ -311,7 +311,7 @@ $\vy=(\underbrace{+1}_{\blue\text{heart}},\underbrace{+1}_{\blue\text{stroke}},\
 		\newline
 		\newline
 		\newline
-$\vy=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\underbrace{+1}_{\blue\text{David}},\underbrace{-1}_{\gray\text{Mark}},\underbrace{+1}_{\blue\text{Alex}},\underbrace{-1}_{\gray\text{Zoe}},\underbrace{-1}_{\gray\text{Frank}})$\\
+$\vy_0=(\underbrace{+1}_{\blue\text{Ted}},\underbrace{-1}_{\gray\text{Alice}},\underbrace{+1}_{\blue\text{David}},\underbrace{-1}_{\gray\text{Mark}},\underbrace{+1}_{\blue\text{Alex}},\underbrace{-1}_{\gray\text{Zoe}},\underbrace{-1}_{\gray\text{Frank}})$\\
 		\end{center}	
 	\end{itemize}
 \end{frame}
